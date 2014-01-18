@@ -1,0 +1,37 @@
+Index: src/sagex/remote/media/AlbumArtHandler.java
+===================================================================
+--- src/sagex/remote/media/AlbumArtHandler.java	(revision 0)
++++ src/sagex/remote/media/AlbumArtHandler.java	(revision 0)
+@@ -0,0 +1,20 @@
++package sagex.remote.media;
++
++import javax.servlet.http.HttpServletRequest;
++import javax.servlet.http.HttpServletResponse;
++
++import sagex.api.AlbumAPI;
++import sagex.api.MediaFileAPI;
++
++/**
++ * 
++ * Resolves album art and writes it
++ * @author broconne
++ *
++ */
++public class AlbumArtHandler implements SageMediaRequestHandler {
++    public void processRequest(HttpServletRequest req, HttpServletResponse resp, Object mediaFile) throws Exception {
++    	Object album = MediaFileAPI.GetAlbumForFile(mediaFile);
++        MediaHandler.writeSageImageFile(AlbumAPI.GetAlbumArt(album), resp);
++    }
++}
+Index: src/sagex/remote/media/MediaHandler.java
+===================================================================
+--- src/sagex/remote/media/MediaHandler.java	(revision 372)
++++ src/sagex/remote/media/MediaHandler.java	(working copy)
+@@ -31,6 +31,7 @@
+         handlers.put("thumbnail", new ThumbnailRequestHandler());
+         handlers.put("logo", new LogoRequestHandler());
+         handlers.put("mediafile", new MediaFileRequestHandler());
++        handlers.put("albumart", new AlbumArtHandler());
+ 
+         handlers.put("poster", new ProxySageMediaRequestHandler("sagex.phoenix.fanart.FanartMediaRequestHandler", "poster"));
+         handlers.put("background", new ProxySageMediaRequestHandler("sagex.phoenix.fanart.FanartMediaRequestHandler", "background"));

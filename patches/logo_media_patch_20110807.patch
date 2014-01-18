@@ -1,0 +1,39 @@
+Index: src/sagex/remote/media/LogoRequestHandler.java
+===================================================================
+--- src/sagex/remote/media/LogoRequestHandler.java	(revision 429)
++++ src/sagex/remote/media/LogoRequestHandler.java	(working copy)
+@@ -1,5 +1,8 @@
+ package sagex.remote.media;
+ 
++import java.util.HashMap;
++import java.util.Map;
++
+ import javax.servlet.http.HttpServletRequest;
+ import javax.servlet.http.HttpServletResponse;
+ 
+@@ -14,11 +17,24 @@
+  *
+  */
+ public class LogoRequestHandler implements SageMediaRequestHandler {
++	static private final Map<String, Object> CHAN_CACHE = new HashMap<String, Object>();
++	
+     public void processRequest(HttpServletRequest req, HttpServletResponse resp, Object logo) throws Exception {
+     	String type = req.getParameter("type");
+     	if (type!=null&&type.trim().length()>0) {
+     		// use new api
+-    		MediaHandler.writeSageImageFile(ChannelAPI.GetChannelLogo(ChannelAPI.GetChannelForStationID(TypesUtil.toInt((String)logo, 0)), type, TypesUtil.toInt(req.getParameter("index"),0), TypesUtil.toBoolean(req.getParameter("fallback"), true)), req, resp);
++    		Object chan = CHAN_CACHE.get(logo.toString());
++    		if(chan == null) {
++    			for(Object c : ChannelAPI.GetAllChannels()) {
++    				if(ChannelAPI.GetChannelName(c).equals(logo.toString())) {
++    					CHAN_CACHE.put(logo.toString(), c);
++    					chan = c;
++    					break;
++    				}
++    			}
++    		}
++    		Object img = chan != null ? ChannelAPI.GetChannelLogo(chan, type, TypesUtil.toInt(req.getParameter("index"),0), TypesUtil.toBoolean(req.getParameter("fallback"), true)) : null;
++    		MediaHandler.writeSageImageFile(img, req, resp);
+     	} else {
+     		Object l = Global.GetLogo((String)logo);
+     		if (l==null) {

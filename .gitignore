@@ -1,3 +1,9 @@
+/target/
+/bin/
+/logs/
+/tags/
+/html/
+*.class
 *.class
 
 # Package Files #

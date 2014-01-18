@@ -1,0 +1,39 @@
+Index: src/sagex/remote/builder/SageAPIBuilder.java
+===================================================================
+--- src/sagex/remote/builder/SageAPIBuilder.java	(revision 390)
++++ src/sagex/remote/builder/SageAPIBuilder.java	(working copy)
+@@ -15,6 +15,7 @@
+ import sagex.api.FavoriteAPI;
+ import sagex.api.MediaFileAPI;
+ import sagex.api.PlaylistAPI;
++import sagex.api.SeriesInfoAPI;
+ import sagex.api.ShowAPI;
+ import sagex.api.SystemMessageAPI;
+ 
+@@ -58,6 +59,12 @@
+             buildSystemMessage(parent, handler);
+         } else if(PlaylistAPI.IsPlaylistObject(parent) || parent.toString().startsWith("Playlist[")) {
+             buildPlaylist(parent, handler);
++            
++        // TODO use SeriesInfoAPI.IsSeriesInfoObject(parent) if Sage implements this method in the SeriesInfoAPI
++        // until then, this test needs to be last so that other object types don't inadvertently get converted to a SeriesInfo
++        // object when calling GetSeriesID.  (e.g. a Show object will be automatically converted to SeriesInfo and thus pass this test
++        } else if(SeriesInfoAPI.GetSeriesID(parent) != null) {
++            buildSeriesInfo(parent, handler);
+         } else {
+             String msg = "Unknown Object Type: " + parent.getClass().getName() + " for Sage Object: " + parent;
+             handler.handleError(msg, new Exception(msg));
+@@ -108,6 +115,13 @@
+         buildObject("Playlist", PlaylistAPI.class, parent, handler, null);
+     }
+ 
++    public void buildSeriesInfo(Object parent, BuilderHandler handler) throws Exception {
++        buildObject("SeriesInfo", SeriesInfoAPI.class, parent, handler, new String[]{"GerSeriesInfoForID", "GetAllSeriesInfo", 
++        	//TODO These next 2 only need to be excluded until Sage fixes the API documentation to reflect that they return String[]
++        	//  so that the generated API signature can be corrected.
++        	"GetSeriesActorList", "GetSeriesCharacterList"});
++    }
++    
+     public void buildObject(String objectName, Class staticObjectClass, Object parent, BuilderHandler handler, String[] ignoreMethods) throws Exception {
+         Method methods[] = getMethods(staticObjectClass, ignoreMethods);
+         handler.beginObject(makeName(objectName));
