@@ -19,6 +19,8 @@ import sagex.util.ILog;
 import sagex.util.LogProvider;
 
 public class SagexServlet extends HttpServlet {
+	public static final String DEBUG_ATTRIBUTE = "SagexServlet.debug";
+	
     private static final long serialVersionUID = 1L;
 
     public interface SageHandler {
@@ -41,14 +43,18 @@ public class SagexServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        log.debug("Handling remote request: " + req.getPathInfo());
+        log.debug("Handling remote request: " + req.getPathInfo() + (req.getQueryString()!=null?("?" + req.getQueryString()):""));
+		if ("true".equals(req.getParameter("_debug")) || req.getPathInfo().contains(".debug.")) {
+			req.setAttribute(DEBUG_ATTRIBUTE, true);
+		}
+		
         try {
         	try {
-        		if ("true".equals(req.getParameter("_debug"))) {
-        			log.debug("BEGIN DEBUG: " + req.getPathInfo());
+        		if (req.getAttribute(DEBUG_ATTRIBUTE)!=null) {
+        			log.debug("BEGIN DEBUG: " + req.getPathInfo() + "?" + req.getQueryString());
         			for (Enumeration<String> e = req.getHeaderNames(); e.hasMoreElements();) {
         				String n = e.nextElement();
-        				log.debug(String.format("HEADER: %s=%s\n", n, req.getHeader(n)));
+        				log.debug(String.format("REQ HEADER: %s=%s\n", n, req.getHeader(n)));
         			}
         			log.debug("END DEBUG");
         		}
@@ -81,7 +87,9 @@ public class SagexServlet extends HttpServlet {
             sh.handleRequest(args, req, resp);
         } catch (Throwable t) {
             log.warn("Failed to process Sage Handler!", t);
-            resp.sendError(500, "Sage Servlet Failed: " + t.getMessage());
+        	if (!resp.isCommitted()) {
+	            resp.sendError(500, "Sage Servlet Failed: " + t.getMessage());
+        	}
         }
     }
 

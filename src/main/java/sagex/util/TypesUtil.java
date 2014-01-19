@@ -58,7 +58,7 @@ public class TypesUtil {
      * @return
      */
     public static Date toDate(String s) {
-        if (s==null) return null;
+        if (s==null||s.trim().length()==0) return null;
         try {
             long l = Long.parseLong(s);
             return new Date(l);
@@ -70,7 +70,7 @@ public class TypesUtil {
                 // we'll log it later
             }
         }
-        log.warn("Failed to convert " + s + " to a valid date");
+        log.warn("Failed to convert {" + s + "} to a valid date");
         return null;
     }
     

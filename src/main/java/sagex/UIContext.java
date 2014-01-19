@@ -40,7 +40,7 @@ public final class UIContext {
                 // still no context, try the thread parse hack
                 if (ctx == null) {
                     String name = Thread.currentThread().getName();
-                    log.debug("Attempting to parse UIContext from thread name: " + name);
+                    // log.debug("Attempting to parse UIContext from thread name: " + name);
                     // try to parse the context from the thread
                     Matcher m = threadPattern.matcher(name);
                     if (m.find()) {
@@ -55,7 +55,7 @@ public final class UIContext {
             }
             
             if (ctx != null) {
-                log.debug("Discovered UIContext: " + ctx);
+                // log.debug("Discovered UIContext: " + ctx);
                 ui = new UIContext(ctx);
                 setCurrentContext(ui);
             } else {
@@ -68,7 +68,7 @@ public final class UIContext {
             }
             
             if (ui==null) {
-                log.debug("No Context was found!");
+                // log.debug("No Context was found!");
             }
         }
         

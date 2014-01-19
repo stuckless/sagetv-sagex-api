@@ -87,7 +87,7 @@ public class MediaHandler implements SageHandler {
 
             if (args.length>4) {
             	// we have a segment
-            	req.setAttribute(MEDIA_SEGMENT_ATTRIBUTE, args[4]);
+            	req.setAttribute(MEDIA_SEGMENT_ATTRIBUTE, parseSegment(args[4]));
             }
             
             if (req.getPathInfo().endsWith(".m3u") || req.getPathInfo().endsWith(".m3u8")) {
@@ -108,7 +108,16 @@ public class MediaHandler implements SageHandler {
         }
     }
     
-    private void help(HttpServletResponse resp, Throwable t) throws IOException {
+    private Object parseSegment(String seg) {
+    	if (seg==null) return null;
+    	int pos = seg.indexOf('.');
+    	if (pos!=-1) {
+    		return seg.substring(0, pos);
+    	}
+		return seg;
+	}
+
+	private void help(HttpServletResponse resp, Throwable t) throws IOException {
         help(resp, t.getMessage(), t);
     }
     
