@@ -25,7 +25,8 @@
 
   <Package>
     <PackageType>System</PackageType>
-    <Location>http://customsagetv.googlecode.com/files/sagex-api-services-@@version@@.zip</Location>
+    <!-- <Location>http://customsagetv.googlecode.com/files/sagex-api-services-@@version@@.zip</Location> -->
+    <Location>https://github.com/stuckless/sagetv-sagex-api/releases/download/v@@version@@/sagex-api-services-@@version@@.zip</Location>
     <MD5>@@system-checksum@@</MD5>
   </Package>
 

@@ -110,7 +110,8 @@ public class MediaFileRequestHandler implements SageMediaRequestHandler {
 		sb.append("#EXTM3U\n");
 		sb.append("#EXT-X-PLAYLIST-TYPE:VOD\n");
 		sb.append("#EXT-X-TARGETDURATION:"+getDurationInSeconds(sagefile)+"\n");
-		sb.append("#EXT-X-VERSION:3\n");
+		// eventually for range headers
+		sb.append("#EXT-X-VERSION:4\n");
 		sb.append("#EXT-X-MEDIA-SEQUENCE:0\n");
 		for (int i=0;i<files.length;i++) {
 			//String mfpart = "/sagex/media/mediafile/"+String.valueOf(mfid)+"/"+String.valueOf(i)+"/" + String.valueOf(i);
@@ -130,7 +131,7 @@ public class MediaFileRequestHandler implements SageMediaRequestHandler {
 		resp.setContentLength(sb.length());
 		resp.setContentType("audio/mpegurl");
 		
-		log.debug(sb.toString());
+		log.debug("\n" + sb.toString());
 		
 		resp.getWriter().write(sb.toString());
 		resp.flushBuffer();
@@ -191,9 +192,10 @@ public class MediaFileRequestHandler implements SageMediaRequestHandler {
 			throws IOException {
 		
 		setHeader(resp, "Accept-Ranges", "bytes", req);
-		setHeader(resp, "Connection", "close", req);
+		setHeader(resp, "Connection", "keep-alive", req);
 		setHeader(resp, "Date", formatDate(System.currentTimeMillis()), req);
 		setHeader(resp, "Last-Modified", formatDate(file.lastModified()), req);
+		setHeader(resp, "X-Content-Duration", String.valueOf(getDurationInSeconds(sagefile, getMediaSegment(req))) + ".0", req);
 		
 		if (MediaFileAPI.IsMusicFile(sagefile)) {
 			setHeader(resp, "Content-Type","audio/mpeg", req);
@@ -208,13 +210,16 @@ public class MediaFileRequestHandler implements SageMediaRequestHandler {
 			setHeader(resp, "Content-Type", forceMime, req);						
 		}
 		
+		boolean rangeRequest = false;
 		RandomAccessFile raf = new RandomAccessFile(file, "r");
 		try {
 			if (ranges==null) {
 				resp.setStatus(200);
 				ranges = new long[] {0, file.length()-1};
+				rangeRequest=false;
 			} else {
 				resp.setStatus(206);
+				rangeRequest=true;
 			}
 			
 			raf.seek(ranges[0]);
@@ -222,19 +227,25 @@ public class MediaFileRequestHandler implements SageMediaRequestHandler {
 			long size = ranges[1] - ranges[0] + 1;
 			setHeader(resp, "Content-Length", String.valueOf(size), req);
 			
-			String contentRange = "bytes "+String.valueOf(ranges[0])+"-"+String.valueOf((ranges[1]))+"/"+String.valueOf(file.length());
-			setHeader(resp, "Content-Range", contentRange, req);
-			
-			log.debug("Content Range: " + contentRange + " for " + file);
-			log.debug("Content Length: " + size + " for " + file);
+			if (rangeRequest) {
+				String contentRange = "bytes "+String.valueOf(ranges[0])+"-"+String.valueOf((ranges[1]))+"/"+String.valueOf(file.length());
+				setHeader(resp, "Content-Range", contentRange, req);
+			}
 			
 			long counted = 0;
 			int bufSize = (int) Math.min(size, 64 * 1024);
 			byte[] buf = new byte[bufSize];
 			int curRead = 0;
-			log.debug("beginning range with size: " + size + "; bufsize: " + bufSize + " for file " + file);
+			if (rangeRequest) {
+				log.debug("beginning range ["+String.valueOf(ranges[0]) + " - " + String.valueOf(ranges[1]) + "] with size: " + size + "; bufsize: " + bufSize + " for file " + file);
+			} else {
+				log.debug("Sending entire file (" + size +" bytes) for file " + file);
+			}
+			
+			long logticker = 10000;
+			
 			OutputStream os = resp.getOutputStream();
-			long logit = System.currentTimeMillis()+1000;
+			long logit = System.currentTimeMillis()+logticker;
 			while (counted < size) {
 				curRead = fis.read(buf, 0, (int) Math.min(bufSize, size - counted));
 				if (curRead == 0 || curRead == -1)
@@ -244,14 +255,15 @@ public class MediaFileRequestHandler implements SageMediaRequestHandler {
 				os.flush();
 				if (System.currentTimeMillis()>logit) {
 					log.debug("Still Streaming: " + file + "; " + String.valueOf(counted));
-					logit = System.currentTimeMillis()+1000;
+					logit = System.currentTimeMillis()+logticker;
 				}
 			}
 			os.flush();
 			fis.close();
+			//os.close();
 			log.debug("Finished normal range stream for file " + file + "; processed " + counted + " bytes");
 		} catch (IOException e) {
-			log.info("IOError ("+ file+ "): " + e.getMessage());
+			log.warn("IOError ("+ file+ "): " + e.getMessage(), e);
 		} catch (Throwable t) {
 			log.warn("Range Stream Error for " + file, t);
 		} finally {
