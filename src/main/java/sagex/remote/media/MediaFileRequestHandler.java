@@ -11,11 +11,14 @@ import java.io.OutputStream;
 import java.io.RandomAccessFile;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.RandomAccess;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import net.sf.sageplugins.sagexmlinfo.MediaFile;
 import sagex.api.AiringAPI;
 import sagex.api.MediaFileAPI;
 import sagex.remote.SagexServlet;
@@ -35,7 +38,32 @@ import sagex.util.LogProvider;
 //Header: Server=nginx/1.2.5
 
 public class MediaFileRequestHandler implements SageMediaRequestHandler {
+	public static final Map<String,String> MimeTypes = new HashMap<String,String>();
+	static {
+		MimeTypes.put("ts", "video/MP2T");
+		MimeTypes.put("avi", "video/x-msvideo");
+		MimeTypes.put("mp4", "video/mp4");
+		MimeTypes.put("mkv", "video/x-matroska");
+		MimeTypes.put("mov", "video/quicktime");
+		MimeTypes.put("flv", "video/x-flv");
+		MimeTypes.put("m3u8", "application/x-mpegURL");
+	}
+	
+	private static final String ARG_SEGLENGTH = "segment";
+	
 	ILog log = LogProvider.getLogger(this.getClass());
+
+	public String getMimeType(File file, String defaultMime) {
+		return getMimeType(parseFileExtension(file).toLowerCase(), defaultMime);
+	}
+
+	public String getMimeType(String ext, String defaultMime) {
+		String mime = MimeTypes.get(ext);
+		if (mime==null) {
+			mime=defaultMime;
+		}
+		return mime;
+	}
 	
 	public String formatDate(long time) {
 		Calendar calendar = Calendar.getInstance();
@@ -80,10 +108,82 @@ public class MediaFileRequestHandler implements SageMediaRequestHandler {
 		return 0;
 	}
 
+	/**
+	 * splits a files into pseudo seglen (seconds) chunks for hsl streaming.  This is not
+	 * exact, and is simply an estimate in how it splits
+	 * @param req
+	 * @param resp
+	 * @param sagefile
+	 * @param seglen
+	 * @throws IOException
+	 */
+	private void processM3U(HttpServletRequest req, HttpServletResponse resp, Object sagefile, int seglen) throws IOException {
+		File[] files=MediaFileAPI.GetSegmentFiles(sagefile);
+		
+//		#EXTM3U
+//		#EXT-X-PLAYLIST-TYPE:VOD
+//		#EXT-X-TARGETDURATION:10
+//		#EXT-X-VERSION:3
+//		#EXT-X-MEDIA-SEQUENCE:0
+//		#EXTINF:10.0,
+//		http://example.com/movie1/fileSequenceA.ts		
+//		#EXTINF:10.0,
+//		http://example.com/movie1/fileSequenceB.ts
+//		#EXTINF:10.0,
+//		http://example.com/movie1/fileSequenceC.ts
+//		#EXTINF:9.0,
+//		http://example.com/movie1/fileSequenceD.ts
+//		#EXT-X-ENDLIST		
+
+		int mfid = MediaFileAPI.GetMediaFileID(sagefile);
+	
+		StringBuilder sb = new StringBuilder();
+		sb.append("#EXTM3U\r\n");
+		sb.append("#EXT-X-PLAYLIST-TYPE:VOD\r\n");
+		sb.append("#EXT-X-TARGETDURATION:"+seglen+"\r\n");
+		sb.append("#EXT-X-MEDIA-SEQUENCE:0\r\n");
+		// for range headers
+		sb.append("#EXT-X-VERSION:4\r\n");
+		for (int i=0;i<files.length;i++) {
+			String mfpart = getOrigUrl(req) +String.valueOf(mfid)+ "/"+String.valueOf(i)+"/" + String.valueOf(i);
+			if (req.getAttribute(SagexServlet.DEBUG_ATTRIBUTE)!=null) {
+				mfpart = (mfpart + ".debug."+parseFileExtension(files[i]));	
+			} else {
+				mfpart = (mfpart + "."+parseFileExtension(files[i]));
+			}			
+			long segs = (MediaFileAPI.GetDurationForSegment(sagefile, i)/1000)/seglen;
+			long segbytes = files[i].length()/segs;
+			for (int k=0;k<segs;k++) {
+				sb.append("#EXTINF:" + seglen + ".0,no desc\r\n");
+				sb.append("#EXT-X-BYTERANGE:"+String.valueOf(segbytes)+"@"+String.valueOf(k*segbytes)+"\r\n");
+				sb.append(mfpart + "\r\n");
+			}
+			log.debug("Created " + segs + " segments for file " + files[i]);
+		}
+		sb.append("#EXT-X-ENDLIST\r\n");
+		
+//		resp.setHeader("Accept-Ranges", "bytes");
+		resp.setHeader("Connection", "close");
+		
+		resp.setContentLength(sb.length());
+		resp.setContentType(getMimeType("m3u8", "audio/mpegurl"));
+		
+		log.debug("\r\n" + sb.toString());
+		
+		resp.getWriter().write(sb.toString());
+		resp.flushBuffer();
+	}
+	
+	
 	private void processM3U(HttpServletRequest req, HttpServletResponse resp,
 			Object sagefile) throws IOException {
 
 		File[] files=MediaFileAPI.GetSegmentFiles(sagefile);
+		
+		if (req.getParameter(ARG_SEGLENGTH)!=null) {
+			processM3U(req, resp, sagefile, Integer.parseInt(req.getParameter(ARG_SEGLENGTH)));
+			return;
+		}
 		
 //		#EXTM3U
 //		fileSequenceA.ts
@@ -107,31 +207,30 @@ public class MediaFileRequestHandler implements SageMediaRequestHandler {
 		int mfid = MediaFileAPI.GetMediaFileID(sagefile);
 		
 		StringBuilder sb = new StringBuilder();
-		sb.append("#EXTM3U\n");
-		sb.append("#EXT-X-PLAYLIST-TYPE:VOD\n");
-		sb.append("#EXT-X-TARGETDURATION:"+getDurationInSeconds(sagefile)+"\n");
+		sb.append("#EXTM3U\r\n");
+		sb.append("#EXT-X-PLAYLIST-TYPE:VOD\r\n");
+		sb.append("#EXT-X-TARGETDURATION:"+getDurationInSeconds(sagefile)+"\r\n");
 		// eventually for range headers
-		sb.append("#EXT-X-VERSION:4\n");
-		sb.append("#EXT-X-MEDIA-SEQUENCE:0\n");
+		sb.append("#EXT-X-VERSION:4\r\n");
+		sb.append("#EXT-X-MEDIA-SEQUENCE:0\r\n");
 		for (int i=0;i<files.length;i++) {
-			//String mfpart = "/sagex/media/mediafile/"+String.valueOf(mfid)+"/"+String.valueOf(i)+"/" + String.valueOf(i);
 			String mfpart = getOrigUrl(req) +String.valueOf(mfid)+ "/"+String.valueOf(i)+"/" + String.valueOf(i);
-			sb.append("#EXTINF:" + getDurationInSeconds(sagefile, i) + ".0,\n");
+			sb.append("#EXTINF:" + getDurationInSeconds(sagefile, i) + ".0,no desc\r\n");
 			if (req.getAttribute(SagexServlet.DEBUG_ATTRIBUTE)!=null) {
-				sb.append(mfpart + ".debug."+parseFileExtension(files[i])+"\n");	
+				sb.append(mfpart + ".debug."+parseFileExtension(files[i])+"\r\n");	
 			} else {
-				sb.append(mfpart + "."+parseFileExtension(files[i])+"\n");
+				sb.append(mfpart + "."+parseFileExtension(files[i])+"\r\n");
 			}
 		}
-		sb.append("#EXT-X-ENDLIST\n");
+		sb.append("#EXT-X-ENDLIST\r\n");
 		
 		resp.setHeader("Accept-Ranges", "bytes");
-		resp.setHeader("Connection", "close");
+//		resp.setHeader("Connection", "close");
 		
 		resp.setContentLength(sb.length());
-		resp.setContentType("audio/mpegurl");
+		resp.setContentType(getMimeType("m3u8", "audio/mpegurl"));
 		
-		log.debug("\n" + sb.toString());
+		log.debug("\r\n" + sb.toString());
 		
 		resp.getWriter().write(sb.toString());
 		resp.flushBuffer();
@@ -148,13 +247,6 @@ public class MediaFileRequestHandler implements SageMediaRequestHandler {
 	 
 	    // Reconstruct original requesting URL
 	    String url = scheme+"://"+serverName+":"+serverPort+"/sagex/media/mediafile/";
-//	    if (pathInfo != null) {
-//	        url += pathInfo;
-//	    }
-	    
-//	    if (queryString != null) {
-//	        url += "?"+queryString;
-//	    }
 	    
 	    return url;
 	}
@@ -202,7 +294,7 @@ public class MediaFileRequestHandler implements SageMediaRequestHandler {
 		} else if (MediaFileAPI.IsPictureFile(sagefile)) {
 			setHeader(resp, "Content-Type","image/jpeg", req);
 		} else {
-			setHeader(resp, "Content-Type","application/octet-stream", req);
+			setHeader(resp, "Content-Type", getMimeType(file, "application/octet-stream"), req);
 		}
 
 		String forceMime = req.getParameter("force-mime");

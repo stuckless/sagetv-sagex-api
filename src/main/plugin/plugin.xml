@@ -21,6 +21,9 @@
   </Package>
 
   <ReleaseNotes>
+7.1.9.23
+* Added tweaks to the streaming code 
+
 7.1.9.22
 * Fixed /mediafile/ handler to handle http range headers
 * Added the ability to return .m3u8 video playlists from /mediafile/ handler 
