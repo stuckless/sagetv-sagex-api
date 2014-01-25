@@ -16,11 +16,15 @@
   <Package>
     <PackageType>JAR</PackageType>
     <!--<Location>http://customsagetv.googlecode.com/files/sagex-api-@@version@@.zip</Location>-->
-    <Location>https://github.com/stuckless/sagetv-sagex-api/releases/download/v@@version@@/sagex-api-@@version@@.zip</Location>
+    <Location>http://github.com/stuckless/sagetv-sagex-api/releases/download/v@@version@@/sagex-api-@@version@@.zip</Location>
     <MD5>@@jar-checksum@@</MD5>
   </Package>
 
   <ReleaseNotes>
+7.1.9.23
+* Modified download url to use http and not https 
+
+
 7.1.9.23
 * Added tweaks to the streaming code 
 
