@@ -18,6 +18,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import sagex.api.AiringAPI;
 import sagex.api.MediaFileAPI;
 import sagex.api.Utility;
 import sagex.remote.SagexServlet.SageHandler;
@@ -170,7 +171,12 @@ public class MediaHandler implements SageHandler {
             int mfid = Integer.parseInt(id);
             Object o  = MediaFileAPI.GetMediaFileForID(mfid);
             if (o==null) {
-                throw new Exception("Unknown MediaFile: " + id);
+            	// attempt to see if this is an airing ID that we can convert to
+            	// a mediafile
+            	o = AiringAPI.GetMediaFileForAiring(AiringAPI.GetAiringForID(mfid));
+            	if (o==null) {
+            		throw new Exception("Unknown MediaFile: " + id);
+            	}
             }
             return o;
         } catch (Exception e) {

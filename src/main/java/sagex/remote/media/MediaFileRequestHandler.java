@@ -38,6 +38,8 @@ import sagex.util.LogProvider;
 //Header: Server=nginx/1.2.5
 
 public class MediaFileRequestHandler implements SageMediaRequestHandler {
+	public static final long BUF_SIZE = 1024*1024;
+			
 	public static final Map<String,String> MimeTypes = new HashMap<String,String>();
 	static {
 		MimeTypes.put("ts", "video/MP2T");
@@ -87,7 +89,7 @@ public class MediaFileRequestHandler implements SageMediaRequestHandler {
 			// subtitle files... need to handle subtitles at some point.
 			
 			log.info("MediaFile not found for " + req.getPathInfo());
-			resp.sendError(404, "File not found");
+			resp.sendError(404, "File not found: " + file);
 			return;
 		}
 
@@ -283,6 +285,11 @@ public class MediaFileRequestHandler implements SageMediaRequestHandler {
 	public void doRangeRequestWithStatus(File file, HttpServletRequest req, HttpServletResponse resp, Object sagefile, long[] ranges)
 			throws IOException {
 		
+		boolean liveStream = MediaFileAPI.IsFileCurrentlyRecording(sagefile);
+		if (liveStream) {
+			log.debug("Live Streaming: " + file);
+		}
+		
 		setHeader(resp, "Accept-Ranges", "bytes", req);
 		setHeader(resp, "Connection", "keep-alive", req);
 		setHeader(resp, "Date", formatDate(System.currentTimeMillis()), req);
@@ -302,30 +309,57 @@ public class MediaFileRequestHandler implements SageMediaRequestHandler {
 			setHeader(resp, "Content-Type", forceMime, req);						
 		}
 		
+		long fileLen = file.length();
+		
 		boolean rangeRequest = false;
 		RandomAccessFile raf = new RandomAccessFile(file, "r");
 		try {
 			if (ranges==null) {
 				resp.setStatus(200);
-				ranges = new long[] {0, file.length()-1};
+				ranges = new long[] {0, fileLen-1};
 				rangeRequest=false;
 			} else {
 				resp.setStatus(206);
 				rangeRequest=true;
 			}
+
+			// account for seeking past the file
+			if (ranges[1]>=fileLen) {
+				log.debug("End Range is beyond the end of file... fixing...");
+				ranges[1]=fileLen-1;
+			}
+			
+			if (ranges[0]>=fileLen) {
+				log.debug("Attempting to seek beyond the end of the file, repositioning it to the end of file");
+				ranges[0] = fileLen-BUF_SIZE;
+			}
+			
+			if (ranges[0]<0) {
+				log.debug("Fixing start range, since it is less than 0");
+				ranges[0] = 0;
+			}
 			
 			raf.seek(ranges[0]);
 			FileInputStream fis = new FileInputStream(raf.getFD());
+
 			long size = ranges[1] - ranges[0] + 1;
-			setHeader(resp, "Content-Length", String.valueOf(size), req);
+			if (size<0) size=0;
+			if (!liveStream) {
+				setHeader(resp, "Content-Length", String.valueOf(size), req);
+			}
 			
 			if (rangeRequest) {
-				String contentRange = "bytes "+String.valueOf(ranges[0])+"-"+String.valueOf((ranges[1]))+"/"+String.valueOf(file.length());
-				setHeader(resp, "Content-Range", contentRange, req);
+				if (liveStream) {
+					String contentRange = "bytes "+String.valueOf(ranges[0])+"-"+String.valueOf((ranges[1]));
+					setHeader(resp, "Content-Range", contentRange, req);
+				} else {
+					String contentRange = "bytes "+String.valueOf(ranges[0])+"-"+String.valueOf((ranges[1]))+"/"+String.valueOf(fileLen);
+					setHeader(resp, "Content-Range", contentRange, req);
+				}
 			}
 			
 			long counted = 0;
-			int bufSize = (int) Math.min(size, 64 * 1024);
+			int bufSize = (int) Math.min(size, BUF_SIZE);
 			byte[] buf = new byte[bufSize];
 			int curRead = 0;
 			if (rangeRequest) {
@@ -338,10 +372,19 @@ public class MediaFileRequestHandler implements SageMediaRequestHandler {
 			
 			OutputStream os = resp.getOutputStream();
 			long logit = System.currentTimeMillis()+logticker;
-			while (counted < size) {
-				curRead = fis.read(buf, 0, (int) Math.min(bufSize, size - counted));
-				if (curRead == 0 || curRead == -1)
+			while (counted < size || liveStream) {
+				curRead = fis.read(buf, 0, bufSize);
+				if (curRead == 0 || curRead == -1) {
+					liveStream = MediaFileAPI.IsFileCurrentlyRecording(sagefile); 
+					if (liveStream) {
+						// file is recording, so let's wait a little...
+						Thread.sleep(200);
+						continue;
+					}
+					
+					// not livestreaming, so just break out
 					break;
+				}
 				counted += curRead;
 				os.write(buf, 0, curRead);
 				os.flush();
@@ -377,7 +420,12 @@ public class MediaFileRequestHandler implements SageMediaRequestHandler {
 		if (bytes.startsWith("-")) {
 			return new long[] { 0, Long.valueOf(bytes.substring(1)) };
 		} else if (bytes.endsWith("-")) {
-			return new long[] { Long.valueOf(bytes.substring(0, bytes.length() - 1)), fileLength-1 };
+			try {
+				return new long[] { Long.valueOf(bytes.substring(0, bytes.length() - 1)), fileLength-1 };
+			} catch (Throwable t) {
+				// number way too large
+				return new long[] {fileLength-BUF_SIZE, fileLength-1};
+			}
 		} else {
 			int pos = bytes.indexOf("-");
 			return new long[] { Long.valueOf(bytes.substring(0, pos)), Long.valueOf(bytes.substring(pos + 1)) };
