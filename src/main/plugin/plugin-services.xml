@@ -12,7 +12,7 @@
   <Webpage><![CDATA[http://forums.sagetv.com/forums/showthread.php?t=36044]]></Webpage>
 
   <Dependency>
-    <Plugin>Jetty</Plugin>
+    <Plugin>jetty</Plugin>
     <MinVersion>1.7</MinVersion>
   </Dependency>
 

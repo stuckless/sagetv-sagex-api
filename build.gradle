@@ -1,0 +1,208 @@
+plugins {
+    id "com.jfrog.bintray" version "1.4"
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+ext {
+    plugin_name = "sagex-api"
+    plugin_desc = "SageTV API Extensions and Remote APIs"
+    plugin_longdesc = "Wrapper for SageTV APIs, adding plugin extensions, remote REST extensions, and other general utility type functions"
+}
+
+archivesBaseName = "${plugin_name}"
+group 'sagex.plugins'
+version '9.0.0'
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+configurations {
+    configure
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    jcenter()
+    maven {
+        url  "http://dl.bintray.com/opensagetv/maven"
+    }
+    maven {
+        url  "http://dl.bintray.com/stuckless/sagetvphoenix"
+    }
+}
+
+dependencies {
+    // used by the configure target
+    configure 'sagex:sagex.plugin.resolver:1.5'
+    configure 'dom4j:dom4j:1.6.1'
+
+    // the plugin jars should be extrated here
+    compile fileTree(dir: 'lib', include: '*.jar')
+    // https://mvnrepository.com/artifact/log4j/log4j
+    compile group: 'log4j', name: 'log4j', version: '1.2.17'
+
+    // compile time jars
+    testCompile 'org.mockito:mockito-all:1.9.5'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+jar {
+    manifest {
+        attributes(
+                "Implementation-Title": "${plugin_name}",
+                "Implementation-Version": version
+        )
+    }
+}
+
+// setup testing
+test {
+    // set a system property for the test JVM(s)
+    systemProperty 'java.library.path', file('lib').getAbsolutePath()
+
+    // explicitly include or exclude tests
+    include '**'
+    // if you need to exclude some tests
+    // exclude 'test/junit/**'
+
+    // show standard out and standard error of the test JVM(s) on the console
+    testLogging.showStandardStreams = true
+
+    // set heap size for the test JVM(s)
+    minHeapSize = "128m"
+    maxHeapSize = "512m"
+
+    // listen to events in the test execution lifecycle
+    beforeTest { descriptor ->
+        logger.lifecycle("Running test: " + descriptor)
+    }
+
+    // listen to standard out and standard error of the test JVM(s)
+    onOutput { descriptor, event ->
+        logger.lifecycle("Test: " + descriptor + ": " + event.message )
+    }
+
+    // if you need to set another working dir for tests
+    //workingDir 'target/testing/'
+}
+
+clean {
+    // extra folders to clean
+    delete 'target'
+    delete 'bin'
+}
+
+task configureDependencies << {
+    // remove all dependency jars
+    ant.delete(dir:"lib", includes: "*.*",failonerror:"false")
+
+    ant.taskdef(
+            name: 'sagetvdeps',
+            classname: 'sagex.plugin.resolver.ant.SageDependencies',
+            classpath: configurations.configure.asPath
+    )
+
+    ant.sagetvdeps(
+            downloadsagejar:"true",
+            jardir:"lib",
+            pluginname:"sagex-api,sagex-api-services,sagexmlinfo,htmlparser",
+            devpluginsxml:"src/main/plugin/plugin.xml,src/main/plugin/plugin-services.xml"
+    )
+
+    // delete the plugin jar if it's downloaded as a dependency
+    ant.delete(file:"lib/${plugin_name}.jar", failonerror:"false")
+}
+
+task configure(dependsOn: configureDependencies) {
+}
+
+// after a clean eclipse we need to download the configuration dependencies and make sure eclipse
+// target will have the required deps
+cleanEclipse.finalizedBy configure
+
+task packagePlugin(type: Zip, dependsOn: jar) {
+    baseName "${plugin_name}"
+    from "build/libs/"
+    include "${plugin_name}-*.jar"
+    rename("${plugin_name}-${version}.jar","${plugin_name}.jar")
+}
+
+task packagePluginManifest << {
+    // note Copy will always overwrite, so we'll have clean files to manipulate
+    copy {
+        from 'src/main/plugin/plugin.xml'
+        into 'build/tmp/'
+    }
+
+    ant.checksum (file:"build/distributions/${plugin_name}-${version}.zip", property:"md5_jar")
+    ant.tstamp {
+        format(property:"lastmodified", pattern:"yyyy.MM.dd")
+    }
+
+    ant.replace(file:"build/tmp/plugin.xml", summary:"yes") {
+        replacefilter(token: "@@last-modified@@", value: ant.lastmodified)
+        replacefilter(token: "@@version@@", value: version)
+        replacefilter(token: "@@jar-checksum@@", value: ant.md5_jar)
+        replacefilter(token: "@@plugin-name@@", value: plugin_name)
+        replacefilter(token: "@@plugin-desc@@", value: plugin_desc)
+        replacefilter(token: "@@plugin-longdesc@@", value: plugin_longdesc)
+    }
+
+    copy {
+        from 'build/tmp/plugin.xml'
+        into 'build/distributions/'
+        rename ('plugin.xml', "${plugin_name}-${version}.xml")
+    }
+
+    // update the deployed manifest
+    copy {
+        from 'build/tmp/plugin.xml'
+        into 'deployed/'
+    }
+}
+packagePluginManifest.dependsOn packagePlugin
+
+/**
+ * Entry point for creating all plugins with manifest, making it ready for upload
+ */
+task dist <<{
+}
+dist.dependsOn packagePluginManifest
+
+// uploading to BinTray
+// use ./gradlew bintrayUpload
+bintray {
+    user = System.getenv("BINTRAY_USER")
+    key = System.getenv("BINTRAY_API");
+
+    filesSpec {
+        from ('build/distributions/') {
+            include "*${version}*"
+        }
+        into "${plugin_name}"
+    }
+
+    dryRun = false //Whether to run this as dry-run, without deploying
+    publish = true //If version should be auto published after an upload
+    pkg {
+        repo = 'sagetv-plugins'
+        name = "${plugin_name}"
+        userOrg = 'opensagetv'
+        desc = "${plugin_desc}"
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/stuckless/sagetv-phoenix-core'
+        labels = ['sagetv', 'sagetv-plugin']
+        publicDownloadNumbers = true
+        //attributes= ['a': ['ay1', 'ay2'], 'b': ['bee'], c: 'cee'] //Optional package-level attributes
+        version {
+            name = "${version}"
+            desc = "${plugin_desc}"
+            vcsTag = "${version}"
+            //attributes = ['gradle-plugin': 'com.use.less:com.use.less.gradle:gradle-useless-plugin']
+        }
+    }
+}

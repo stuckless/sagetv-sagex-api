@@ -1,8 +1,16 @@
 /target/
+/build/
 /bin/
 /logs/
 /tags/
 /html/
+/lib/
+/libs/
+/deployed/
+.gradle/
+.idea/
+.classpath
+.project
 *.class
 *.class
 
@@ -10,3 +18,5 @@
 *.jar
 *.war
 *.ear
+*.log
+*.iml
