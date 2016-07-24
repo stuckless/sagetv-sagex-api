@@ -14,13 +14,20 @@ ext {
 
 archivesBaseName = "${plugin_name}"
 group 'sagex.plugins'
-version '9.0.0'
+version '9.0.0.0'
 
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
 
 configurations {
     configure
+}
+
+sourceSets {
+    main {
+        java.srcDirs = ['src/main/java','src/generated/java','src/tools/java']
+        resources.srcDirs = ['src/main/resources','src/generated/resources','src/tools/resources']
+    }
 }
 
 repositories {
@@ -45,12 +52,16 @@ dependencies {
     // https://mvnrepository.com/artifact/log4j/log4j
     compile group: 'log4j', name: 'log4j', version: '1.2.17'
 
+    // used for the api generator
+    compile group: 'org.apache.ant', name: 'ant', version: '1.9.7'
+
     // compile time jars
     testCompile 'org.mockito:mockito-all:1.9.5'
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
 
 jar {
+    exclude('org/**')
     manifest {
         attributes(
                 "Implementation-Title": "${plugin_name}",
@@ -109,7 +120,7 @@ task configureDependencies << {
     ant.sagetvdeps(
             downloadsagejar:"true",
             jardir:"lib",
-            pluginname:"sagex-api,sagex-api-services,sagexmlinfo,htmlparser",
+            pluginname:"sagex-api,sagex-api-services,sagexmlinfo,htmlparser,log4j",
             devpluginsxml:"src/main/plugin/plugin.xml,src/main/plugin/plugin-services.xml"
     )
 
@@ -194,7 +205,7 @@ bintray {
         userOrg = 'opensagetv'
         desc = "${plugin_desc}"
         licenses = ['Apache-2.0']
-        vcsUrl = 'https://github.com/stuckless/sagetv-phoenix-core'
+        vcsUrl = 'https://github.com/stuckless/sagetv-sagex-api'
         labels = ['sagetv', 'sagetv-plugin']
         publicDownloadNumbers = true
         //attributes= ['a': ['ay1', 'ay2'], 'b': ['bee'], c: 'cee'] //Optional package-level attributes
@@ -205,4 +216,21 @@ bintray {
             //attributes = ['gradle-plugin': 'com.use.less:com.use.less.gradle:gradle-useless-plugin']
         }
     }
+}
+
+task createVersion << {
+    def versionFile = new File("src/generated/java/sagex/api/Version.java");
+    versionFile.text = "\
+package sagex.api;\n\
+public class Version {\n\
+    public static final String VERSION = \"${version}\";\n\
+    public static String GetVersion() {\n\
+       return VERSION;\n\
+    }\n\
+}\n"
+}
+
+task generateApi(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'org.jdna.sage.api.generator.Main'
 }

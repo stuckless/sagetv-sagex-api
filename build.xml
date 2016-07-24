@@ -15,6 +15,7 @@
 	<!-- <property name="gwt.sdk" location="" /> -->
 
 	<property name="src.dir" location="src/main/java" />
+	<property name="gen.dir" location="src/generated/java" />
 	<property name="target" location="target" />
 	<property name="build.dir" location="${target}/build" />
 	<property name="dist.dir" location="${target}/dist" />
@@ -30,16 +31,14 @@
 
 	<path id="SageAPI.classpath">
 		<pathelement location="bin" />
-		<pathelement location="libs/htmlparser.jar" />
-		<pathelement location="libs/log4j-1.2.15.jar" />
-		<pathelement location="libs/metadata-updater-1.5.jar" />
-		<pathelement location="${sage.home}/Sage.jar" />
+		<pathelement location="build/classes" />
+		<pathelement location="build/" />
+		<fileset dir="lib" includes="*.jar" />
 	</path>
 
 	<path id="AppClasspath">
-		<pathelement location="${sage.home}/Sage.jar" />
 		<pathelement location="target/classes" />
-		<fileset dir="libs" includes="*.jar" />
+		<fileset dir="lib" includes="*.jar" />
 	</path>
 
 	<target name="package" depends="init,build,makeJar,javadoc,package-javadoc">
@@ -52,7 +51,7 @@
 		</zip>
 	</target>
 
-	<target name="build" depends="cleanGeneratedAPI,buildVersion,generateSageAPI">
+	<target name="build" depends="">
 		<mkdir dir="target/classes/jetty" />
 		<copy todir="target/classes/jetty">
 			<fileset dir="src/main/jetty" includes="**/*.xml" />
@@ -62,20 +61,6 @@
 		</copy>
 		<javac debug="true" classpathref="AppClasspath" source="1.5" target="1.5" srcdir="${src.dir}" destdir="target/classes">
 		</javac>
-	</target>
-
-	<target name="buildVersion" if="createAPI">
-		<mkdir dir="${src.dir}/sagex/api/" />
-		<echo file="#{src.dir}/sagex/api/Version.java">
-			package sagex.api;
-
-			public class Version {
-			    public static final String VERSION = "${version}";
-			    public static String GetVersion() {
-					return VERSION;
-				}
-			}
-		</echo>
 	</target>
 
 	<target name="makeJar">
@@ -128,63 +113,9 @@
 		</javadoc>
 	</target>
 
-	<target name="cleanGeneratedAPI" if="createAPI">
-	</target>
-
-	<target name="generateSageAPI" if="createAPI" depends="init">
-		<java classname="org.jdna.sage.api.generator.Main" classpathref="SageAPI.classpath" fork="true" />
-	</target>
-
 	<target name="package-javadoc" if="createJAVADOC">
 		<zip destfile="${target}/${name}-javadoc-${version}.zip">
 			<zipfileset dir="target/docs/" prefix="sagex-api-javadoc" />
 		</zip>
-	</target>
-
-	<target name="package-system">
-		<delete dir="${dist.dir}/packages" />
-		<mkdir dir="${dist.dir}/packages" />
-		<zip destfile="${dist.dir}/packages/${name}-services-${version}.zip">
-			<zipfileset file="src/main/services/sagex.js" prefix="sagex/services" />
-			<zipfileset file="src/main/jetty/contexts/sagex.xml" prefix="jetty/contexts/" />
-		</zip>
-	</target>
-
-	<target name="package-jar">
-		<zip destfile="${dist.dir}/packages/${name}-${version}.zip">
-			<zipfileset file="${target}/sagex-api.jar" prefix="" />
-		</zip>
-	</target>
-
-	<!-- Create the plugin's package for SageTV 7.0 and later -->
-	<target name="dist-plugin" depends="package, package-system, package-jar" description="Creates all the zips, plugins, etc (calls basic jar packager as well)">
-		<copy tofile="${dist.dir}/packages/${name}-${version}.xml" file="src/main/plugin/plugin.xml" />
-		<copy tofile="${dist.dir}/packages/${name}-services-${version}.xml" file="src/main/plugin/plugin-services.xml" />
-
-		<checksum file="${dist.dir}/packages/${name}-services-${version}.zip" property="md5.system" />
-		<checksum file="${dist.dir}/packages/${name}-${version}.zip" property="md5.jar" />
-
-		<tstamp>
-			<format property="last-modified" pattern="yyyy.MM.dd" />
-		</tstamp>
-
-		<replace file="${dist.dir}/packages/${name}-${version}.xml" summary="yes">
-			<replacefilter token="@@last-modified@@" value="${last-modified}" />
-			<replacefilter token="@@version@@" value="${version}" />
-			<replacefilter token="@@system-checksum@@" value="${md5.system}" />
-			<replacefilter token="@@jar-checksum@@" value="${md5.jar}" />
-		</replace>
-
-		<replace file="${dist.dir}/packages/${name}-services-${version}.xml" summary="yes">
-			<replacefilter token="@@last-modified@@" value="${last-modified}" />
-			<replacefilter token="@@version@@" value="${version}" />
-			<replacefilter token="@@system-checksum@@" value="${md5.system}" />
-			<replacefilter token="@@jar-checksum@@" value="${md5.jar}" />
-		</replace>
-
-		<!-- copy to the s7 local dir for testing -->
-		<copy todir="${sage.home}/DeveloperPlugins/" failonerror="false">
-			<fileset dir="${dist.dir}/packages/" />
-		</copy>
 	</target>
 </project>
