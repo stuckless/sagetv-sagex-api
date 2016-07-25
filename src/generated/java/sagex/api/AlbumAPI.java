@@ -2,7 +2,7 @@ package sagex.api;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 24/07/16 5:40 PM
+ * Generated Date/Time: 24/07/16 7:30 PM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/AlbumAPI.html'>AlbumAPI</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -19,7 +19,7 @@ public static java.lang.String[] GetAllMusicArtists () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns all of the artists for the music files in the library
 
 Returns:
@@ -40,7 +40,7 @@ public static java.lang.String[] GetAllMusicGenres () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns all of the genres for the music files in the library
 
 Returns:
@@ -61,7 +61,7 @@ public static Object[] GetAlbums () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns all of the Album objects in the library. This list is derived from the music files in the library.
 
 Returns:
@@ -85,7 +85,7 @@ public static Object[] GetAllMusicForArtist (java.lang.String Artist) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets all of the Airings (a 'meta' object referring to the music file in this case)
  that have an artist that matches the passed in artist
 
@@ -112,7 +112,7 @@ public static Object[] GetAllMusicForGenre (java.lang.String Genre) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets all of the Airings (a 'meta' object referring to the music file in this case)
  that have a genre that matches the passed in genre
 
@@ -139,7 +139,7 @@ public static Object[] GetAlbumTracks (Object Album) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets all of the Airings (a 'meta' object referring to the music file in this case)
  that are on this Album in the library. The returned list is sorted by the track number of each song.
 
@@ -167,7 +167,7 @@ public static int GetNumberOfTracks (Object Album) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the number of tracks that are on this Album
 
 Parameters:
@@ -197,7 +197,7 @@ public static java.lang.String GetAlbumArtist (Object Album) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the artist for this Album. If there's more than one artist it will return the
  localized string for the resource "Various_Artists". This defaults to "Various".
 
@@ -227,7 +227,7 @@ public static Object GetAlbumArt (Object Album) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the album art for this Album.
 
 Parameters:
@@ -256,7 +256,7 @@ public static java.lang.String GetAlbumName (Object Album) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the name/title for this Album
 
 Parameters:
@@ -285,7 +285,7 @@ public static boolean HasAlbumArt (Object Album) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if there is album art for this Album
 
 Parameters:
@@ -314,7 +314,7 @@ public static boolean IsAlbumObject (java.lang.Object Album) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the argument is an Album object
 
 Parameters:
@@ -343,7 +343,7 @@ public static java.lang.String GetAlbumGenre (Object Album) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the genre for this Album
 
 Parameters:
@@ -372,7 +372,7 @@ public static java.lang.String GetAlbumYear (Object Album) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the year this Album was recorded in
 
 Parameters:

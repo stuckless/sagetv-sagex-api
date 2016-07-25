@@ -28,6 +28,10 @@ sourceSets {
         java.srcDirs = ['src/main/java','src/generated/java','src/tools/java']
         resources.srcDirs = ['src/main/resources','src/generated/resources','src/tools/resources']
     }
+    test {
+        java.srcDirs = ['src/test/java']
+        resources.srcDirs = ['src/test/resources']
+    }
 }
 
 repositories {
@@ -233,4 +237,27 @@ public class Version {\n\
 task generateApi(type: JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
     main = 'org.jdna.sage.api.generator.Main'
+}
+
+task gendocs(type: Javadoc) {
+    //options.stylesheetFile = new File("./assets/doc_style.css")
+    version = version
+    title = "SageTV sagex ${version} API"
+    options.windowTitle = "SageTV sagex API"
+    options.memberLevel = JavadocMemberLevel.PROTECTED
+    options.author = true
+    //options.linksOffline('http://d.android.com/reference', System.getenv("ANDROID_HOME") + '/docs/reference')
+    destinationDir = new File("build/docs/api")
+    source = sourceSets.main.allJava
+    classpath += configurations.compile
+    exclude "org/**"
+}
+
+// Java 8 is really strict on the JavaDoc front... We need to turn off the lints
+if (JavaVersion.current().isJava8Compatible()) {
+    allprojects {
+        tasks.withType(Javadoc) {
+            options.addStringOption('Xdoclint:none', '-quiet')
+        }
+    }
 }

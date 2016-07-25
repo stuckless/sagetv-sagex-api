@@ -2,7 +2,7 @@ package sagex.api;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 24/07/16 5:40 PM
+ * Generated Date/Time: 24/07/16 7:30 PM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/PlaylistAPI.html'>PlaylistAPI</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -20,7 +20,7 @@ public static void AddToPlaylist (Object Playlist, java.lang.Object NewItem) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Adds the specified item to this Playlist. The item may be either an Airing, Album, MediaFile or another Playlist.
 
 Parameters:
@@ -46,7 +46,7 @@ public static java.lang.String GetName (Object Playlist) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the name of the specified Playlist
 
 Parameters:
@@ -75,7 +75,7 @@ public static int GetNumberOfPlaylistItems (Object Playlist) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the number of items in the specified Playlist
 
 Parameters:
@@ -105,7 +105,7 @@ public static java.lang.Object GetPlaylistItemAt (Object Playlist, int Index) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the item in this Playlist at the specified index
 
 Parameters:
@@ -136,7 +136,7 @@ public static java.lang.String GetPlaylistItemTypeAt (Object Playlist, int Index
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the type of item in the Playlist at the specified index
 
 Parameters:
@@ -164,7 +164,7 @@ public static java.lang.Object[] GetPlaylistItems (Object Playlist) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the list of items in the specified Playlist
 
 Parameters:
@@ -189,7 +189,7 @@ public static void InsertIntoPlaylist (Object Playlist, int InsertIndex, java.la
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Inserts a new item into the specified Playlist at the specified position.
 
 Parameters:
@@ -213,7 +213,7 @@ public static void MovePlaylistItemUp (Object Playlist, int Index) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Swaps the position of the item at the specified index in the Playlist with the item at the position (Index - 1)
 
 Parameters:
@@ -236,7 +236,7 @@ public static void MovePlaylistItemDown (Object Playlist, int Index) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Swaps the position of the item at the specified index in the Playlist with the item at the position (Index   1)
 
 Parameters:
@@ -259,7 +259,7 @@ public static void RemovePlaylistItem (Object Playlist, java.lang.Object Item) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Removes the specified item from the Playlist. If this item appears in the Playlist more than once, only the first occurrence will be removed.
 
 Parameters:
@@ -282,7 +282,7 @@ public static void RemovePlaylistItemAt (Object Playlist, int ItemIndex) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Removes the specified item at the specified index from the Playlist.
 
 Parameters:
@@ -305,7 +305,7 @@ public static void SetName (Object Playlist, java.lang.String Name) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the name for this Playlist
 
 Parameters:
@@ -331,7 +331,7 @@ public static boolean IsPlaylistObject (java.lang.Object Playlist) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the passed in argument is a Playlist object
 
 Parameters:
@@ -356,7 +356,7 @@ public static Object[] GetPlaylists () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets a list of all of the Playlists in the database
 
 Returns:
@@ -377,7 +377,7 @@ public static void RemovePlaylist (Object Playlist) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Removes a specified Playlist from the databse completely. The files in the Playlist will NOT be removed.
 
 Parameters:
@@ -404,7 +404,7 @@ public static boolean DoesPlaylistHaveVideo (Object Playlist) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified Playlist contains any video files, false otherwise
 
 Parameters:
@@ -435,7 +435,7 @@ public static Object AddPlaylist (java.lang.String Name) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Creates a new Playlist object
 
 Parameters:
@@ -466,7 +466,7 @@ public static Object GetNowPlayingList () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the 'Now Playing' playlist. This can be used as a local, client-specific playlist which
  songs can be added to and then played as a temporary set of songs. i.e. usually playlists are shared between
  all of the clients that are connected to a SageTV system, but this one is NOT shared
@@ -501,7 +501,7 @@ public static java.lang.String GetPlaylistProperty (Object Playlist, java.lang.S
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a property value for a specified Playlist. This must have been set using SetPlaylistProperty.
  Returns the empty string when the property is undefined.
 
@@ -535,7 +535,7 @@ public static void SetPlaylistProperty (Object Playlist, java.lang.String Proper
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets a property for this Playlist. This can be any name/value combination (but the name cannot be null). If the value is null;
  then the specified property will be removed from this Playlist. This only impacts the return values from GetPlaylistProperty and has no other side effects.
 
@@ -567,7 +567,7 @@ public static java.util.Properties GetPlaylistProperties (Object Playlist) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a java.util.Properties object that has all of the user-set properties for this Playlist in it.
 
 Parameters:

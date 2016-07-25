@@ -2,7 +2,7 @@ package sagex.api;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 24/07/16 5:40 PM
+ * Generated Date/Time: 24/07/16 7:30 PM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/TranscodeAPI.html'>TranscodeAPI</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -21,7 +21,7 @@ public static java.lang.String[] GetTranscodeFormats () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the names of the different transcode formats
 
 Returns:
@@ -50,7 +50,7 @@ public static java.lang.String GetTranscodeFormatDetails (java.lang.String Forma
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the format details for the specified format name
 
 Parameters:
@@ -80,7 +80,7 @@ public static void AddTranscodeFormat (java.lang.String FormatName, java.lang.St
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Adds the specified transcode format to the list of available formats
 
 Parameters:
@@ -106,7 +106,7 @@ public static void RemoveTranscodeFormat (java.lang.String FormatName) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Removed the specified transcode format to the list of available formats
 
 Parameters:
@@ -138,7 +138,7 @@ public static int AddTranscodeJob (Object SourceMediaFile, java.lang.String Form
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Adds the specified job to the transcoder's queue. Returns a Job ID# for future reference of it.
 
 Parameters:
@@ -180,7 +180,7 @@ public static int AddTranscodeJob (Object SourceMediaFile, java.lang.String Form
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Adds the specified job to the transcoder's queue. Returns a Job ID# for future reference of it. This allows specification of the
  start time and duration for the media which allows extracting a 'clip' from a file.
 
@@ -219,7 +219,7 @@ public static java.lang.String GetTranscodeJobStatus (int JobID) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the status of the specified transcoding job
 
 Parameters:
@@ -252,7 +252,7 @@ public static boolean CancelTranscodeJob (int JobID) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Cancels the specified transcoding ob
 
 Parameters:
@@ -285,7 +285,7 @@ public static Object GetTranscodeJobSourceFile (int JobID) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the source file of the specified transcoding job
 
 Parameters:
@@ -318,7 +318,7 @@ public static java.io.File GetTranscodeJobDestFile (int JobID) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the destination file of the specified transcoding job
 
 Parameters:
@@ -351,7 +351,7 @@ public static boolean GetTranscodeJobShouldKeepOriginal (int JobID) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns whether or not the specified transcoding job retains the original source file
 
 Parameters:
@@ -384,7 +384,7 @@ public static long GetTranscodeJobClipStart (int JobID) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the clip start time for the specified transcode job
 
 Parameters:
@@ -417,7 +417,7 @@ public static long GetTranscodeJobClipDuration (int JobID) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the clip duration for the specified transcode job
 
 Parameters:
@@ -450,7 +450,7 @@ public static java.lang.String GetTranscodeJobFormat (int JobID) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the target format of the specified transcoding job
 
 Parameters:
@@ -477,7 +477,7 @@ public static void ClearTranscodedJobs () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Removes all of the completed transcode jobs from the transcoder queue
 
 Since:
@@ -500,7 +500,7 @@ public static java.lang.Integer[] GetTranscodeJobs () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a list of the job IDs for all the current jobs in the transcode queue.
 
 Returns:
@@ -530,7 +530,7 @@ public static boolean CanFileBeTranscoded (Object MediaFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified MediaFile can be transcoded, false otherwise. Transcoding may be restricted
  by certain formats and also by DRM.
 
@@ -564,7 +564,7 @@ public static float GetTranscodeJobCompletePercent (int JobID) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the percent complete (between 0 and 1 as a float) for a transcode job
 
 Parameters:

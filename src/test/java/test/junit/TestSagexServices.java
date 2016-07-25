@@ -7,6 +7,7 @@ import sagex.SageAPI;
 import sagex.api.MediaFileAPI;
 import sagex.remote.api.ServiceFactory;
 import sagex.stub.StubSageAPI;
+import sagex.util.LogProvider;
 
 public class TestSagexServices extends TestCase {
     public TestSagexServices() {
@@ -17,6 +18,7 @@ public class TestSagexServices extends TestCase {
     }
     
     public void testServices() throws Exception {
+        LogProvider.useSystemOut();
         StubSageAPI api = new StubSageAPI();
         SageAPI.setProvider(api);
         

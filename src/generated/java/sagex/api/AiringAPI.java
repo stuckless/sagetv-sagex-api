@@ -2,7 +2,7 @@ package sagex.api;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 24/07/16 5:40 PM
+ * Generated Date/Time: 24/07/16 7:30 PM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/AiringAPI.html'>AiringAPI</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -21,7 +21,7 @@ public static void SetRecordingName (Object Airing, java.lang.String Name) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the name for this recording. For Timed Recordings this will effect the title  associated attributes.
  For ManualRecordings this will not have any side effects at all.
 
@@ -49,7 +49,7 @@ public static java.lang.String GetRecordingName (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the name for this recording that was set viaSetRecordingName(Airing, String)
 
 
@@ -79,7 +79,7 @@ public static Object GetChannel (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the Channel that this Airing is on
 
 Parameters:
@@ -108,7 +108,7 @@ public static java.lang.String GetAiringChannelName (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the name of the Channel that this Airing is on
 
 Parameters:
@@ -137,7 +137,7 @@ public static java.lang.String GetAiringChannelNumber (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the channel number that this Airing is on
 
 Parameters:
@@ -166,7 +166,7 @@ public static long GetAiringDuration (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the duration of this Airing in milliseconds
 
 Parameters:
@@ -195,7 +195,7 @@ public static long GetAiringStartTime (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the start time of this Airing. The time is in Java time units, which are milliseconds since Jan 1, 1970 GMT
 
 Parameters:
@@ -224,7 +224,7 @@ public static long GetAiringEndTime (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the end time of this Airing. The time is in Java time units, which are milliseconds since Jan 1, 1970 GMT
 
 Parameters:
@@ -253,7 +253,7 @@ public static Object GetShow (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the Show object for this Airing which describes it in further detail (Show contains the title, actors, category, description, etc.)
 
 Parameters:
@@ -280,7 +280,7 @@ public static java.lang.String[] GetAiringRatings (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the list of the field values which correspond to parental ratings control for this Airing
 
 Parameters:
@@ -307,7 +307,7 @@ public static long GetScheduleStartTime (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Get the start time for an airing accounting for any adjustments made due to Manual Recording stop/start time adjustments or adjustments due to favorite padding.
 
 Parameters:
@@ -337,7 +337,7 @@ public static long GetScheduleEndTime (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Get the end time for an airing accounting for any adjustments made due to Manual Recording
  stop/start time adjustments or adjustments due to favorite padding.
 
@@ -368,7 +368,7 @@ public static long GetScheduleDuration (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Get the duration for an airing accounting for any adjustments made due to Manual
  Recording stop/start time adjustments or adjustments due to favorite padding.
 
@@ -398,7 +398,7 @@ public static java.lang.String GetScheduleRecordingRecurrence (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 If this Airing is a time-based recording this will get a description of the recurrence frequency for its recording recurrence
 
 Parameters:
@@ -427,7 +427,7 @@ public static java.lang.String PrintAiringLong (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a lengthy string which is suitable for displaying information about this Airing. This contains nearly all the details of the Airing  its Show
 
 Parameters:
@@ -456,7 +456,7 @@ public static java.lang.String PrintAiringMedium (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a string which is suitable for displaying information about this Airing. This contains the Airing's channel  a short time string as well as the title  episode name or a short description
 
 Parameters:
@@ -485,7 +485,7 @@ public static java.lang.String PrintAiringShort (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a brief string which is suitable for displaying information about this Airing. This contains the Airing's channel  a short time string as well as the title
 
 Parameters:
@@ -514,7 +514,7 @@ public static java.lang.String GetAiringTitle (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the title of this Airing. This will be the same as the title of the Airing's Show
 
 Parameters:
@@ -543,7 +543,7 @@ public static boolean IsWatched (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if this Airing's content has been completely watched already. This may also return true if this Airing itself was not watched; but an Airing with the same content (as determined by SageTV's AI) was watched
 
 Parameters:
@@ -572,7 +572,7 @@ public static long GetWatchedDuration (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the duration of time of this Airing that has been watched already. This time is relative to the Airing itself; not real time.
 
 Parameters:
@@ -603,7 +603,7 @@ public static long GetWatchedStartTime (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the time the user started watching this Airing. This time is relative to the Airing itself; not real time.
  If this is the first time watching this Airing; then this will return the time the Airing started recording.
  If this Airing has been watched previously; then the minimum value for this will be the Airing start time.
@@ -636,7 +636,7 @@ public static long GetWatchedEndTime (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the time the user finished watching this Airing. This time is relative to the Airing itself; not real time.
  If this Airing is currently being watched, this will be the maximum of any prior watch end time and the
  current playback time in the Airing.
@@ -669,7 +669,7 @@ public static long GetRealWatchedStartTime (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the time the user started watching this Airing, in real time.
 
 Parameters:
@@ -702,7 +702,7 @@ public static long GetRealWatchedEndTime (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the time the user finished watching this Airing, in real time.
 
 Parameters:
@@ -729,7 +729,7 @@ public static void SetWatched (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the watched flag for this Airing to true as if the user watched the show from start to finish
 
 Parameters:
@@ -757,7 +757,7 @@ public static void SetWatchedTimes (Object Airing, long WatchedEndTime, long Rea
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Updates the Watched information for this airing. The AiringEndTime should be an airing-relative time which indicates the time the
  user has watched the show up until. The new watched end time will be the maximum of this value and the current watched end time. The
  RealStartTime is the time (in real time) the user started watching this program at. Internally SageTV will set the start time of the watched
@@ -785,7 +785,7 @@ public static void ClearWatched (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Clears the watched information for this Airing completely.
 
 Parameters:
@@ -810,7 +810,7 @@ public static long GetLatestWatchedTime (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the time that viewing should resume from for this Airing if it is selected to view
 
 Parameters:
@@ -840,7 +840,7 @@ public static boolean IsWatchedCompletely (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if this Airing has been completely watched already. This is different thenIsWatched()
 
 
@@ -870,7 +870,7 @@ public static boolean IsDontLike (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if this Airing has been set as content the user "Doesn't Like"
 
 Parameters:
@@ -895,7 +895,7 @@ public static void SetDontLike (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Called to indicate that the content in this Airing is "Not Liked" by the user
 
 Parameters:
@@ -916,7 +916,7 @@ public static void ClearDontLike (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Called to cancel the indication that the content in this Airing is "Not Liked" by the user
 
 Parameters:
@@ -942,7 +942,7 @@ public static boolean IsManualRecord (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if this Airing has been selected by the user to manually recordRecord()
 
 
@@ -976,7 +976,7 @@ public static boolean IsNotManualOrFavorite (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if this Airing has NOT been selected by the user to manually recordRecord()
 and
  is also NOT a Favorite (i.e. IsFavorite and IsManualRecord both return false)
@@ -1009,7 +1009,7 @@ public static boolean IsAiringHDTV (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if this Airing is in HDTV
 
 Parameters:
@@ -1038,7 +1038,7 @@ public static int GetTrackNumber (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the track number for the Airing if it's from a Music Album. With music; each song (file) corresponds to an airing.
 
 Parameters:
@@ -1068,7 +1068,7 @@ public static java.lang.String GetRecordingQuality (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the recording quality that this Airing has been specifically set to record at. This is only valid for user selected manual recordingsRecord()
 
 
@@ -1095,7 +1095,7 @@ public static void SetRecordingQuality (Object Airing, java.lang.String Quality)
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the recording quality for this Airing if it has been selected by the user as a manual record
 
 Parameters:
@@ -1121,7 +1121,7 @@ public static boolean IsFavorite (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if this Airing matches one of the Favorites the user has setup
 
 Parameters:
@@ -1152,7 +1152,7 @@ public static java.lang.Object SetRecordingTimes (Object Airing, long StartTime,
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Modifies or creates a time-based recording that is associated with this Airing. This is also a type of Manual Record.
 
 Parameters:
@@ -1183,7 +1183,7 @@ public static java.lang.Object Record (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Specifies that this Airing should be recorded. This is a Manul Recording.
 
 Parameters:
@@ -1210,7 +1210,7 @@ public static void CancelRecord (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Cancels a recording that was previously set with a call toRecord()
 orSetRecordingTimes()
 
@@ -1237,7 +1237,7 @@ public static boolean IsAiringObject (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the argument is an Airing object. Automatic type conversion is NOT done in this call.
 
 Parameters:
@@ -1266,7 +1266,7 @@ public static java.lang.String GetParentalRating (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the parental rating information associated with this Airing. This is information such as TVY, TVPG, TVMA, etc.
 
 Parameters:
@@ -1295,7 +1295,7 @@ public static java.lang.String GetExtraAiringDetails (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets miscellaneous information about this Airing. This includes thing such as "Part 1 of 2", "CC", "HDTV", "Series Premiere", etc.
 
 Parameters:
@@ -1325,7 +1325,7 @@ public static int GetAiringID (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the unique ID used to identify this Airing. Can get used later on a call toGetAiringForID()
 
 
@@ -1356,7 +1356,7 @@ public static Object GetAiringForID (int AiringID) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the Airing object that corresponds to the passed in ID. The ID should have been obtained from a call toGetAiringID()
 
 
@@ -1389,7 +1389,7 @@ public static Object AddAiring (java.lang.String ShowExternalID, int StationID, 
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Adds a new Airing object to the database. This call should be used with caution.
 
 Parameters:
@@ -1436,7 +1436,7 @@ public static Object AddAiringDetailed (java.lang.String ShowExternalID, int Sta
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Adds a new Airing object to the database. This call should be used with caution. (it has more details you can specify than the
  standard AddAiring API call)
 
@@ -1491,7 +1491,7 @@ public static Object AddAiringDetailed (java.lang.String ShowExternalID, int Sta
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Adds a new Airing object to the database. This call should be used with caution. (it has more details you can specify than the
  standard AddAiring API call)
 
@@ -1534,7 +1534,7 @@ public static boolean IsAiringAttributeSet (Object Airing, java.lang.String Attr
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns whether or not the specificed attibute is set for this Airing
 
 Parameters:
@@ -1566,7 +1566,7 @@ public static java.lang.String[] GetAiringAttributeList (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets a list of attributes that are set for this Airing.
 
 Parameters:
@@ -1597,7 +1597,7 @@ public static int GetAiringPartNumber (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the part number for this Airing if it is a multi-part Airing.
 
 Parameters:
@@ -1630,7 +1630,7 @@ public static int GetAiringTotalParts (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the number of parts for this Airing if it is a multi-part Airing.
 
 Parameters:
@@ -1663,7 +1663,7 @@ public static java.lang.String GetAiringPremiereFinaleInfo (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a String which describes any kind of Premiere, Finale info for this Airing
 
 Parameters:
@@ -1694,7 +1694,7 @@ public static Object GetMediaFileForAiring (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the MediaFile object which corresponds to this Airing object
 
 Parameters:
@@ -1723,7 +1723,7 @@ public static Object GetAiringOnAfter (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the Airing on the same Channel that is on immediately after the passed in Airing
 
 Parameters:
@@ -1752,7 +1752,7 @@ public static Object GetAiringOnBefore (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the Airing on the same Channel that is on immediately before the passed in Airing
 
 Parameters:
@@ -1786,7 +1786,7 @@ public static java.lang.String GetManualRecordProperty (Object Airing, java.lang
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a property value for a specified ManualRecord. This must have been set using SetManualRecordProperty and
  the specified Airing must be a ManualRecord.
  Returns the empty string when the property is undefined.
@@ -1821,7 +1821,7 @@ public static void SetManualRecordProperty (Object Airing, java.lang.String Prop
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets a property for a specified ManualRecord. This can be any name/value combination (but the name cannot be null). If the value is null;
  then the specified property will be removed from this ManualRecord. This only impacts the return values from GetManualRecordProperty and has no other side effects.
 
@@ -1854,7 +1854,7 @@ public static Object GetPlayableAiring (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns an Airing that correlates to the same content as the argument that is playable now.
  This can only be from a completely recorded MediaFile (but could be extended beyond that).
 
@@ -1887,7 +1887,7 @@ public static java.lang.String[] GetParentalLimitsExceeded (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Checks the airing for exceeding parental ratings and return a string array filled with each rating.
  If parental ratings is disabled, or the airing exceeds no parental settings, return empty array.
 

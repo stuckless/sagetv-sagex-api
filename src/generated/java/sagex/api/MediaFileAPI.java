@@ -2,7 +2,7 @@ package sagex.api;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 24/07/16 5:40 PM
+ * Generated Date/Time: 24/07/16 7:30 PM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/MediaFileAPI.html'>MediaFileAPI</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -19,7 +19,7 @@ public static Object[] GetMediaFiles () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns all of the MediaFile objects in the database.
 
 Returns:
@@ -46,7 +46,7 @@ public static Object[] GetMediaFiles (java.lang.String MediaMask) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns all of the MediaFile objects in the database
  The content it references must also match one of the media types specified in the MediaMask.
  There's also an additional supported type of 'L' which indicates files that pass IsLibraryFile()
@@ -79,7 +79,7 @@ public static Object AddMediaFile (java.io.File File, java.lang.String NamePrefi
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Adds a new MediaFile to the database. This file will remain in the database until it is manually removed by the
  user or when the file no longer exists.
 
@@ -113,7 +113,7 @@ public static Object CreateTempMediaFile (java.lang.String FilePath) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Creates a temporary MediaFile object which can be used for playback later. This will not be added into the database;
  but any metadata that is attached to this MediaFile object will be put in the database until the next cleanup process occurs.
 
@@ -147,7 +147,7 @@ public static boolean SetMediaFileAiring (Object MediaFile, Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets a link between a MediaFile object which represents a file(s) on disk and an Airing object which
  represents metadata about the content. This is a way to link content information with media.
 
@@ -183,7 +183,7 @@ public static boolean SetMediaFileShow (Object MediaFile, Object Show) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets a link between a MediaFile object which represents a file(s) on disk and a Show object which
  represents metadata about the content. This is a way to link content information with media.
  This will create a new Airing representing this Show and add it to the database. Then that new Airing is
@@ -217,7 +217,7 @@ public static Object GetMediaFileForFilePath (java.io.File FilePath) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the MediaFile from the database that corresponds to a specified file on disk
 
 Parameters:
@@ -246,7 +246,7 @@ public static boolean IsLocalFile (Object MediaFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified MediaFile is local to this system (i.e. doesn't need to be streamed from a server)
 
 Parameters:
@@ -276,7 +276,7 @@ public static boolean IsLibraryFile (Object MediaFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified MediaFile has been either imported using a library path or if this is a television
  recording that has had the 'Move to Library' operation performed on it.
 
@@ -307,7 +307,7 @@ public static boolean IsCompleteRecording (Object MediaFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if SageTV considers this MediaFile a 'complete' recording. The rules behind this are somewhat complex,
  but the intended purpose is that a 'complete' recording is one that should be presented in the list of recordings to a user.
 
@@ -337,7 +337,7 @@ public static boolean IsDVD (Object MediaFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if this MediaFile represents DVD content. This can be either a DVD drive or a ripped DVD.
 
 Parameters:
@@ -368,7 +368,7 @@ public static boolean IsBluRay (Object MediaFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if this MediaFile represents BluRay content.
 
 Parameters:
@@ -399,7 +399,7 @@ public static boolean IsDVDDrive (Object MediaFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if this MediaFile represents the physical DVD drive in the system. Use this MediaFile to playback DVDs from an optical drive.
 
 Parameters:
@@ -428,7 +428,7 @@ public static boolean IsMusicFile (Object MediaFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if this MediaFile's content is audio only.
 
 Parameters:
@@ -457,7 +457,7 @@ public static boolean IsVideoFile (Object MediaFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if this MediaFile's content is an audio/video or video file (this will be false for DVD/BluRay content)
 
 Parameters:
@@ -486,7 +486,7 @@ public static boolean IsPictureFile (Object MediaFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if this MediaFile's content represents a picture file
 
 Parameters:
@@ -515,7 +515,7 @@ public static boolean IsTVFile (Object MediaFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if this MediaFile represents recorded television content
 
 Parameters:
@@ -544,7 +544,7 @@ public static java.io.File[] GetSegmentFiles (Object MediaFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the list of files that make up the specified MediaFile object. A MediaFile object can represent more than
  one physical file on disk. This occurs when a recording of a television show is not contiguous; this can happen for various
  reasons including the user changing the channel or restarting the system.
@@ -573,7 +573,7 @@ public static java.lang.String GetMediaTitle (Object MediaFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the title for the specified MediaFile object
 
 Parameters:
@@ -604,7 +604,7 @@ public static java.lang.String GetMediaFileRelativePath (Object MediaFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the path of this MediaFile object relative to the root of the import directory it is in.
 
 Parameters:
@@ -635,7 +635,7 @@ public static java.io.File GetParentDirectory (Object MediaFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the directory that the files for this MediaFile are in.
 
 Parameters:
@@ -664,7 +664,7 @@ public static long GetSize (Object MediaFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the total size in bytes of the files on disk that represent this MediaFile
 
 Parameters:
@@ -695,7 +695,7 @@ public static Object GetFullImage (Object MediaFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the MetaImage object which represents the picture file for this MediaFile. If the specified MediaFile
  is not a picture file, then null is returned
 
@@ -737,7 +737,7 @@ public static boolean GenerateThumbnail (Object MediaFile, float Time, int Width
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Generates a thumbnail for the specified MediaFile at the requested offset time in the file using the desired width  height.
  The resulting thumbnail will be saved to the specified file. This call DOES NOT need to be used for GetThumbnail to work properly; this
  API call is intended as an extra for developers who want additional thumbnails beyond the one that is normally auto-generated for MediaFiles.
@@ -779,7 +779,7 @@ public static Object GetThumbnail (Object MediaFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the representative thumbnail image which should be used for iconic display of this MediaFile. For picture files,
  this will be a thumbnail image. For music files it will be the album art. For any other files it'll be the thumbnail for
  the file if one exists, otherwise it'll be the channel logo for the file. If none of those exist then null is returned.
@@ -813,7 +813,7 @@ public static boolean IsThumbnailLoaded (Object MediaFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Checks whether the passed thumbnail for the specified MediaFile is loaded
  into system memory or into the VRAM cache of the corresponding UI making the call.
 
@@ -846,7 +846,7 @@ public static boolean HasSpecificThumbnail (Object MediaFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if this MediaFile object has a thumbnail for it that is unique to the content itself. This is true
  for any music file with album art or any other MediaFile that has another file on disk which contains the representative thumbnail.
 
@@ -877,7 +877,7 @@ public static boolean HasAnyThumbnail (Object MediaFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if this MediaFile object has a thumbnail representation of it. If this is true, thenGetThumbnail()
 will not return null.
 
@@ -907,7 +907,7 @@ public static boolean IsFileCurrentlyRecording (Object MediaFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if this MediaFile is currently in the process of recording.
 
 Parameters:
@@ -939,7 +939,7 @@ public static boolean DeleteFile (Object MediaFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Deletes the files that correspond to this MediaFile from disk and also deletes the MediaFile object from the database.
  NOTE: This actually delete the files from the disk.
  This has a slightly different effect on Intelligent Recording versus theDeleteFileWithoutPrejudice()
@@ -975,7 +975,7 @@ public static boolean DeleteFileWithoutPrejudice (Object MediaFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Deletes the files that correspond to this MediaFile from disk and also deletes the MediaFile object from the database.
  NOTE: This actually delete the files from the disk.
  This has a slightly different effect on Intelligent Recording versusDeleteFile()
@@ -1008,7 +1008,7 @@ public static long GetFileDuration (Object MediaFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the total duration of the content in this MediaFile
 
 Parameters:
@@ -1038,7 +1038,7 @@ public static long GetFileStartTime (Object MediaFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the starting time for the content in ths specified MediaFile. This corresponds to when the file's recording started or the
  timestamp on the file itself. See java.lang.System.currentTimeMillis() for information on the time units.
 
@@ -1069,7 +1069,7 @@ public static long GetFileEndTime (Object MediaFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the ending time for the content in ths specified MediaFile. This corresponds to when the file's recording ended or the
  timestamp on the file itself plus the file's duration. See java.lang.System.currentTimeMillis() for information on the time units.
 
@@ -1097,7 +1097,7 @@ public static void CopyToLocalFile (Object MediaFile, java.io.File LocalFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Downloads the specified MediaFile from the SageTV server and saves it as the specified LocalFile. This call should
  only be made by SageTV Client.
 
@@ -1125,7 +1125,7 @@ public static long GetDurationForSegment (Object MediaFile, int SegmentNumber) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the duration in milliseconds for the specified segment number in this MediaFile.
 
 Parameters:
@@ -1156,7 +1156,7 @@ public static long GetEndForSegment (Object MediaFile, int SegmentNumber) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the ending time for a specified segment number in this MediaFile.
 
 Parameters:
@@ -1187,7 +1187,7 @@ public static long GetStartForSegment (Object MediaFile, int SegmentNumber) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the starting time for a specified segment number in this MediaFile.
 
 Parameters:
@@ -1218,7 +1218,7 @@ public static java.io.File GetFileForSegment (Object MediaFile, int SegmentNumbe
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the file that represents the specified segment number in this MediaFile
 
 Parameters:
@@ -1248,7 +1248,7 @@ public static int GetNumberOfSegments (Object MediaFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the number of segments in ths specified MediaFile. Each segment corresponds to a different physical file on disk.
 
 Parameters:
@@ -1275,7 +1275,7 @@ public static long[][] GetStartTimesForSegments (Object MediaFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a list of all of the start times of the segments in the specified MediaFile
 
 Parameters:
@@ -1300,7 +1300,7 @@ public static void MoveFileToLibrary (Object MediaFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Marks a MediaFile object as being 'Moved to Library' which means theIsLibraryFile()
 call will
  now return true. This can be used to help organize the recorded television files.
@@ -1326,7 +1326,7 @@ public static void MoveTVFileOutOfLibrary (Object MediaFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Un-marks a MediaFile object as being 'Moved to Library' which means theIsLibraryFile()
 call will
  no longer return true. This can only be used on recorded television files and has the opposite effect ofMoveFileToLibrary()
@@ -1355,7 +1355,7 @@ public static boolean IsMediaFileObject (java.lang.Object Object) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified object is a MediaFile object. No automatic type conversion will be performed on the argument.
  This will return false if the argument is a MediaFile object, BUT that object no longer exists in the SageTV database.
 
@@ -1385,7 +1385,7 @@ public static Object GetAlbumForFile (Object MediaFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the Album object that corresponds to this MediaFile. This only returns a useful object if the argument is a music file.
 
 Parameters:
@@ -1414,7 +1414,7 @@ public static java.lang.String GetMediaFileEncoding (Object MediaFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the encoding that was used to record this file. This will only return something useful for recorded television files.
 
 Parameters:
@@ -1443,7 +1443,7 @@ public static Object GetMediaFileAiring (Object MediaFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the Airing object that represents the content metadata for this MediaFile
 
 Parameters:
@@ -1473,7 +1473,7 @@ public static int GetMediaFileID (Object MediaFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the unique ID used to identify this MediaFile. Can get used later on a call toGetMediaFileForID()
 
 
@@ -1504,7 +1504,7 @@ public static Object GetMediaFileForID (int id) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the MediaFile object that corresponds to the passed in ID. The ID should have been obtained from a call toGetMediaFileID()
 
 
@@ -1536,7 +1536,7 @@ public static java.lang.String GetMediaFileFormatDescription (Object MediaFile) 
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a string that provides a description of this MediaFile's format, i.e. MPEG2-PS[MPEG2-Video/2.0Mbps 4:3 480i@30fps, MP2/192kbps@48kHz]
 
 Parameters:
@@ -1580,7 +1580,7 @@ public static java.lang.String GetMediaFileMetadata (Object MediaFile, java.lang
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a string for the corresponding metadata property in the MediaFile's format. These are set during format detection/import.
  Names set in the property "custom_metadata_properties" (which is a semicolon/comma delimited list) will be available; as well
  as all standard SageTV metadata fields and details on format information.
@@ -1629,7 +1629,7 @@ public static java.util.Properties GetMediaFileMetadataProperties (Object MediaF
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a java.util.Properties object that contains all of the metadata properties for a MediaFile object.
  This will only include properties that can be modified (i.e. no format information is included). These properties will include all
  the standard database fields, as well as any custom metadata properties that were set for this MediaFile object.
@@ -1672,7 +1672,7 @@ public static void SetMediaFileMetadata (Object MediaFile, java.lang.String Name
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the corresponding metadata property in the MediaFile's format. These are set in the database and are also exported
  to the corresponding .properties file for that MediaFile. When it exports it will append these updates to the .properties file.
  It will also update the property "custom_metadata_properties" (which is a semicolon/comma delimited list) which tracks the extra
@@ -1712,7 +1712,7 @@ public static boolean RotatePictureFile (Object MediaFile, int Degrees) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Performs a lossless rotation of the specified JPEG picture file (90, 180 or 270 degrees). This will modify the file that is
  stored on disk.
 
@@ -1749,7 +1749,7 @@ public static boolean FlipPictureFile (Object MediaFile, boolean Horizontal) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Performs a lossless flip of the specified JPEG picture file. This will modify the file that is
  stored on disk.
 
@@ -1784,7 +1784,7 @@ public static boolean CanAutorotatePictureFile (Object MediaFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified picture file can be autorotated and is currently not in that autorotated position
 
 Parameters:
@@ -1817,7 +1817,7 @@ public static boolean AutorotatePictureFile (Object MediaFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Automatically rotates the specified picture file according to the orientation set in the EXIF data.
 
 Parameters:
@@ -1847,7 +1847,7 @@ public static void RegeneratePictureThumbnail (Object MediaFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Regenerates the thumbnail associated with the specified picture file. Sometimes the rotation may be mis-aligned from
  the thumbnail and this allows a way to repair that.
 

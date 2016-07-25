@@ -2,7 +2,7 @@ package sagex.api;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 24/07/16 5:40 PM
+ * Generated Date/Time: 24/07/16 7:30 PM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/Global.html'>Global</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -16,7 +16,7 @@ public static void Refresh () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Re-evaluates and redraws all UI elements on the current menu
  */
 public static void Refresh (UIContext _uicontext) {
@@ -34,7 +34,7 @@ public static void RefreshArea (java.lang.String WidgetName) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Finds the Widget on the current menu who's name matches the argument and then re-evaluates and redraws all UI elements, and their children for this Widget
 
 Parameters:
@@ -59,7 +59,7 @@ public static void RefreshAreaForVariable (java.lang.String Name, java.lang.Obje
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Searches all visible UI elements in the current menu finding any that have a variable with the specified name
  matching the specified value. For any elements it finds, it will re-evaluate and redraws its UI elements, and its children
 
@@ -81,7 +81,7 @@ public static void Repaint () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Redraws all UI elements on the current menu
  */
 public static void Repaint (UIContext _uicontext) {
@@ -99,7 +99,7 @@ public static void RepaintArea (java.lang.String WidgetName) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Finds the Widget on the current menu who's name matches the argument and then redraws all UI elements, and their children for this Widget
 
 Parameters:
@@ -130,7 +130,7 @@ public static java.lang.Object AddStaticContext (java.lang.String Name, java.lan
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the variable with the specified name to the specified value. This variable will
  exist for the lifetime of the current Menu. When the next Menu transition occurs,
  all values in the static context will be copied to the highest level context for the new Menu.
@@ -167,7 +167,7 @@ public static java.lang.Object AddGlobalContext (java.lang.String Name, java.lan
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the variable with the specified name to the specified value. This variable
  will exist for the lifetime of the SageTV application and is always in scope for all expression evaluation. This is a 'global variable'.
 
@@ -196,7 +196,7 @@ public static boolean AreThereUnresolvedConflicts () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns whether or not there are unresolved scheduling conflicts
 
 Returns:
@@ -221,7 +221,7 @@ public static boolean IsAsleep () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if SageTV is in the Sleep state.
 
 Returns:
@@ -246,7 +246,7 @@ public static long GetTotalDiskspaceAvailable () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the total diskspace available for television recording by SageTV. This is the unused space in the video directories.
 
 Returns:
@@ -271,7 +271,7 @@ public static long GetTotalLibraryDuration () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the total duration of all of the content in the media library
 
 Returns:
@@ -296,7 +296,7 @@ public static long GetTotalVideoDuration () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the total duration of all of the recorded television content
 
 Returns:
@@ -321,7 +321,7 @@ public static long GetUsedLibraryDiskspace () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the total number of bytes on disk used by the content in the imported video, picturees and music libraries
 
 Returns:
@@ -346,7 +346,7 @@ public static long GetUsedVideoDiskspace () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the total number of bytes on disk used by recorded television content
 
 Returns:
@@ -375,7 +375,7 @@ public static boolean AreAiringsSameShow (Object Airing1, Object Airing2) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if two Airings represent the same Show. This means that they both are the same content (i.e. one is a repeat of the other)
  Just because two Airings use the same Show object (in terms of object reference) doesn't mean this call will return true.
 
@@ -404,7 +404,7 @@ public static long GetLastEPGDownloadTime () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the last time that SageTV did an EPG update. The returned value uses the same units as java.lang.System.currentTimeMillis()
 
 Returns:
@@ -431,7 +431,7 @@ public static Object GetLogo (java.lang.String LogoName) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets an Image object that represents the specified name. This is normally used for Channel Logos.
 
 Parameters:
@@ -458,7 +458,7 @@ public static long GetTimeUntilNextEPGDownload () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 The amount of time in milliseconds until SageTV will perform an EPG update again. Zero if no update is planned.
 
 Returns:
@@ -481,7 +481,7 @@ public static java.lang.String[] GetAllLineups () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the name of all the EPG lineups in the system
 
 Returns:
@@ -506,7 +506,7 @@ public static boolean IsChannelDownloadComplete (java.lang.String Lineup) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the channel download has been completed on the specified lineup
 
 Parameters:
@@ -531,7 +531,7 @@ public static java.lang.String[] GetLocalMarketsFromEPGServer () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets a list of all the possible United States local broadcast markets from the EPG server
 
 Returns:
@@ -554,7 +554,7 @@ public static java.lang.String[] GetLineupsForZipCodeFromEPGServer (java.lang.St
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets a list from the EPG server of all the possible EPG Lineups that are available in a given zip code
 
 Parameters:
@@ -577,7 +577,7 @@ public static Object[] GetCurrentlyRecordingMediaFiles () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a list of all of the files that SageTV is currently recording
 
 Returns:
@@ -601,7 +601,7 @@ public static Object[] GetSuggestedIntelligentRecordings () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets a list of all of the Airings that SageTV would record if Intelligent Recording was enabled.
  This does not include Manual Recordings or Favorites.
 
@@ -625,7 +625,7 @@ public static Object[] GetScheduledRecordings () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets a list of all of the Airings that SageTV is planning to record in the future
 
 Returns:
@@ -648,7 +648,7 @@ public static Object[] GetScheduledRecordingsForDevice (java.lang.String Capture
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets a list of all of the Airings that SageTV is planning to record in the future on the specified CaptureDevice
 
 Parameters:
@@ -674,7 +674,7 @@ public static Object[] GetScheduledRecordingsForTime (long StartTime, long StopT
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets a list of all of the Airings that SageTV is planning on recording during the specified time span
 
 Parameters:
@@ -702,7 +702,7 @@ public static Object[] GetScheduledRecordingsForDeviceForTime (java.lang.String 
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets a list of all of the Airings that SageTV is planning on recording during the specified time span on a specified CaptureDevice
 
 Parameters:
@@ -729,7 +729,7 @@ public static Object[] GetRecentlyWatched (long DurationToLookBack) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets a list of all of the Airings that have been watched within the specified amount of time
 
 Parameters:
@@ -752,7 +752,7 @@ public static void RunLibraryImportScan (boolean WaitUntilDone) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Tells SageTV to run a library import scan now. This will scan all of the library import directories for new content.
 
 Parameters:
@@ -770,7 +770,7 @@ public static void Exit () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Causes the SageTV application to terminate. If this is called from the non-primary UI session then it will terminate the UI session it is called from.
  */
 public static void Exit (UIContext _uicontext) {
@@ -790,7 +790,7 @@ public static void SageCommand (java.lang.String Command) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Causes the corresponding Sage Command to be executed just like it would be if the user performed it.
  These are always done asynchronously with the exception of "Back" and "Forward" since those effect
  the current UI and may be used to override a menu transition.
@@ -819,7 +819,7 @@ public static void SageCommand (java.lang.String Command, java.lang.Object Paylo
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Causes the corresponding Sage Command to be executed just like it would be if the user performed it.
  These are always done asynchronously with the exception of "Back" and "Forward" since those effect
  the current UI and may be used to override a menu transition. The payload will be passed along and
@@ -848,7 +848,7 @@ public static boolean RemoveUnusedLineups () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Removes all of the lineups from SageTV's configuration that are no longer in use by a CaptureDevice
 
 Returns:
@@ -873,7 +873,7 @@ public static long GetApplicationLaunchTime () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the time that the SageTV application was instantiated.
 
 Returns:
@@ -899,7 +899,7 @@ public static boolean GetFocusContext () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Copies all variables from the currently focused UI element's variable context to the current context
  of the calling Action. Any variables that are in a common parent hierarchy are not copied as part of this.
 
@@ -921,7 +921,7 @@ public static void Fork () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Spawns a new thread of execution that will be used for further processing of Widget chain. This is analagous to 'forking' a thread
  to continue execution of a widget chain in parallel to the current system execution.
  */
@@ -944,7 +944,7 @@ public static void TransmitCommandUsingInfraredTuningPlugin (java.lang.String Tu
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Causes SageTV to instruct the specified tuning plugin to send a command
 
 Parameters:
@@ -969,7 +969,7 @@ public static void DebugLog (java.lang.String DebugString) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Prints out a message to SageTV's debug log
 
 Parameters:
@@ -991,7 +991,7 @@ public static void CloseOptionsMenu () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Closes the last OptionsMenu that was shown and continues execution of the Action
  chain that spawned that OptionsMenu at the sibling after this OptionsMenu. The
  feature of continuing execution can be used to prompt the user with a question
@@ -1025,7 +1025,7 @@ public static boolean CloseOptionsMenu (java.lang.String WidgetName, boolean Wai
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Closes the OptionsMenu who's Widget name (or themed Widget name) matches that of the argument and continues execution of the Action
  chain that spawned that OptionsMenu at the sibling after this OptionsMenu. The
  feature of continuing execution can be used to prompt the user with a question
@@ -1062,7 +1062,7 @@ public static boolean IsOptionsMenuOpen () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if an options menu is currently open in the UI.
 
 Returns:
@@ -1089,7 +1089,7 @@ public static java.util.Vector GetSageCommandNames () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the names of all of the SageTV commands that are available in the system
 
 Returns:
@@ -1113,7 +1113,7 @@ public static void ApplyServiceLevelToLineup (java.lang.String Lineup, int Servi
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Applies a service level to a given lineup. This is specific to the EPG data source that is being used.
 
 Parameters:
@@ -1142,7 +1142,7 @@ public static boolean SetFocusForVariable (java.lang.String Name, java.lang.Obje
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Searches all UI elements in the current menu until it finds one that has a variable with the specified name
  matching the specified value. Once it finds this UI element, it gives it the focus.  If scrolling of a table
  or panel is necessary to make it visible, that scrolling will occur.
@@ -1182,7 +1182,7 @@ public static boolean EnsureVisibilityForVariable (java.lang.String Name, java.l
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Searches the tables in the current menu for a cell that matches the passed in name/value pair;
  if found it will ensure that it is currently visible in the UI at the specified visual index of the table.
  The name should match the name of the TableComponent-Cell. For example if the TableComponent with a Cell
@@ -1225,7 +1225,7 @@ public static java.lang.Object GetVariableFromContext (java.lang.String MatchNam
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Searches all UI elements in the current menu until it finds one that has a variable with the specified name
  matching the specified value. Once it finds this UI element, it then does a lookup of the other
  specified variable in that UI element's context and returns that value
@@ -1265,7 +1265,7 @@ public static boolean GetVisibilityForVariable (java.lang.String MatchName, java
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Searches all UI elements in the current menu until it finds one that has a variable with the specified name
  matching the specified value. Once it finds this UI element, it will return true if that UI element is currently
  visible and false otherwise
@@ -1304,7 +1304,7 @@ public static java.lang.Object GetUIComponentForVariable (java.lang.String Match
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Searches all UI elements in the current menu until it finds one that has a variable with the specified name
  matching the specified value. It then returns on Object representing that UI component. The search method
  prefers visible components over hidden ones.
@@ -1342,7 +1342,7 @@ public static java.lang.Object GetUIComponentContext () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the UI component that this execution originated from. For
  'green' process chains; this will correspond to the UI component that received the event. For 'blue'
  UI chains; this will correspond to the UI component who's conditionality is being determined or who's data
@@ -1378,7 +1378,7 @@ public static boolean SetFocusToUIComponent (java.lang.Object UIComponent) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets focus in the specified UI component. The UIComponent must be focusable for this to succeed
 
 Parameters:
@@ -1414,7 +1414,7 @@ public static int GetTableFocusedVisibleRow (java.lang.Object UIComponent) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the row number that currently has focus in the specified table. The argument may be the table itself; or a component between
  the table and the focused component.
 
@@ -1451,7 +1451,7 @@ public static int GetTableFocusedVisibleColumn (java.lang.Object UIComponent) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the column number that currently has focus in the specified table. The argument may be the table itself; or a component between
  the table and the focused component.
 
@@ -1488,7 +1488,7 @@ public static int GetTableFocusedVisiblePosition (java.lang.Object UIComponent) 
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets thevisibletable position that currently has focus in the specified table. The argument may be the table itself; or a component between
  the table and the focused component. This starts counting from the first component which is currently visible in the table.
 
@@ -1526,7 +1526,7 @@ public static int GetTableFocusedPosition (java.lang.Object UIComponent) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the table position that currently has focus in the specified table. The argument may be the table itself; or a component between
  the table and the focused component. This is the equivalent of the "TableRow" variable for the currently focused table cell; which is
  the cell's index in the data backing the table.
@@ -1567,7 +1567,7 @@ public static java.lang.Object GetDataFromTableFocusedOffset (java.lang.Object U
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the data value for the table that is used for the cell at the specified position relative to what is currentlyfocusedfor the table. The UIComponent should either be the table itself; or it should have the desired table as an ancestor of it.
  Position values are zero-based; and may be negative. If WrapIndex is false then positions greater then the size of the table's data or
  less than zero will return null; otherwise they will be mod'd to return a value within the range of the data.
@@ -1610,7 +1610,7 @@ public static java.lang.Object GetDataFromTableVisiblePosition (java.lang.Object
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the data value for the table that is used for the cell at the specified position relative to what is currentlyvisiblefor the table. The UIComponent should either be the table itself; or it should have the desired table as an ancestor of it.
  Offset values are zero-based; and may be negative. If WrapIndex is false then positions greater then the size of the table's data or
  less than zero will return null; otherwise they will be mod'd to return a value within the range of the data.
@@ -1652,7 +1652,7 @@ public static boolean IsTableTransitionToNext (java.lang.Object UIComponent) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified table argument (or the first table parent of the argument) is on the leading edge of a transition
  to a cell after the current one. It could be a page event, or a moving a single unit. Right and Down directionality is considered to be 'next'.
  This can be used to trigger effects that relate to navigation occurring in a table. This will only be true for a single rendering pass on the
@@ -1693,7 +1693,7 @@ public static boolean IsTableTransitionToPrevious (java.lang.Object UIComponent)
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified table argument (or the first table parent of the argument) is on the leading edge of a transition
  to a cell before the current one. It could be a page event, or a moving a single unit. Left and Up directionality is considered to be 'previous'.
  This can be used to trigger effects that relate to navigation occurring in a table. This will only be true for a single rendering pass on the
@@ -1732,7 +1732,7 @@ public static boolean IsTransitioningToMenu (java.lang.String MenuName) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified menu name matches the name of the menu widget that the UI is in the process
  of transitioning to. This will only be true during the processing of MenuUnloaded effects. If a null argument is given; then this is
  true in the case that any menu transition is about to occur. The name match is case-insensitive.
@@ -1768,7 +1768,7 @@ public static boolean IsTransitioningFromMenu (java.lang.String MenuName) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified menu name matches the name of the menu widget for the previously loaded menu. The name match is case-insensitive.
  UnlikeIsTransitioningToMenu, this is true even after the transition is complete. A null argument always returns false.
 
@@ -1804,7 +1804,7 @@ public static boolean IsTransitioningToMenus (java.lang.String[] MenuNames) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if one of the specified menu name matches the name of the menu widget that the UI is in the process
  of transitioning to. This will only be true during the processing of MenuUnloaded effects. If a null argument or empty list is given; then this is
  true in the case that any menu transition is about to occur. The name match is case-insensitive.
@@ -1840,7 +1840,7 @@ public static boolean IsTransitioningFromMenus (java.lang.String[] MenuNames) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if one of the specified menu names matches the name of the menu widget for the previously loaded menu. The name match is case-insensitive.
  UnlikeIsTransitioningToMenus, this is true even after the transition is complete. A null argument or empty list always returns false.
 
@@ -1876,7 +1876,7 @@ public static java.lang.String GetTextForUIComponent (java.lang.Object UICompone
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the value displayed for the textual component of the specified UI object. If its not a Text component; then
  its children will be searched depth-first until one is found and then that will be used for the return value.
 
@@ -1913,7 +1913,7 @@ public static java.lang.Object GetUIComponentLastFocusedChild (java.lang.Object 
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 If the specified component currently has a focused child; that child's UI object will
  be returned. If not, then the last focused child for this component will be returned.
 
@@ -1949,7 +1949,7 @@ public static int GetUIComponentPositionX (java.lang.Object UIComponent) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the X position in pixels in the UI of the specified UI component. This will be a value relative to the overall UI; not its parent.
 
 Parameters:
@@ -1984,7 +1984,7 @@ public static int GetUIComponentPositionY (java.lang.Object UIComponent) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the Y position in pixels in the UI of the specified UI component. This will be a value relative to the overall UI; not its parent.
 
 Parameters:
@@ -2019,7 +2019,7 @@ public static int GetUIComponentWidth (java.lang.Object UIComponent) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the width in pixels in the UI of the specified UI component.
 
 Parameters:
@@ -2054,7 +2054,7 @@ public static int GetUIComponentHeight (java.lang.Object UIComponent) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the height in pixels in the UI of the specified UI component.
 
 Parameters:
@@ -2089,7 +2089,7 @@ public static float GetUIComponentPositionXf (java.lang.Object UIComponent) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the X position in the UI of the specified UI component. This will be a value relative to the overall UI; not its parent.
 
 Parameters:
@@ -2124,7 +2124,7 @@ public static float GetUIComponentPositionYf (java.lang.Object UIComponent) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the Y position in the UI of the specified UI component. This will be a value relative to the overall UI; not its parent.
 
 Parameters:
@@ -2159,7 +2159,7 @@ public static int GetUIComponentWidthf (java.lang.Object UIComponent) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the width in the UI of the specified UI component relative to the entire UI width.
 
 Parameters:
@@ -2194,7 +2194,7 @@ public static float GetUIComponentHeightf (java.lang.Object UIComponent) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the height in the UI of the specified UI component relative to the entire UI height.
 
 Parameters:
@@ -2234,7 +2234,7 @@ public static java.lang.Object SendEventToUIComponent (java.lang.Object UICompon
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sends an event to a specific UI component for processing. Similar to using theSageCommand()
 API call, but this
  version is targeted at a specific component. Normal event processing of cursor navigation, selection, entry events will continue up the hierarchy from the target component if it
@@ -2276,7 +2276,7 @@ public static java.lang.Object GetChildUIComponentForVariable (java.lang.Object 
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Searches all child UI elements in of the specified UIComponent until it finds one that has a variable with the specified name
  matching the specified value. It then returns on Object representing that UI component
 
@@ -2313,7 +2313,7 @@ public static java.lang.Object GetVariableFromUIComponent (java.lang.Object UICo
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Retrieves the variable with the specified name from the context of the passed in UIComponent.
 
 Parameters:
@@ -2347,7 +2347,7 @@ public static void SetVariableForUIComponent (java.lang.Object UIComponent, java
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the variable with the specified name in the context of the passed in UIComponent. This behaves the same way as
  if an assignment was done to that variable within the passed in UIComponent context within the Studio. This may result
  in setting the value at a higher level in the hierarchy if the variable is defined above the specified component.
@@ -2373,7 +2373,7 @@ public static void PassiveListen () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Should only be used in the Action chain from a Listener Widget. Normally SageTV will stop processing Listeners
  for an event once the first one is reached. If you use PassiveListen() in the action chain for a
  Listener then SageTV will not stop processing at the current Listener.
@@ -2398,7 +2398,7 @@ public static java.util.Vector GetAiringsThatWontBeRecorded (boolean OnlyUnresol
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns all of the Airings that the user has requested to record that SageTV will not be recording. This would be due to
  scheduling conflicts.
 
@@ -2426,7 +2426,7 @@ public static boolean IsClient () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if this is an instance of SageTV Client
 
 Returns:
@@ -2454,7 +2454,7 @@ public static boolean IsRemoteUI () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if this UI is being remoted onto another device such as a media extender. This also returns
  true for Placeshifter clients.
 
@@ -2485,7 +2485,7 @@ public static boolean IsDesktopUI () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if this UI is being run in a desktop environment. It may or may not be remoted. This is
  intended to distinguish Placeshifter clients from Media Extenders since both return true for IsRemoteUI().
 
@@ -2518,7 +2518,7 @@ public static boolean IsServerUI () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if this UI is being run on the same system as the SageTV Server it's connected to.
  Also returns true for standalone SageTV applications. This indicates the UI should have the ability
  to configure all 'server' based options. For SageTVClient, you must be connected to the loopback address
@@ -2546,7 +2546,7 @@ public static java.lang.String[] GetConnectedClients () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a list of all the clients that are currently connected to this server.
 
 Returns:
@@ -2574,7 +2574,7 @@ public static java.lang.String[] GetUIContextNames () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a list of the names of the different UI contexts that are available. One will be the local context
  which is the UI for the SageTV app (which doesn't exist in service mode). The other contexts can be UIs that
  are for remote devices such as media extenders. This context name can then be passed back in using
@@ -2607,7 +2607,7 @@ public static java.lang.String GetUIContextName () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the name of the UI context that makes the API call. SeeGetUIContextNames()
 for more information.
 
@@ -2637,7 +2637,7 @@ public static java.lang.String GetRemoteClientVersion () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the version string for this connected remote client
 
 Returns:
@@ -2666,7 +2666,7 @@ public static java.lang.String GetRemoteUIType () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the type of client that is connected on this remote interface
 
 Returns:
@@ -2700,7 +2700,7 @@ public static java.lang.Object CreateTimedRecording (Object Channel, long StartT
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Creates a new time based recording for SageTV.
 
 Parameters:
@@ -2732,7 +2732,7 @@ public static boolean IsFullScreen () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns whether or not SageTV is in full screen mode
 
 Returns:
@@ -2755,7 +2755,7 @@ public static void SetFullScreen (boolean FullScreen) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets SageTV to be in full or non-full screen mode
 
 Parameters:
@@ -2778,7 +2778,7 @@ public static java.lang.String GetServerAddress () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the hostname of the SageTV server if this is a client, otherwise it returns the name of the host SageTV is running on
 
 Returns:
@@ -2803,7 +2803,7 @@ public static java.lang.String GetOS () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the name of the operating system that is being used.
 
 Returns:
@@ -2828,7 +2828,7 @@ public static boolean IsWindowsOS () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if SageTV is currently running on a Windows operating system.
 
 Returns:
@@ -2855,7 +2855,7 @@ public static boolean IsLinuxOS () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if SageTV is currently running on a Linux operating system.
 
 Returns:
@@ -2884,7 +2884,7 @@ public static boolean IsMacOS () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if SageTV is currently running on a Macintosh operating system.
 
 Returns:
@@ -2914,7 +2914,7 @@ public static java.lang.Object DVDBurnTheBurnList (Object BurnList) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Instructs the DVD burning engine inside SageTV to start prepping the specified Playlist to be burned to a DVD, and then perform the actual burn.
  NOTE: Currently this is only supported on the Linux operating system
 
@@ -2937,7 +2937,7 @@ public static void DVDCancelBurn () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Cancels a previous request that was made to perform DVD burning.
  */
 public static void DVDCancelBurn (UIContext _uicontext) {
@@ -2958,7 +2958,7 @@ public static java.lang.Object DVDGetCurrentBurnStatus () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the current status of a previously invoked DVD burning process.
 
 Returns:
@@ -2987,7 +2987,7 @@ public static java.lang.Object CDBurnTheBurnList (Object BurnList) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Instructs the CD burning engine inside SageTV to start prepping the specified Playlist to be burned to a CD, and then perform the actual burn.
  NOTE: Currently this is only supported on the Linux operating system
 
@@ -3010,7 +3010,7 @@ public static void CDCancelBurn () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Cancels a previous request that was made to perform CD burning.
  */
 public static void CDCancelBurn (UIContext _uicontext) {
@@ -3031,7 +3031,7 @@ public static java.lang.Object CDGetCurrentBurnStatus () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the current status of a previously invoked CD burning process.
 
 Returns:
@@ -3061,7 +3061,7 @@ public static java.lang.Object CDRipToLibrary (java.io.File LibraryDir, java.lan
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Instructs the CD ripping engine to rip the contents of a CD and encode it in MP3 format and then store it in the music library.
  NOTE: This is currently only supported on the Linux operating system
 
@@ -3085,7 +3085,7 @@ public static void CDCancelRip () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Cancels a previous request that was made to perform CD ripping
  */
 public static void CDCancelRip (UIContext _uicontext) {
@@ -3106,7 +3106,7 @@ public static java.lang.Object CDGetCurrentRipStatus () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the current status of a previously invoked CD ripping process.
 
 Returns:
@@ -3139,7 +3139,7 @@ public static java.lang.Object StartFileCopy (java.lang.String Filename, java.la
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Instructs the file transfer engine to copy the specified file(s) from the source directory to the destination directory.
  If there is no filename specified then the contents of the directory are copied recursively. If the destination directory
  is within the path of SageTV managed diskspace then the appropriate free space will be cleared on the disk in order for the file copy to succeed.
@@ -3166,7 +3166,7 @@ public static void CancelFileCopy () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Cancels a previous request that was made to perform a file copy
  */
 public static void CancelFileCopy (UIContext _uicontext) {
@@ -3187,7 +3187,7 @@ public static java.lang.Object GetFileCopyStatus () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the current status of a previously invoked file copy process.
 
 Returns:
@@ -3222,7 +3222,7 @@ public static boolean StartFileDownload (java.lang.String ServerAddress, java.la
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Instructs the file transfer engine to download the specified file from the server to the local destination file. You may also
  download from remote http:// or ftp:// addresses; in that case just specify the URL in the ServerAddress argument and leave sourceFile as null.
  When downloading from http or ftp addresses, the target will be the server's filesystem for remote clients; otherwise it is the local filesystem.
@@ -3268,7 +3268,7 @@ public static boolean StartFileDownload (java.lang.String ServerAddress, java.la
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Instructs the file transfer engine to download the specified file from the server to the local destination file. You may also
  download from remote http:// or ftp:// addresses; in that case just specify the URL in the ServerAddress argument and leave sourceFile as null.
  When downloading from http or ftp addresses, the target will be the server's filesystem for remote clients; otherwise it is the local filesystem.
@@ -3317,7 +3317,7 @@ public static boolean StartBackgroundFileDownload (java.lang.String ServerAddres
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Instructs the file transfer engine to download the specified file from the server to the local destination file. You may also
  download from remote http:// or ftp:// addresses; in that case just specify the URL in the ServerAddress argument and leave sourceFile as null.
  When downloading from http or ftp addresses, the target will be the server's filesystem for remote clients; otherwise it is the local filesystem.
@@ -3366,7 +3366,7 @@ public static boolean StartCircularFileDownload (java.lang.String ServerAddress,
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Instructs the file transfer engine to download the specified file from the server to the local destination file. You may also
  download from remote http:// or ftp:// addresses; in that case just specify the URL in the ServerAddress argument and leave sourceFile as null.
  When downloading from http or ftp addresses, the target will be the server's filesystem for remote clients; otherwise it is the local filesystem.
@@ -3416,7 +3416,7 @@ public static boolean StartCircularFileDownload (java.lang.String ServerAddress,
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Instructs the file transfer engine to download the specified file from the server to the local destination file. You may also
  download from remote http:// or ftp:// addresses; in that case just specify the URL in the ServerAddress argument and leave sourceFile as null.
  When downloading from http or ftp addresses, the target will be the server's filesystem for remote clients; otherwise it is the local filesystem.
@@ -3449,7 +3449,7 @@ public static void CancelFileDownload () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Cancels a previous request that was made to perform a file download
  */
 public static void CancelFileDownload (UIContext _uicontext) {
@@ -3469,7 +3469,7 @@ public static void CancelBackgroundFileDownload (java.io.File DestFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Cancels a previous request that was made to perform a background file download.
 
 Parameters:
@@ -3495,7 +3495,7 @@ public static java.lang.Object GetFileDownloadStatus () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the current status of a previously invoked file download process.
 
 Returns:
@@ -3526,7 +3526,7 @@ public static java.lang.Object GetBackgroundFileDownloadStatus (java.io.File Des
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the current status of a previously invoked file background download process.
 
 Parameters:
@@ -3559,7 +3559,7 @@ public static long GetFileDownloadStreamTime () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the current stream time of a previously invoked file download process. This is only valid
  for when the file being downloaded is an FLV, MP3, MP4 or Quicktime file
 
@@ -3592,7 +3592,7 @@ public static boolean IsFileDownloadProgressivePlay () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns whether or not the current file being downloaded can be played back while being downloaded. This is only valid
  for when the file being downloaded is an FLV, MP3, MP4 or Quicktime file. It will always be true for MP3  FLV files;
  and for MP4/Quicktime files it'll be true if the sample section is before the movie data in the file. If this is true
@@ -3627,7 +3627,7 @@ public static long GetBackgroundFileDownloadStreamTime (java.io.File DestFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the current stream time of a previously invoked file download process. This is only valid
  for when the file being downloaded is an FLV, MP3, MP4 or Quicktime file
 
@@ -3664,7 +3664,7 @@ public static boolean IsBackgroundFileDownloadProgressivePlay (java.io.File Dest
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns whether or not the current file being downloaded can be played back while being downloaded. This is only valid
  for when the file being downloaded is an FLV, MP3, MP4 or Quicktime file. It will always be true for MP3  FLV files;
  and for MP4/Quicktime files it'll be true if the sample section is before the movie data in the file. If this is true
@@ -3701,7 +3701,7 @@ public static long GetBackgroundFileDownloadTotalSize (java.io.File DestFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the total size of the specified background download target. This may not always be known in cases
  where the server does not indicate the specific length of the file.
 
@@ -3740,7 +3740,7 @@ public static boolean SetRemoteEventEncryptionEnabled (boolean EnableEncryption)
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 This is used to enable/disable encryption on the event channel for the SageTV MiniClient. The MiniClient is used
  for the media extenders and for placeshifting. When using a non-local MiniClient connection, or if local MiniClient
  connections are configured to require authentication; the event channel between the two will start off in an encrypted
@@ -3774,7 +3774,7 @@ public static void CachePlaceshifterLogin () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 This is used to store an authentication block on the current client that it can use in the future to automatically
  connect to this server w/out having to login. The channel must be encrypted when this call is made. See the API call
  SetRemoteEventEncryptionEnabled for more details on that.
@@ -3801,7 +3801,7 @@ public static boolean CanCachePlaceshifterLogin () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 This indicates whether the server and the client both support caching of placeshifter logins.
 
 Returns:
@@ -3827,7 +3827,7 @@ public static void ReloadSystemHooks () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 This is a Windows only API call which tells SageTV to unload and then reload any system hooks it has installed.
  This allows reconfiguration of parameters in the UI and then realization of those changes on the fly.
 
@@ -3850,7 +3850,7 @@ public static void UpdateLocatorServer () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 This API call can be used to tell SageTV to do an update with the Locator server right now.
  It's useful for when you change external network configuration stuff like ports or IPs.
 
@@ -3876,7 +3876,7 @@ public static int GetFullUIWidth () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the width in pixels of the user interface for the calling SageTV UI context.
 
 Returns:
@@ -3905,7 +3905,7 @@ public static int GetFullUIHeight () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the height in pixels of the user interface for the calling SageTV UI context.
 
 Returns:
@@ -3934,7 +3934,7 @@ public static int GetDisplayResolutionWidth () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the width in pixels of the current display resolution set
 
 Returns:
@@ -3963,7 +3963,7 @@ public static int GetDisplayResolutionHeight () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the height in pixels of the current display resolution set
 
 Returns:
@@ -3992,7 +3992,7 @@ public static java.lang.String GetDisplayResolution () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a string describing the current display resolution set
 
 Returns:
@@ -4020,7 +4020,7 @@ public static java.lang.String[] GetDisplayResolutionOptions () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a list of the possible display resolutions. This is currently only used
  on media extender devices that have adjustable output resolution
 
@@ -4051,7 +4051,7 @@ public static java.lang.String GetDisplayResolutionDetails (java.lang.String Res
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the detailed format description for the specific resolution returned from GetDisplayResolutionOptions()
  NOTE: This API call is only valid on embedded platforms.
 
@@ -4082,7 +4082,7 @@ public static java.lang.String[] GetPreferredDisplayResolutions () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a list of the preferred display resolutions. This is currently only used
  on media extender devices that have adjustable output resolution. This information is obtained from the HDMI/DVI connector
 
@@ -4110,7 +4110,7 @@ public static void SetDisplayResolution (java.lang.String Resolution) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the current output display resolution. This is currently only used
  on media extender devices that have adjustable output resolution.
 
@@ -4139,7 +4139,7 @@ public static java.lang.String[] DiscoverSageTVServers (long Timeout) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a list of the SageTV servers on the network. Each item will be "name;IP address"
 
 Parameters:
@@ -4169,7 +4169,7 @@ public static boolean IsEmbeddedSystem () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if running on an 'embedded' platform. This will be true for the standalone environment on products like the HD300
  and false otherwise. Used for making STVs that have different options based on whether they're on a PC vs. embedded system.
 
@@ -4201,7 +4201,7 @@ public static boolean IsEmbeddedServer () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if running on an 'embedded' platform in standalone mode or running as a SageTV Client that is connected to a server running on an embedded platform.
  This will be true for the standalone environment on products like the HD300
  and false otherwise. Used for making STVs that have different options based on whether they're on a PC vs. embedded system.
@@ -4233,7 +4233,7 @@ public static boolean IsPVR () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if running on a system or connected to a server that has PVR functionality. Used for making STVs that have different options based on whether
  or not PVR functionality is available. Even if no capture devices are configured and the system is PVR capable, this will still return true.
 
@@ -4265,7 +4265,7 @@ public static java.util.Map GetHotplugStorageMap () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a map of name-file for any hotplug storage devies on the system. The
  names are user-presentable and the path is the java.io.File root which corresponds to the root of that device.
  NOTE: This is only valid on embedded platforms.
@@ -4296,7 +4296,7 @@ public static boolean IsDoingLibraryImportScan () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the server is currently scanning the import directories for new files
 
 Returns:
@@ -4324,7 +4324,7 @@ public static void SwitchEmbeddedModeTo (java.lang.String NewMode) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Executes a predefined application in the context of an embedded client. This is used for launching things
  like Netflix, YouTube Leanback and also specifying alternate modes the embedded client can exit into.
 
@@ -4350,7 +4350,7 @@ public static void PrepareForFirmwareLoad () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Prepares the device for a firmware download  flash. This internally will stop the library importing process,
  empty all of the database tables, clear the UI caches, and then force a complete garbage collection.
  NOTE: This is only valid on embedded platforms.
@@ -4377,7 +4377,7 @@ public static boolean AreScreenshotsSupported () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if it's possible to take screenshots of the UI using the API on this UI client
 
 Returns:
@@ -4410,7 +4410,7 @@ public static boolean SaveScreenshotToFile (java.io.File FilePath) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Takes a screenshot of the current UI and saves it to the specified file in PNG format. This is only supported
  on clients that return true to the API callAreScreenshotsSupported()
 .
@@ -4441,7 +4441,7 @@ public static java.awt.Panel GetEmbeddedPanel () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets a java.awt.Panel which can be used for embedding Java UI elements directly into SageTV
 
 Returns:
@@ -4469,7 +4469,7 @@ public static void SetEmbeddedPanelBounds (float x, float y, float width, float 
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the bounding region to be used for the embedded panel. These are floating point numbers relative to the total size of the UI.
 
 Parameters:
@@ -4501,7 +4501,7 @@ public static boolean IsClientDisconnected () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if this is an instance of SageTVClient (or a remote client connected via SageTVClient)
  and there is currently not a connection to the server. This should be used during startup to go to the
  server connection lost menu for remote clients connected through SageTVClient (SageTVClient itself will do it automatically).
@@ -4533,7 +4533,7 @@ public static java.lang.String GetClientServerConnectionProgress () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a string describing the state of the client/server connection process.
  NOTE: This is only useful on embedded with a fat client setup.
 
@@ -4563,7 +4563,7 @@ public static java.lang.String GetEPGUpdateState () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a string describing the state of the epg system.
 
 Returns:

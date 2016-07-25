@@ -2,7 +2,7 @@ package sagex.api;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 24/07/16 5:40 PM
+ * Generated Date/Time: 24/07/16 7:30 PM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/MediaPlayerAPI.html'>MediaPlayerAPI</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -22,7 +22,7 @@ public static boolean IsMediaPlayerFullyLoaded () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the MediaPlayer is fully loaded. This means it has the meta information for the
  file loaded as well as the native media player.
 
@@ -49,7 +49,7 @@ public static boolean IsMediaPlayerLoading () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the MediaPlayer is loading. This is true from the point that a Watch() API call
  is made until the point that the native media player is loaded or there is a failure loading the file.
 
@@ -71,7 +71,7 @@ public static void PlayFaster () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the playback rate of the MediaPlayer to be twice the current playback rate. Not supported
  on all platforms or with all media formats.
  */
@@ -88,7 +88,7 @@ public static void SkipForward () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Performs a time seek forward in the MediaPlayer. The amount of time skipped will be equivalent
  to the value of the property videoframe/ff_time in milliseconds. (the default is 10 seconds)
  */
@@ -105,7 +105,7 @@ public static void SkipForward2 () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Performs a time seek forward in the MediaPlayer. The amount of time skipped will be equivalent
  to the value of the property videoframe/ff_time2 in milliseconds. (the default is 2 1/2 minutes)
  */
@@ -126,7 +126,7 @@ public static void Seek (long Time) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Performs a time seek in the MediaPlayer to the specified time. This time is relative to the
  start time of the metadata for the MediaFile unless a DVD is being played back. In the case of a DVD
  the time is absolute.
@@ -146,7 +146,7 @@ public static void Pause () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Pauses playback in the MediaPlayer. If the MediaPlayer is currently paused this will perform a frame step.
  */
 public static void Pause (UIContext _uicontext) {
@@ -162,7 +162,7 @@ public static void Play () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Resumes playback in the MediaPlayer. If the MediaPlayer is playing at a speed other than x1, the playback speed will be
  reset to x1.
  */
@@ -179,7 +179,7 @@ public static void PlaySlower () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the playback rate of the MediaPlayer to be half the current playback rate. Not supported
  on all platforms or with all media formats.
  */
@@ -196,7 +196,7 @@ public static void PlayPause () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Pauses playback of the MediaPlayer if it is currently playing or resumes playback of the MediaPlayer
  if it is currently paused.
  */
@@ -213,7 +213,7 @@ public static void SkipBackwards () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Performs a time seek backwards in the MediaPlayer. The amount of time skipped will be equivalent
  to the value of the property videoframe/rew_time in milliseconds. (the default is 10 seconds)
  */
@@ -230,7 +230,7 @@ public static void SkipBackwards2 () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Performs a time seek backwards in the MediaPlayer. The amount of time skipped will be equivalent
  to the value of the property videoframe/rew_time2 in milliseconds. (the default is 2 1/2 minutes)
  */
@@ -252,7 +252,7 @@ public static float GetPlaybackRate () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the current playback rate as a floating point number. 1.0 is normal speed forward playback.
  Negative numbers indicate reverse playback.
 
@@ -277,7 +277,7 @@ public static void SetPlaybackRate (float PlaybackRate) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the playback rate of the MediaPlayer to the specified value. 1.0 is normal speed forward playback.
  Negative numbers indicate reverse playback. Not all values are supported on all platforms or for all formats.
 
@@ -297,7 +297,7 @@ public static void VolumeUp () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Increases the volume in the MediaPlayer. This may also effect the 'system' volume depending upon the
  configuration of SageTV.
  */
@@ -314,7 +314,7 @@ public static void VolumeDown () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Decreases the volume in the MediaPlayer. This may also effect the 'system' volume depending upon the
  configuration of SageTV.
  */
@@ -337,7 +337,7 @@ public static float GetVolume () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the current volume level of the MediaPlayer. If no MediaPlayer is loaded this will return
  the system volume.
 
@@ -360,7 +360,7 @@ public static void ChannelUp () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Performs a logical channel up in the MediaPlayer. This only has effect if the content that is
  currently being viewed has the concept of channels, tracks, chapters, etc.
  */
@@ -377,7 +377,7 @@ public static void ChannelDown () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Performs a logical channel down in the MediaPlayer. This only has effect if the content that is
  currently being viewed has the concept of channels, tracks, chapters, etc.
  */
@@ -397,7 +397,7 @@ public static void ChannelSet (java.lang.String ChannelNumber) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Performs a logical channel set in the MediaPlayer. This only has effect if the content that is
  currently being viewed has the concept of channels, tracks, chapters, etc.
 
@@ -421,7 +421,7 @@ public static void VolumeAdjust (float Amount) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Adjusts the volume in the MediaPlayer be the specified amount. The overall volume for the
  player is between 0.0 and 1.0. This may also effect the 'system' volume depending upon the
  configuration of SageTV.
@@ -445,7 +445,7 @@ public static void SetVolume (float Amount) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Explicitly sets the volume in the MediaPlayer to be the specified amount. This should be between 0.0 and 1.0
  This may also effect the 'system' volume depending upon the configuration of SageTV.
 
@@ -475,7 +475,7 @@ public static java.lang.Object Watch (java.lang.Object Content) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Instructs SageTV to playback the specified media content. The argument can be either an
  Airing, a MediaFile or a file path.  For Airings, it can correspond to a MediaFile (which has the
  same effect as just calling this with the MediaFile itself) or it can correspond to a live
@@ -514,7 +514,7 @@ public static java.lang.Object WatchLive (java.lang.String CaptureDeviceInput, l
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Instructs SageTV to begin playback of content streamed from the specified CaptureDeviceInput. The content
  may or may not be buffered to a file first depending upon the PauseBufferSize parameter as well as the
  capabilities of the capture hardware and the network configuration.  NOTE: This is NOT the same as jumping
@@ -559,7 +559,7 @@ public static java.lang.Object WatchLive (java.lang.String CaptureDeviceInput, l
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Instructs SageTV to begin playback of content streamed from the specified CaptureDeviceInput. The content
  may or may not be buffered to a file first depending upon the PauseBufferSize parameter as well as the
  capabilities of the capture hardware and the network configuration.  The channel to view is also
@@ -602,7 +602,7 @@ public static java.lang.Object LockTuner (java.lang.String CaptureDeviceInput) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Instructs SageTV to take control of the specified CaptureDeviceInput. The device may then be used
  for channel scanning. This will cause any prompts to occur that are a result of taking control of the device.
  When done using it; CloseAndWaitUntilClosed() should be called.
@@ -637,7 +637,7 @@ public static java.lang.Object WatchLocalFile (java.io.File file) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Instructs SageTV to playback the specified file path that's local to this client
 
 Parameters:
@@ -669,7 +669,7 @@ public static java.lang.Object StartPlaylist (Object Playlist) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Starts playback of the specified Playlist. The MediaPlayer will playback everything in the Playlist
  sequentially until it is done.
 
@@ -701,7 +701,7 @@ public static java.lang.Object StartPlaylistAt (Object Playlist, int StartIndex)
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Starts playback of the specified Playlist. The MediaPlayer will playback everything in the Playlist
  sequentially until it is done. Playback will begin at the item at the specified by the passed in index.
 
@@ -726,7 +726,7 @@ public static void CloseAndWaitUntilClosed () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Closes the file that is currently loaded by the MediaPlayer and waits for the MediaPlayer to
  completely free all of its resources before returning.
  */
@@ -747,7 +747,7 @@ public static boolean IsMuted () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the MediaPlayer is currently in a muted state. This will not affect the system volume.
 
 Returns:
@@ -770,7 +770,7 @@ public static void SetMute (boolean Muted) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the mute state for the MediaPlayer. This does not affect the system volume.
 
 Parameters:
@@ -793,7 +793,7 @@ public static java.lang.String GetCurrentMediaTitle () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the title of the content that is currently loaded by the MediaPlayer.
 
 Returns:
@@ -821,7 +821,7 @@ public static long GetMediaTime () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the current playback time of the MediaPlayer. For DVD content this time will return a value appropriate for
  a current time display (starting at zero). For all other content types, this value will be the time in java.lang.System.currentTimeMillis() units
  and is relative to the start time of the Airing metadata which represents the currently loaded file. So for a current time display you
@@ -853,7 +853,7 @@ public static long GetRawMediaTime () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the current playback time of the MediaPlayer. This is the current playback time relative to the
  start of the current playing file. For multiple segment files; this will be relative to the start of the currently
  playing segment. This is intended to be used by plugin developers for linking events with the media time in the file.
@@ -882,7 +882,7 @@ public static long GetMediaDuration () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the duration of the currently loaded MediaFile in milliseconds.
 
 Returns:
@@ -907,7 +907,7 @@ public static Object GetCurrentMediaFile () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the MediaFile object that is currently loaded (or loading) by the MediaPlayer
 
 Returns:
@@ -932,7 +932,7 @@ public static boolean HasMediaFile () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the MediaPlayer currently has a file that is loading or loaded.
 
 Returns:
@@ -957,7 +957,7 @@ public static boolean DoesCurrentMediaFileHaveVideo () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the MediaPlayer has a file loading or loaded that has video content in it
 
 Returns:
@@ -982,7 +982,7 @@ public static boolean IsCurrentMediaFileMusic () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the MediaPlayer has a file loading or loaded, and that file is a music file
 
 Returns:
@@ -1007,7 +1007,7 @@ public static boolean IsCurrentMediaFileDVD () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the MediaPlayer has a file loading or loaded, and that file is a DVD
 
 Returns:
@@ -1032,7 +1032,7 @@ public static boolean IsCurrentMediaFileRecording () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the MediaPlayer has a file loading or loaded, and that file is currently being recorded
 
 Returns:
@@ -1057,7 +1057,7 @@ public static boolean IsPlaying () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the MediaPlayer is currently playing back content (i.e. content is fully loaded and not in the paused state)
 
 Returns:
@@ -1082,7 +1082,7 @@ public static boolean IsShowingDVDMenu () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the MediaPlayer currently has DVD content loaded and that content is showing a DVD menu that can have user interaction
 
 Returns:
@@ -1109,7 +1109,7 @@ public static Object GetCurrentPlaylist () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the current Playlist that is being played back by the MediaPlayer. Playlists can be played back
  using the callStartPlaylist()
 
@@ -1138,7 +1138,7 @@ public static int GetCurrentPlaylistIndex () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the 0-based index into the root Playlist that is currently being played back by the MediaPlayer. 0 is returned
  if no Playlist is currently being played back.
 
@@ -1167,7 +1167,7 @@ public static long GetAvailableSeekingStart () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the earliest time that the current media can be seeked to using theSeek()
 call. This
  will be in absolute time.
@@ -1196,7 +1196,7 @@ public static long GetAvailableSeekingEnd () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the latest time that the current media can be seeked to using theSeek()
 call. This
  will be in absolute time.
@@ -1225,7 +1225,7 @@ public static boolean IsCorrectParentalLockCode (java.lang.String ParentalLockCo
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the argument passed in matches the parental lock code in the system
 
 Parameters:
@@ -1250,7 +1250,7 @@ public static void SetVideoAlwaysOnTop (boolean OnTop) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the video portion of SageTV to always be on top of other windows in the desktop (Windows only).
 
 Parameters:
@@ -1268,7 +1268,7 @@ public static void DVDChapterNext () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Informs the MediaPlayer to start playback of the next chapter in the current DVD content.
  */
 public static void DVDChapterNext (UIContext _uicontext) {
@@ -1283,7 +1283,7 @@ public static void DVDChapterPrevious () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Informs the MediaPlayer to start playback of the previous chapter in the current DVD content.
  */
 public static void DVDChapterPrevious (UIContext _uicontext) {
@@ -1301,7 +1301,7 @@ public static void DVDChapterSet (int ChapterNumber) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Informs the MediaPlayer to start playback of the specified chapter in the current DVD content.
 
 Parameters:
@@ -1319,7 +1319,7 @@ public static void DVDEnter () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Performs the 'Enter' operation when using a menu system in DVD content.
  */
 public static void DVDEnter (UIContext _uicontext) {
@@ -1334,7 +1334,7 @@ public static void DVDMenu () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Performs the 'Menu' operation when playing back a DVD which should bring up the root menu of the DVD
  */
 public static void DVDMenu (UIContext _uicontext) {
@@ -1349,7 +1349,7 @@ public static void DVDTitleMenu () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Performs the 'Menu' operation when playing back a DVD which should bring up the title menu of the DVD
  */
 public static void DVDTitleMenu (UIContext _uicontext) {
@@ -1364,7 +1364,7 @@ public static void DVDReturn () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Performs the 'Return' operation when playing back a DVD which should bring the user back to the last DVD menu they were at
  */
 public static void DVDReturn (UIContext _uicontext) {
@@ -1379,7 +1379,7 @@ public static void DVDTitleNext () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Informs the MediaPlayer to start playback of the next title in the current DVD content.
  */
 public static void DVDTitleNext (UIContext _uicontext) {
@@ -1394,7 +1394,7 @@ public static void DVDTitlePrevious () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Informs the MediaPlayer to start playback of the previous title in the current DVD content.
  */
 public static void DVDTitlePrevious (UIContext _uicontext) {
@@ -1409,7 +1409,7 @@ public static void DVDSubtitleToggle () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Toggles the state for subtitle display in the DVD content being played back.
  */
 public static void DVDSubtitleToggle (UIContext _uicontext) {
@@ -1430,7 +1430,7 @@ public static void DVDSubtitleChange (int SubtitleNum) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the subtitle that should be displayed in the current DVD content. The names of the languages for the
  corresponding subtitles are obtained from a call toGetDVDAvailableSubpictures()
 .
@@ -1457,7 +1457,7 @@ public static void DVDAudioChange (int AudioNum) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the audio language that should be used in the current DVD content. The names of the languages
  are obtained from a call toGetDVDAvailableLanguages()
 .
@@ -1484,7 +1484,7 @@ public static void DVDAngleChange (int AngleNum) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the 'Angle' for playback of the current DVD content. The number of angels
  are obtained from a call toGetDVDNumberOfAngles()
 .
@@ -1506,7 +1506,7 @@ public static void ReloadCurrentFile () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Reloads the current file that is loaded by the MediaPlayer. This is useful when changing configuration options
  for the MediaPlayer and then showing playback with those changes.
  */
@@ -1541,7 +1541,7 @@ public static void DirectPlaybackControl (int Code, long Param1, long Param2) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Submits an explicit playback control request to the MediaPlayer if it supports it. (Only DVD-based media players support this call)
 
 Parameters:
@@ -1580,7 +1580,7 @@ public static int GetDVDCurrentTitle () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the current title number that is being played back for DVD content.
 
 Returns:
@@ -1610,7 +1610,7 @@ public static java.lang.String GetBluRayTitleDescription (int TitleNum) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a description of the specified title number if playing back a BluRay. This description will have
  the total unique duration of the specified title and an asterisk if it is considered to be the 'main' title.
 
@@ -1640,7 +1640,7 @@ public static int GetDVDNumberOfTitles () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the total number of titles in the current DVD content
 
 Returns:
@@ -1665,7 +1665,7 @@ public static int GetDVDCurrentChapter () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the current chapter number that is being played back for DVD content.
 
 Returns:
@@ -1690,7 +1690,7 @@ public static int GetDVDNumberOfChapters () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the total number of chapters in the current title in the current DVD content
 
 Returns:
@@ -1716,7 +1716,7 @@ public static int GetDVDCurrentDomain () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the current 'domain' that the DVD playback is in.
 
 Returns:
@@ -1742,7 +1742,7 @@ public static int GetDVDCurrentAngle () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the current angle number that is being played back for DVD content
 
 Returns:
@@ -1767,7 +1767,7 @@ public static int GetDVDNumberOfAngles () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the total number of angles that are currently available to select from in the current DVD content
 
 Returns:
@@ -1792,7 +1792,7 @@ public static java.lang.String GetDVDCurrentLanguage () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the current audio playback language that is being used for the current DVD content
 
 Returns:
@@ -1815,7 +1815,7 @@ public static java.lang.String[] GetDVDAvailableLanguages () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets a list of all of the audio languages that are currently available in the current DVD content
 
 Returns:
@@ -1836,7 +1836,7 @@ public static java.lang.String[] GetDVDCurrentSubpicture () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the current subtitle that is being used for the current DVD content
 
 Returns:
@@ -1857,7 +1857,7 @@ public static java.lang.String[] GetDVDAvailableSubpictures () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets a list of all of the subtitles that are currently available in the current DVD content
 
 Returns:
@@ -1881,7 +1881,7 @@ public static java.lang.String GetMediaPlayerClosedCaptionState () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the current state that MediaPlayer close captioning is set to use. This can be either a localized
  version of "Captions Off" or one of the strings: "CC1", "CC2", "Text1", "Text2"
 
@@ -1906,7 +1906,7 @@ public static void SetMediaPlayerClosedCaptionState (java.lang.String CCType) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the current state that MediaPlayer close captioning should use. This can be one of the strings: "CC1", "CC2", "Text1", "Text2".
  If any other value is used then closed captioning will be turned off.
 
@@ -1931,7 +1931,7 @@ public static boolean IsMediaPlayerSignalLost () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the source the MediaPlayer is trying to playback from indicates a signal loss.
  This can happen when trying to watch digital TV stations.
 
@@ -1959,7 +1959,7 @@ public static long GetSubtitleDelay () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the delay in milliseconds that is applied to external subtitle files when they are used during playback (can be positive or negative)
 
 Returns:
@@ -1986,7 +1986,7 @@ public static void SetSubtitleDelay (long DelayMsec) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the delay in milliseconds that is applied to external subtitle files when they are used during playback (can be positive or negative)
 
 Parameters:
@@ -2014,7 +2014,7 @@ public static boolean CanAdjustSubtitleTiming () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the subtitles for the currently loaded file can have their timing adjusted. This is true for subtitles
  that come from external files
 
@@ -2047,7 +2047,7 @@ public static long ApplyRelativeSubtitleAdjustment (int SubCount) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Adjusts the timing for subtitle display by increasing/decreasing the delay so that the sub at the relative SubCount position
  would be currently displayed.
 
@@ -2077,7 +2077,7 @@ public static Object[] GetRecentChannels () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns an array of recently viewed channels. This tracks channels viewed from any mechanism; live or DVR'd.
 
 Returns:
@@ -2100,7 +2100,7 @@ public static void ClearRecentChannels () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Clears the list of recently viewed channels.
 
 Since:
@@ -2124,7 +2124,7 @@ public static java.awt.image.BufferedImage GetVideoSnapshot () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns an image which is a frame grab of the currently rendered video frame. This is currently only
  supported on Windows when using VMR9 with 3D acceleration
 

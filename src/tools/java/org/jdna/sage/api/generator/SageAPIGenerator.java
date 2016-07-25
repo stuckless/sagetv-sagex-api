@@ -70,7 +70,7 @@ public class SageAPIGenerator {
 
 			if (m.comment != null && m.comment.trim().length() > 0) {
                 pw.println("/**");
-                pw.println(" * UI Context Aware Call<br/>");
+                pw.println(" * UI Context Aware Call<br>");
                 pw.println(m.comment.trim());
                 pw.println(" */");
             }

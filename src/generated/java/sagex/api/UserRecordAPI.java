@@ -2,7 +2,7 @@ package sagex.api;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 24/07/16 5:40 PM
+ * Generated Date/Time: 24/07/16 7:30 PM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/UserRecordAPI.html'>UserRecordAPI</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -27,7 +27,7 @@ public static Object AddUserRecord (java.lang.String Store, java.lang.String Key
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Creates a new UserRecord object in the database under the specified data 'Store' and with the
  specified 'Key'. If a UserRecord already exists with that Store/Key combination, it will be returned instead.
 
@@ -63,7 +63,7 @@ public static java.lang.String GetUserRecordData (Object UserRecord, java.lang.S
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the Value from the specified Name that's stored in the given UserRecord object.
 
 Parameters:
@@ -95,7 +95,7 @@ public static void SetUserRecordData (Object UserRecord, java.lang.String Name, 
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the Value for the specified Name that's stored in the given UserRecord object
 
 Parameters:
@@ -128,7 +128,7 @@ public static Object GetUserRecord (java.lang.String Store, java.lang.String Key
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets an existing UserRecord object in the database under the specified data 'Store' and with the
  specified 'Key'.
 
@@ -163,7 +163,7 @@ public static boolean DeleteUserRecord (Object UserRecord) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Deletes the specified UserRecord object from the database.
 
 Parameters:
@@ -194,7 +194,7 @@ public static Object[] GetAllUserRecords (java.lang.String Store) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets all existing UserRecord objects that exist under the specified data Store.
 
 Parameters:
@@ -221,7 +221,7 @@ public static java.lang.String[] GetAllUserStores () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets all existing Stores that UserRecord objects have been created under in the database.
 
 Returns:
@@ -246,7 +246,7 @@ public static void DeleteAllUserRecords (java.lang.String Store) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Deletes the all the UserRecords from the database under the specified Store.
 
 Parameters:
@@ -275,7 +275,7 @@ public static boolean IsUserRecordObject (java.lang.Object UserRecord) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the passed in argument is a UserRecord object
 
 Parameters:
@@ -306,7 +306,7 @@ public static java.lang.String[] GetUserRecordNames (Object UserRecord) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets a list of all the 'Name' values used in name-value pairs in this UserRecord object
 
 Parameters:

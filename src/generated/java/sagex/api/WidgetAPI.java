@@ -2,7 +2,7 @@ package sagex.api;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 24/07/16 5:40 PM
+ * Generated Date/Time: 24/07/16 7:30 PM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/WidgetAPI.html'>WidgetAPI</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -23,7 +23,7 @@ public static java.lang.Object LoadSTVFile (java.io.File STVFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Loads a new SageTV Application Definition file that defines the entire user interface for SageTV
 
 Parameters:
@@ -52,7 +52,7 @@ public static java.lang.Object ImportSTVFile (java.io.File STVFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Imports a SageTV Application Definition file into the current STV file that is loaded. This will essentially merge the two together.
 
 Parameters:
@@ -81,7 +81,7 @@ public static boolean IsSTVModified () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the currently loaded STV has been modified at all since its last save
 
 Returns:
@@ -106,7 +106,7 @@ public static Object[] GetAllWidgets () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets all of the Widgets that are in the currently loaded STV
 
 Returns:
@@ -129,7 +129,7 @@ public static Object[] GetWidgetsByType (java.lang.String WidgetType) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets all of the Widgets that are in the currently loaded STV that are of the specified type
 
 Parameters:
@@ -156,7 +156,7 @@ public static Object AddWidget (java.lang.String WidgetType) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Creates a new Widget of the specified type and adds it to the STV
 
 Parameters:
@@ -189,7 +189,7 @@ public static Object AddWidgetWithSymbol (java.lang.String WidgetType, java.lang
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Creates a new Widget of the specified type and adds it to the STV. This also allows specifying the desired symbol to use for the Widget.
  If the symbol is already in use; then a new symbol will automatically be assigned to this Widget instead.
 
@@ -218,7 +218,7 @@ public static void RemoveWidget (Object Widget) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Removes a Widget from the STV
 
 Parameters:
@@ -241,7 +241,7 @@ public static void AddWidgetChild (Object WidgetParent, Object WidgetChild) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Creates a parent-child relationship between two Widgets. If the relationship already exists, this call has no effect.
  This new child will be the last child of the parent.
 
@@ -267,7 +267,7 @@ public static void InsertWidgetChild (Object WidgetParent, Object WidgetChild, i
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Creates a parent-child relationship between two Widgets. Since parent-child relationships are ordered, this allows
  specifying where in that order this relationship should be.
 
@@ -293,7 +293,7 @@ public static void RemoveWidgetChild (Object WidgetParent, Object WidgetChild) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Breaks a parent-child relationships between two Widgets. If the Widgets do not have the specified parent-child relationship
  then there is no effect.
 
@@ -321,7 +321,7 @@ public static boolean IsWidgetParentOf (Object WidgetParent, Object WidgetChild)
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified Widgets have a parent-child relationship.
 
 Parameters:
@@ -351,7 +351,7 @@ public static java.lang.String GetWidgetType (Object Widget) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the type of a Widget
 
 Parameters:
@@ -381,7 +381,7 @@ public static boolean HasWidgetProperty (Object Widget, java.lang.String Propert
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified Widget has a property defined with the specified name
 
 Parameters:
@@ -409,7 +409,7 @@ public static void SetWidgetProperty (Object Widget, java.lang.String PropertyNa
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets a property in a Widget to a specified value. If that property is already defined, this will overwrite it.
 
 Parameters:
@@ -437,7 +437,7 @@ public static java.lang.String GetWidgetProperty (Object Widget, java.lang.Strin
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the value for a specified property in a Widget
 
 Parameters:
@@ -467,7 +467,7 @@ public static java.lang.String GetWidgetName (Object Widget) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the name of the specified Widget
 
 Parameters:
@@ -493,7 +493,7 @@ public static void SetWidgetName (Object Widget, java.lang.String Name) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the name for a Widget
 
 Parameters:
@@ -517,7 +517,7 @@ public static Object[] GetWidgetParents (Object Widget) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the list of Widgets that are parents of the specified Widget. The ordering of this list has no effect.
 
 Parameters:
@@ -542,7 +542,7 @@ public static Object[] GetWidgetChildren (Object Widget) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the list of Widgets that are children of the specified Widget. The ordering of this list does have an effect.
 
 Parameters:
@@ -569,7 +569,7 @@ public static java.lang.Object ExecuteWidgetChain (Object Widget) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Executes a Widget and the chain of child Widgets underneath it
 
 Parameters:
@@ -603,7 +603,7 @@ public static java.lang.Object ExecuteWidgetChainInCurrentMenuContext (Object Wi
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Executes a Widget and the chain of child Widgets underneath it. This will use the context of the currently loaded menu to do this which
  is useful if you want to launch an OptionsMenu programatically w/ the proper parent context. NOTE: If this does launch an OptionsMenu then the
  value returned from this function will not be usable and this call will return once the OptionsMenu is launched. Once it is closed the core
@@ -633,7 +633,7 @@ public static void LaunchMenuWidget (Object Widget) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Launches a new menu in SageTV with the specified Widget as the menu's definition.
 
 Parameters:
@@ -656,7 +656,7 @@ public static java.lang.String GetCurrentSTVFile () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the STV file that is currently loaded by the system
 
 Returns:
@@ -686,7 +686,7 @@ public static Object GetWidgetChild (Object Widget, java.lang.String Type, java.
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Searches the children of the specified Widget for one with the specified type and name. If no match
  is found then null is returned. If there are multiple matches then the first one is returned.
 
@@ -721,7 +721,7 @@ public static Object GetWidgetParent (Object Widget, java.lang.String Type, java
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Searches the parents of the specified Widget for one with the specified type and name. If no match
  is found then null is returned. If there are multiple matches then the first one is returned.
 
@@ -751,7 +751,7 @@ public static Object GetCurrentMenuWidget () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the Widget the defines the menu that is currently loaded by the system
 
 Returns:
@@ -774,7 +774,7 @@ public static Object[] GetWidgetMenuHistory () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets a list of the Widgets that have defined the menus that were recently displayed in the UI
 
 Returns:
@@ -801,7 +801,7 @@ public static Object[] GetWidgetMenuBackHistory () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets a list of the Widgets that have defined the menus that were recently displayed in the UI.
  UnlikeGetWidgetMenuHistory()
 this only returns Menus that are
@@ -833,7 +833,7 @@ public static java.lang.Object EvaluateExpression (java.lang.String Expression) 
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Evaluates the passed in expression and returns the result. This is executed in a new variable context w/out any
  user interface context.
 
@@ -864,7 +864,7 @@ public static boolean SaveWidgetsAsXML (java.io.File File, boolean Overwrite) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Saves all of the current Widgets as an XML file. Same as the "Save a Copy as XML..." in the Studio.
 
 Parameters:
@@ -896,7 +896,7 @@ public static java.lang.String GetWidgetSymbol (Object Widget) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the UID symbol for the specified Widget
 
 Parameters:
@@ -929,7 +929,7 @@ public static Object FindWidgetBySymbol (java.lang.String Symbol) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the Widget represented by the specified UID symbol
 
 Parameters:
@@ -960,7 +960,7 @@ public static java.io.File GetDefaultSTVFile () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the file path for the default STV file
 
 Returns:
@@ -993,7 +993,7 @@ public static Object GetUIWidgetContext () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the Widget for the corresponding UI component that this execution originated from. For
  'green' process chains; this will correspond to the UI component that received the event. For 'blue'
  UI chains; this will correspond to the UI component who's conditionality is being determined or who's data
@@ -1026,7 +1026,7 @@ public static java.lang.String GetSTVName () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the value of the 'STVName' Attribute under the Global Theme Widget. This is used for dependencies relating to plugins.
 
 Returns:
@@ -1055,7 +1055,7 @@ public static java.lang.String GetSTVVersion () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the value of the 'STVVersion' Attribute under the Global Theme Widget. This is used for dependencies relating to plugins.
 
 Returns:

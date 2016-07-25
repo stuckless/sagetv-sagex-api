@@ -2,7 +2,7 @@ package sagex.api;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 24/07/16 5:40 PM
+ * Generated Date/Time: 24/07/16 7:30 PM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/ChannelAPI.html'>ChannelAPI</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -23,7 +23,7 @@ public static java.lang.String GetChannelDescription (Object Channel) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the descriptive name for this Channel. This is the longer text string.
 
 Parameters:
@@ -52,7 +52,7 @@ public static java.lang.String GetChannelName (Object Channel) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the name for this Channel. This is the Channel's call sign.
 
 Parameters:
@@ -81,7 +81,7 @@ public static java.lang.String GetChannelNetwork (Object Channel) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the name of the associated network for this Channel. This is a way of grouping kinds of Channels together.
 
 Parameters:
@@ -110,7 +110,7 @@ public static java.lang.String GetChannelNumber (Object Channel) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the channel number to tune to for this Channel. SageTV will return the first channel number it finds for this Channel since there may be multiple ones.
 
 Parameters:
@@ -141,7 +141,7 @@ public static java.lang.String GetChannelNumberForLineup (Object Channel, java.l
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the channel number to tune to for this Channel on the specified lineup.
  SageTV will return the first channel number it finds for this Channel on the lineup since there may be multiple ones.
 
@@ -175,7 +175,7 @@ public static java.lang.String GetPhysicalChannelNumberForLineup (Object Channel
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the physical channel number to tune to for this Channel on the specified lineup.
 
 Parameters:
@@ -207,7 +207,7 @@ public static boolean IsChannelViewable (Object Channel) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if there is a configured lineup for which this channel is viewable.
 
 Parameters:
@@ -237,7 +237,7 @@ public static boolean IsChannelViewableOnLineup (Object Channel, java.lang.Strin
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if this Channel is viewable on the specified Lineup
 
 Parameters:
@@ -269,7 +269,7 @@ public static boolean IsChannelViewableOnNumberOnLineup (Object Channel, java.la
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if this Channel is viewable on the specified Lineup on the specified channel number
 
 Parameters:
@@ -299,7 +299,7 @@ public static java.lang.String[] GetChannelNumbersForLineup (Object Channel, jav
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the channel numbers which can be used to tune this Channel on the specified lineup.
 
 Parameters:
@@ -324,7 +324,7 @@ public static void ClearChannelMappingOnLineup (Object Channel, java.lang.String
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Clears any associated channel mappings that were created for this Channel on the specified Lineup
 
 Parameters:
@@ -351,7 +351,7 @@ public static boolean IsChannelRemappedOnLineup (Object Channel, java.lang.Strin
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the user has remapped this Channel to a different number than it's default on the specified Lineup
 
 Parameters:
@@ -379,7 +379,7 @@ public static void SetChannelMappingForLineup (Object Channel, java.lang.String 
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Maps a channel on a lineup to a new channel number.
 
 Parameters:
@@ -406,7 +406,7 @@ public static void SetChannelMappingsForLineup (Object Channel, java.lang.String
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Maps a channel on a lineup to a new channel number(s).
 
 Parameters:
@@ -434,7 +434,7 @@ public static void ClearPhysicalChannelMappingsOnLineup (Object Channel, java.la
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Clears any associated physical channel mappings that were created for this Channel on the specified Lineup
 
 Parameters:
@@ -465,7 +465,7 @@ public static boolean IsPhysicalChannelRemappedOnLineup (Object Channel, java.la
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the user has remapped this physical Channel to a different physical number than it's default on the specified Lineup
 
 Parameters:
@@ -497,7 +497,7 @@ public static void SetPhysicalChannelMappingForLineup (Object Channel, java.lang
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Maps a Channel on a lineup to a new physical channel number.
 
 Parameters:
@@ -527,7 +527,7 @@ public static int GetStationID (Object Channel) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns an ID which can be used withGetChannelForStationID()
 for doing keyed lookups of Channel objects
 
@@ -557,7 +557,7 @@ public static Object GetChannelLogo (Object Channel) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the logo image for the specified Channel if one exists
 
 Parameters:
@@ -591,7 +591,7 @@ public static Object GetChannelLogo (Object Channel, java.lang.String Type, int 
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a Channel logo for the requested Channel if one exists. This can provide more detailed requests then the single argument GetChannelLogo call.
 
 Parameters:
@@ -625,7 +625,7 @@ public static boolean IsChannelObject (Object Channel) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the argument is a Channel object. Automatic type conversion is NOT done in this call.
 
 Parameters:
@@ -653,7 +653,7 @@ public static void SetChannelViewabilityForChannelNumberOnLineup (Object Channel
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets whether or not the specified Channel is viewable on the specified number on the specified Lineup
 
 Parameters:
@@ -679,7 +679,7 @@ public static void SetChannelViewabilityForChannelOnLineup (Object Channel, java
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets whether or not the specified Channel is viewable on the specified Lineup. This affects all channel numbers it appears on.
 
 Parameters:
@@ -707,7 +707,7 @@ public static Object GetChannelForStationID (int StationID) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the Channel object that has the corresponding station ID. The station ID is retrieved usingGetStationID()
 
 
@@ -742,7 +742,7 @@ public static Object AddChannel (java.lang.String CallSign, java.lang.String Nam
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Adds a new Channel to the database. The CallSign should not match that of any other channel; but this rule is not enforced.
  The StationID is what is used as the unique key to identify a station. Be sure that if you're creating new station IDs they do not conflict with existing ones.
  The safest way to pick a station ID (if you need to at random) is to make it less than 10000 and ensure that no channel already exists with that station ID.
@@ -772,7 +772,7 @@ public static Object[] GetAllChannels () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns all of the Channels that are defined in the system
 
 Returns:
@@ -800,7 +800,7 @@ public static int GetChannelLogoCount (Object Channel) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a count of logos for this channel. This will either be 0, 1 or 2. This does NOT include user-supplied channel logos.
  Since all channel logos have all types, this does not require a type argument.
 
@@ -834,7 +834,7 @@ public static java.lang.String GetChannelLogoURL (Object Channel) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the URL of the logo image for the specified Channel if one exists
 
 Parameters:
@@ -870,7 +870,7 @@ public static java.lang.String GetChannelLogoURL (Object Channel, java.lang.Stri
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a Channel logo URL for the requested Channel if one exists. This can provide more detailed requests then the single argument GetChannelLogoURL call.
 
 Parameters:

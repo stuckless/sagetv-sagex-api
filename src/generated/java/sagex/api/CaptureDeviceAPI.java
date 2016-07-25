@@ -2,7 +2,7 @@ package sagex.api;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 24/07/16 5:40 PM
+ * Generated Date/Time: 24/07/16 7:30 PM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/CaptureDeviceAPI.html'>CaptureDeviceAPI</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -19,7 +19,7 @@ public static java.lang.String[] GetCaptureDevices () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns all of the CaptureDevices in the system that SageTV can use
 
 Returns:
@@ -42,7 +42,7 @@ public static java.lang.String[] GetCaptureDeviceInputs (java.lang.String Captur
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns all of the CaptureDeviceInputs for a given CaptureDevice.
 
 Parameters:
@@ -65,7 +65,7 @@ public static java.lang.String[] GetConfiguredCaptureDeviceInputs () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns all of the CaptureDeviceInputs that are currently configured for use by SageTV.
 
 Returns:
@@ -90,7 +90,7 @@ public static boolean IsCaptureDeviceFunctioning (java.lang.String CaptureDevice
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns whether or not a CaptureDevice is functioning (i.e. the device is offline)
 
 Parameters:
@@ -119,7 +119,7 @@ public static boolean IsCaptureDeviceANetworkEncoder (java.lang.String CaptureDe
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if a CaptureDevice is a Network Encoder
 
 Parameters:
@@ -144,7 +144,7 @@ public static java.lang.String[] GetActiveCaptureDevices () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns all of the CaptureDevices that are currently configured for use by SageTV
 
 Returns:
@@ -169,7 +169,7 @@ public static boolean IsCaptureDeviceInUseByALiveClient (java.lang.String Captur
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the CaptureDevice is currently under control of a client who is (or was) watching live TV
 
 Parameters:
@@ -200,7 +200,7 @@ public static java.lang.String AddInputForRFChannel (java.lang.String CaptureDev
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a CaptureDeviceInput that corresponds to using the tuner input on the CaptureDevice locked to a certain channel.
  For example, using the RF connection from your cable box to the capture card on channel 3 would required adding a new input this way.
 
@@ -229,7 +229,7 @@ public static java.lang.String GetLastUsedCaptureDevice () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the last CaptureDevice that was accessed by SageTV.
 
 Returns:
@@ -256,7 +256,7 @@ public static java.lang.String GetLastUsedCaptureDeviceInput (java.lang.String C
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the last CaptureDeviceInput that was used by SageTV on the given CaptureDevice
 
 Parameters:
@@ -285,7 +285,7 @@ public static Object GetCaptureDeviceCurrentRecordFile (java.lang.String Capture
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the file that is currently being recorded by this capture device
 
 Parameters:
@@ -312,7 +312,7 @@ public static java.lang.String[] GetCaptureDeviceQualities (java.lang.String Cap
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the recording qualities which are supported by this CaptureDevice
 
 Parameters:
@@ -339,7 +339,7 @@ public static java.lang.String GetCaptureDeviceDefaultQuality (java.lang.String 
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the default recording qualities for this CaptureDevice.
 
 Parameters:
@@ -365,7 +365,7 @@ public static void SetCaptureDeviceDefaultQuality (java.lang.String CaptureDevic
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the default recording quality for a CaptureDevice
 
 Parameters:
@@ -388,7 +388,7 @@ public static void SetCaptureDeviceAudioSource (java.lang.String CaptureDevice, 
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the audio capture source for a corresponding CaptureDevice
 
 Parameters:
@@ -414,7 +414,7 @@ public static java.lang.String GetCaptureDeviceAudioSource (java.lang.String Cap
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the audio capture source for a corresponding CaptureDevice.
 
 Parameters:
@@ -440,7 +440,7 @@ public static java.lang.String[] GetAudioCaptureSources () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns an array of all the audio capture sources in the system, used withSetCaptureDeviceAudioSource(CaptureDevice, AudioSource)
 
 
@@ -466,7 +466,7 @@ public static boolean IsCaptureDeviceHardwareEncoder (java.lang.String CaptureDe
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the CaptureDevice is a hardware encoder
 
 Parameters:
@@ -498,7 +498,7 @@ public static java.lang.String GetCaptureDeviceBroadcastStandard (java.lang.Stri
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the name of the broadcast standard used for reception on this capture device.
  NOTE: The method 'GetCaptureDeviceInputBroadcastStandard' should be used instead since the broadcast standard can change per-input
 
@@ -530,7 +530,7 @@ public static void SetCaptureDeviceDTVStandard (java.lang.String CaptureDevice, 
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the TV standard to use for a capture device for devices that support multiple digital TV standards. The only current
  example of this is the Hauppauge HVR-4000 which support DVB-T, DVB-S and DVB-C.
 
@@ -559,7 +559,7 @@ public static int GetCaptureDeviceMerit (java.lang.String CaptureDevice) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the encoder merit for a CaptureDevice.
 
 Parameters:
@@ -584,7 +584,7 @@ public static void SetCaptureDeviceMerit (java.lang.String CaptureDevice, int Me
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the encoder merit for a CaptureDevice.
 
 Parameters:

@@ -2,7 +2,7 @@ package sagex.api;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 24/07/16 5:40 PM
+ * Generated Date/Time: 24/07/16 7:30 PM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/Database.html'>Database</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -29,7 +29,7 @@ public static java.lang.Object FilterByBoolMethod (java.lang.Object Data, java.l
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Filters data by a boolean method. Each element in the 'Data' has the 'Method' executed on it.
  If the result is the same as the 'MatchValue' parameter then that element will be in the
  returned data. For Maps  Collections this is done in place. For Arrays a new Array is created.
@@ -72,7 +72,7 @@ public static java.lang.Object FilterByMethod (java.lang.Object Data, java.lang.
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Filters data by a method. Each element in the 'Data' has the 'Method' executed on it.
  If the result is the same as the 'MatchValue' parameter then that element will be in the
  returned data if MatchedPasses is true. If MatchedPasses is false then non-matching elements will be in the returned data.
@@ -121,7 +121,7 @@ public static java.lang.Object FilterByMethodRegex (java.lang.Object Data, java.
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Filters data by a method. Each element in the 'Data' has the 'Method' executed on it.
  The result is then converted to a String and RegexPattern is applied to it.
  If the regular expression matches the String value and MatchedPasses is true, then the element
@@ -169,7 +169,7 @@ public static java.lang.Object FilterByRange (java.lang.Object Data, java.lang.S
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Filters data by a comparable range. Each element in the 'Data' has the 'Method' executed on it.
  If KeepWithinBounds is true, then results that are within the specified range are included in the returned data; otherwise
  if KeepWithinBounds is false then results that are outside of the specified range are included in the returned data.
@@ -215,7 +215,7 @@ public static java.util.Map GroupByMethod (java.lang.Object Data, java.lang.Stri
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Grouping method for data lists/maps. This will return a Map that uses a key-value mapping to group the data.
  The order of the grouping is stable, which means the order of the elements within a subgroup will be the same
  order as in the pased in data. Use the GetSubgroup method to get the corresponding value for a key.
@@ -264,7 +264,7 @@ public static java.util.Map GroupByArrayMethod (java.lang.Object Data, java.lang
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Grouping method for data lists/maps. This will return a Map that uses a key-value mapping to group the data.
  The order of the grouping is stable, which means the order of the elements within a subgroup will be the same
  order as in the pased in data. Use the GetSubgroup method to get the corresponding value for a key.
@@ -311,7 +311,7 @@ public static java.lang.Object Sort (java.lang.Object Data, boolean Descending, 
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sorts a list of data according to the specified sorting technique. The order of the sort can be reversed using
  the Descending parameter. If you use a method name for the SortTechnique, then the data will be sorted by the natural
  ordering of the values returned from that mehod call. If that data type does not implement java.lang.Comparable then they
@@ -356,7 +356,7 @@ public static java.lang.Object SortLexical (java.lang.Object Data, boolean Desce
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sorts a list of data based on the result of calling the "SortByMethod" on each item and using toString on the return value of that method.
  The order of the sort can be reversed using the Descending parameter. There are many cases where this will return the same thing as a call toSort()
 SortLexical should be used when sorting text if possible, as it uses more advanced language-specific sorting techniques to determine a proper order.
@@ -395,7 +395,7 @@ public static Object[] GetAiringsOnChannelAtTime (Object Channel, long StartTime
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns all of the Airing objects in the database that are on the specified channel during the specified time span.
 
 Parameters:
@@ -427,7 +427,7 @@ public static Object[] GetAiringsOnViewableChannelsAtTime (long StartTime, long 
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns all of the Airing objects in the database on all of the channels that are viewable during the specified time span.
 
 Parameters:
@@ -458,7 +458,7 @@ public static Object[] GetAllNonMusicWithPerson (java.lang.String Person) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Deprecated. 
 
 Returns all Airings in the database that refer to content that is NOT a music file and includes the specified person
@@ -488,7 +488,7 @@ public static Object[] GetAllNonMusicWithTitle (java.lang.String Title) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Deprecated. 
 
 Returns all Airings in the database that refer to content that is NOT a music file and has the specified title.
@@ -518,7 +518,7 @@ public static Object[] SearchByPerson (java.lang.String SearchString) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns all Airings in the database that refer to content that is NOT a music file and includes the specified person
  in the list of people involved (i.e. actors, directors, producers, etc.)
  This is the same asGetAllNonMusicWithPerson()
@@ -551,7 +551,7 @@ public static Object[] SearchByPerson (java.lang.String SearchString, java.lang.
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns all Airings in the database that refer to content that includes the specified person
  in the list of people involved (i.e. actors, directors, producers, etc.). The content must also match
  one of the media types specified in the MediaMask
@@ -582,7 +582,7 @@ public static Object[] SearchByText (java.lang.String SearchString) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Searches the descriptions and episode names of all of the content in the database for the
  specified search string. This search is case insensitive.
 
@@ -613,7 +613,7 @@ public static Object[] SearchByText (java.lang.String SearchString, java.lang.St
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Searches the descriptions and episode names of all of the content in the database for the
  specified search string. This search is case insensitive. The content must also match
  one of the media types specified in the MediaMask
@@ -645,7 +645,7 @@ public static Object[] SearchByTitle (java.lang.String SearchString) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns all Airings in the database that refer to content that is NOT a music file and has the specified title.
  This is the same asGetAllNonMusicWithTitle()
 
@@ -676,7 +676,7 @@ public static Object[] SearchByTitle (java.lang.String SearchString, java.lang.S
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns all Airings in the database that refer to content that has the specified title. The content must also match
  one of the media types specified in the MediaMask
 
@@ -706,7 +706,7 @@ public static Object[] SearchForPeople (java.lang.String SearchString) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a list of all of the people in the database that include the search string in their name.
  This search is case insensitive.
 
@@ -736,7 +736,7 @@ public static Object[] SearchForPeople (java.lang.String SearchString, java.lang
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a list of all of the people in the database that include the search string in their name.
  This search is case insensitive. The content it references must also match one of the media types specified in the MediaMask.
 
@@ -766,7 +766,7 @@ public static java.lang.String[] SearchForTitles (java.lang.String SearchString)
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a list of all of the titles in the database that include the search string in them.
  This search is case insensitive.
 
@@ -796,7 +796,7 @@ public static java.lang.String[] SearchForTitles (java.lang.String SearchString,
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a list of all of the titles in the database that include the search string in them.
  This search is case insensitive. The content it references must also match one of the media types specified in the MediaMask.
 
@@ -827,7 +827,7 @@ public static Object[] SearchForPeopleRegex (java.util.regex.Pattern RegexPatter
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a list of all of the people in the database that match the passed in regular expression.
 
 Parameters:
@@ -858,7 +858,7 @@ public static Object[] SearchForPeopleRegex (java.util.regex.Pattern RegexPatter
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a list of all of the people in the database that match the passed in regular expression.
  The content it references must also match one of the media types specified in the MediaMask.
 
@@ -891,7 +891,7 @@ public static Object[] SearchForPeopleNTE (java.lang.String NTEString) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a list of all of the people in the database that match the passed in text, where
  the Unicode characters u2460-u2468 and u24EA  (Unicode Circled Digits) in the text represent the
  numeric Text Keys 1-9 and 0. This is similar to the predictive text entry input of mobile phones.The characters represented by the keys are defined by the client properties"ui/numeric_text_input_ui/translation_language_code_key_lower
@@ -925,7 +925,7 @@ public static Object[] SearchForPeopleNTE (java.lang.String NTEString, java.lang
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a list of all of the people in the database that match the passed in text, where
  the Unicode characters u2460-u2468 and u24EA  (Unicode Circled Digits) in the text represent the
  numeric Text Keys 1-9 and 0. This is similar to the predictive text entry input of mobile phones.The characters represented by the keys are defined by the client properties"ui/numeric_text_input_ui/translation_language_code_key_lowerThe content it references must also match one of the media types specified in the MediaMask.
@@ -957,7 +957,7 @@ public static java.lang.String[] SearchForTitlesRegex (java.util.regex.Pattern R
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a list of all of the titles in the database that match the passed in regular expression.
 
 Parameters:
@@ -988,7 +988,7 @@ public static java.lang.String[] SearchForTitlesRegex (java.util.regex.Pattern R
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a list of all of the titles in the database that match the passed in regular expression.
  The content it references must also match one of the media types specified in the MediaMask.
 
@@ -1021,7 +1021,7 @@ public static java.lang.String[] SearchForTitlesNTE (java.lang.String NTEString)
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a list of all of the titles in the database that match the passed in text, where
  the Unicode characters u2460-u2468 and u24EA  (Unicode Circled Digits) in the text represent the
  numeric Text Keys 1-9 and 0. This is similar to the predictive text entry input of mobile phones.The characters represented by the keys are defined by the client properties"ui/numeric_text_input_ui/translation_language_code_key_lowerThe content it references must also match one of the media types specified in the MediaMask.
@@ -1055,7 +1055,7 @@ public static java.lang.String[] SearchForTitlesNTE (java.lang.String NTEString,
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a list of all of the titles in the database that match the passed in text, where
  the Unicode characters u2460-u2468 and u24EA  (Unicode Circled Digits) in the text represent the
  numeric Text Keys 1-9 and 0. This is similar to the predictive text entry input of mobile phones.The characters represented by the keys are defined by the client properties"ui/numeric_text_input_ui/translation_language_code_key_lowerThe content it references must also match one of the media types specified in the MediaMask.
@@ -1092,7 +1092,7 @@ public static java.util.Vector DataUnion (java.lang.Object DataSet1, java.lang.O
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Creates a Union of one or more sets of data. This method can have zero or more arguments.
  The ordering of the elements is stable. Any element that is in any data set that is passed in will
  be included in the returned set. Any duplicate items will be removed.
@@ -1131,7 +1131,7 @@ public static java.util.Vector DataIntersection (java.lang.Object DataSet1, java
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Creates an intersection of two sets of data.
  The ordering of the elements is stable. Any element that is in both of the data sets that are passed in will
  be included in the returned set.
@@ -1175,7 +1175,7 @@ public static java.util.Vector SearchSelectedFields (java.lang.String SearchStri
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Searches the specified fields of all the Airings in the database for the specified search string.
 
 Parameters:
@@ -1228,7 +1228,7 @@ public static java.util.Vector SearchSelectedFields (java.lang.String SearchStri
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Searches the specified fields of all the Airings in the database for the specified search string.
  The content it references must also match one of the media types specified in the MediaMask.
 
@@ -1285,7 +1285,7 @@ public static java.util.Vector SearchSelectedExactFields (java.lang.String Searc
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Searches the specified fields of all the Airings in the database for the specified search string. This requires
  that the SearchString matches the specified field's value exactly. UnlikeSearchSelectedFields
 which only requires that the SearchString exist within the field's value somewhere (i.e. a substring)
@@ -1344,7 +1344,7 @@ public static java.util.Vector SearchSelectedExactFields (java.lang.String Searc
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Searches the specified fields of all the Airings in the database for the specified search string. This requires
  that the SearchString matches the specified field's value exactly. UnlikeSearchSelectedFields
 which only requires that the SearchString exist within the field's value somewhere (i.e. a substring)
@@ -1401,7 +1401,7 @@ public static java.util.Vector SearchSelectedFieldsRegex (java.util.regex.Patter
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Searches the specified fields of all the Airings in the database and tries to match them against
  the passed in regular expression.
 
@@ -1456,7 +1456,7 @@ public static java.util.Vector SearchSelectedFieldsRegex (java.util.regex.Patter
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Searches the specified fields of all the Airings in the database and tries to match them against
  the passed in regular expression.
  The content it references must also match one of the media types specified in the MediaMask.
@@ -1512,7 +1512,7 @@ public static java.util.Vector SearchSelectedFieldsNTE (java.lang.String NTEStri
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Searches the specified fields of all the Airings in the database and tries to match them against
  the passed in text, where the Unicode characters u2460-u2468 and u24EA  (Unicode Circled Digits) in the text represent the
  numeric Text Keys 1-9 and 0. This is similar to the predictive text entry input of mobile phones.The characters represented by the keys are defined by the client properties"ui/numeric_text_input_ui/translation_language_code_key_lower.
@@ -1569,7 +1569,7 @@ public static java.util.Vector SearchSelectedFieldsNTE (java.lang.String NTEStri
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Searches the specified fields of all the Airings in the database and tries to match them against
  the passed in text where the Unicode characters u2460-u2468 and u24EA  (Unicode Circled Digits) in the text represent the
  numeric Text Keys 1-9 and 0. This is similar to the predictive text entry input of mobile phones.The characters represented by the keys are defined by the client properties"ui/numeric_text_input_ui/translation_language_code_key_lower.
@@ -1611,7 +1611,7 @@ public static Object[] GetChannelsOnLineup (java.lang.String Lineup) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns all of the Channel objects in the database that are on the specified Lineup.
 
 Parameters:
@@ -1634,7 +1634,7 @@ public static java.lang.String[] GetAllTitles () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets all of the titles that are in the database.
 
 Returns:
@@ -1660,7 +1660,7 @@ public static java.lang.String[] GetAllTitles (java.lang.String MediaMask) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets all of the titles that are in the database.
  The content it references must also match one of the media types specified in the MediaMask.
 
@@ -1686,7 +1686,7 @@ public static java.lang.String[] GetAllPeople () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets all of the people that are in the database.
 
 Returns:
@@ -1712,7 +1712,7 @@ public static java.lang.String[] GetAllPeople (java.lang.String MediaMask) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets all of the people that are in the database.
  The content it references must also match one of the media types specified in the MediaMask.
 
@@ -1738,7 +1738,7 @@ public static java.lang.String[] GetAllCategories () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets all of the categories that are in the database.
 
 Returns:
@@ -1764,7 +1764,7 @@ public static java.lang.String[] GetAllCategories (java.lang.String MediaMask) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets all of the categories that are in the database.
  The content it references must also match one of the media types specified in the MediaMask.
 
@@ -1794,7 +1794,7 @@ public static java.lang.String[] GetAllGroupingCategories () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets all of the categories that are in the database. This is different than GetAllCategories because this one will break apart
  any comma or semicolon delimited category lists into multiple different categories. i.e. if you have "Comedy; Horror" as a category
  this API call will break it up into Comedy and Horror as two separate categories. This call will also coalesce any case-sensitive differences in category names.
@@ -1827,7 +1827,7 @@ public static java.lang.String[] GetAllGroupingCategories (java.lang.String Medi
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets all of the categories that are in the database.
  The content it references must also match one of the media types specified in the MediaMask.
  This is different than GetAllCategories because this one will break apart
@@ -1863,7 +1863,7 @@ public static long GetDatabaseLastModifiedTime (java.lang.String MediaMask) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the last modification time for objects that match anything in the specified MediaMask. This is useful
  for knowing when to clear caches that are used to optimize UI rendering.
 
@@ -1901,7 +1901,7 @@ public static java.lang.Object GetFilesWithImportPrefix (java.lang.Object MediaD
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a list of java.io.File objects w/ the specified MediaMask whos import prefix matches that of the argument
 
 Parameters:
@@ -1942,7 +1942,7 @@ public static java.lang.Object GetMediaFilesWithImportPrefix (java.lang.Object M
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a list or map of MediaFile objects w/ the specified MediaMask whos import prefix matches that of the argument
 
 Parameters:
@@ -1977,7 +1977,7 @@ public static boolean IsDatabaseMemoryMaxed () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the database has maxed out its memory usage and cannot add more content
 
 Returns:
@@ -2010,7 +2010,7 @@ public static java.lang.String StripLeadingArticles (java.lang.String Text) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Strips any leading 'a, an or the' prefixes from the passed in string and returns the resulting string.
  If the property "ui/ignore_the_when_sorting" is set to false, this method will do nothing. The articles stripped
  by this method can be defined with the property "ui/prefixes_to_ignore_on_sort".
@@ -2047,7 +2047,7 @@ public static java.lang.String GetMediaMask (Object DBObject) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a string which represents the different media categories the specified DBObject belongs to.
  This may contain any of the following characters respectively: T = TV, D = DVD, V = Video, M = Music,
  P = Photos, B = BluRay, O = VOD, N = Netflix, U = VUDU.
@@ -2085,7 +2085,7 @@ public static boolean HasMediaMask (Object DBObject, java.lang.String MediaMask)
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Tests whether the passed in DBObject matches any of the categories specified in the passed in MediaMask.
  This may contain any of the following characters respectively: T = TV, D = DVD, V = Video, M = Music,
  P = Photos, B = BluRay, O = VOD, N = Netflix, U = VUDU.
@@ -2121,7 +2121,7 @@ public static Object[] SearchForChannel (java.lang.String SearchString) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns all Channels in the database (disabled or not) that match the
  SearchString in their channel number, name, callsign or network. Results
  will be returned in StationID order
@@ -2155,7 +2155,7 @@ public static Object[] SearchForChannel (java.lang.String SearchString, java.lan
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns all Channels in the database that match the SearchString in their
  channel number, name, callsign or network. Results will be returned in
  StationID order

@@ -67,7 +67,7 @@ public class LogProvider {
     
     private static Class<ILog> logClass = null;
     private static Constructor<ILog> logInit = null;
-    private static ILog DefaultLog = new NullLog();
+    private static ILog DefaultLog = new SystemOutLog();
     
     static {
         try {

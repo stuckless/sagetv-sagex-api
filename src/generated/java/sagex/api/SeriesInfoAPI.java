@@ -2,7 +2,7 @@ package sagex.api;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 24/07/16 5:40 PM
+ * Generated Date/Time: 24/07/16 7:30 PM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/SeriesInfoAPI.html'>SeriesInfoAPI</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -21,7 +21,7 @@ public static Object[] GetAllSeriesInfo () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a list of all of the SeriesInfo which is information about television series
 
 Returns:
@@ -50,7 +50,7 @@ public static java.lang.String GetSeriesTitle (Object SeriesInfo) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the title for the specified SeriesInfo
 
 Parameters:
@@ -83,7 +83,7 @@ public static java.lang.String GetSeriesDescription (Object SeriesInfo) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the description for the specified SeriesInfo
 
 Parameters:
@@ -116,7 +116,7 @@ public static java.lang.String GetSeriesCategory (Object SeriesInfo) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the category for the specified SeriesInfo
 
 Parameters:
@@ -149,7 +149,7 @@ public static java.lang.String GetSeriesSubCategory (Object SeriesInfo) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the subcategory for the specified SeriesInfo
 
 Parameters:
@@ -182,7 +182,7 @@ public static java.lang.String GetSeriesHistory (Object SeriesInfo) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the history description for the specified SeriesInfo
 
 Parameters:
@@ -215,7 +215,7 @@ public static java.lang.String GetSeriesPremiereDate (Object SeriesInfo) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a String describing the premiere date for the specified SeriesInfo
 
 Parameters:
@@ -248,7 +248,7 @@ public static java.lang.String GetSeriesFinaleDate (Object SeriesInfo) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a String describing the finale date for the specified SeriesInfo
 
 Parameters:
@@ -281,7 +281,7 @@ public static java.lang.String GetSeriesNetwork (Object SeriesInfo) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the name of the network the specified SeriesInfo airs on
 
 Parameters:
@@ -314,7 +314,7 @@ public static java.lang.String GetSeriesDayOfWeek (Object SeriesInfo) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the name of the day of the week the specified SeriesInfo airs on
 
 Parameters:
@@ -347,7 +347,7 @@ public static java.lang.String GetSeriesHourAndMinuteTimeslot (Object SeriesInfo
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the hour/minute timeslot that the specified SeriesInfo airs at
 
 Parameters:
@@ -380,7 +380,7 @@ public static boolean HasSeriesImage (Object SeriesInfo) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified SeriesInfo has a corresponding image for it
 
 Parameters:
@@ -413,7 +413,7 @@ public static Object GetSeriesImage (Object SeriesInfo) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the image that corresponds to this SeriesInfo if there is one
 
 Parameters:
@@ -447,7 +447,7 @@ public static Object GetSeriesImage (Object SeriesInfo, boolean Thumb) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the image that corresponds to this SeriesInfo if there is one
 
 Parameters:
@@ -481,7 +481,7 @@ public static java.lang.String GetSeriesImageURL (Object SeriesInfo) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the URL of the image that corresponds to this SeriesInfo if there is one
 
 Parameters:
@@ -515,7 +515,7 @@ public static java.lang.String GetSeriesImageURL (Object SeriesInfo, boolean Thu
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the image URL that corresponds to this SeriesInfo if there is one
 
 Parameters:
@@ -549,7 +549,7 @@ public static int GetSeriesImageCount (Object SeriesInfo) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the number of images available that correspond to this SeriesInfo
 
 Parameters:
@@ -584,7 +584,7 @@ public static Object GetSeriesImageAtIndex (Object SeriesInfo, int Index, boolea
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the image that corresponds to this SeriesInfo at the specified index (when there are multiple images)
 
 Parameters:
@@ -621,7 +621,7 @@ public static java.lang.String GetSeriesImageURLAtIndex (Object SeriesInfo, int 
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the image URL that corresponds to this SeriesInfo at the specified index (when there are multiple images)
 
 Parameters:
@@ -657,7 +657,7 @@ public static boolean HasSeriesActorImage (Object SeriesInfo, Object Person) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified SeriesInfo has a corresponding image for it for the specified Person in it
 
 Parameters:
@@ -693,7 +693,7 @@ public static Object GetSeriesActorImage (Object SeriesInfo, Object Person, bool
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns an image of the specified Person in their role in the specified Series
 
 Parameters:
@@ -730,7 +730,7 @@ public static java.lang.String GetSeriesActorImageURL (Object SeriesInfo, Object
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns an image URL of the specified Person in their role in the specified Series
 
 Parameters:
@@ -765,7 +765,7 @@ public static int GetNumberOfCharactersInSeries (Object SeriesInfo) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the number of characters that we have information on for the specified series
 
 Parameters:
@@ -801,7 +801,7 @@ public static Object GetSeriesActor (Object SeriesInfo, int Index) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the name of the actor/actress for the specfied index in the specified SeriesInfo. The range
  for the index is from 0 to one less than the value ofGetNumberOfCharactersInSeries()
 
@@ -835,7 +835,7 @@ public static Object[] GetSeriesActorList (Object SeriesInfo) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a list of the names of the actors/actresses in the specified SeriesInfo.
 
 Parameters:
@@ -869,7 +869,7 @@ public static java.lang.String GetSeriesCharacter (Object SeriesInfo, int Index)
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the name of the character for the specfied index in the specified SeriesInfo. The range
  for the index is from 0 to one less than the value ofGetNumberOfCharactersInSeries()
 
@@ -903,7 +903,7 @@ public static java.lang.String[] GetSeriesCharacterList (Object SeriesInfo) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a list of the names of the characters in the specified SeriesInfo.
 
 Parameters:
@@ -935,7 +935,7 @@ public static java.lang.String GetSeriesCharacterForActor (Object SeriesInfo, ja
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the name of the character that the corresponding actor plays in this series
 
 Parameters:
@@ -970,7 +970,7 @@ public static java.lang.String GetSeriesID (Object SeriesInfo) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the Series ID of the specified SeriesInfo
  NOTE: V8.0 IDs are not backwards compatible with prior versions
 
@@ -1005,7 +1005,7 @@ public static Object GetSeriesInfoForID (java.lang.String SeriesID) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the SeriesInfo object for the specified Series ID
  NOTE: V8.0 IDs are not backwards compatible with prior versions
 
@@ -1051,7 +1051,7 @@ public static Object AddSeriesInfo (int SeriesID, java.lang.String Title, java.l
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Call this to add a SeriesInfo object to the database. If a SeriesInfo with this seriesID is already present, it will be updated
  to this information. You can use null or String[0] for any fields you don't want to specify.
 
@@ -1098,7 +1098,7 @@ public static java.lang.String GetSeriesInfoProperty (Object SeriesInfo, java.la
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a property value for a specified SeriesInfo object. This must have been set using SetSeriesInfoProperty.
  Returns the empty string when the property is undefined.
 
@@ -1132,7 +1132,7 @@ public static void SetSeriesInfoProperty (Object SeriesInfo, java.lang.String Pr
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets a property for this SeriesInfo object. This can be any name/value combination (but the name cannot be null). If the value is null;
  then the specified property will be removed from this SeriesInfo object. This only impacts the return values from GetSeriesInfoProperty and has no other side effects.
 
@@ -1164,7 +1164,7 @@ public static boolean IsSeriesInfoObject (java.lang.Object SeriesInfo) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the argument is a SeriesInfo object. Automatic type conversion is NOT done in this call.
 
 Parameters:

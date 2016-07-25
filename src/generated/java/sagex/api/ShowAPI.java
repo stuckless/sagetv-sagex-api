@@ -2,7 +2,7 @@ package sagex.api;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 24/07/16 5:40 PM
+ * Generated Date/Time: 24/07/16 7:30 PM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/ShowAPI.html'>ShowAPI</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -25,7 +25,7 @@ public static boolean IsShowEPGDataUnique (Object Show) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 If this is true, then two Airings that both represent this Show will contain the same content.
  If this is false then it means the EPG metadata for the content is 'generic' two different Airings
  each with this Show for its metadata may actually represent different content
@@ -57,7 +57,7 @@ public static java.lang.String GetShowMisc (Object Show) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the miscellaneous metadata for this Show. This includes things such as
  the star rating for a movie, the studio a movie was produced at, etc.
 
@@ -87,7 +87,7 @@ public static java.lang.String GetShowCategory (Object Show) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the category for the specified Show. For music files, this will be the genre.
 
 Parameters:
@@ -116,7 +116,7 @@ public static java.lang.String GetShowSubCategory (Object Show) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the subcategory for the specified Show
 
 Parameters:
@@ -147,7 +147,7 @@ public static java.lang.String GetShowCategoriesString (Object Show) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a String of categories for the Show, separated by '/' if there are multiple levels of categories. For music files, this will be the genre.
 
 Parameters:
@@ -181,7 +181,7 @@ public static java.lang.String GetShowCategoriesString (Object Show, java.lang.S
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a String of categories for the Show, separated by the specified delimiter if there are multiple levels of categories. For music files, this will be the genre.
 
 Parameters:
@@ -213,7 +213,7 @@ public static java.lang.String[] GetShowCategoriesList (Object Show) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a String array of categories for the Show. For music files, this will be the genre.
 
 Parameters:
@@ -242,7 +242,7 @@ public static java.lang.String GetShowDescription (Object Show) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the description for the specified Show
 
 Parameters:
@@ -271,7 +271,7 @@ public static java.lang.String GetShowEpisode (Object Show) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the episode name for the specified Show. For music files, this will be the name of the song.
 
 Parameters:
@@ -301,7 +301,7 @@ public static java.lang.String GetShowExpandedRatings (Object Show) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the epxanded ratings information for the specified Show. This includes thigs like
  Violence, Nudity, Adult Language, etc.
 
@@ -333,7 +333,7 @@ public static java.lang.String GetShowParentalRating (Object Show) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Deprecated. 
 
 Returns the parental rating for this show. The parental rating field in Airing is used instead of this in the standard implementation.
@@ -364,7 +364,7 @@ public static java.lang.String GetShowRated (Object Show) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the MPAA rating for the specified Show (only used for movies).
 
 Parameters:
@@ -394,7 +394,7 @@ public static long GetShowDuration (Object Show) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the duration of the specified Show. Most Shows do not contain duration information, with the exception
  of movies whose show duration indicates the runing time of the movie.
 
@@ -424,7 +424,7 @@ public static java.lang.String GetShowTitle (Object Show) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the title of the specified Show. For music this will correspond to the Album name. For imported videos, For imported videos, this will be the title of the file with the relative import path as it's prefix.
 
 Parameters:
@@ -453,7 +453,7 @@ public static java.lang.String GetShowYear (Object Show) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the year of the specified Show. This is usually only valid for movies.
 
 Parameters:
@@ -482,7 +482,7 @@ public static java.lang.String GetShowExternalID (Object Show) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the global unique ID which is used to identify Shows. This ID is common among all SageTV users.
 
 Parameters:
@@ -511,7 +511,7 @@ public static long GetOriginalAiringDate (Object Show) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the date that this Show was originally aired at.
 
 Parameters:
@@ -536,7 +536,7 @@ public static java.lang.String[] GetRoleTypes () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets a list of all of the valid roles that people can have in a Show
 
 Returns:
@@ -563,7 +563,7 @@ public static java.lang.String GetPeopleInShow (Object Show) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets a list of all of the people involved in this Show. The order of the returned list will
  correlate with the values returned fromGetRolesInShow
 .
@@ -596,7 +596,7 @@ public static Object[] GetPersonListInShow (Object Show) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets a list of all of the people involved in this Show. The order of the returned list will
  correlate with the values returned fromGetRolesInShow
 .
@@ -629,7 +629,7 @@ public static java.lang.String[] GetPeopleListInShow (Object Show) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets a list of all of the people involved in this Show. The order of the returned list will
  correlate with the values returned fromGetRolesInShow
 .
@@ -662,7 +662,7 @@ public static java.lang.String[] GetPeopleAndCharacterListInShow (Object Show) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets a list of all of the people involved in this Show and the character each of them plays if known. The order of the returned list will
  correlate with the values returned fromGetRolesInShow
 .
@@ -693,7 +693,7 @@ public static java.lang.String[] GetRolesInShow (Object Show) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets a list of the roles for each of the people in the specified Show. The order of the returned list will
  correlate with the values returned fromGetPeopleInShow
 
@@ -723,7 +723,7 @@ public static java.lang.String GetPeopleInShowInRole (Object Show, java.lang.Str
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the people in the specified Show in the specified Role. Returned as a comma separated list.
 
 Parameters:
@@ -754,7 +754,7 @@ public static java.lang.String GetPeopleInShowInRoles (Object Show, java.lang.St
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the people in the specified Show in the specified Roles. Returned as a comma separated list.
 
 Parameters:
@@ -788,7 +788,7 @@ public static java.lang.String GetPeopleAndCharacterInShowInRole (Object Show, j
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the people in the specified Show in the specified Role. Returned as a comma separated list.
  Each name will also append the character they play if known; using the localized format "Actor as Character".
 
@@ -825,7 +825,7 @@ public static java.lang.String GetPeopleAndCharacterInShowInRoles (Object Show, 
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the people in the specified Show in the specified Roles. Returned as a comma separated list.
  Each name will also append the character they play if known; using the localized format "Actor as Character".
 
@@ -859,7 +859,7 @@ public static java.lang.String[] GetPeopleListInShowInRole (Object Show, java.la
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the people in the specified Show in the specified Role. Returned as a String array.
 
 Parameters:
@@ -890,7 +890,7 @@ public static Object[] GetPersonListInShowInRole (Object Show, java.lang.String 
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the people in the specified Show in the specified Role. Returned as a Person array.
 
 Parameters:
@@ -921,7 +921,7 @@ public static java.lang.String[] GetPeopleListInShowInRoles (Object Show, java.l
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the people in the specified Show in the specified Roles. Returned as a String array.
 
 Parameters:
@@ -952,7 +952,7 @@ public static Object[] GetPersonListInShowInRoles (Object Show, java.lang.String
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the people in the specified Show in the specified Roles. Returned as a Person array.
 
 Parameters:
@@ -984,7 +984,7 @@ public static java.lang.String[] GetPeopleAndCharacterListInShowInRole (Object S
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the people in the specified Show in the specified Role. Returned as a String array.
  Each string will also indicate the character they play if known; using the localized format "Actor as Character".
 
@@ -1017,7 +1017,7 @@ public static java.lang.String[] GetPeopleAndCharacterListInShowInRoles (Object 
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the people in the specified Show in the specified Roles. Returned as a String array.
  Each string will also indicate the character they play if known; using the localized format "Actor as Character".
 
@@ -1049,7 +1049,7 @@ public static boolean IsShowObject (java.lang.Object Show) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the passed in argument is a Show object. No automatic type conversion
  will be done on the argument.
 
@@ -1079,7 +1079,7 @@ public static boolean IsShowFirstRun (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified Airing represents the first run of the Show content.
 
 Parameters:
@@ -1108,7 +1108,7 @@ public static boolean IsShowReRun (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified Airing represents a rerun of the Show content.
 
 Parameters:
@@ -1137,7 +1137,7 @@ public static java.lang.String GetShowLanguage (Object Show) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the language that the specified Show is in.
 
 Parameters:
@@ -1184,7 +1184,7 @@ public static Object AddShow (java.lang.String Title, boolean IsFirstRun, java.l
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Adds a new Show to the database. Null or the empty string ("") can be passed in for any unneeded fields.
 
 Parameters:
@@ -1252,7 +1252,7 @@ public static Object AddShow (java.lang.String Title, boolean IsFirstRun, java.l
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Adds a new Show to the database. Null or the empty string ("") can be passed in for any unneeded fields.
 
 Parameters:
@@ -1301,7 +1301,7 @@ public static Object[] GetAiringsForShow (Object Show, long StartingAfterTime) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a list of all of the Airings for the specified Show starting after the specified time.
 
 Parameters:
@@ -1331,7 +1331,7 @@ public static Object GetShowForExternalID (java.lang.String ExternalID) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets a Show based on the global unique ID which is used to identify Shows. This ID is common among all SageTV users.
  This value can be obtained fromGetShowExternalID()
 
@@ -1365,7 +1365,7 @@ public static boolean IsMovie (Object Show) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified Show object is a Movie. This is true if the ExternalID starts with 'MV' or if the primary
  category for the content is "Movie"
 
@@ -1400,7 +1400,7 @@ public static Object GetShowSeriesInfo (Object Show) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the SeriesInfo object for a specified Show if that Show is for a television series and there
  is information on that series.
 
@@ -1435,7 +1435,7 @@ public static int GetShowSeasonNumber (Object Show) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the season number of the specified Show. For episodic content; sometimes a numeric value is given to the
  season. If that information exists, this will return it.
 
@@ -1470,7 +1470,7 @@ public static int GetShowEpisodeNumber (Object Show) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the episode number of the specified Show. For episodic content; sometimes a numeric value is given to the
  episode in a season. If that information exists, this will return it.
 
@@ -1510,7 +1510,7 @@ public static Object GetShowImage (Object Show, java.lang.String Type, int Index
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns an image specific to this Show. For the standard implementation, this will only return values for Movies (and not all movies have images).
  UseGetShowImageCount
 to determine what the valid values are for the Index parameter.
@@ -1551,7 +1551,7 @@ public static int GetShowImageCount (Object Show, java.lang.String Type) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a count of images specific to this Show. For the standard implementation, this will only return non-zero values for Movies (and not all movies have images).
  In the future this will be expanded to support plugin image providers to extend what is returned.
 
@@ -1586,7 +1586,7 @@ public static boolean HasMovieImage (Object Show) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the passed in Show that represents a Movie has any imagery associated with it
 
 Parameters:
@@ -1620,7 +1620,7 @@ public static Object GetMovieImage (Object Show, boolean Thumb) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a MetaImage for an image that's representative of this Movie
 
 Parameters:
@@ -1655,7 +1655,7 @@ public static java.lang.String GetMovieImageURL (Object Show, boolean Thumb) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns an image URL that's representative of this Movie
 
 Parameters:
@@ -1689,7 +1689,7 @@ public static int GetMovieImageCount (Object Show) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the number of images available for a Show that represents a Movie
 
 Parameters:
@@ -1724,7 +1724,7 @@ public static Object GetMovieImageAtIndex (Object Show, int Index, boolean Thumb
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the image at the specified index for a Show that represents a Movie
 
 Parameters:
@@ -1761,7 +1761,7 @@ public static java.lang.String GetMovieImageURLAtIndex (Object Show, int Index, 
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the image URL at the specified index for a Show that represents a Movie
 
 Parameters:
@@ -1796,7 +1796,7 @@ public static boolean HasPersonImage (Object Person) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the passed in Person has an image associated with them
 
 Parameters:
@@ -1830,7 +1830,7 @@ public static Object GetPersonImage (Object Person, boolean Thumb) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the image for the specified person
 
 Parameters:
@@ -1865,7 +1865,7 @@ public static java.lang.String GetPersonImageURL (Object Person, boolean Thumb) 
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the image URL for the specified person
 
 Parameters:
@@ -1899,7 +1899,7 @@ public static java.lang.String GetPersonDateOfBirth (Object Person) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a String representing the birthdate of the specified person, empty string if unknown
 
 Parameters:
@@ -1932,7 +1932,7 @@ public static java.lang.String GetPersonDateOfDeath (Object Person) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a String representing the date of the specified person's death, empty string if unknown
 
 Parameters:
@@ -1965,7 +1965,7 @@ public static java.lang.String GetPersonBirthplace (Object Person) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a String representing the birthplace of the specified person, empty string if unknown
 
 Parameters:
@@ -1999,7 +1999,7 @@ public static int GetPersonID (Object Person) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the unique ID used to identify this Person. Can get used later on a call toGetPersonForID()
 
 
@@ -2034,7 +2034,7 @@ public static Object GetPersonForID (int PersonID) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the Person object that corresponds to the passed in ID. The ID should have been obtained from a call toGetPersonID()
 
 
@@ -2068,7 +2068,7 @@ public static float GetMovieStarRating (Object Show) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the star rating for a Movie as a floating point number.
 
 Parameters:

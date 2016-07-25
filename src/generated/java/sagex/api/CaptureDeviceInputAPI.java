@@ -2,7 +2,7 @@ package sagex.api;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 24/07/16 5:40 PM
+ * Generated Date/Time: 24/07/16 7:30 PM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/CaptureDeviceInputAPI.html'>CaptureDeviceInputAPI</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -23,7 +23,7 @@ public static java.lang.String GetInfraredTuningPlugin (java.lang.String Capture
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the name of the tuning plugin used for this CaptureDeviceInput
 
 Parameters:
@@ -52,7 +52,7 @@ public static int GetInfraredTuningPluginPortNumber (java.lang.String CaptureDev
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the port number used by the tuning plugin for this CaptureDeviceInput
 
 Parameters:
@@ -84,7 +84,7 @@ public static boolean SetInfraredTuningPluginAndPort (java.lang.String CaptureDe
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the name and port number for the tuning plugin for a CaptureDeviceInput
 
 Parameters:
@@ -121,7 +121,7 @@ public static boolean AutoTuneChannelTest (java.lang.String CaptureDeviceInput, 
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Tunes the CaptureDeviceInput to the specified physical channel and indicates whether or not a signal is present. This call should only
  be used if the CaptureDeviceInput is already under live control (i.e.WatchLive()
 orLockTuner()
@@ -160,7 +160,7 @@ public static java.lang.String AutoScanChannelInfo (java.lang.String CaptureDevi
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Tunes the CaptureDeviceInput to the specified physical channel and returns a list of the available channels. This call should only
  be used if the CaptureDeviceInput is already under live control (i.e.WatchLive()
 orLockTuner()
@@ -194,7 +194,7 @@ public static int GetInputMinimumChannelNumber (java.lang.String CaptureDeviceIn
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the minimum channel number that this CaptureDeviceInput can tune to
 
 Parameters:
@@ -223,7 +223,7 @@ public static int GetInputMaximumChannelNumber (java.lang.String CaptureDeviceIn
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the maximum channel number that this CaptureDeviceInput can tune to
 
 Parameters:
@@ -249,7 +249,7 @@ public static void SetCaptureBrightness (java.lang.String CaptureDeviceInput, in
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the brightness for capture on this CaptureDeviceInput. This only affects analog capture devices
 
 Parameters:
@@ -272,7 +272,7 @@ public static void SetCaptureSaturation (java.lang.String CaptureDeviceInput, in
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the saturation for capture on this CaptureDeviceInput. This only affects analog capture devices
 
 Parameters:
@@ -295,7 +295,7 @@ public static void SetCaptureHue (java.lang.String CaptureDeviceInput, int Value
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the hue for capture on this CaptureDeviceInput. This only affects analog capture devices.
 
 Parameters:
@@ -318,7 +318,7 @@ public static void SetCaptureContrast (java.lang.String CaptureDeviceInput, int 
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the contrast for capture on this CaptureDeviceInput. This only affects analog capture devices.
 
 Parameters:
@@ -342,7 +342,7 @@ public static void SetCaptureSharpness (java.lang.String CaptureDeviceInput, int
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the sharpness for capture on this CaptureDeviceInput. This only affects analog capture devices.
  NOTE: On Linux this currently sets the audio capture volume level
 
@@ -369,7 +369,7 @@ public static int GetCaptureBrightness (java.lang.String CaptureDeviceInput) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the brightness level for this CaptureDeviceInput. This is only valid for analog capture devices.
 
 Parameters:
@@ -398,7 +398,7 @@ public static int GetCaptureSaturation (java.lang.String CaptureDeviceInput) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the saturation level for this CaptureDeviceInput. This is only valid for analog capture devices.
 
 Parameters:
@@ -427,7 +427,7 @@ public static int GetCaptureHue (java.lang.String CaptureDeviceInput) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the hue level for this CaptureDeviceInput. This is only valid for analog capture devices.
 
 Parameters:
@@ -456,7 +456,7 @@ public static int GetCaptureContrast (java.lang.String CaptureDeviceInput) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the contrast level for this CaptureDeviceInput. This is only valid for analog capture devices.
 
 Parameters:
@@ -486,7 +486,7 @@ public static int GetCaptureSharpness (java.lang.String CaptureDeviceInput) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the sharpness level for this CaptureDeviceInput. This is only valid for analog capture devices.
  NOTE: On Linux this gets the audio volume level
 
@@ -513,7 +513,7 @@ public static void SetInfraredTunerRemoteName (java.lang.String CaptureDeviceInp
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the name of the device that is passed to the IR Tuner plugin for tuning control. Corresponds to a .ir file for current IR transmitters
 
 Parameters:
@@ -539,7 +539,7 @@ public static java.lang.String GetInfraredTunerRemoteName (java.lang.String Capt
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the name of the device that is passed to the IR Tuner plugin for tuning control. Corresponds to a .ir file for current IR transmitters.
 
 Parameters:
@@ -565,7 +565,7 @@ public static void SetRFSignalIsCableTV (java.lang.String CaptureDeviceInput, bo
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets whether or not this CaptureDeviceInput tunes for Antenna or Cable if it's a TV Tuner input
 
 Parameters:
@@ -591,7 +591,7 @@ public static boolean IsRFSignalCableTV (java.lang.String CaptureDeviceInput) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns whether or not this CaptureDeviceInput tunes for Antenna or Cable if it's a TV Tuner input
 
 Parameters:
@@ -622,7 +622,7 @@ public static boolean IsExternallyTunedRFInput (java.lang.String CaptureDeviceIn
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if this input was created usingAddInputForRFChannel()
 method call
 
@@ -654,7 +654,7 @@ public static int GetConstantRFChannelInput (java.lang.String CaptureDeviceInput
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the RF channel number that is used to receive the source signal. This is set usingAddInputForRFChannel()
 
 
@@ -684,7 +684,7 @@ public static boolean IsCaptureDeviceInputAudioVideo (java.lang.String CaptureDe
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns whether or not this CaptureDeviceInput captures both audio and video
 
 Parameters:
@@ -713,7 +713,7 @@ public static java.lang.String GetPhysicalInputType (java.lang.String CaptureDev
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the type of input this is, such as: S-Video, Composite, TV Tuner, etc.
 
 Parameters:
@@ -745,7 +745,7 @@ public static java.lang.String GetCaptureDeviceInputName (java.lang.String Captu
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the name of this CaptureDeviceInput connection without the CaptureDevice name prefixing it. This is not the
  same as the 'name' of the CaptureDeviceInput used as the parameter. The String that uniquely identifies a CaptureDeviceInput
  must always have the CaptureDevice's name included in it. Only use this return value for display purposes; do not use
@@ -778,7 +778,7 @@ public static boolean ConfigureInputForEPGDataLineup (java.lang.String CaptureDe
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Configures this CaptureDeviceInput to use the specified EPG Lineup.
 
 Parameters:
@@ -808,7 +808,7 @@ public static boolean ConfigureInputWithoutEPGData (java.lang.String CaptureDevi
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Configures this CaptureDeviceInput to not use an EPG data source. It will instead create a generic lineup with numeric channels that
 
 Parameters:
@@ -834,7 +834,7 @@ public static void ReleaseCaptureDeviceInput (java.lang.String CaptureDeviceInpu
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Releases this CaptureDeviceInput from its currently configured lineup. It will no longer be considered "configured" or "active".
  If its lineup is no longer is in use, it will be cleaned up on the next EPG maintenance cycle.
 
@@ -858,7 +858,7 @@ public static java.lang.String GetCaptureDeviceInputBeingViewed () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the CaptureDeviceInput that is recording the MediaFile that is currently loaded by the MediaPlayer
 
 Returns:
@@ -885,7 +885,7 @@ public static java.lang.String GetCaptureDeviceInputRecordingMediaFile (Object M
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the CaptureDeviceInput that is recording the specified MediaFile
 
 Parameters:
@@ -914,7 +914,7 @@ public static java.lang.String GetLineupForCaptureDeviceInput (java.lang.String 
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the name of the lineup that this CaptureDeviceInput is configured to use
 
 Parameters:
@@ -943,7 +943,7 @@ public static java.lang.String GetCaptureDeviceForInput (java.lang.String Captur
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the CaptureDevice for this CaptureDeviceInput
 
 Parameters:
@@ -973,7 +973,7 @@ public static int GetSignalStrength (java.lang.String CaptureDeviceInput) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the current signal strength for this CaptureDeviceInput. This is only valid for Digital TV inputs.
  The returned value will be between 0 and 100 inclusive. 0 is no signal and 100 is maximum signal strength.
 
@@ -1005,7 +1005,7 @@ public static java.lang.String GetCaptureDeviceInputBroadcastStandard (java.lang
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the name of the broadcast standard used for reception on this capture device input (can be different per-input)
 
 Parameters:

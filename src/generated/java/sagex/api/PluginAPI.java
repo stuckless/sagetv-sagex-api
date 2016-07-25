@@ -2,7 +2,7 @@ package sagex.api;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 24/07/16 5:40 PM
+ * Generated Date/Time: 24/07/16 7:30 PM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/PluginAPI.html'>PluginAPI</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -24,7 +24,7 @@ public static Object GetSageTVPluginRegistry () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns an object which implements the sage.SageTVPluginRegistry interface. Can be used to subscribe/unsubscribe
  to SageTVEvents.
 
@@ -52,7 +52,7 @@ public static Object[] GetAllAvailablePlugins () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns an array of Plugin objects which represent all the plugins available in the plugin repository.
 
 Returns:
@@ -78,7 +78,7 @@ public static Object[] GetInstalledPlugins () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns an array of Plugin objects which represent all the plugins that have been installed on this SageTV system (enabled or disabled).
  If using a non-localhost SageTVClient; this will return the plugins that are installed on the server.
 
@@ -105,7 +105,7 @@ public static Object[] GetInstalledClientPlugins () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns an array of Plugin objects which represent all the plugins that have been installed on the local client (enabled or disabled).
  This is only needed when dealing with SageTVClient applications that are connected to a non-localhost server.
 
@@ -133,7 +133,7 @@ public static Object[] GetAllPluginVersions (java.lang.Object Plugin) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns an array of Plugin objects which represent all of the versions available of the specified plugin in the repository
 
 Parameters:
@@ -164,7 +164,7 @@ public static Object GetAvailablePluginForID (java.lang.String PluginID) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the plugin in the repository for the specified plugin ID
 
 Parameters:
@@ -197,7 +197,7 @@ public static boolean IsPluginInstalled (Object Plugin) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified plugin has already been installed
 
 Parameters:
@@ -230,7 +230,7 @@ public static boolean IsClientPluginInstalled (Object Plugin) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified plugin has already been installed into the locally running SageTVClient
 
 Parameters:
@@ -263,7 +263,7 @@ public static boolean IsPluginInstalledSameVersion (Object Plugin) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified plugin has already been installed and is the same version as this one
 
 Parameters:
@@ -296,7 +296,7 @@ public static boolean IsClientPluginInstalledSameVersion (Object Plugin) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified plugin has already been installed into the locally running SageTVClient and is the same version as this one
 
 Parameters:
@@ -330,7 +330,7 @@ public static boolean IsPluginEnabled (Object Plugin) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified plugin has already been installed and is enabled. This will also
  return true if the specified plugin does not support being enabled/disabled.
 
@@ -364,7 +364,7 @@ public static boolean IsPluginFailed (Object Plugin) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified plugin has already been installed and is enabled; but the loading of it has failed.
 
 Parameters:
@@ -397,7 +397,7 @@ public static boolean IsPluginDesktopOnly (Object Plugin) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified plugin is only supported in desktop environments (i.e. not on a headless server, placeshifter or extender)
 
 Parameters:
@@ -430,7 +430,7 @@ public static boolean IsPluginBeta (Object Plugin) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified plugin is tagged as a 'beta' version.
 
 Parameters:
@@ -458,7 +458,7 @@ public static void RefreshAvailablePlugins () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Refreshes the plugin repository list by contacting the server to ensure it is up to date (this is done automatically
  on a regular basis)
 
@@ -486,7 +486,7 @@ public static boolean CanPluginBeDisabled (Object Plugin) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns whether the specified plugin can be enabled/disabled. Only 'Standard' type plugins w/ an implementation class and STVIs can be enabled/disabled.
 
 Parameters:
@@ -519,7 +519,7 @@ public static java.lang.String GetPluginName (Object Plugin) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the displayable name of the specified Plugin object
 
 Parameters:
@@ -552,7 +552,7 @@ public static java.lang.String GetPluginIdentifier (Object Plugin) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the unique identifier of the specified Plugin object
 
 Parameters:
@@ -585,7 +585,7 @@ public static java.lang.String GetPluginAuthor (Object Plugin) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the author of the specified Plugin object
 
 Parameters:
@@ -618,7 +618,7 @@ public static java.lang.String GetPluginReleaseNotes (Object Plugin) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the release notes attached to this specific version of the specified Plugin object
 
 Parameters:
@@ -651,7 +651,7 @@ public static long GetPluginModificationDate (Object Plugin) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the last modification date of the specified Plugin object
 
 Parameters:
@@ -684,7 +684,7 @@ public static long GetPluginCreationDate (Object Plugin) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the creation date of the specified Plugin object
 
 Parameters:
@@ -717,7 +717,7 @@ public static long GetPluginInstallDate (Object Plugin) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the date the specified Plugin object was installed
 
 Parameters:
@@ -750,7 +750,7 @@ public static java.lang.String GetPluginDescription (Object Plugin) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the description of the specified Plugin object
 
 Parameters:
@@ -783,7 +783,7 @@ public static java.lang.String GetPluginVersion (Object Plugin) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the version of the specified Plugin object
 
 Parameters:
@@ -816,7 +816,7 @@ public static java.lang.String GetPluginResourcePath (Object Plugin) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the relative path to resources used by the specified Plugin object
 
 Parameters:
@@ -847,7 +847,7 @@ public static java.lang.String[] GetPluginScreenshots (Object Plugin) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns an array of URLs to screenshots for the specified plugin object
 
 Parameters:
@@ -876,7 +876,7 @@ public static java.lang.String[] GetPluginDemoVideos (Object Plugin) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns an array of URLs to demo videos for the specified plugin object
 
 Parameters:
@@ -905,7 +905,7 @@ public static java.lang.String[] GetPluginWebsites (Object Plugin) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns an array of URLs to websites for the specified plugin object
 
 Parameters:
@@ -937,7 +937,7 @@ public static java.lang.String GetPluginType (Object Plugin) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the type of the specified plugin object. This wil be one of "Standard", "Theme", "STV",
  "STVI", "Library" or "Images". The empty string will be returned if an invalid argument is supplied.
 
@@ -971,7 +971,7 @@ public static java.lang.String[] GetPluginDependencies (Object Plugin) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns an array of Strings which specifies the dependencies of this plugin. These strings
  will be descriptive and indicate the type of dependency (i.e. STV, Plugin, OS or Desktop) and
  the specifics of that dependency.
@@ -1004,7 +1004,7 @@ public static boolean IsPluginObject (java.lang.Object Plugin) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified object is a Plugin object
 
 Parameters:
@@ -1038,7 +1038,7 @@ public static boolean DisablePlugin (Object Plugin) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Disables the specified Plugin if it can be disabled. Some plugins, like Themes and STVs are disabled by simply selecting
  an alternate Theme or STV, so those do not have the ability to be 'disabled' in the sense that this API call refers to.
 
@@ -1072,7 +1072,7 @@ public static boolean EnablePlugin (Object Plugin) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Enables the specified Plugin if it can be enabled/disabled.
 
 Parameters:
@@ -1106,7 +1106,7 @@ public static java.lang.String GetPluginIncompatabilityReason (Object Plugin) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the reason why the specified Plugin object is incompatible and cannot be installed. This can be due to
  operating system, desktop, STV, STV Version or plugin dependency version conflicts.
 
@@ -1142,7 +1142,7 @@ public static java.lang.String GetClientPluginIncompatabilityReason (Object Plug
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the reason why the specified Plugin object is incompatible and cannot be installed. This can be due to
  operating system, desktop, STV, STV Version or plugin dependency version conflicts. This version of the API
  call relates to installation on non-localhost connected SageTVClients.
@@ -1178,7 +1178,7 @@ public static boolean IsPluginCompatible (Object Plugin) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns whether or not the specified Plugin object is compatible and can be installed. This can be due to
  operating system, desktop, STV, STV Version or plugin dependency version conflicts.
 
@@ -1214,7 +1214,7 @@ public static boolean IsClientPluginCompatible (Object Plugin) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns whether or not the specified Plugin object is compatible and can be installed. This can be due to
  operating system, desktop, STV, STV Version or plugin dependency version conflicts. This version of the API
  call relates to installation on non-localhost connected SageTVClients.
@@ -1250,7 +1250,7 @@ public static java.lang.String InstallPlugin (Object Plugin) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Installs or upgrades the specified Plugin. If there's a failure in doing so
  or a restart of SageTV is required after installing the plugin; the return value will indicate that.
 
@@ -1286,7 +1286,7 @@ public static java.lang.String InstallClientPlugin (Object Plugin) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Installs or upgrades the specified Plugin. If there's a failure in doing so
  or a restart of SageTV is required after installing the plugin; the return value will indicate that.
  This version of the API call relates to installation on non-localhost connected SageTVClients.
@@ -1323,7 +1323,7 @@ public static java.lang.String UninstallPlugin (Object Plugin) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Uninstalls the specified Plugin. If there's a failure in doing so
  or a restart of SageTV is required after installing the plugin; the return value will indicate that.
  Failure will also occur if other plugins are dependent on this plugin.
@@ -1357,7 +1357,7 @@ public static java.lang.String GetPluginProgress () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a progress based status message regarding any current plugin installation. There is no progress messages
  for plugin uninstalls since they should happen relatively quickly.
 
@@ -1389,7 +1389,7 @@ public static java.lang.String GetClientPluginProgress () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a progress based status message regarding any current plugin installation. This is for non-localhost connected
  SageTVClients regarding client plugin installation. There is no progress messages
  for plugin uninstalls since they should happen relatively quickly.
@@ -1422,7 +1422,7 @@ public static boolean AreClientPluginsSupported () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if this instance of SageTV supports installation of client plugins. This is true for SageTVClient applications
  that are not running on the same machine as the SageTV server itself. If they are running on the same machine; then their
  installations will be shared.
@@ -1455,7 +1455,7 @@ public static java.lang.String[] GetPluginConfigSettings (Object Plugin) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a list of the setting names for the specified Plugin object. These are not suitable for
  display; but should be used as the 'SettingName' for any of the plugin setting operations.
  Only enabled plugins can be configured.
@@ -1490,7 +1490,7 @@ public static java.lang.String GetPluginConfigValue (Object Plugin, java.lang.St
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the current value for the specified configuration setting for the specified Plugin object.
  Only enabled plugins can be configured.
 
@@ -1526,7 +1526,7 @@ public static java.lang.String[] GetPluginConfigValues (Object Plugin, java.lang
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the current values for the specified configuration setting for the specified Plugin object.
  This should be used for plugin settings of type "Multichoice".
  Only enabled plugins can be configured.
@@ -1563,7 +1563,7 @@ public static java.lang.String GetPluginConfigType (Object Plugin, java.lang.Str
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the setting type for the specified configuration setting for the specified Plugin object.
  The possible values are "Boolean", "Integer", "Text", "Choice", "Multichoice", "File", "Directory", "Button" or "Password".
  Only enabled plugins can be configured.
@@ -1602,7 +1602,7 @@ public static java.lang.String SetPluginConfigValue (Object Plugin, java.lang.St
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the value for the specified configuration setting for the specified Plugin object.
  Only enabled plugins can be configured.
 
@@ -1642,7 +1642,7 @@ public static java.lang.String SetPluginConfigValues (Object Plugin, java.lang.S
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the values for the specified configuration setting for the specified Plugin object.
  This should be used for plugin settings of type "Multichoice".
  Only enabled plugins can be configured.
@@ -1680,7 +1680,7 @@ public static java.lang.String[] GetPluginConfigOptions (Object Plugin, java.lan
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets all the options available for the specified configuration setting for the specified Plugin object.
  This should be used for plugin settings of type "Multichoice" or "Choice". These are the different choices
  that the user will select from. Only enabled plugins can be configured.
@@ -1716,7 +1716,7 @@ public static java.lang.String GetPluginConfigHelpText (Object Plugin, java.lang
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the help text to describe the specified configuration setting for the specified Plugin object.
  Only enabled plugins can be configured.
 
@@ -1754,7 +1754,7 @@ public static java.lang.String GetPluginConfigLabel (Object Plugin, java.lang.St
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the label to describe the specified configuration setting for the specified Plugin object.
  This should be used for UI display when presenting this setting to the user instead of the SettingName.
  Only enabled plugins can be configured.
@@ -1787,7 +1787,7 @@ public static void ResetPluginConfiguration (Object Plugin) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Resets the configuration for the specified plugin. If this is called on a disabled plugin, then next time it
  is enabled the configuration will be reset.
 
@@ -1817,7 +1817,7 @@ public static boolean IsPluginConfigurable (Object Plugin) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified plugin can be configured when enabled. If it is disabled, it can still have its configuration reset.
 
 Parameters:
@@ -1853,7 +1853,7 @@ public static Object GetPluginImplementation (Object Plugin) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the actual object that implements the sage.SageTVPlugin interface for the specified Plugin. This will only be valid
  if the Plugin has an actual implementation and is being called on a plugin that is valid in this context (i.e. you can't call it on a
  server plugin in the client JVM). DO NOT use this object to start/stop or perform other behaviors that are normally done by the
@@ -1889,7 +1889,7 @@ public static boolean IsPluginStartupComplete () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true once all of the core plugins that are enabled have completed their startup process. This can be useful because
  plugins are loaded asynchronously with the UI and sometimes a UI needs to wait for their startup process to be completed before it loads.
  For client instances; this will return true once client and server plugin startup has completed.

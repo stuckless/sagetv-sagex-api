@@ -2,7 +2,7 @@ package sagex.api;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 24/07/16 5:40 PM
+ * Generated Date/Time: 24/07/16 7:30 PM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/SystemMessageAPI.html'>SystemMessageAPI</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -23,7 +23,7 @@ public static int GetSystemAlertLevel () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the global alert level in the system.
 
 Returns:
@@ -50,7 +50,7 @@ public static Object[] GetSystemMessages () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the list of SystemMessage objects currently in the queue.
 
 Returns:
@@ -73,7 +73,7 @@ public static void ResetSystemAlertLevel () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Resets the global alert level in the system back to zero.
 
 Since:
@@ -94,7 +94,7 @@ public static void DeleteAllSystemMessages () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Deletes all the SystemMessages from the queue. This will not have any effect on the global alert level.
 
 Since:
@@ -117,7 +117,7 @@ public static void DeleteSystemMessage (Object message) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Deletes the specified SystemMessage from the queue. This will not have any effect on the global alert level.
 
 Parameters:
@@ -146,7 +146,7 @@ public static java.lang.String GetSystemMessageString (Object message) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the 'message string' associated with this SystemMessage. This is the same result as converting the object to a String.
 
 Parameters:
@@ -179,7 +179,7 @@ public static long GetSystemMessageTime (Object message) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the time when this SystemMessage was first posted.
 
 Parameters:
@@ -213,7 +213,7 @@ public static long GetSystemMessageEndTime (Object message) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the time when this SystemMessage was last posted. For messages that did not repeat this will be the same as
  GetSystemMessageTime. For messages that repeated; this will be the time of the last repeating occurence.
 
@@ -248,7 +248,7 @@ public static int GetSystemMessageRepeatCount (Object message) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the number of times this message was repeated. For a message that repeated once (i.e. it had 2 occurences), this
  method will return 2.
 
@@ -282,7 +282,7 @@ public static java.lang.String GetSystemMessageTypeName (Object message) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a localized string which represents the type of SystemMessage that was specified.
 
 Parameters:
@@ -315,7 +315,7 @@ public static int GetSystemMessageTypeCode (Object message) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns an integer which represents the type of SystemMessage that was specified.
 
 Parameters:
@@ -348,7 +348,7 @@ public static int GetSystemMessageLevel (Object message) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the alert level for the SystemMessage that was specified.
 
 Parameters:
@@ -384,7 +384,7 @@ public static java.lang.String GetSystemMessageVariable (Object message, java.la
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the SystemMessage variable property associated with the specified SystemMessage. Depending
  upon the type of message; different variables will be assigned that can be used to do further analysis/processing
  on the message or to guide the user through resolution steps.
@@ -421,7 +421,7 @@ public static void PostSystemMessage (int MessageCode, int MessageLevel, java.la
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Creates a new SystemMessage and posts it to the message queue.
  Predefined message codes of interest for posting messages are:SOFTWARE_UPDATE_MSG = 1202STORAGE_MONITOR_MSG = 1203GENERAL_MSG = 1204You may also use other user-defined message codes which should be greater than 9999. To give those messages a 'type name' which
  will be visible by the user; you can defined a message variable with the name 'typename' and then that will be displayed.
@@ -455,7 +455,7 @@ public static boolean IsSystemMessageObject (java.lang.Object SystemMessage) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the passed in argument is a SystemMessage object
 
 Parameters:
@@ -489,7 +489,7 @@ public static java.lang.String[] GetSystemMessageVariableNames (Object message) 
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the names of the variables associated with the specified SystemMessage. Depending
  upon the type of message; different variables will be assigned that can be used to do further analysis/processing
  on the message or to guide the user through resolution steps. The actual values can be retrieved with

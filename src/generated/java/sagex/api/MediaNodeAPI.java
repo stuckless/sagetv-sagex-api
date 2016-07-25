@@ -2,7 +2,7 @@ package sagex.api;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 24/07/16 5:40 PM
+ * Generated Date/Time: 24/07/16 7:30 PM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/MediaNodeAPI.html'>MediaNodeAPI</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -57,7 +57,7 @@ public static Object GetMediaSource (java.lang.String Name) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Retrieves a MediaNode which is the root of the specified 'Media Source'. All names are case insensitive.
  Valid names are:
  Filesystem - provides a view of the native filesystem
@@ -125,7 +125,7 @@ public static Object GetMediaView (java.lang.String Name, java.lang.Object Data)
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Similar to the GetMediaSource API call; but the second argument allows specifying the actual data set to
  be used for the view. The name describes the type of content or grouping just like in GetMediaSource. Can be used for
  presenting a subset of another view or for creating a MediaNode view of a fixed list of data such as a list of MediaFiles or Actors.
@@ -163,7 +163,7 @@ public static Object GetRelativeMediaSource (java.lang.String Name, java.lang.Ob
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Creates a MediaNode view with a relative root for a specified media source. This is currently only useable
  with the 'Filesystem' media source
 
@@ -198,7 +198,7 @@ public static boolean IsNodeFolder (Object MediaNode) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified MediaNode has children
 
 Parameters:
@@ -229,7 +229,7 @@ public static Object[] GetNodeChildren (Object MediaNode) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns an array of the children of the specified MediaNode
 
 Parameters:
@@ -260,7 +260,7 @@ public static int GetNodeNumChildren (Object MediaNode) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the number of children of the specified MediaNode
 
 Parameters:
@@ -294,7 +294,7 @@ public static Object GetNodeChildAt (Object MediaNode, int Index) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the child of the specified MediaNode at the given index
 
 Parameters:
@@ -331,7 +331,7 @@ public static void SetNodeSort (Object MediaNode, java.lang.String Technique, bo
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the sorting technique used by the specified MediaNode hierarchy. This effects all levels of the hierarchy.
  MediaNodes that are folders are always listed first when sorting. Some of the sorting techniques
  can also ignore 'the' as a prefix; this is controlled by the property "ui/ignore_the_when_sorting" which defaults to true.
@@ -367,7 +367,7 @@ public static java.lang.String GetNodeSortTechnique (Object MediaNode) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the name of the current sorting technique used by the specified MediaNode hierarchy.
 
 Parameters:
@@ -400,7 +400,7 @@ public static boolean IsNodeSortAscending (Object MediaNode) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the current sorting technique used by the specified MediaNode hierarchy is in ascending order, false otherwise
 
 Parameters:
@@ -434,7 +434,7 @@ public static void SetNodeFilter (Object MediaNode, java.lang.String Technique, 
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the filtering techniques used by the specified MediaNode hierarchy. This effects all levels of the hierarchy.
  Filters can either be inclusive or exclusive. This method will clear all other filters and set this as the only filter.
  Valid filtering technique names are: Directories, Pictures, Videos, Music, DVD, BluRay, TV, Watched, Archived, DontLike, Favorite,
@@ -468,7 +468,7 @@ public static int GetNodeNumFilters (Object MediaNode) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the number of filters that are currently set for the specified MediaNode.
 
 Parameters:
@@ -503,7 +503,7 @@ public static java.lang.String GetNodeFilterTechnique (Object MediaNode, int Fil
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the name of the current filtering technique used by the specified MediaNode hierarchy. Since
  multiple filters can be set; an index must be specified to determine which one to get the technique of
 
@@ -540,7 +540,7 @@ public static boolean IsNodeFilterMatching (Object MediaNode, int FilterIndex) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the match state of the current filtering technique used by the specified MediaNode hierarchy. Since
  multiple filters can be set; an index must be specified to determine which one to get the matching state of
 
@@ -576,7 +576,7 @@ public static void AppendNodeFilter (Object MediaNode, java.lang.String Techniqu
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Adds a filtering technique to used by the specified MediaNode hierarchy. This effects all levels of the hierarchy.
  Filters can either be inclusive or exclusive. This method will not clear other filters that have been set.
  Valid filtering technique names are: Directories, Pictures, Videos, Music, DVD, BluRay, TV, Watched, Archived, DontLike, Favorite,
@@ -612,7 +612,7 @@ public static boolean IsNodeHierarchyRealized (Object MediaNode) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the entire set of data objects that back this MediaNode hierarchy has already been realized.
  This will be true for fixed sets of data; but false for abstractions like the filesystem. When this is true the
  API call GetAllNodeDescendants will return a valid result.
@@ -648,7 +648,7 @@ public static java.util.Collection GetAllNodeDescendants (Object MediaNode) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the data set that represents all the children under the specified MediaNode if that
  data set has already been realized.
 
@@ -682,7 +682,7 @@ public static java.lang.Object GetNodeIcon (Object MediaNode) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the icon image associated with the specified MediaNode. This is currently the same as GetNodeThumbnail.
 
 Parameters:
@@ -715,7 +715,7 @@ public static java.lang.Object GetNodeThumbnail (Object MediaNode) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the thumbnail image associated with the specified MediaNode.
 
 Parameters:
@@ -748,7 +748,7 @@ public static java.lang.String GetNodePrimaryLabel (Object MediaNode) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a string representation of the primary data associated with the specified MediaNode suitable for display in the UI.
 
 Parameters:
@@ -782,7 +782,7 @@ public static java.lang.String GetNodeSecondaryLabel (Object MediaNode) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a string representation of the secondary data associated with the specified MediaNode suitable for display in the UI.
  This will usually relate to whatever the current sorting technique is.
 
@@ -816,7 +816,7 @@ public static boolean IsNodePlayable (Object MediaNode) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the Object that this MediaNode wraps is suitable for passing to the Watch API call.
 
 Parameters:
@@ -849,7 +849,7 @@ public static boolean IsNodeVirtual (Object MediaNode) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified MediaNode doesn't wrap an actual data object; but just an abstraction of a hierarchy
 
 Parameters:
@@ -882,7 +882,7 @@ public static java.lang.Object GetNodeDataObject (Object MediaNode) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the Object that is wrapped by the specified MediaNode
 
 Parameters:
@@ -915,7 +915,7 @@ public static java.lang.String GetNodeDataType (Object MediaNode) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the type of the Object that is wrapped by the specified MediaNode
 
 Parameters:
@@ -950,7 +950,7 @@ public static java.lang.String GetNodeProperty (Object MediaNode, java.lang.Stri
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a specific property associated with this MediaNode. This varies depending upon the data type of the
  MediaNode. For MediaFile based nodes this will end up calling GetMediaFileMetadata.
 
@@ -985,7 +985,7 @@ public static Object GetNodeParent (Object MediaNode) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the MediaNode parent of the specified MediaNode
 
 Parameters:
@@ -1014,7 +1014,7 @@ public static void RefreshNode (Object MediaNode) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Refreshes the hierarchy associated with the specified MediaNode.
 
 Parameters:
@@ -1041,7 +1041,7 @@ public static void SetNodeChecked (Object MediaNode, boolean State) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets a flag on this MediaNode to indicate it is in the checked state. Useful for tracking multi-selection of
  child MediaNodes.
 
@@ -1070,7 +1070,7 @@ public static void SetAllChildrenChecked (Object MediaNode, boolean State) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets a flag on all the children of this MediaNode to indicate they are in the checked state. Useful for tracking multi-selection of
  child MediaNodes.
 
@@ -1102,7 +1102,7 @@ public static int GetChildrenCheckedCount (Object MediaNode, boolean State) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the number of children of the specified MediaNode that are in the specified checked state.
 
 Parameters:
@@ -1137,7 +1137,7 @@ public static java.util.Vector GetChildrenCheckedNodes (Object MediaNode, boolea
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the children of the specified MediaNode that are in the specified checked state.
 
 Parameters:
@@ -1176,7 +1176,7 @@ public static Object CreateMediaNode (java.lang.String PrimaryLabel, java.lang.S
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Creates a static MediaNode that has no parents and no children. Can be used to add arbitrary items to MediaNode lists for display in
  the UI. The data type for the node will be Virtual.
 
@@ -1215,7 +1215,7 @@ public static java.lang.String GetNodeFullPath (Object MediaNode) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a string which represents the hierarchical path to this MediaNode. This is created by appending the primary labels
  of all the parents up to the root of the hierarchy. The forward slash is used as a separator.
 
@@ -1251,7 +1251,7 @@ public static java.lang.String GetNodeTypePath (Object MediaNode) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a string which represents the hierarchical path to this MediaNode with type information only. This is created by appending the data types
  of all the parents up to the root of the hierarchy. The forward slash is used as a separator. For Virtual nodes, it will use F if it represents
  a folder in the import hierarchy; otherwise it'll use the primary label unless that is null, in which case it'll use V.
@@ -1286,7 +1286,7 @@ public static boolean IsMediaNodeObject (java.lang.Object Object) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified object is a MediaNode object. No automatic type conversion will be performed on the argument.
 
 Parameters:

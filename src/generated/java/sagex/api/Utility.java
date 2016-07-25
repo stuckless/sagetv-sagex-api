@@ -2,7 +2,7 @@ package sagex.api;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 24/07/16 5:40 PM
+ * Generated Date/Time: 24/07/16 7:30 PM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/Utility.html'>Utility</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -25,7 +25,7 @@ public static java.lang.Object GetSubgroup (java.util.Map Grouping, java.lang.Ob
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the value for the specified key out of a map. Useful for analyzing data from aGroupByMethod ()
 call.
 
@@ -53,7 +53,7 @@ public static void Keystroke (java.lang.String Character, boolean System) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Executes the specified keystroke in either the SageTV event system or by emulation in the operating system
 
 Parameters:
@@ -79,7 +79,7 @@ public static int Size (java.lang.Object Data) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the size of the specified data.
 
 Parameters:
@@ -110,7 +110,7 @@ public static boolean IsEmpty (java.lang.Object Data) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the argument is null, zero, an empty string or a failed image load
 
 Parameters:
@@ -142,7 +142,7 @@ public static java.lang.String DateFormat (java.lang.String Format, java.lang.Ob
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a formatted date string for the specified Date.
 
 Parameters:
@@ -173,7 +173,7 @@ public static java.lang.String NumberFormat (java.lang.String Format, float Numb
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a formatted numeric string for the specified number.
 
 Parameters:
@@ -209,7 +209,7 @@ public static java.lang.String DurFormat (java.lang.String Format, long Duration
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a formatted duration String for a period of time in milliseconds. The formatting string
  uses the % character for escapement (%% is not supported, you cannot display the % symbol in a duration string).
  The 'd', 'h', 'm' and 's' characters can be used to indicate days, hours, minutes and seconds respectively.
@@ -244,7 +244,7 @@ public static java.lang.Long[] CreateTimeSpan (long StartTime, long EndTime) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a length 2 Long object array which can be used for specifying a time span in a table. The first element
  will be the StartTime and the second will be the EndTime
 
@@ -274,7 +274,7 @@ public static java.lang.Object GetElement (java.lang.Object Data, int Index) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the element at the specified index in this data; works for arrays and java.util.List implementations (i.e. Vector, etc.)
 
 Parameters:
@@ -306,7 +306,7 @@ public static java.lang.Object SetElement (java.lang.Object Data, int Index, jav
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the element at the specified index in this data; works for arrays and java.util.List implementations (i.e. Vector, etc.)
 
 Parameters:
@@ -338,7 +338,7 @@ public static java.lang.Object RemoveElementAtIndex (java.util.List Data, int In
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Removes the element at the specified index in this data; works java.util.List implementations (i.e. Vector, etc.)
 
 Parameters:
@@ -370,7 +370,7 @@ public static java.lang.Object RemoveElement (java.lang.Object Data, java.lang.O
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Removes the element at with the specified value from this data. Works for java.util.Collection or java.util.Map implementations.
  If the value appears multiple times in the data (for Collections) only the first occurrence is removed.
 
@@ -404,7 +404,7 @@ public static boolean AddElement (java.util.Collection Data, java.lang.Object Va
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Add the element with the specified value to this data. Works for java.util.Collection implementations.
 
 Parameters:
@@ -438,7 +438,7 @@ public static int FindElementIndex (java.lang.Object Data, java.lang.Object Elem
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the index in the data that the specified element is found at. If there are multiple occurrences of this element
  only the first index is returned. This works for arrays and java.util.List implementations.
 
@@ -473,7 +473,7 @@ public static java.lang.Object FindComparativeElement (java.lang.Object Data, ja
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Searches a sorted list of data to find the index that the specified criteria exists at; or if it doesn't exist
  in the data it will use the index that would be the appropriate insertion point for the criteria in the data
  in order to maintain sort order. The element at that index is what is returned
@@ -508,7 +508,7 @@ public static java.lang.String Substring (java.lang.String String, int StartInde
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the substring from a specified string. Same as java.lang.String.substring(int startIndex, int endIndex)
 
 Parameters:
@@ -543,7 +543,7 @@ public static java.lang.String SubstringBegin (java.lang.String String, int EndO
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the substring from a specified string. The substring will start at the beginning of the string and end
  EndIndex characters before the end of the string. Same as Substring(String, 0, Size(String) - EndOffset).
 
@@ -576,7 +576,7 @@ public static java.lang.Object Round (java.lang.Object Number) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Rounds a floating point number to an integral value. For Doubles a Long is returned, for Floats an Integer is returned
 
 Parameters:
@@ -603,7 +603,7 @@ public static long Time () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the current time; see java.lang.System.currentTimeMillis() for the explanation of the units.
 
 Returns:
@@ -628,7 +628,7 @@ public static java.lang.String PrintCurrentTime () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a string that represents the current time.
 
 Returns:
@@ -655,7 +655,7 @@ public static java.lang.String PrintDate (long Date) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a formatted date string using the java.text.DateFormat.MEDIUM formatting technique
 
 Parameters:
@@ -684,7 +684,7 @@ public static java.lang.String PrintDateLong (long Date) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a formatted date string using SageTV's default detailed date formatting
 
 Parameters:
@@ -713,7 +713,7 @@ public static java.lang.String PrintDateShort (long Date) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a formatted date string using the java.text.DateFormat.SHORT formatting technique
 
 Parameters:
@@ -742,7 +742,7 @@ public static java.lang.String PrintDateFull (long Date) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a formatted date string using the java.text.DateFormat.FULL formatting technique
 
 Parameters:
@@ -771,7 +771,7 @@ public static java.lang.String PrintTime (long Time) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a formatted time string using the java.text.DateFormat.MEDIUM formatting technique
 
 Parameters:
@@ -800,7 +800,7 @@ public static java.lang.String PrintTimeLong (long Time) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a formatted time string using the java.text.DateFormat.LONG formatting technique
 
 Parameters:
@@ -829,7 +829,7 @@ public static java.lang.String PrintTimeShort (long Time) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a formatted time string using the java.text.DateFormat.SHORT formatting technique
 
 Parameters:
@@ -858,7 +858,7 @@ public static java.lang.String PrintTimeFull (long Time) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a formatted time string using the java.text.DateFormat.FULL formatting technique
 
 Parameters:
@@ -887,7 +887,7 @@ public static java.lang.String PrintDuration (long Duration) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a formatted duration string according to SageTV's verbose duration formating, minutes is the most detailed resolution of this format
 
 Parameters:
@@ -916,7 +916,7 @@ public static java.lang.String PrintDurationWithSeconds (long Duration) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a formatted duration string according to SageTV's default duration formating, seconds is the most detailed resolution of this format
 
 Parameters:
@@ -945,7 +945,7 @@ public static java.lang.String PrintDurationShort (long Duration) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a formatted duration string according to SageTV's concise duration formating, minutes is the most detailed resolution of this format
 
 Parameters:
@@ -974,7 +974,7 @@ public static long GetDiskFreeSpace (java.lang.String DrivePath) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the amount of disk free space in bytes at the specified path
 
 Parameters:
@@ -1003,7 +1003,7 @@ public static long GetDiskTotalSpace (java.lang.String DrivePath) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the amount of total disk space in bytes at the specified path
 
 Parameters:
@@ -1032,7 +1032,7 @@ public static java.lang.String GetFileSystemType (java.lang.String DrivePath) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the name of the filesystem type at the specified path
 
 Parameters:
@@ -1062,7 +1062,7 @@ public static java.lang.String[] GetWindowsRegistryNames (java.lang.String Root,
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a list of the Windows registry names which exist under the specified root  key (Windows only)
  Acceptable values for the Root are: "HKCR", "HKEY_CLASSES_ROOT", "HKCC", "HKEY_CURRENT_CONFIG", "HKCU",
  "HKEY_CURRENT_USER", "HKU", "HKEY_USERS", "HKLM" or "HKEY_LOCAL_MACHINE" (HKLM is the default if nothing matches)
@@ -1096,7 +1096,7 @@ public static int GetWindowsRegistryDWORDValue (java.lang.String Root, java.lang
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a DWORD value from the Windows registry for the specified root, key and name(Windows only)
  Acceptable values for the Root are: "HKCR", "HKEY_CLASSES_ROOT", "HKCC", "HKEY_CURRENT_CONFIG", "HKCU",
  "HKEY_CURRENT_USER", "HKU", "HKEY_USERS", "HKLM" or "HKEY_LOCAL_MACHINE" (HKLM is the default if nothing matches)
@@ -1133,7 +1133,7 @@ public static int GetWindowsRegistryStringValue (java.lang.String Root, java.lan
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a string value from the Windows registry for the specified root, key and name(Windows only)
  Acceptable values for the Root are: "HKCR", "HKEY_CLASSES_ROOT", "HKCC", "HKEY_CURRENT_CONFIG", "HKCU",
  "HKEY_CURRENT_USER", "HKU", "HKEY_USERS", "HKLM" or "HKEY_LOCAL_MACHINE" (HKLM is the default if nothing matches)
@@ -1170,7 +1170,7 @@ public static boolean RemoveWindowsRegistryValue (java.lang.String Root, java.la
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Removes a value from the Windows registry for the specified root, key and name(Windows only)
  Acceptable values for the Root are: "HKCR", "HKEY_CLASSES_ROOT", "HKCC", "HKEY_CURRENT_CONFIG", "HKCU",
  "HKEY_CURRENT_USER", "HKU", "HKEY_USERS", "HKLM" or "HKEY_LOCAL_MACHINE" (HKLM is the default if nothing matches)
@@ -1209,7 +1209,7 @@ public static boolean SetWindowsRegistryDWORDValue (java.lang.String Root, java.
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets a DWORD value in the Windows registry for the specified root, key and name(Windows only)
  The name will be created if it doesn't already exist.
  Acceptable values for the Root are: "HKCR", "HKEY_CLASSES_ROOT", "HKCC", "HKEY_CURRENT_CONFIG", "HKCU",
@@ -1250,7 +1250,7 @@ public static boolean SetWindowsRegistryStringValue (java.lang.String Root, java
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets a string value in the Windows registry for the specified root, key and name(Windows only)
  The name will be created if it doesn't already exist.
  Acceptable values for the Root are: "HKCR", "HKEY_CLASSES_ROOT", "HKCC", "HKEY_CURRENT_CONFIG", "HKCU",
@@ -1281,7 +1281,7 @@ public static void PlaySound (java.lang.String SoundFile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Plays the specified sound file (used for sound effects, don't use for music playback)
 
 Parameters:
@@ -1309,7 +1309,7 @@ public static java.lang.Object If (boolean Condition, java.lang.Object True, jav
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the second argument if the first argument is true, otherwise the third argument is returned. All 3 arguments
  will be evaluated in all cases. This does NOT have a short-circuit which prevents evaluation of the third argument if the first is true.
 
@@ -1341,7 +1341,7 @@ public static java.lang.String GetFileNameFromPath (java.io.File FilePath) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the file name from the specified file path; this just returns the filename without any path information.
 
 Parameters:
@@ -1372,7 +1372,7 @@ public static java.lang.String GetAbsoluteFilePath (java.io.File FilePath) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the full path name from the specified file path..
 
 Parameters:
@@ -1405,7 +1405,7 @@ public static java.lang.String GetFileExtensionFromPath (java.lang.String FilePa
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the file name extension from the specified file path (not including the '.')
 
 Parameters:
@@ -1432,7 +1432,7 @@ public static void Wait (long Time) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Causes the currently executing thread to sleep for the specified amount of time in milliseconds.
 
 Parameters:
@@ -1458,7 +1458,7 @@ public static java.lang.Number Max (java.lang.Number Value1, java.lang.Number Va
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the maximum of the two arguments; the type of the returned argument will be the same as the highest precision argument
 
 Parameters:
@@ -1489,7 +1489,7 @@ public static java.lang.Number Min (java.lang.Number Value1, java.lang.Number Va
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the minimum of the two arguments; the type of the returned argument will be the same as the highest precision argument
 
 Parameters:
@@ -1522,7 +1522,7 @@ public static java.lang.Process ExecuteProcess (java.lang.String CommandString, 
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Executes a new process on the system
 
 Parameters:
@@ -1560,7 +1560,7 @@ public static java.lang.String ExecuteProcessReturnOutput (java.lang.String Comm
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Executes a new process on the system and returns as a String the output of the process
 
 Parameters:
@@ -1595,7 +1595,7 @@ public static Object LoadImageFile (java.io.File FilePath) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a MetaImage object that refers to the specified image file. Used for passing images into Widgets.
 
 Parameters:
@@ -1627,7 +1627,7 @@ public static Object LoadImage (java.lang.Object Resource) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a MetaImage object that refers to a specified image resource. This can be used to load images from URLs, JAR resources or the file system.It also has a secondary purpose where you can pass it a MetaImage and then it will load that image into
  the current image cache so it will render as fast as possible in the next drawing cycle. Good for preloading
  the next image in a slideshow. If a MetaImage is passed in; this call will not return until that image is loaded into the cache.
@@ -1666,7 +1666,7 @@ public static boolean SaveImageToFile (Object MetaImage, java.io.File File, int 
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Saves a MetaImage object to a file using the specified image size. The supported formats are JPG and PNG. The format is determined by the file extension, which must be either .jpg or .png.
  Use zero for the width and height to save it at the original image size.
  NOTE: This call is a NOOP on embedded platforms
@@ -1704,7 +1704,7 @@ public static java.io.File GetMetaImageSourceFile (Object MetaImage) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the file path that a MetaImage was loaded from. Since not all MetaImage objects come from file paths, this will return null for any non-file based images.
 
 Parameters:
@@ -1737,7 +1737,7 @@ public static float GetMetaImageAspectRatio (Object MetaImage) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the aspect ratio of an image as a floating point number of width/height, zero if the image was a failed load or has not been loaded yet
 
 Parameters:
@@ -1770,7 +1770,7 @@ public static boolean IsMetaImage (java.lang.Object MetaImage) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the argument is a MetaImage object.
 
 Parameters:
@@ -1801,7 +1801,7 @@ public static byte[] GetMetaImageBytes (Object MetaImage) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a byte array which is the contents of the MetaImage source's data (i.e. compressed image data)
 
 Parameters:
@@ -1833,7 +1833,7 @@ public static java.awt.image.BufferedImage GetImageAsBufferedImage (java.lang.Ob
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a java.awt.image.BufferedImage object. This can be used to load images from URLs, JAR resources or the file system.
 
 
@@ -1870,7 +1870,7 @@ public static java.awt.image.BufferedImage GetScaledImageAsBufferedImage (java.l
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a java.awt.image.BufferedImage object. This can be used to load images from URLs, JAR resources or the file system.
  The size of the returned image will match the passed in arguments.
 
@@ -1902,7 +1902,7 @@ public static void UnloadImage (java.lang.String ResPath) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Unloads the specified image resource from memory. NOTE: This does not care about the internal reference
  count in SageTV for this image which could mean bad things will happen if you use this on images other than ones
  that you are explicitly managing.
@@ -1932,7 +1932,7 @@ public static boolean IsImageLoaded (java.lang.Object Image) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Checks whether the passed in MetaImage (from an API call that returns MetaImage), MediaFile, File, URL or Album is loaded
  into system memory or into the VRAM cache of the corresponding UI making the call.
 
@@ -1967,7 +1967,7 @@ public static boolean DidImageLoadFail (java.lang.Object Image) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Checks whether the passed in MetaImage (from an API call that returns MetaImage), MediaFile, File, URL or Album failed
  to load successfully. This will return false if the image load has not been attempted yet.
 
@@ -1997,7 +1997,7 @@ public static java.io.File[] DirectoryListing (java.io.File DirectoryPath) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a list of the files in the specified directory
 
 Parameters:
@@ -2025,7 +2025,7 @@ public static java.io.File[] DirectoryListing (java.io.File DirectoryPath, java.
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a list of the files in the specified directory. Only directories and file matching the media mask will be returned.
 
 Parameters:
@@ -2055,7 +2055,7 @@ public static java.io.File[] LocalDirectoryListing (java.io.File DirectoryPath) 
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a list of the files in the specified directory on the local filesystem
 
 Parameters:
@@ -2080,7 +2080,7 @@ public static java.io.File[] GetFileSystemRoots () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the root directories of the file systems (on Linux this'll just be / and on Windows it'll be the drive letters)
 
 Returns:
@@ -2103,7 +2103,7 @@ public static java.io.File[] GetLocalFileSystemRoots () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the root directories of the local file systems  (on Linux this'll just be / and on Windows it'll be the drive letters)
 
 Returns:
@@ -2131,7 +2131,7 @@ public static boolean StringEndsWith (java.lang.String FullString, java.lang.Str
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the first string ends with the second, uses java.lang.String.endsWith
 
 Parameters:
@@ -2162,7 +2162,7 @@ public static boolean StringStartsWith (java.lang.String FullString, java.lang.S
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the first string starts with the second, uses java.lang.String.startsWith
 
 Parameters:
@@ -2193,7 +2193,7 @@ public static int StringIndexOf (java.lang.String FullString, java.lang.String M
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the index of the second string within the first string, -1 if it is not found. Uses java.lang.String.indexOf
 
 Parameters:
@@ -2224,7 +2224,7 @@ public static int StringLastIndexOf (java.lang.String FullString, java.lang.Stri
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the last index of the second string within the first string, -1 if it is not found. Uses java.lang.String.lastIndexOf
 
 Parameters:
@@ -2252,7 +2252,7 @@ public static java.lang.String GetWorkingDirectory () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the current working directory for the application (if this is a client; it'll be the working directory of the server)
 
 Returns:
@@ -2279,7 +2279,7 @@ public static boolean HasLocalFilesystem () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if this client has a local file system that can be accessed.
 
 Returns:
@@ -2309,7 +2309,7 @@ public static java.io.File CreateFilePath (java.lang.String Directory, java.lang
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Creates a new file object for the specified directory and file name or relative path
 
 Parameters:
@@ -2339,7 +2339,7 @@ public static boolean IsFilePathHidden (java.lang.String FilePath) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified file path is marked as a hidden file
 
 Parameters:
@@ -2370,7 +2370,7 @@ public static boolean IsLocalFilePathHidden (java.lang.String FilePath) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified local file path is marked as a hidden file
 
 Parameters:
@@ -2401,7 +2401,7 @@ public static boolean IsFilePath (java.lang.String FilePath) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified file path denotes a file that exists and is not a directory
 
 Parameters:
@@ -2432,7 +2432,7 @@ public static boolean IsLocalFilePath (java.lang.String FilePath) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified local file path denotes a file that exists and is not a directory
 
 Parameters:
@@ -2463,7 +2463,7 @@ public static boolean IsDirectoryPath (java.lang.String FilePath) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified path denotes a directory that exists
 
 Parameters:
@@ -2494,7 +2494,7 @@ public static boolean IsLocalDirectoryPath (java.lang.String FilePath) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified local path denotes a directory that exists
 
 Parameters:
@@ -2525,7 +2525,7 @@ public static boolean CreateNewDirectory (java.io.File DirectoryPath) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Creates a new directory and any parent directories for the specified directory path.
 
 Parameters:
@@ -2556,7 +2556,7 @@ public static boolean CreateNewLocalDirectory (java.io.File DirectoryPath) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Creates a new local directory and any parent directories for the specified directory path.
 
 Parameters:
@@ -2587,7 +2587,7 @@ public static java.io.File GetPathParentDirectory (java.io.File FilePath) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the parent directory for the specified file path
 
 Parameters:
@@ -2616,7 +2616,7 @@ public static long GetPathLastModifiedTime (java.io.File FilePath) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the last modified time of the specified file path
 
 Parameters:
@@ -2647,7 +2647,7 @@ public static long GetLocalPathLastModifiedTime (java.io.File FilePath) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the last modified time of the specified local file path
 
 Parameters:
@@ -2680,7 +2680,7 @@ public static long GetFilePathSize (java.io.File FilePath) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the size in bytes of the specified file path
 
 Parameters:
@@ -2713,7 +2713,7 @@ public static long GetLocalFilePathSize (java.io.File FilePath) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the size in bytes of the specified local file path
 
 Parameters:
@@ -2746,7 +2746,7 @@ public static boolean DeleteFilePath (java.io.File FilePath) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Deletes the file/directory at the corresponding file path (directories must be empty first)
 
 Parameters:
@@ -2779,7 +2779,7 @@ public static boolean DeleteLocalFilePath (java.io.File FilePath) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Deletes the file/directory at the corresponding local file path (directories must be empty first)
 
 Parameters:
@@ -2813,7 +2813,7 @@ public static boolean RenameFilePath (java.io.File OriginalFilePath, java.io.Fil
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Renames a file/directory
 
 Parameters:
@@ -2849,7 +2849,7 @@ public static boolean AddToGrouping (java.util.Map Grouping, java.lang.Object Ke
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Adds the specified value into the grouping using the specified key. Useful on results fromGroupByMethod()
 This works using a Map implementation that has Collections as the values and objects as the keys. So if two objects have the same key
  they will both still exist in the map by being in the Collection that corresponds to their key.
@@ -2885,7 +2885,7 @@ public static boolean SendNetworkCommand (java.lang.String Hostname, int Port, j
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Opens a TCP/IP socket connection to the specified hostname on the specified port and then sends the specified command. After that
  the socket is closed.
 
@@ -2920,7 +2920,7 @@ public static java.awt.image.BufferedImage ScaleBufferedImage (java.awt.image.Bu
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Scales a java.awt.image.BufferedImage object using optimized techniques
 
 Parameters:
@@ -2952,7 +2952,7 @@ public static java.lang.String LocalizeString (java.lang.String EnglishText) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a localized version of the specified string. Uses SageTV's core translation properties to do this.
 
 Parameters:
@@ -2979,7 +2979,7 @@ public static java.lang.String GetLocalIPAddress () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the IP address of the machine
 
 Returns:
@@ -3006,7 +3006,7 @@ public static boolean IsImportableFileType (java.lang.String Filename) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified file path has a file extension which would be imported by SageTV into its library.
 
 Parameters:
@@ -3034,7 +3034,7 @@ public static java.lang.String GetSubnetMask () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the subnet mask for the currently configured network adapter.
  NOTE: This is only valid on embedded platforms.
 
@@ -3061,7 +3061,7 @@ public static java.lang.String GetGatewayAddress () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the gateway address for the currently configured network adapter.
  NOTE: This is only valid on embedded platforms.
 
@@ -3088,7 +3088,7 @@ public static java.lang.String GetDNSAddress () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the DNS address for the currently configured network adapter.
  NOTE: This is only valid on embedded platforms.
 
@@ -3119,7 +3119,7 @@ public static java.lang.String GuessMajorFileType (java.lang.String Filename) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Guesses what media type the specified filename corresponds to. It does this based on the configuration
  for the import library file types.
 
@@ -3158,7 +3158,7 @@ public static int TestPlaceshifterConnectivity (java.lang.String LocatorID) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Connects to the SageTV Locator server and submits the specified Locator ID for a 'ping'. The Locator server will
  then attempt to connect to the IP for that GUID and report back the status.  The return code is an integer as follows:
  -1 - Unable to connect to the locator server (internet connection is down or locator server is down)
@@ -3195,7 +3195,7 @@ public static java.lang.String LookupIPForLocatorID (java.lang.String LocatorID)
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Connects to the SageTV Locator server and submits the specified Locator ID for a IP lookup. The Locator server will
  then lookup the IP for that GUID and report it back.
 
@@ -3227,7 +3227,7 @@ public static java.lang.Object[] CreateArray (java.lang.Object Value) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Creates a java.lang.Object array and initializes each element to the passed in argument.
  NOTE: This method takes a variable number of arguments, and the length of the returned array will be
  equal to the number of arguments. i.e. calling CreateArray(1, 2) returns an Object array with elements 1 and 2 in it
@@ -3257,7 +3257,7 @@ public static void SetScrollPosition (float RelativeX, float RelativeY) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Scrolls the closest pageable UI parent component (or sibling of a parent) to the specified position.
 
 Parameters:
@@ -3282,7 +3282,7 @@ public static void ClearMenuCache () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Clears the cache that links Widgets to the in memory-menu representations for this UI. This also clears the back/forward history
  to remove any references contained in there as well.
 
@@ -3369,7 +3369,7 @@ public static boolean Animate (java.lang.String WidgetName, java.lang.String Lay
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Starts an animation for the specified Widget in the specified Layer. If the Widget name ends with a '*' then all Widgets
  that match will be animated; otherwise only the first visible Widget matching the name will be animated. The Widget must
  also have the specified Layer as it's animation layer (i.e. if the Layer is Foreground, then the corresponding Widget
@@ -3470,7 +3470,7 @@ public static boolean AnimateVariable (java.lang.String WidgetName, java.lang.St
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 For more details on Animations see here:Animate()
 In addition to what's specified in the Animate API call; this also offers restricting of an
  Animation by a variable name and value. Usage of the '*' suffix on the WidgetName is allowed.
@@ -3521,7 +3521,7 @@ public static boolean AnimateTransition (java.lang.String SourceWidgetName, java
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Performs an Animation between two different Widgets. Normally animations are performed between two different states for a single Widget.
  This API call allows an animation to occur between two different Widgets and will usually be used with a 'Morph' AnimationName. This
  may only target a single Widget; so the '*' suffix is not used on the WidgetNames in this call.For more details on Animations see here:Animate()
@@ -3572,7 +3572,7 @@ public static boolean AnimateDelayed (java.lang.String WidgetName, java.lang.Str
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 This is the same as the Animate API call; but it allows specifiying a delay that should occur before the animation actually starts.
  Useful for creating sequences of animation effects.
 
@@ -3610,7 +3610,7 @@ public static void SetCoreAnimationsEnabled (boolean Enabled) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets whether or not animation support is enabled (either layered or Effect based animations; depending upon the STV configuration)
 
 Parameters:
@@ -3637,7 +3637,7 @@ public static boolean AreCoreAnimationsEnabled () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns whether or not animation support is enabled (either layered or Effect based animations; depending upon the STV configuration)
 
 Returns:
@@ -3667,7 +3667,7 @@ public static boolean AreCoreAnimationsSupported () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns whether or not animation support is possible in the current UI environment. Certain clients (like the MVP) do not support animations;
  and animations over remote connections are also disabled due to performance reasons.
 
@@ -3704,7 +3704,7 @@ public static boolean GetUIRefreshLock () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Acquires the lock for this user interface system to prevent other updates from occuring. This can be used
  at the start of an animation sequence before the refresh call is made to ensure that the animations will
  all occur on the same refresh cycle. The return value indicates if the lock was acquired. Do NOT release the lock
@@ -3738,7 +3738,7 @@ public static void ReleaseUIRefreshLock () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Releases the lock for this user interface system to allow other updates to occur. This must ONLY be used
  after GetUIRefreshLock() was called and ONLY if GetUIRefreshLock() actually returned true. This must also be called
  from the same thread that called GetUIRefreshLock()
@@ -3767,7 +3767,7 @@ public static java.lang.String CalculateMD5Sum (java.io.File FilePath) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Calculates the MD5 Sum of a given file
 
 Parameters:
@@ -3792,7 +3792,7 @@ public static void ReloadNameserverCache () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Reloads the name server cache. Should be used after reconfiguring the network adapter.
  NOTE: This is only valid on embedded platforms.
  */
@@ -3815,7 +3815,7 @@ public static long GetTimeSinceLastInput () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the amount of time in milliseconds since the last user input occurred for this UI (used for doing things while the user is idle)
 
 Returns:
@@ -3847,7 +3847,7 @@ public static java.lang.String GetFileAsString (java.io.File FilePath) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Opens the file at the specified path and reads the entire contents of it and returns it as a String.
  This will use the server's filesystem if executed on SageTVClient.
 
@@ -3881,7 +3881,7 @@ public static java.lang.String GetLocalFileAsString (java.io.File FilePath) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Opens the file at the specified path and reads the entire contents of it and returns it as a String.
 
 Parameters:
@@ -3912,7 +3912,7 @@ public static boolean IsLocalRestartNeeded () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the local instance of SageTV needs to be restarted due to a plugin install/uninstall
 
 Returns:
@@ -3941,7 +3941,7 @@ public static boolean IsServerRestartNeeded () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the server instance of SageTV needs to be restarted due to a plugin install/uninstall
 
 Returns:
@@ -3973,7 +3973,7 @@ public static boolean Restart () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Restarts the local instance of SageTV. Sometimes needed after a plugin install/uninstall. If you want to restart
  the local and server instance; then perform the restart on the server first. This is only supported on
  Windows and Linux currently. If this is called from a SageTVClient running on the same machine as the server, this will invoke
@@ -4007,7 +4007,7 @@ public static boolean ServerRestart () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Restarts the server instance of SageTV. Sometimes needed after a plugin install/uninstall. If you want to restart
  the local and server instance; then perform the restart on the server first. This is only supported on
  Windows servers and Linux servers currently.
@@ -4041,7 +4041,7 @@ public static java.lang.String QueryServerMacAddress (java.lang.String Hostname)
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the MAC address of the SageTV server at the specified hostname. This will only work if SageTV is running on that host.
  This call uses a 3 second timeout internally.
 
@@ -4075,7 +4075,7 @@ public static java.util.Map ScanWirelessAPs () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Scans for wireless access points and returns the results as a map. The keys are the SSID names and the values are Security;Strength where
  Security will be WEP/WPA/None and strength will be an integer between 0 and 100
  NOTE: This is only valid on embedded platforms.
@@ -4110,7 +4110,7 @@ public static int ReformatDeviceAtPathAsEXT3 (java.lang.String DrivePath) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Determines the device that is mounted at the specified path, and then repartitions it to have a single EXT3 partition and then
  formats that partition. WARNING: THIS WILL DESTROY ALL INFORMATION ON THE TARGET DEVICE AND REFORMAT IT
  NOTE: This is only valid on embedded platforms.
@@ -4148,7 +4148,7 @@ public static java.lang.String ConvertNteChars (java.lang.String NteString) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 converts a string of NTE key characters (and normal characters) into their
  default character representation - given by the first character in the
  NTE chatacter listThe NTE key characters are the Unicode characters u2460-u2468 and u24EA  (Unicode Circled Digits),
@@ -4186,7 +4186,7 @@ public static java.lang.String StringIndexOfNTE (java.lang.String FullString, ja
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the index of MatchStringNTE string within FullString, -1 if it is not found.Search is case-insentiveThe MatchStringNTE may contain the Unicode characters u2460-u2468 and u24EA  (Unicode Circled Digits) representing
  numeric Text Keys 1-9 and 0. The characters represented by the keys are defined by the client properties"ui/numeric_text_input_ui/translation_language_code_key_lower.
 
@@ -4223,7 +4223,7 @@ public static java.lang.Boolean StringStartsWithNTE (java.lang.String FullString
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the Full String starts with characters matching MatchStringNTESearch is case-insentiveThe MatchStringNTE may contain the Unicode characters u2460-u2468 and u24EA  (Unicode Circled Digits) representing
  numeric Text Keys 1-9 and 0. The characters represented by the keys are defined by the client properties"ui/numeric_text_input_ui/translation_language_code_key_lower.
 
@@ -4252,7 +4252,7 @@ public static void DumpServerThreadStates () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Dumps all the java stack information on the SageTV server process to the server's debug output stream
 
 Since:

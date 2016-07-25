@@ -2,7 +2,7 @@ package sagex.api;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 24/07/16 5:40 PM
+ * Generated Date/Time: 24/07/16 7:30 PM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/Configuration.html'>Configuration</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -16,7 +16,7 @@ public static void SaveProperties () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Saves the Sage.properties file to disk
  */
 public static void SaveProperties (UIContext _uicontext) {
@@ -34,7 +34,7 @@ public static java.io.File[] GetLibraryImportPaths () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns all of the library import paths that are currently configured for all media types
 
 Returns:
@@ -55,7 +55,7 @@ public static java.io.File[] GetPictureLibraryImportPaths () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the library import paths that are currently configured for picture files
 
 Returns:
@@ -76,7 +76,7 @@ public static java.io.File[] GetMusicLibraryImportPaths () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the library import paths that are currently configured for music files
 
 Returns:
@@ -97,7 +97,7 @@ public static java.io.File[] GetVideoLibraryImportPaths () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the library import paths that are currently configured for video files
 
 Returns:
@@ -122,7 +122,7 @@ public static boolean IsMajorMinorDTVChannelTuningEnabled () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Deprecated. 
 
 Returns true if the legacy major/minor channel tuning is enabled. Do not use anymore
@@ -149,7 +149,7 @@ public static boolean GetAutodialForInternet () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if SageTV should attempt to autodial before accessing the Internet
 
 Returns:
@@ -172,7 +172,7 @@ public static void SetAutodialForInternet (boolean Autodial) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets whether or not SageTV should autodial before accessing the Internet
 
 Parameters:
@@ -197,7 +197,7 @@ public static boolean IsProvideoPentium4FixEnabled () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Deprecated. 
 
 Returns true if the Provideo 256 Pentium 4 fix is enabled
@@ -224,7 +224,7 @@ public static void SetProvideoPentium4FixEnabled (boolean Enabled) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Deprecated. 
 
 Sets whether or not the Provideo 256 Pentium 4 fix should be enabled
@@ -247,7 +247,7 @@ public static java.lang.String[] GetInfraredTuningPlugins () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the list of infrared tuning plugins that are available for use with SageTV
 
 Returns:
@@ -271,7 +271,7 @@ public static java.lang.String[] GetRemotesForInfraredTuningPlugin (java.lang.St
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the names of the 'Remote Controls' which correspond to external devices that can be controlled with the specified plugin
 
 Parameters:
@@ -302,7 +302,7 @@ public static java.lang.String AddRemoteForInfraredTuningPlugin (java.lang.Strin
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Creates a new 'Remote Control' with the specified name for the specified plugin. Depending upon the plugin, this may require
  the user to perform some interaction before it returns.
 
@@ -338,7 +338,7 @@ public static boolean LearnCommandForInfraredTuningPlugin (java.lang.String Plug
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Informs an infrared tuning plugin that it should go into the learn mode to learn a new command. This call will return after the user has
  given the hardware the appropriate input it is looking for.
 
@@ -371,7 +371,7 @@ public static void RenameCommandForInfraredTuningPlugin (java.lang.String Plugin
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Renames a command for a remote control on an infrared tuning plugin
 
 Parameters:
@@ -398,7 +398,7 @@ public static void RemoveRemoteForInfraredTuningPlugin (java.lang.String PluginN
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Removes a 'Remote Control' from an infrared tuning plugin. This will also delete all commands learned by that 'Remote Control'.
 
 Parameters:
@@ -424,7 +424,7 @@ public static void RemoveCommandForInfraredTuningPlugin (java.lang.String Plugin
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Removes a command from a 'Remote Control' for an infrared tuning plugin. If the command had a learned code, that code will be lost.
 
 Parameters:
@@ -453,7 +453,7 @@ public static void SetMaxChannelDigitsForInfraredTuningPlugin (java.lang.String 
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the maximum number of digits that are needed to tune a channel on the device that corresponds to the specified 'Remote Control'.
  For example, if you always need to push 3 numeric keys before the device would tune a channel (i.e. channels are from 1-999) then you
  would specify 3 here.
@@ -487,7 +487,7 @@ public static int GetMaxChannelDigitsForInfraredTuningPlugin (java.lang.String P
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the maximum number of digits that are needed to tune a channel on the device that corresponds to the specified 'Remote Control'.
  For example, if you always need to push 3 numeric keys before the device would tune a channel (i.e. channels are from 1-999) then this
  should be 3.
@@ -519,7 +519,7 @@ public static void SetButtonDelayForInfraredTuningPlugin (java.lang.String Plugi
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the minimum delay in milliseconds that is required between sending consecutive commands using the specified 'Remote Control'.
 
 Parameters:
@@ -549,7 +549,7 @@ public static int GetButtonDelayForInfraredTuningPlugin (java.lang.String Plugin
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the minimum delay in milliseconds that is required between sending consecutive commands using the specified 'Remote Control'.
 
 Parameters:
@@ -580,7 +580,7 @@ public static void SetSequenceDelayForInfraredTuningPlugin (java.lang.String Plu
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the minimum delay in milliseconds that is required between the completion of a sequence of commands that represent a channel change
  and the start of a new sequence of commands that represent a channel change
 
@@ -612,7 +612,7 @@ public static int GetSequenceDelayForInfraredTuningPlugin (java.lang.String Plug
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the minimum delay in milliseconds that is required between the completion of a sequence of commands that represent a channel change
  and the start of a new sequence of commands that represent a channel change
 
@@ -644,7 +644,7 @@ public static void SetConfirmCommandForInfraredTuningPlugin (java.lang.String Pl
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the command that is to be sent as the last command to complete a channel change sequence. This is for devices that require an
  'Enter' or other type of confirmation key to be pressed after the numeric channel codes are sent.
 
@@ -675,7 +675,7 @@ public static void SetPrefixCommandForInfraredTuningPlugin (java.lang.String Plu
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the command that is to be sent before a channel change sequence is started. This is for devices that require a
  'Power On' or 'Cancel' type of function to ensure the device is a responsive state.
 
@@ -709,7 +709,7 @@ public static java.lang.String GetConfirmCommandForInfraredTuningPlugin (java.la
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the command that is to be sent as the last command to complete a channel change sequence. This is for devices that require an
  'Enter' or other type of confirmation key to be pressed after the numeric channel codes are sent.
 
@@ -746,7 +746,7 @@ public static java.lang.String GetPrefixCommandForInfraredTuningPlugin (java.lan
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the command that is to be sent before a channel change sequence is started. This is for devices that require a
  'Power On' or 'Cancel' type of function to ensure the device is a responsive state.
 
@@ -782,7 +782,7 @@ public static long GetCarrierFrequencyForInfraredTuningPlugin (java.lang.String 
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the carrier frequency detected by this plugin for the specified remote
 
 Parameters:
@@ -815,7 +815,7 @@ public static long GetBitTimeForInfraredTuningPlugin (java.lang.String PluginNam
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the 'bit time' detected by this plugin for the specified remote
 
 Parameters:
@@ -848,7 +848,7 @@ public static java.util.Vector GetCommandsForInfraredTuningPlugin (java.lang.Str
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the list of commands for the specified 'Remote Control' for the specified plugin
 
 Parameters:
@@ -884,7 +884,7 @@ public static java.lang.String[] GetSubpropertiesThatAreBranches (java.lang.Stri
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the list of properties underneath the specified property that themselves contain further subproperties.
  For example, if the following were the properties:
  animal/pig=0
@@ -923,7 +923,7 @@ public static java.lang.String[] GetSubpropertiesThatAreLeaves (java.lang.String
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the list of properties underneath the specified property that do not contain further subproperties.
  For example, if the following were the properties:
  animal/pig=0
@@ -965,7 +965,7 @@ public static java.lang.String[] GetServerSubpropertiesThatAreBranches (java.lan
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the list of properties underneath the specified property that themselves contain further subproperties.
  For example, if the following were the properties:
  animal/pig=0
@@ -1010,7 +1010,7 @@ public static java.lang.String[] GetServerSubpropertiesThatAreLeaves (java.lang.
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the list of properties underneath the specified property that do not contain further subproperties.
  For example, if the following were the properties:
  animal/pig=0
@@ -1049,7 +1049,7 @@ public static java.lang.String GetProperty (java.lang.String PropertyName, java.
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the property with the specified name. If the property is not set yet, it will be set to the DefaultValue
  that is passed in unless that value is null
 
@@ -1077,7 +1077,7 @@ public static void SetProperty (java.lang.String PropertyName, java.lang.String 
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the property with the specified name to the specified value.
 
 Parameters:
@@ -1106,7 +1106,7 @@ public static java.lang.String GetServerProperty (java.lang.String PropertyName,
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the property with the specified name. If the property is not set yet, it will be set to the DefaultValue
  that is passed in unless that value is null. If this is called from a client instance then it will use the
  properties on the server system for this call.
@@ -1136,7 +1136,7 @@ public static void SetServerProperty (java.lang.String PropertyName, java.lang.S
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the property with the specified name to the specified value. If this is called from a client instance then it will use the
  properties on the server system for this call and the change will be made on the server system.
 
@@ -1159,7 +1159,7 @@ public static void RemoveProperty (java.lang.String PropertyName) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Removes the specified property from the property map
 
 Parameters:
@@ -1180,7 +1180,7 @@ public static void RemovePropertyAndChildren (java.lang.String PropertyName) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Removes the specified property and any subproperties that start with the same prefix
 
 Parameters:
@@ -1204,7 +1204,7 @@ public static void RemoveServerProperty (java.lang.String PropertyName) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Removes the specified property from the property map. If this is called from a client instance then it will use the
  properties on the server system for this call and the change will be made on the server system.
 
@@ -1232,7 +1232,7 @@ public static void RemoveServerPropertyAndChildren (java.lang.String PropertyNam
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Removes the specified property and any subproperties that start with the same prefix.
  If this is called from a client instance then it will use the
  properties on the server system for this call and the change will be made on the server system.
@@ -1259,7 +1259,7 @@ public static java.lang.String GetDefaultRecordingQuality () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the name of the default quality that is used to record television.
 
 Returns:
@@ -1284,7 +1284,7 @@ public static boolean IsIntelligentRecordingDisabled () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the 'Intelligent Recording' feature of SageTV is disabled. The default is disabled.
 
 Returns:
@@ -1308,7 +1308,7 @@ public static void AddLibraryImportPath (java.lang.String NewPath) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Adds a new file path to the list of paths that SageTV checks for library import files. This path will
  be used to search for music, video and picture files.
 
@@ -1331,7 +1331,7 @@ public static void AddPictureLibraryImportPath (java.lang.String NewPath) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Adds a new file path to the list of paths that SageTV checks for library import files. This path will
  be used to search for picture files only.
 
@@ -1354,7 +1354,7 @@ public static void AddMusicLibraryImportPath (java.lang.String NewPath) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Adds a new file path to the list of paths that SageTV checks for library import files. This path will
  be used to search for music files only.
 
@@ -1377,7 +1377,7 @@ public static void AddVideoLibraryImportPath (java.lang.String NewPath) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Adds a new file path to the list of paths that SageTV checks for library import files. This path will
  be used to search for video files only.
 
@@ -1399,7 +1399,7 @@ public static void RemoveLibraryImportPath (java.io.File RemovePath) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Removes a path from the list of library import paths. This will affect all import types.
 
 Parameters:
@@ -1420,7 +1420,7 @@ public static void RemovePictureLibraryImportPath (java.io.File RemovePath) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Removes a path from the list of library import paths for pictures
 
 Parameters:
@@ -1441,7 +1441,7 @@ public static void RemoveMusicLibraryImportPath (java.io.File RemovePath) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Removes a path from the list of library import paths for music
 
 Parameters:
@@ -1462,7 +1462,7 @@ public static void RemoveVideoLibraryImportPath (java.io.File RemovePath) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Removes a path from the list of library import paths for videos
 
 Parameters:
@@ -1483,7 +1483,7 @@ public static void SetDefaultRecordingQuality (java.lang.String Quality) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the default quality that is used to record television
 
 Parameters:
@@ -1504,7 +1504,7 @@ public static void SetIntelligentRecordingDisabled (boolean Disabled) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets whether or not 'Intelligent Recording' should be disabled.
 
 Parameters:
@@ -1527,7 +1527,7 @@ public static void SetMajorMinorDTVChannelTuningEnabled (boolean Enabled) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Deprecated. 
 
 Sets whether or not SageTV should use legacy major-minor DTV channels. Not recommend for use anymore.
@@ -1553,7 +1553,7 @@ public static boolean IsScreenSaverOnSleepEnabled () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if SageTV will go to its screen saver when it is put to sleep. If SageTV is not in full screen mode
  then it will go to the system tray regardless of this setting.
 
@@ -1578,7 +1578,7 @@ public static void SetScreenSaverOnSleepEnabled (boolean Enabled) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets whether or not SageTV should go to its screen saver when put to sleep. If SageTV is not in full screen mode
  then it will go to the system tray regardless of this setting.
 
@@ -1603,7 +1603,7 @@ public static boolean IsSyncSystemClockWithServerEnabled () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if SageTV should synchronize the system clock with the server. For SageTV Client this
  will synchronize with its SageTV Server. For a SageTV system, this will synchronize with the EPG data server.
 
@@ -1628,7 +1628,7 @@ public static void SetSyncSystemClockWithServerEnabled (boolean Enabled) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets if SageTV should synchronize the system clock with the server. For SageTV Client this
  will synchronize with its SageTV Server. For a SageTV system, this will synchronize with the EPG data server.
 
@@ -1652,7 +1652,7 @@ public static java.lang.String GetAspectRatioMode () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the localized name of the aspect ratio mode currently in use.
 
 Returns:
@@ -1675,7 +1675,7 @@ public static void SetAspectRatioMode (java.lang.String AspectRatioMode) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the aspect ratio mode that should currently be used.
 
 Parameters:
@@ -1696,7 +1696,7 @@ public static java.lang.String[] GetAspectRatioModes () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the list of localized names for the aspect ratio modes
 
 Returns:
@@ -1721,7 +1721,7 @@ public static float GetDisplayAspectRatio () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the display aspect ratio that is set for the current display device being used
 
 Returns:
@@ -1748,7 +1748,7 @@ public static void SetDisplayAspectRatio (float DisplayAspectRatio) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the aspect ratio of the current display device
 
 Parameters:
@@ -1773,7 +1773,7 @@ public static boolean IsParentalControlEnabled () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if parental controls are enabled on the system
 
 Returns:
@@ -1796,7 +1796,7 @@ public static void SetParentalControlEnabled (boolean Enabled) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets whether or not parental controls are enabled for the system
 
 Parameters:
@@ -1819,7 +1819,7 @@ public static boolean IsMutedOnAlternateSpeedPlayback () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if SageTV should mute the volume when media is played back at speeds besides x1
 
 Returns:
@@ -1842,7 +1842,7 @@ public static void SetMuteOnAlternateSpeedPlayback (boolean Enabled) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets whether or not SageTV should mute the sound when media is played back at a speed other than x1
 
 Parameters:
@@ -1865,7 +1865,7 @@ public static boolean HasParentalLockCode () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if a parental lock code has been configured
 
 Returns:
@@ -1889,7 +1889,7 @@ public static java.lang.String[] GetRatingsUnderParentalLock () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the list of content ratings that are under parental lock. When any content that has ratings that match anything
  in the restricted list is requested for playback; the parental lock code must be entered before playback will begin.
 
@@ -1915,7 +1915,7 @@ public static boolean IsRatingUnderParentalLock (java.lang.String Rating) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified rating is in the list that is under parental control
 
 Parameters:
@@ -1942,7 +1942,7 @@ public static java.awt.Color GetVideoBackgroundColor () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the color that should be used for the video background. This is only shown when the video's aspect ratio doesn't match the area that it's playing back in.
 
 Returns:
@@ -1965,7 +1965,7 @@ public static void SetVideoBackgroundColor (java.awt.Color Color) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the color that should be used for the video background. This is only shown when the video's aspect ratio doesn't match the area that it's playing back in.
 
 Parameters:
@@ -1989,7 +1989,7 @@ public static long GetVideoOrbitingDuration () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the video orbiting duration in milliseconds. This is used to shift the video left-to-right very slowly over time. It
  is used on widescreen displays to prevent screen burn when watching 4:3 content.
 
@@ -2014,7 +2014,7 @@ public static void SetVideoOrbitingDuration (long Duration) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the video orbiting duration in milliseconds. This is used to shift the video left-to-right very slowly over time. It
  is used on widescreen displays to prevent screen burn when watching 4:3 content.
 
@@ -2040,7 +2040,7 @@ public static float GetVideoZoomX (java.lang.String AspectRatioMode) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the horizontal scale factor for the video for the specified aspect ratio mode.
 
 Parameters:
@@ -2066,7 +2066,7 @@ public static void SetVideoZoomX (java.lang.String AspectRatioMode, float ScaleF
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the horizontal scale factor for the video for the specified aspect ratio mode.
 
 Parameters:
@@ -2092,7 +2092,7 @@ public static float GetVideoZoomY (java.lang.String AspectRatioMode) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the vertical scale factor for the video for the specified aspect ratio mode.
 
 Parameters:
@@ -2118,7 +2118,7 @@ public static void SetVideoZoomY (java.lang.String AspectRatioMode, float ScaleF
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the vertical scale factor for the video for the specified aspect ratio mode.
 
 Parameters:
@@ -2144,7 +2144,7 @@ public static int GetVideoOffsetX (java.lang.String AspectRatioMode) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets of the offset in pixels that should be applied horizontally to the video. Positive numbers move it to the right.
 
 Parameters:
@@ -2170,7 +2170,7 @@ public static void SetVideoOffsetX (java.lang.String AspectRatioMode, int PixelO
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets of the offset in pixels that should be applied horizontally to the video. Positive numbers move it to the right.
 
 Parameters:
@@ -2196,7 +2196,7 @@ public static int GetVideoOffsetY (java.lang.String AspectRatioMode) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets of the offset in pixels that should be applied vertically to the video. Positive numbers move it down.
 
 Parameters:
@@ -2222,7 +2222,7 @@ public static void SetVideoOffsetY (java.lang.String AspectRatioMode, int PixelO
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets of the offset in pixels that should be applied vertically to the video. Positive numbers move it down.
 
 Parameters:
@@ -2244,7 +2244,7 @@ public static void SetParentalLockCode (java.lang.String ParentalLockCode) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the code that is to be used in order to unlock the parental controls.
 
 Parameters:
@@ -2265,7 +2265,7 @@ public static java.lang.String[] GetRecordingQualities () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a list of the different recording quality names available in the system
 
 Returns:
@@ -2290,7 +2290,7 @@ public static long GetRecordingQualityBitrate (java.lang.String Quality) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the estimated overall bitrate for a given recording quality. The returned value is in Megabits per second.
 
 Parameters:
@@ -2319,7 +2319,7 @@ public static java.lang.String GetRecordingQualityFormat (java.lang.String Quali
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the format for a given recording quality. Returns values like "MPEG-2 PS", "DivX", etc.
 
 Parameters:
@@ -2344,7 +2344,7 @@ public static java.io.File[] GetVideoDirectories () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the list of directories that SageTV is configured to record television to
 
 Returns:
@@ -2370,7 +2370,7 @@ public static java.lang.String GetDiskspaceRuleForVideoDirectory (java.io.File D
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the diskspace rule that SageTV should use when managing the disk space in a given directory.
  The names for the rules are localized versions of the strings "Use Only", "Use All" and "Leave Free"
 
@@ -2400,7 +2400,7 @@ public static long GetDiskspaceSizeForVideoDirectory (java.io.File Directory) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the size (in bytes) that should be applied to the specified directory for its configured diskspace rule
 
 Parameters:
@@ -2427,7 +2427,7 @@ public static void RemoveVideoDirectory (java.io.File Directory) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Removes a directory from SageTV's list of directories that it can record television to. If you delete all of the directories;
  SageTV will be unable to record television. This does NOT delete the directory or any of its files from disk. They will still be fully
  accessible in SageTV.
@@ -2454,7 +2454,7 @@ public static void AddVideoDirectory (java.lang.String Directory, java.lang.Stri
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Adds a new directory to SageTV's list of directories that it can record video to. Also specifies what rule  size to use
  when managing the diskspace for this directory.
 
@@ -2483,7 +2483,7 @@ public static void ChangeVideoDirectory (java.io.File OldDirectory, java.io.File
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Changes the location of a given video directory, or modifies the diskspace rule or diskspace rule size for a video directory.
 
 Parameters:
@@ -2508,7 +2508,7 @@ public static java.lang.String[] GetVideoDiskspaceRules () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the list of valid diskspace rules. Will be localized versions of the strings "Use All", "Use Only" and "Leave Free"
 
 Returns:
@@ -2532,7 +2532,7 @@ public static long[] GetIRCodesLinkedToSageCommand (java.lang.String SageCommand
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the infrared codes that are linked to the given SageTV Command. When one of these IR codes is received; that will cause the
  specified SageTV Command to get executed.
 
@@ -2559,7 +2559,7 @@ public static java.lang.String[] GetKeystrokesLinkedToSageCommand (java.lang.Str
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the keystroke names that are linked to the given SageTV Command. When one of these keystrokes is received; that will cause the
  specified SageTV Command to get executed.
 
@@ -2588,7 +2588,7 @@ public static java.lang.String GetNameForIRCode (long IRCode) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the name that is associated with an IR code. This has no functional purpose and is purely for display purposes.
 
 Parameters:
@@ -2618,7 +2618,7 @@ public static java.lang.String GetSageCommandLinkedToIRCode (long IRCode) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the SageTV Command that is linked to the specified infrared code.
 
 Parameters:
@@ -2647,7 +2647,7 @@ public static java.lang.String GetSageCommandLinkedToKeystroke (java.lang.String
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the SageTV Command that is linked to the specified keystroke.
 
 Parameters:
@@ -2673,7 +2673,7 @@ public static void SetNameForIRCode (long IRCode, java.lang.String Name) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the name for a given IR code. This has no functional purpose, and is purely for display purposes.
 
 Parameters:
@@ -2696,7 +2696,7 @@ public static void LinkIRCodeToSageCommand (long IRCode, java.lang.String SageCo
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Links an infrared code to a SageTV Command. The specified SageTV Command will then be executed whenever the specified IRCode is received.
 
 Parameters:
@@ -2719,7 +2719,7 @@ public static void LinkKeystrokeToSageCommand (java.lang.String Keystroke, java.
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Links a keystroke to a SageTV Command. The specified SageTV Command will then be executed whenever the specified keystroke is received.
 
 Parameters:
@@ -2741,7 +2741,7 @@ public static void UnlinkIRCodeFromSageCommands (long IRCode) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Unlinks an infrared code from any SageTV commands it is linked to
 
 Parameters:
@@ -2762,7 +2762,7 @@ public static void UnlinkKeystrokeFromSageCommands (java.lang.String Keystroke) 
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Unlinks a keystroke from any SageTV commands it is linked to
 
 Parameters:
@@ -2784,7 +2784,7 @@ public static void SetRatingUnderParentalControl (java.lang.String Rating, boole
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets whether or not a given rating should be restricted under parental control
 
 Parameters:
@@ -2808,7 +2808,7 @@ public static java.lang.String GetInfraredReceiverPort () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the name of the port that the infrared receiver is connected to.
 
 Returns:
@@ -2835,7 +2835,7 @@ public static boolean SetInfraredReceiverPort (java.lang.String Port) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the name of the port that the infrared receiver is connected to.
 
 Parameters:
@@ -2863,7 +2863,7 @@ public static int GetInactivityTimeout () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the inactivity timeout in milliseconds. The hook InactivityTimeout() will be called whenever the system experiences inactivity
  for this amount of time.
 
@@ -2888,7 +2888,7 @@ public static void SetInactivityTimeout (int Timeout) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the inactivity timeout in milliseconds. The hook InactivityTimeout() will be called whenever the system experiences inactivity
  for this amount of time.
 
@@ -2913,7 +2913,7 @@ public static int GetScreenSaverTimeout () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the screen saver timeout in milliseconds. The "Screen Saver" menu will be launched after this period of user inactivity if the
  program is in full screen mode.
 
@@ -2938,7 +2938,7 @@ public static void SetScreenSaverTimeout (int Timeout) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the screen saver timeout in milliseconds. The "Screen Saver" menu will be launched after this period of user inactivity if the
  program is in full screen mode.
 
@@ -2962,7 +2962,7 @@ public static boolean IsSageTVServerEnabled () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the SageTV server is enabled. This allows SageTV Clients to connect.
 
 Returns:
@@ -2986,7 +2986,7 @@ public static void SetSageTVServerEnabled (boolean Enabled) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets whether or not the SageTV server should be enabled. This call will take effect immediately (i.e. the server can
  be started/stopped on demand)
 
@@ -3010,7 +3010,7 @@ public static boolean IsAcceleratedDrawingEnabled () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if 3D acceleration is enabled for the rendering engine. This uses DirectX9-3D on Windows and OpenGL on Linux.
 
 Returns:
@@ -3038,7 +3038,7 @@ public static boolean SetAcceleratedDrawingEnabled (boolean Enabled) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Specifies whether or not 3D acceleration should be enabled for the rendering engine. This uses DirectX9 on Windows and OpenGL on Linux.
  This call takes effect immediately.
 
@@ -3067,7 +3067,7 @@ public static int GetOverscanOffsetX () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the horizontal offset in pixels that should be applied to the UI to account for overscan. This moves the UI to fit on a TV screen in the
  case where it goes off the edges of the screen due to what is known as 'Overscan'.
 
@@ -3094,7 +3094,7 @@ public static int GetOverscanOffsetY () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the vertical offset in pixels that should be applied to the UI to account for overscan. This moves the UI to fit on a TV screen in the
  case where it goes off the edges of the screen due to what is known as 'Overscan'.
 
@@ -3121,7 +3121,7 @@ public static float GetOverscanScaleWidth () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the horizontal scale factor that should be applied to the UI to account for overscan. This shrinks the UI to fit on a TV screen in the
  case where it goes off the edges of the screen due to what is known as 'Overscan'.
 
@@ -3148,7 +3148,7 @@ public static float GetOverscanScaleHeight () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the vertical scale factor that should be applied to the UI to account for overscan. This shrinks the UI to fit on a TV screen in the
  case where it goes off the edges of the screen due to what is known as 'Overscan'.
 
@@ -3173,7 +3173,7 @@ public static void SetOverscanOffsetX (int Amount) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the horizontal offset in pixels that should be applied to the UI to account for overscan. This moves the UI to fit on a TV screen in the
  case where it goes off the edges of the screen due to what is known as 'Overscan'.
 
@@ -3196,7 +3196,7 @@ public static void SetOverscanOffsetY (int Amount) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the vertical offset in pixels that should be applied to the UI to account for overscan. This moves the UI to fit on a TV screen in the
  case where it goes off the edges of the screen due to what is known as 'Overscan'.
 
@@ -3219,7 +3219,7 @@ public static void SetOverscanScaleWidth (float Amount) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the horizontal scale factor that should be applied to the UI to account for overscan. This shrinks the UI to fit on a TV screen in the
  case where it goes off the edges of the screen due to what is known as 'Overscan'.
 
@@ -3242,7 +3242,7 @@ public static void SetOverscanScaleHeight (float Amount) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the vertical scale factor that should be applied to the UI to account for overscan. This shrinks the UI to fit on a TV screen in the
  case where it goes off the edges of the screen due to what is known as 'Overscan'.
 
@@ -3269,7 +3269,7 @@ public static float GetOverscanInsetLeft () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a floating point value which specifies the percent of the UI that is taken up by overscan on the left side.
  Equivalent to (GetOverscanOffsetX() * 1.0 / (GetFullUIWidth() * GetOverscanScaleWidth()))
 
@@ -3300,7 +3300,7 @@ public static float GetOverscanInsetRight () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a floating point value which specifies the percent of the UI that is taken up by overscan on the right side.
  Equivalent to (1.0 - (GetOverscanOffsetX() * 1.0 / GetFullUIWidth()) - GetOverscanScaleWidth())/GetOverscanScaleWidth()
 
@@ -3331,7 +3331,7 @@ public static float GetOverscanInsetTop () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a floating point value which specifies the percent of the UI that is taken up by overscan on the top
  Equivalent to (GetOverscanOffsetY() * 1.0 / (GetFullUIHeight() * GetOverscanScaleHeight())))
 
@@ -3362,7 +3362,7 @@ public static float GetOverscanInsetBottom () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a floating point value which specifies the percent of the UI that is taken up by overscan on the bottom
  Equivalent to (1.0 - (GetOverscanOffsetY() * 1.0 / GetFullUIHeight()) - GetOverscanScaleHeight())/GetOverscanScaleHeight()
 
@@ -3391,7 +3391,7 @@ public static java.lang.Float[] GetOverscanInsets () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a length 4 array of floating point values which specifies the percent of the UI that is taken up by overscan on the 4 sides.
  The order is top, left, bottom, right in the returned array. Each value comes from GetOverscanInsetTop/Left/Bottom/Right() API calls.
 
@@ -3416,7 +3416,7 @@ public static java.lang.String[] GetAvailableCountries () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the names of the countries that can be used in theSetCountry()
 call.
 
@@ -3443,7 +3443,7 @@ public static java.lang.String SetCountry (java.lang.String Country) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the country that the user is in. This is used for determining the frequencies used for tuning television signals.
 
 Parameters:
@@ -3471,7 +3471,7 @@ public static java.lang.String GetCountry () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the country that SageTV is configured for. This is used for determining the frequencies used for tuning television signals.
 
 Returns:
@@ -3494,7 +3494,7 @@ public static void SetAnalogVideoFormat (java.lang.String Format) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the analog video format that should be used for capture and playback. Valid values are "NTSC" or "PAL"
 
 Parameters:
@@ -3517,7 +3517,7 @@ public static java.lang.String GetAnalogVideoFormat () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the analog video format that should be used for capture and playback. Valid values are "NTSC" or "PAL"
 
 Returns:
@@ -3542,7 +3542,7 @@ public static java.lang.String GetUILanguage () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the language that the user interface should be displayed in.
 
 Returns:
@@ -3567,7 +3567,7 @@ public static void SetUILanguage (java.lang.String Language) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the language that the user interface should be displayed in. This takes effect immediately.
  Use theGetAvailableUILanguages()
 call to get the options for this.
@@ -3590,7 +3590,7 @@ public static java.lang.String[] GetAvailableUILanguages () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the list of languages that are available to be used for the user interface.
 
 Returns:
@@ -3611,7 +3611,7 @@ public static java.lang.String[] GetSubpicAudioLanguageOptions () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the list of languages that are available to be used as presets for Audio tracks or Subpicture.
 
 Returns:
@@ -3634,7 +3634,7 @@ public static java.lang.String GetDefaultAudioLanguage () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the name of the preferred default language when selecting which audio stream to playback.
 
 Returns:
@@ -3658,7 +3658,7 @@ public static void SetDefaultAudioLanguage (java.lang.String Language) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the name of the preferred default language when selecting which audio stream to playback. The values for this should be
  obtained from GetSubpicAudioLanguageOptions.
 
@@ -3683,7 +3683,7 @@ public static java.lang.String GetDefaultSubpicLanguage () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the name of the preferred default language when selecting which subpicture stream to playback. This
  will be the empty string if subtitles are preferred to be off by default.
 
@@ -3708,7 +3708,7 @@ public static void SetDefaultSubpicLanguage (java.lang.String Language) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the name of the preferred default language when selecting which subpicture stream to playback. The values for this should be
  obtained from GetSubpicAudioLanguageOptions, the value of null or the empty string is also allowed to indicate no subtitle track should be selected by default.
 
@@ -3732,7 +3732,7 @@ public static java.lang.String GetTimeZone () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the name of the time zone that the application is currently configured to use
 
 Returns:
@@ -3755,7 +3755,7 @@ public static void SetTimeZone (java.lang.String TimeZone) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the name of the time zone that the application should use. This takes effect immediately.
 
 Parameters:
@@ -3778,7 +3778,7 @@ public static java.util.Vector GetAllTimeZones () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the list of all of the valid time zone names
 
 Returns:
@@ -3806,7 +3806,7 @@ public static java.lang.String[] GetDVBTRegions () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the names of the regions for the configured country which are used for dividing it up into
  different areas for DVB-T reception. Returns a zero-length list if there are no sub-regions within the country.
  Use the results from this in a call toSetDVBTRegion(DVBTRegion)
@@ -3835,7 +3835,7 @@ public static void SetDVBTRegion (java.lang.String DVBTRegion) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the the region within the current country that the user is in.
 
 Parameters:
@@ -3865,7 +3865,7 @@ public static java.lang.String GetDVBTRegion () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the the region within the current country that the user is in for DVB-T tuning purposes.
  Must have been set with a call toSetDVBTRegion(DVBTRegion)
 
@@ -3897,7 +3897,7 @@ public static java.lang.String[] GetDVBCRegions () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the names of the DVB-C providers for the configured country which are used for dividing it up into
  different areas for DVB-C reception. Returns a zero-length list if there are one or no providers in this country.
  Use the results from this in a call toSetDVBCRegion(DVBCRegion)
@@ -3926,7 +3926,7 @@ public static void SetDVBCRegion (java.lang.String DVBCRegion) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the the provider within the current country that the user has for DVBC reception.
 
 Parameters:
@@ -3956,7 +3956,7 @@ public static java.lang.String GetDVBCRegion () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the the provider within the current country that the user has for DVB-C tuning purposes.
  Must have been set with a call toSetDVBCRegion(DVBCRegion)
 
@@ -3988,7 +3988,7 @@ public static java.lang.String[] GetDVBSRegions () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the names of the providers for the configured country which are used for dividing it up into
  different areas for DVB-S reception. Returns a zero-length list if there are one or no providers within the country.
  Use the results from this in a call toSetDVBSRegion(DVBSRegion)
@@ -4017,7 +4017,7 @@ public static void SetDVBSRegion (java.lang.String DVBSRegion) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the the provider within the current country that the user has for DVBS reception.
 
 Parameters:
@@ -4047,7 +4047,7 @@ public static java.lang.String GetDVBSRegion () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the the provider within the current country that the user has for DVB-S tuning purposes.
  Must have been set with a call toSetDVBSRegion(DVBSRegion)
 
@@ -4079,7 +4079,7 @@ public static boolean CanDoNativeOutputResolution () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if this device can do native output resolutions (where output resolution
  matches the format of the media being played)
 
@@ -4109,7 +4109,7 @@ public static boolean IsNativeOutputResolutionEnabled () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if this device is configured to match the output resolution to the media format's resolution
 
 Returns:
@@ -4136,7 +4136,7 @@ public static void SetNativeOutputResolutionEnabled (boolean Enabled) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets whether or not this device should try to match its output resolution to the media format's resolution
 
 Parameters:
@@ -4163,7 +4163,7 @@ public static java.lang.String GetAudioOutput () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a string describing the currently selected audio output (empty string if this can't be configured)
 
 Returns:
@@ -4191,7 +4191,7 @@ public static java.lang.String[] GetAudioOutputOptions () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a list of the possible audio outputs. This is currently only used
  on media extender devices that have adjustable audio outputs.
 
@@ -4219,7 +4219,7 @@ public static void SetAudioOutput (java.lang.String AudioOutput) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the current audio output. This is currently only used
  on media extender devices that have configurable audio outputs.
 
@@ -4248,7 +4248,7 @@ public static java.lang.String GetHDMIAutodetectedConnector () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a string describing the type of connection autodetected on HDMI (currently only used on media extenders)
 
 Returns:
@@ -4275,7 +4275,7 @@ public static boolean IsAdvancedDeinterlacingSupported () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the client supports doing advanced deinterlacing. This is only available on the HD300.
 
 Returns:
@@ -4300,7 +4300,7 @@ public static boolean IsAdvancedDeinterlacingEnabled () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the client supports doing advanced deinterlacing and it is enabled. This is only available on the HD300.
 
 Returns:
@@ -4323,7 +4323,7 @@ public static void SetAdvancedDeinterlacingEnabled (boolean Enabled) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Allows enabling/disabling of advanced deinterlacing support. This is only available on the HD300.
 
 Parameters:
@@ -4343,7 +4343,7 @@ public static void RunFilterAutoconfiguration () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Deprecated. 
 
 Sets the DirectShow audio  video decoders on windows to acceptable values
@@ -4366,7 +4366,7 @@ public static java.lang.String GetDXVAMpegMode () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the preferred DXVA MPEG Mode configuration setting (Windows only). This will be A, B, C or D (or Default if not set)
  This is used when playing back MPEG2 files.
 
@@ -4391,7 +4391,7 @@ public static void SetDXVAMpegMode (java.lang.String DXVAMode) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the preferred DXVA MPEG Mode configuration setting (Windows only). This will be A, B, C or D.
  This is used when playing back MPEG2 files.
 
@@ -4416,7 +4416,7 @@ public static java.lang.String GetDVDDXVAMpegMode () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the preferred DXVA MPEG Mode configuration setting (Windows only). This will be A, B, C or D (or Default if not set)
  This is used when playing back DVDs.
 
@@ -4441,7 +4441,7 @@ public static void SetDVDDXVAMpegMode (java.lang.String DXVAMode) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the preferred DXVA MPEG Mode configuration setting (Windows only). This will be A, B, C or D.
  This is used when playing back DVDs.
 
@@ -4463,7 +4463,7 @@ public static java.lang.String[] GetDXVAMpegModes () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the list of available DXVA MPEG Modes. This will return {"A", "B", "C", "D"}
 
 Returns:
@@ -4487,7 +4487,7 @@ public static java.lang.String GetDXVADeinterlaceMode () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the preferred DXVA Deinterlacing configuration setting (Windows only).
  This is used when playing back MPEG2 files.
 
@@ -4512,7 +4512,7 @@ public static void SetDXVADeinterlaceMode (java.lang.String DeinterlaceMode) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the preferred DXVA Deinterlacing configuration setting (Windows only).
  This is used when playing back MPEG2 files.
 
@@ -4537,7 +4537,7 @@ public static java.lang.String GetDVDDXVADeinterlaceMode () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the preferred DXVA Deinterlacing configuration setting (Windows only).
  This is used when playing back DVDs.
 
@@ -4562,7 +4562,7 @@ public static void SetDVDDXVADeinterlaceMode (java.lang.String DeinterlaceMode) 
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the preferred DXVA Deinterlacing configuration setting (Windows only).
  This is used when playing back DVDs.
 
@@ -4584,7 +4584,7 @@ public static java.lang.String[] GetDXVADeinterlaceModes () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the list of potential DXVA Deinterlacing Capabilities (Widows only)
 
 Returns:
@@ -4607,7 +4607,7 @@ public static java.lang.String GetDscalerMode () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the mode that DScaler is currently configured to run in when it is used (Windows only)
 
 Returns:
@@ -4630,7 +4630,7 @@ public static void SetDscalerMode (java.lang.String DscalerMode) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the mode that DScaler should be configured to run in when it is used (Windows only)
 
 Parameters:
@@ -4651,7 +4651,7 @@ public static java.lang.String[] GetDscalerModes () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the list of the available modes that DScaler can be run in
 
 Returns:
@@ -4674,7 +4674,7 @@ public static java.lang.String GetAudioDecoderFilter () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the name of the DirectShow audio decoder filter that's used for MPEG2 playback (Windows only)
 
 Returns:
@@ -4697,7 +4697,7 @@ public static void SetAudioDecoderFilter (java.lang.String FilterName) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the name of the DirectShow audio decoder filter that's used for MPEG2 playback (Windows only)
 
 Parameters:
@@ -4720,7 +4720,7 @@ public static java.lang.String GetDVDAudioDecoderFilter () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the name of the DirectShow audio decoder filter that's used for DVD playback (Windows only)
 
 Returns:
@@ -4743,7 +4743,7 @@ public static void SetDVDAudioDecoderFilter (java.lang.String FilterName) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the name of the DirectShow audio decoder filter that's used for DVD playback (Windows only)
 
 Parameters:
@@ -4766,7 +4766,7 @@ public static java.lang.String GetAudioRenderFilter () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the name of the DirectShow audio renderer filter that's used for all playback except DVDs (Windows only)
 
 Returns:
@@ -4789,7 +4789,7 @@ public static void SetAudioRenderFilter (java.lang.String FilterName) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the name of the DirectShow audio renderer filter that's used for playback except DVDs (Windows only)
 
 Parameters:
@@ -4812,7 +4812,7 @@ public static java.lang.String GetDVDAudioRenderFilter () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the name of the DirectShow audio renderer filter that's used for DVD playback (Windows only)
 
 Returns:
@@ -4835,7 +4835,7 @@ public static void SetDVDAudioRenderFilter (java.lang.String FilterName) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the name of the DirectShow audio renderer filter that's used for DVD playback (Windows only)
 
 Parameters:
@@ -4859,7 +4859,7 @@ public static java.lang.String GetDVDVideoRenderFilter () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the video renderer filter that should be used for DVD playback. Possible values are "VMR9",
  "Overlay" and the localized "Default" string
 
@@ -4884,7 +4884,7 @@ public static void SetDVDVideoRenderFilter (java.lang.String FilterName) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the video renderer filter that should be used for DVD playback. Possible values are "VMR9",
  "Overlay" and the localized "Default" string
 
@@ -4908,7 +4908,7 @@ public static java.lang.String GetVideoDecoderFilter () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the name of the DirectShow video decoder filter that's used for MPEG2 playback (Windows only)
 
 Returns:
@@ -4931,7 +4931,7 @@ public static void SetVideoDecoderFilter (java.lang.String FilterName) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the name of the DirectShow video decoder filter that's used for MPEG2 playback (Windows only)
 
 Parameters:
@@ -4954,7 +4954,7 @@ public static java.lang.String GetDVDVideoDecoderFilter () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the name of the DirectShow video decoder filter that's used for DVD playback (Windows only)
 
 Returns:
@@ -4977,7 +4977,7 @@ public static void SetDVDVideoDecoderFilter (java.lang.String FilterName) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the name of the DirectShow video decoder filter that's used for DVD playback (Windows only)
 
 Parameters:
@@ -5000,7 +5000,7 @@ public static int GetAudioDelay () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the audio delay in milliseconds to apply when playing back MPEG2 files (Windows only)
 
 Returns:
@@ -5023,7 +5023,7 @@ public static void SetAudioDelay (int Delay) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the audio delay in milliseconds to apply when playing back MPEG2 files (Windows only)
 
 Parameters:
@@ -5044,7 +5044,7 @@ public static java.lang.String[] GetAudioDecoderFilters () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the list of the audio decoder filters that are available in the system for MPEG2 playback (Windows only)
 
 Returns:
@@ -5065,7 +5065,7 @@ public static java.lang.String[] GetVideoDecoderFilters () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the list of the video decoder filters that are available in the system for MPEG2 playback (Windows only)
 
 Returns:
@@ -5088,7 +5088,7 @@ public static boolean IsSoftwareDecodingDisabled () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if software decoding is disabled. This only applies to the TV output of the Hauppauge WinTV PVR-350 PCI card on Windows
 
 Returns:
@@ -5111,7 +5111,7 @@ public static void SetSoftwareDecodingDisabled (boolean Disabled) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets if software decoding is disabled. This only applies to the TV output of the Hauppauge WinTV PVR-350 PCI card on Windows
 
 Parameters:
@@ -5134,7 +5134,7 @@ public static boolean IsDscalerDoubleRefresh () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if DScaler is set to double the refresh rate when used. This means it'll run at 60fps instead of 30fps.
 
 Returns:
@@ -5157,7 +5157,7 @@ public static void SetDscalerDoubleRefresh (boolean Enabled) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets whether or not DScaler should double the refresh rate. This means it'll run at 60fps instead of 30fps.
 
 Parameters:
@@ -5180,7 +5180,7 @@ public static boolean IsDscalerOddFieldFirst () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if DScaler is configured to display the odd field first (fields are even or odd)
 
 Returns:
@@ -5203,7 +5203,7 @@ public static void SetDscalerOddFieldFirst (boolean Enabled) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets if DScaler should display the odd field first (fields are even or odd)
 
 Parameters:
@@ -5226,7 +5226,7 @@ public static boolean HasPVR350TVOutput () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the system has a Hauppauge WinTV PVR-350 card installed which can produce a TV output (Windows only)
 
 Returns:
@@ -5251,7 +5251,7 @@ public static boolean IsPVR350TVOutputEnabled () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the TV output on a Hauppauge WinTV PVR-350 card is enabled (Windows only)
 
 Returns:
@@ -5274,7 +5274,7 @@ public static void SetPVR350TVOutputEnabled (boolean Enabled) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets whether or not the TV output on a Hauppauge WinTV PVR-350 should be enabled (Windows only)
 
 Parameters:
@@ -5297,7 +5297,7 @@ public static boolean IsPVR350OSDEnabled () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the user interface (OSD) display on a Hauppauge WinTV PVR-350 should be shown through the tv output (Windows only)
 
 Returns:
@@ -5320,7 +5320,7 @@ public static void SetPVR350OSDEnabled (boolean Enabled) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets whether or not the user interface (OSD) should be displayed on the TV output of a Hauppauge WinTV PVR-350 (Windows only)
 
 Parameters:
@@ -5343,7 +5343,7 @@ public static boolean IsDscalerEnabled () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the DScaler deinterlacing filter is enabled (Windows only)
 
 Returns:
@@ -5366,7 +5366,7 @@ public static void SetDscalerEnabled (boolean Enabled) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets whether or not the DScaler deinterlacing filter should be used (Windows only)
 
 Parameters:
@@ -5389,7 +5389,7 @@ public static java.lang.String GetDscalerPlugin () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the plugin that DScaler is currently configured to use when it is in "Plugin" mode.
 
 Returns:
@@ -5412,7 +5412,7 @@ public static void SetDscalerPlugin (java.lang.String PluginName) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the plugin that should be used by DScaler. DScaler must also be set into "Plugin" mode.
 
 Parameters:
@@ -5433,7 +5433,7 @@ public static java.lang.String[] GetDscalerPlugins () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the list of plugins that are supported by DScaler. These are used when DScaler is in "Plugin" mode. (Windows only)
 
 Returns:
@@ -5456,7 +5456,7 @@ public static boolean HasDirectX9 () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the system has DirectX 9 installed (Windows Only)
 
 Returns:
@@ -5481,7 +5481,7 @@ public static boolean HasEVRSupport () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the system has support for the Enhanced Video Renderer (EVR) (Windows Only)
 
 Returns:
@@ -5506,7 +5506,7 @@ public static boolean IsVideoRendererOverlay () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the video renderer is configured to use the Overlay surface (Windows Only) Applies to all files except DVDs.
 
 Returns:
@@ -5533,7 +5533,7 @@ public static boolean IsVideoRendererVMR9 () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the video renderer is configured to use the Video Mixing Renderer 9 (Windows Only). This
  will only work if accelerated rendering is enabled (3D acceleration). If it's not then Overlay will be used
  as the video renderer instead of VMR9. Applies to all files except DVDs.
@@ -5564,7 +5564,7 @@ public static boolean IsVideoRendererEVR () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the video renderer is configured to use the Enhanced Video Renderer (Windows Only). This
  will only work if accelerated rendering is enabled (3D acceleration). If it's not then Overlay will be used
  as the video renderer instead of EVR. Applies to all files except DVDs.
@@ -5594,7 +5594,7 @@ public static boolean IsVideoRendererDefault () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the video renderer is configured to use the Default renderer (Windows Only). This will usually be the Video Mixing
  Renderer 7 if using Windows XP; but DirectShow ultimately decides this itself. Applies to all files except DVDs.
 
@@ -5616,7 +5616,7 @@ public static void SetVideoRendererToDefault () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the video renderer to use the default renderer (Windows Only). This will usually be the Video Mixing
  Renderer 7 if using Windows XP; but DirectShow ultimately decides this itself. Applies to all files except DVDs.
  */
@@ -5632,7 +5632,7 @@ public static void SetVideoRendererToOverlay () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the video renderer to use the video Overlay surface (Windows Only). Applies to all files except DVDs.
  */
 public static void SetVideoRendererToOverlay (UIContext _uicontext) {
@@ -5649,7 +5649,7 @@ public static void SetVideoRendererToVMR9 () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the video renderer to use the Video Mixing Renderer 9 (Windows Only). This
  will only work if accelerated rendering is enabled (3D acceleration). If it's not then Overlay will be used
  as the video renderer instead of VMR9. Applies to all files except DVDs.
@@ -5671,7 +5671,7 @@ public static void SetVideoRendererToEVR () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the video renderer to use the Enhanced Video Renderer (Windows Only). This
  will only work if accelerated rendering is enabled (3D acceleration). If it's not then Overlay will be used
  as the video renderer instead of EVR. Applies to all files except DVDs.
@@ -5696,7 +5696,7 @@ public static java.util.Vector GetAudioRendererFilters () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the list of DirectShow audio renderer filters that are available on the system (Windows Only).
 
 Returns:
@@ -5719,7 +5719,7 @@ public static java.lang.String[] GetMixerAudioInputPaths () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the different input connectors that are available on the system sound mixer (Windows Only)
 
 Returns:
@@ -5743,7 +5743,7 @@ public static void SetAllowPlaceshifterLoginCaching (boolean Enabled) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets whether or not placeshifter connections should be allowed to cache their login information. Disabling
  this setting will clear the current authentication cache on the server.
 
@@ -5771,7 +5771,7 @@ public static boolean IsPlaceshifterLoginCachingAllowed () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if this server allows caching of placeshifter logins, false otherwise
 
 Returns:
@@ -5798,7 +5798,7 @@ public static void SetCurrentlyAiringProgramsStartLive (boolean Enabled) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets whether or not when playing back a program that is currently airing whether we should start from live TV or not
 
 Parameters:
@@ -5826,7 +5826,7 @@ public static boolean GetCurrentlyAiringProgramsStartLive () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the system is configured to start any program that is currently airing
  from live, false otherwise
 

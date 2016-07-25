@@ -2,7 +2,7 @@ package sagex.api;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 24/07/16 5:40 PM
+ * Generated Date/Time: 24/07/16 7:30 PM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/TVEditorialAPI.html'>TVEditorialAPI</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -21,7 +21,7 @@ public static Object[] GetAllTVEditorials () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a list of all of the 'TV Editorials' which are stories about TV shows
 
 Returns:
@@ -50,7 +50,7 @@ public static java.lang.String GetEditorialTitle (Object TVEditorial) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the title for the specified TVEditorial
 
 Parameters:
@@ -83,7 +83,7 @@ public static java.lang.String GetEditorialShow (Object TVEditorial) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the Show for the specified TVEditorial
 
 Parameters:
@@ -116,7 +116,7 @@ public static java.lang.String GetEditorialText (Object TVEditorial) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the text for the specified TVEditorial
 
 Parameters:
@@ -149,7 +149,7 @@ public static java.lang.String GetEditorialAirDate (Object TVEditorial) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a String representing the airing date for the content the editorial is about
 
 Parameters:
@@ -182,7 +182,7 @@ public static java.lang.String GetEditorialNetwork (Object TVEditorial) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the network that the Show for this editorial is broadcast on
 
 Parameters:
@@ -215,7 +215,7 @@ public static boolean HasEditorialImage (Object TVEditorial) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified editorial has an image that corresponds to it
 
 Parameters:
@@ -248,7 +248,7 @@ public static Object GetEditorialImage (Object TVEditorial) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the image that corresponds to this editorial if there is one
 
 Parameters:

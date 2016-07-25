@@ -2,7 +2,7 @@ package sagex.api;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 24/07/16 5:40 PM
+ * Generated Date/Time: 24/07/16 7:30 PM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/FavoriteAPI.html'>FavoriteAPI</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -23,7 +23,7 @@ public static boolean IsFirstRunsAndReRuns (Object Favorite) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if this Favorite is configured to record both first runs and reruns.
 
 Parameters:
@@ -52,7 +52,7 @@ public static boolean IsFirstRunsOnly (Object Favorite) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if this Favorite is configured to record first runs but not reruns.
 
 Parameters:
@@ -81,7 +81,7 @@ public static boolean IsReRunsOnly (Object Favorite) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if this Favorite is configured to record reruns but not first runs.
 
 Parameters:
@@ -110,7 +110,7 @@ public static boolean IsFirstRuns (Object Favorite) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if this Favorite is configured to record first runs (it may or may not record reruns)
 
 Parameters:
@@ -139,7 +139,7 @@ public static boolean IsReRuns (Object Favorite) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if this Favorite is configured to record reruns (it may or may not record first runs)
 
 Parameters:
@@ -170,7 +170,7 @@ public static boolean IsAutoDelete (Object Favorite) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if SageTV is allowed to automatically delete recordings of this
  Favorite when it needs more disk space. If this is false, then SageTV will never automatically
  delete files recorded for this Favorite; the user will have to delete the files themself.
@@ -204,7 +204,7 @@ public static boolean IsDeleteAfterAutomaticConversion (Object Favorite) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 If an automatic conversion quality is set for this Favorite; then this will return true if
  the original file will be deleted after that conversion is performed
 
@@ -238,7 +238,7 @@ public static boolean IsFavoriteEnabled (Object Favorite) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if SageTV considers this favorite when performing scheduling.
 
 Parameters:
@@ -272,7 +272,7 @@ public static int GetKeepAtMost (Object Favorite) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the maximum number of recordings that match this Favorite that should be kept on disk. If AutoDelete is
  set to true then SageTV will continue to record new airings of this Favorite as they air, and delete the oldest
  recording on disk if it hits the keep at most limit. If AutoDelete is false then SageTV will stop recording this Favorite
@@ -304,7 +304,7 @@ public static java.lang.String GetFavoriteDescription (Object Favorite) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a String that describes this Favorite.
 
 Parameters:
@@ -336,7 +336,7 @@ public static java.lang.String GetFavoritePresentationName (Object Favorite) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a String that describes this Favorite in a 'clean' way. Should be used in conjunction with
  GetFavoritePresentationPrefix to create a complete string for presenting a Favorite named uniquely.
 
@@ -370,7 +370,7 @@ public static java.lang.String GetFavoritePresentationPrefix (Object Favorite) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a String that describes this type of Favorite this is, such as Show, Keyword, Person, etc.
 
 Parameters:
@@ -401,7 +401,7 @@ public static java.lang.String GetFavoriteTitle (Object Favorite) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the title that an Airing must match to be included in this Favorite.
 
 Parameters:
@@ -430,7 +430,7 @@ public static java.lang.String GetFavoriteCategory (Object Favorite) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the category that an Airing must match to be included in this Favorite.
 
 Parameters:
@@ -459,7 +459,7 @@ public static java.lang.String GetFavoriteSubCategory (Object Favorite) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the subcategory that an Airing must match to be included in this Favorite.
 
 Parameters:
@@ -488,7 +488,7 @@ public static java.lang.Object GetFavoritePerson (Object Favorite) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the person that an Airing must have to be included in this Favorite. The person may also be restricted by their role in the content.
 
 Parameters:
@@ -517,7 +517,7 @@ public static java.lang.String GetFavoriteRated (Object Favorite) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the rating that an Airing must match to be included in this Favorite.
 
 Parameters:
@@ -546,7 +546,7 @@ public static java.lang.String GetFavoritePersonRole (Object Favorite) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the role that an Airing must have the Favorite Person in to be included in this Favorite. This only applies if a person is set for this Favorite.
 
 Parameters:
@@ -575,7 +575,7 @@ public static java.lang.String GetFavoriteYear (Object Favorite) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the year that an Airing must match to be included in this Favorite.
 
 Parameters:
@@ -604,7 +604,7 @@ public static java.lang.String GetFavoriteParentalRating (Object Favorite) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the parental rating that an Airing must match to be included in this Favorite.
 
 Parameters:
@@ -633,7 +633,7 @@ public static java.lang.String GetFavoriteChannel (Object Favorite) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the channel name (call sign) that an Airing must be on to be included in this Favorite.
 
 Parameters:
@@ -666,7 +666,7 @@ public static java.lang.String GetFavoriteKeyword (Object Favorite) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the keyword string that an Airing must match to be included in this Favorite. This is case insensitive. Double quotes
  can be used to require word to be in a certain order. Otherwise; each individual word is searched for in the Airing's details and must
  match a whole word for the match to succeed.  The * character can be used to match 0 or more characters. The ? character can be used
@@ -699,7 +699,7 @@ public static java.lang.String GetFavoriteNetwork (Object Favorite) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the network name that an Airing must be on to be included in this Favorite.
 
 Parameters:
@@ -728,7 +728,7 @@ public static java.lang.String GetFavoriteTimeslot (Object Favorite) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the timeslot that an Airing must be in to be included in this Favorite. It just needs to overlap the timeslot.
 
 Parameters:
@@ -757,7 +757,7 @@ public static long GetStartPadding (Object Favorite) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the amount of time any recording for this Favorite should start before the actual Airing begins.
 
 Parameters:
@@ -786,7 +786,7 @@ public static long GetStopPadding (Object Favorite) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the amount of time any recording for this Favorite should stop after the actual Airing ends.
 
 Parameters:
@@ -815,7 +815,7 @@ public static java.lang.String GetFavoriteQuality (Object Favorite) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the name of the recording quality that should be used when recording this Favorite.
 
 Parameters:
@@ -847,7 +847,7 @@ public static java.lang.String GetFavoriteAutomaticConversionFormat (Object Favo
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the name of the format that recordings of this Favorite will automatically be converted to when they have completed recording. It will return an empty
  string if automatic conversion is disabled for this Favorite
 
@@ -882,7 +882,7 @@ public static java.io.File GetFavoriteAutomaticConversionDestination (Object Fav
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the directory that automatic conversions of this favorite should be saved to.
  Returns the empty string when using the same directory the recording is in.
 
@@ -911,7 +911,7 @@ public static void SetStartPadding (Object Favorite, long StartPadding) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the amount of time any recording for this Favorite should start before the actual Airing begins.
 
 Parameters:
@@ -934,7 +934,7 @@ public static void SetStopPadding (Object Favorite, long StopPadding) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the amount of time any recording for this Favorite should stop after the actual Airing ends.
 
 Parameters:
@@ -957,7 +957,7 @@ public static void SetFavoriteQuality (Object Favorite, java.lang.String Quality
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the name of the recording quality that should be used when recording this Favorite.
 
 Parameters:
@@ -984,7 +984,7 @@ public static void SetFavoriteAutomaticConversionFormat (Object Favorite, java.l
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the name of the format to transcode this Favorite to after a recording has been completed. Format names should come fromGetTranscodeFormats()
 .
  Use the empty string or null to disable automatic conversion for this Favorite.
@@ -1014,7 +1014,7 @@ public static void SetFavoriteAutomaticConversionDestination (Object Favorite, j
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the directory that automatic conversions of this favorite should be saved to.
  Use null to use the same directory the recording is in.
 
@@ -1041,7 +1041,7 @@ public static void CreateFavoritePriority (Object HigherPriorityFavorite, Object
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Establishes a priority of one Favorite over another. This will take undo any previous prioritization that it directly conflicts with.
  Favorites with a higher priority will be recorded over ones with a lower priority if there's a case where both cannot be recorded at once.
 
@@ -1066,7 +1066,7 @@ public static void ConfirmManualRecordOverFavoritePriority (Object ManualRecordA
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Confirms that the user is aware that a manual recording they've selected creates a conflict with this favorite recording. This is purely
  for notifcation purposes.
 
@@ -1092,7 +1092,7 @@ public static void SetDontAutodelete (Object Favorite, boolean DontAutoDelete) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets whether or not SageTV is allowed to automatically delete recordings of this
  Favorite when it needs more disk space. If this is true, then SageTV will never automatically
  delete files recorded for this Favorite; the user will have to delete the files themself.
@@ -1120,7 +1120,7 @@ public static void SetDeleteAfterAutomaticConversion (Object Favorite, boolean D
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets whether or not SageTV should delete the original file after doing an automatic conversion
  for this Favorite
 
@@ -1149,7 +1149,7 @@ public static void SetKeepAtMost (Object Favorite, int NumberToKeep) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the maximum number of recordings that match this Favorite that should be kept on disk. If AutoDelete is
  set to true then SageTV will continue to record new airings of this Favorite as they air, and delete the oldest
  recording on disk if it hits the keep at most limit. If AutoDelete is false then SageTV will stop recording this Favorite
@@ -1181,7 +1181,7 @@ public static boolean SetRunStatus (Object Favorite, boolean FirstRuns, boolean 
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets whether first runs, reruns or both types of airings should be recorded for this Favorite. If both arguments
  are false, SageTV will record both first runs and reruns.
 
@@ -1214,7 +1214,7 @@ public static boolean SetFavoriteTitle (Object Favorite, java.lang.String Title)
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the title that an Airing must match to be included in this Favorite.
 
 Parameters:
@@ -1246,7 +1246,7 @@ public static boolean SetFavoriteCategories (Object Favorite, java.lang.String C
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the category and optionally the subcategory that an Airing must match to be included in this Favorite.
 
 Parameters:
@@ -1279,7 +1279,7 @@ public static boolean SetFavoritePerson (Object Favorite, Object Person, java.la
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets a person (and optionally the role the person must appear in) that must be in an Airing for it to be included in this Favorite
 
 Parameters:
@@ -1311,7 +1311,7 @@ public static boolean SetFavoriteRated (Object Favorite, java.lang.String Rated)
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the rating that an Airing must match to be included in this Favorite.
 
 Parameters:
@@ -1342,7 +1342,7 @@ public static boolean SetFavoriteYear (Object Favorite, java.lang.String Year) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the year that an Airing must match to be included in this Favorite.
 
 Parameters:
@@ -1373,7 +1373,7 @@ public static boolean SetFavoriteParentalRating (Object Favorite, java.lang.Stri
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the parental rating that an Airing must match to be included in this Favorite.
 
 Parameters:
@@ -1408,7 +1408,7 @@ public static boolean SetFavoriteKeyword (Object Favorite, java.lang.String Keyw
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the keyword string that an Airing must match to be included in this Favorite. This is case insensitive. Double quotes
  can be used to require word to be in a certain order. Otherwise; each individual word is searched for in the Airing's details and must
  match a whole word for the match to succeed.  The * character can be used to match 0 or more characters. The ? character can be used
@@ -1443,7 +1443,7 @@ public static boolean SetFavoriteChannel (Object Favorite, java.lang.Object Chan
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the channel name (call sign) that an Airing must be on to be included in this Favorite.
 
 Parameters:
@@ -1474,7 +1474,7 @@ public static boolean SetFavoriteNetwork (Object Favorite, java.lang.String Netw
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the network name that an Airing must be on to be included in this Favorite.
 
 Parameters:
@@ -1509,7 +1509,7 @@ public static boolean SetFavoriteTimeslot (Object Favorite, java.lang.String Tim
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the timeslot that an Airing must be in to be included in this Favorite. It just needs to overlap the timeslot.
 
 Parameters:
@@ -1542,7 +1542,7 @@ public static void SetFavoriteEnabled (Object Favorite, boolean Enabled) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets whether or not SageTV will use this favorite when scheduling recordings
 
 Parameters:
@@ -1570,7 +1570,7 @@ public static Object GetFavoriteForAiring (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the Favorite that matches this Airing if one exists.
 
 Parameters:
@@ -1599,7 +1599,7 @@ public static Object[] GetFavoritesForAiring (Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the list of all Favorites that match this Airing
 
 Parameters:
@@ -1629,7 +1629,7 @@ public static boolean DoesFavoriteMatchAiring (Object Favorite, Object Airing) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified Favorite object matches the specified Airing object.
 
 Parameters:
@@ -1659,7 +1659,7 @@ public static boolean IsFavoriteObject (java.lang.Object Favorite) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the argument is a Favorite object, false otherwise
 
 Parameters:
@@ -1707,7 +1707,7 @@ public static Object UpdateFavorite (Object Favorite, java.lang.String Title, bo
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Updates all of the fields of a Favorite that can be used to match. The rules for the arguments are specified in the
  individual methods that allow settting of the corresponding parameter.
 
@@ -1753,7 +1753,7 @@ public static Object[] GetFavoriteAirings (Object Favorite) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a list of all of the Airings in the database that match this Favorite.
 
 Parameters:
@@ -1781,7 +1781,7 @@ public static int GetFavoriteID (Object Favorite) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets a unique ID for this Favorite which can be used withGetFavoriteForID()
 for retrieving the object later.
 
@@ -1812,7 +1812,7 @@ public static Object GetFavoriteForID (int FavoriteID) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets the Favorite object with the corresponding ID from the database. Use withGetFavoriteID()
 
 
@@ -1838,7 +1838,7 @@ public static Object[] GetFavorites () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Gets all of the Favorite objects from the database
 
 Returns:
@@ -1859,7 +1859,7 @@ public static void RemoveFavorite (Object Favorite) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Removes a Favorite object from the database. Airings matching this Favorite will not necesarilly be automatically recorded anymore (intelligent recording may still record them)
 
 Parameters:
@@ -1901,7 +1901,7 @@ public static Object AddFavorite (java.lang.String Title, boolean FirstRuns, boo
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Creates a new Favorite object in SageTV. Airings that match this Favorite will be recorded and saved into the SageTV Recordings.
 
 Parameters:
@@ -1951,7 +1951,7 @@ public static java.lang.String GetFavoriteProperty (Object Favorite, java.lang.S
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a property value for a specified Favorite. This must have been set using SetFavoriteProperty.
  Returns the empty string when the property is undefined.
 
@@ -1985,7 +1985,7 @@ public static void SetFavoriteProperty (Object Favorite, java.lang.String Proper
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets a property for this Favorite. This can be any name/value combination (but the name cannot be null). If the value is null;
  then the specified property will be removed from this Favorite. This only impacts the return values from GetFavoriteProperty and has no other side effects.
 
@@ -2017,7 +2017,7 @@ public static java.util.Properties GetFavoriteProperties (Object Favorite) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a java.util.Properties object that has all of the user-set properties for this Favorite in it.
 
 Parameters:

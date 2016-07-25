@@ -2,7 +2,7 @@ package sagex.api.enums;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 24/07/16 5:40 PM
+ * Generated Date/Time: 24/07/16 7:30 PM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/GlobalEnum.html'>GlobalEnum</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */

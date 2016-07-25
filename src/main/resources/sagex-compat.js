@@ -1,0 +1,25 @@
+load("nashorn:mozilla_compat.js");
+
+var MediaFileAPI= Java.type('sagex.api.MediaFileAPI');
+var Global = Java.type('sagex.api.Global');
+var Utility = Java.type('sagex.api.Utility');
+var PlaylistAPI = Java.type('sagex.api.PlaylistAPI');
+var AiringAPI = Java.type('sagex.api.AiringAPI');
+var AlbumAPI = Java.type('sagex.api.AlbumAPI');
+var CaptureDeviceAPI = Java.type('sagex.api.CaptureDeviceAPI');
+var CaptureDeviceInputAPI = Java.type('sagex.api.CaptureDeviceInputAPI');
+var ChannelAPI = Java.type('sagex.api.ChannelAPI');
+var Configuration = Java.type('sagex.api.Configuration');
+var Database = Java.type('sagex.api.Database');
+var FavoriteAPI = Java.type('sagex.api.FavoriteAPI');
+var MediaPlayerAPI = Java.type('sagex.api.MediaPlayerAPI');
+var SeriesInfoAPI = Java.type('sagex.api.SeriesInfoAPI');
+var ShowAPI = Java.type('sagex.api.ShowAPI');
+var TranscodeAPI = Java.type('sagex.api.TranscodeAPI');
+var TVEditorialAPI = Java.type('sagex.api.TVEditorialAPI');
+var WidgetAPI = Java.type('sagex.api.WidgetAPI');
+var Version = Java.type('sagex.api.Version');
+var SageAPI = Java.type('sagex.SageAPI');
+var SageAPIClass = Java.type('sagex.SageAPI').class;
+var LogProvider = Java.type('sagex.util.LogProvider');
+var log = LogProvider.getLogger(SageAPIClass);

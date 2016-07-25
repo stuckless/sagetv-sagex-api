@@ -2,7 +2,7 @@ package sagex.api;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 24/07/16 5:40 PM
+ * Generated Date/Time: 24/07/16 7:30 PM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/Security.html'>Security</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -23,7 +23,7 @@ public static java.lang.String GetActiveSecurityProfile () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the name of the current security profile for the UI client making the API call.
 
 Returns:
@@ -52,7 +52,7 @@ public static java.lang.String GetDefaultSecurityProfile () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the name of the default security profile to use when a new client connects that does not have an associated security profile.
 
 Returns:
@@ -83,7 +83,7 @@ public static boolean SetActiveSecurityProfile (java.lang.String Profile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the name of the current security profile for the UI client making the API call.
 
 Parameters:
@@ -116,7 +116,7 @@ public static boolean SetDefaultSecurityProfile (java.lang.String Profile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets the name of the default security profile to use when a new client connects that does not have an associated security profile.
 
 Parameters:
@@ -145,7 +145,7 @@ public static java.lang.String[] GetSecurityProfiles () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns the names of the different security profiles.
 
 Returns:
@@ -175,7 +175,7 @@ public static boolean AddSecurityProfile (java.lang.String Profile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Adds a new security profile with the specified name. Unless this profile existed before; all permissions will default to false. If the
  profile existed before; it's old settings will be the initial settings for this new profile.
 
@@ -211,7 +211,7 @@ public static boolean RemoveSecurityProfile (java.lang.String Profile) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Removes the security profile with the specified name. You cannot remove the Administrator profile. If a user session is currently
  active under the profile being removed; it will continue to remain active under that profile with the current permissions until that
  user session expires.
@@ -243,7 +243,7 @@ public static java.lang.String[] GetPredefinedPermissions () {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns a list of all the predefined permission names. Plugins are free to define their own new permissions using any string they like;
  but those will not be returned from this API call.
 
@@ -271,7 +271,7 @@ public static void SetPermission (java.lang.String Permission, java.lang.String 
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Sets whether or not a permission is allowed under a specific security profile.
 
 Parameters:
@@ -304,7 +304,7 @@ public static boolean HasPermission (java.lang.String Permission, java.lang.Stri
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified permission is allowed under the specified security profile. If this permission has not
  been explicitly set to false for that profile; this method will return true. The return value is undefined if the specified profile is invalid.
 
@@ -340,7 +340,7 @@ public static boolean HasPermission (java.lang.String Permission) {
 }
 
 /**
- * UI Context Aware Call<br/>
+ * UI Context Aware Call<br>
 Returns true if the specified permission is allowed under the security profile active for the UI making this API call. If this permission has not
  been explicitly set to false for that profile; this method will return true.
 
