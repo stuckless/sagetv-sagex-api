@@ -9,9 +9,18 @@ Check out source code and then configure the project and SageTV dependencies
 
 ```# ./gradlew configure```
 
+If using IntelliJ then just open the build.gradle as the project.
+
 If using eclipse, then run the following command and then import the project
 
 ```# ./gradlew cleanEclipse eclipse ```
 
-If using IntelliJ then just open the build.gradle as the project.
+# Packaging
+```# ./gradlew dist```
+
+# Re-generating API
+```# ./gradlew generateApi```
+
+# Re-generating JavaDocs
+```# ./gradlew gendocs```
 

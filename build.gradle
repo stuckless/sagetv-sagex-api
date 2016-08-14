@@ -139,12 +139,60 @@ task configure(dependsOn: configureDependencies) {
 // target will have the required deps
 cleanEclipse.finalizedBy configure
 
+task packagePluginServices << {
+    ant.mkdir(dir:"build/sage/jetty/contexts/")
+    ant.mkdir(dir:"build/sage/sagex/services/")
+    ant.copy(file:"src/main/jetty/contexts/sagex.xml", todir:"build/sage/jetty/contexts/")
+    ant.copy(file:"src/main/services/sagex.js", todir:"build/sage/sagex/services/")
+    ant.zip(file:"build/distributions/${plugin_name}-services-${version}.zip") {
+        fileset(dir: "build/sage", includes: "**/**")
+    }
+}
+
 task packagePlugin(type: Zip, dependsOn: jar) {
     baseName "${plugin_name}"
     from "build/libs/"
     include "${plugin_name}-*.jar"
     rename("${plugin_name}-${version}.jar","${plugin_name}.jar")
 }
+
+task packagePluginServicesManifest << {
+    // note Copy will always overwrite, so we'll have clean files to manipulate
+    copy {
+        from 'src/main/plugin/plugin-services.xml'
+        into 'build/tmp/'
+    }
+
+    ant.checksum (file:"build/distributions/${plugin_name}-services-${version}.zip", property:"md5_jar")
+    ant.tstamp {
+        format(property:"lastmodified", pattern:"yyyy.MM.dd")
+    }
+
+    ant.replace(file:"build/tmp/plugin-services.xml", summary:"yes") {
+        replacefilter(token: "@@last-modified@@", value: ant.lastmodified)
+        replacefilter(token: "@@version@@", value: version)
+        replacefilter(token: "@@jar-checksum@@", value: ant.md5_jar)
+        replacefilter(token: "@@plugin-name@@", value: "${plugin_name}-services")
+        replacefilter(token: "@@plugin-desc@@", value: plugin_desc)
+        replacefilter(token: "@@plugin-longdesc@@", value: plugin_longdesc)
+    }
+
+    copy {
+        from 'build/tmp/plugin-services.xml'
+        into 'build/distributions/'
+        rename ('plugin-services.xml', "${plugin_name}-services-${version}.xml")
+    }
+
+    // update the deployed manifest
+    copy {
+        from 'build/tmp/plugin-services.xml'
+        into 'deployed/'
+    }
+}
+
+
+packagePlugin.finalizedBy packagePluginServices
+packagePluginServices.finalizedBy packagePluginServicesManifest
 
 task packagePluginManifest << {
     // note Copy will always overwrite, so we'll have clean files to manipulate
@@ -198,6 +246,7 @@ bintray {
         from ('build/distributions/') {
             include "*${version}*"
         }
+        /* this is the dirname */
         into "${plugin_name}"
     }
 

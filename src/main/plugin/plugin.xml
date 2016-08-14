@@ -15,91 +15,23 @@
 
   <Package>
     <PackageType>JAR</PackageType>
-    <!--<Location>http://customsagetv.googlecode.com/files/sagex-api-@@version@@.zip</Location>-->
-    <Location>http://github.com/stuckless/sagetv-sagex-api/releases/download/v@@version@@/sagex-api-@@version@@.zip</Location>
+    <Location>http://dl.bintray.com/opensagetv/sagetv-plugins/sagex-api/sagex-api-@@version@@.zip</Location>
     <MD5>@@jar-checksum@@</MD5>
   </Package>
 
   <ReleaseNotes>
-7.1.9.23
-* Modified download url to use http and not https 
-
-
-7.1.9.23
-* Added tweaks to the streaming code 
-
-7.1.9.22
-* Fixed /mediafile/ handler to handle http range headers
-* Added the ability to return .m3u8 video playlists from /mediafile/ handler 
-
-7.1.9.15
-* Added Phoenix Streaming api handler to the list of media handlers
-
-7.1.9.14
-* Added Range Header support to the sagex/media/mediafile handler
-
-7.1.9.12
-* Added encoder=raw to allow the api to stream back a reply without json or xml formatting
-
-7.1.9.10
-* Fixed Map serialization error 
-
-7.1.9.9
-* Minor changes in the REST api handling to support Phoenix REST services 
-
-7.1.9.3
-* Changed 'call()' behaviour so that EvaluateExpression will allow the Exceptions to bubble up
-
-7.1.9.2
-* JSON/XML Serializers now will encode the error instead of allowing the webserver to send it back
-* Added Support for Phoenix Remote API
-
-7.1.9.1
-* Applied patches by slugger that fixes a couple of issues
-* Fixed bug where IsShowFirstRun was returning false 
-
-7.1.5.5
-* Airings will now return channel information
-
-7.1.5.4
-* Changed Logging to use Rolling Appender with a Max size of 10mb
-* HTTP: Updated Logo APIs to use new Logos APIs
-* HTTP: Added Image Scaling to ALL Image APIs
-* HTTP: Ability to return Image data when requesting method that returns MetaImage
-
-7.1.5.3
-* Renamed some Show APIs since they are incorrect in the JavaDoc
-
-7.1.5.2
-* Another API refresh, since some APIs were apparently missing.
-
-7.1.5.1
-* Fixed bug in MediaHandler that prevented it from working in 7.0x in some cases (album art) 
-
-7.1.5
-* Refreshed the APIs
-* Updated Event Constants to reflect new events in 7.1.5
-* Added SeriesInfo lookups via json (ie, series:SeriesInfoID)
-* Added Favorite lookups vis json (ie, favorite:FavoriteID)
-* Added Plugin lookups vis json (ie, plugin:PluginID)
-* Added scaling processing to logos, albumart, and thumbnails
-
-7.0.23.6
-* Added serialization for SeriesInfo from skiingwiz
-
-7.0.23.5
-* Minor bug fixes in the Media Thumbnail Handler 
-
-7.0.23.3
-* Fixed small bug in TypeUtils 
-
-7.0.23.2
-* Deprecated legacy xml, json, and xbmc remote interfaces
-* Added RMI Reaper for cleaning up Remote RMI objects
-
-7.0.11.0
-* Added Validation Support (IPropertyValidator)
-* Fixed bug in the AbstractPlugin where null configuration values could never be set to a value.
+9.0.0
+    * Upgraded to SageTV 9
   </ReleaseNotes>
+
+  <Dependency>
+    <Core/>
+    <MinVersion>9.0.0</MinVersion>
+  </Dependency>
+
+  <Dependency>
+    <JVM/>
+    <MinVersion>1.7</MinVersion>
+  </Dependency>
 
 </SageTVPlugin>
