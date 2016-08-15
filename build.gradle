@@ -10,11 +10,12 @@ ext {
     plugin_name = "sagex-api"
     plugin_desc = "SageTV API Extensions and Remote APIs"
     plugin_longdesc = "Wrapper for SageTV APIs, adding plugin extensions, remote REST extensions, and other general utility type functions"
+    plugin_version = '9.0.0.0'
 }
 
 archivesBaseName = "${plugin_name}"
 group 'sagex.plugins'
-version '9.0.0.0'
+version = plugin_version
 
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
@@ -247,7 +248,7 @@ bintray {
             include "*${version}*"
         }
         /* this is the dirname */
-        into "${plugin_name}"
+        into "${plugin_name}/${plugin_version}"
     }
 
     dryRun = false //Whether to run this as dry-run, without deploying
@@ -263,9 +264,9 @@ bintray {
         publicDownloadNumbers = true
         //attributes= ['a': ['ay1', 'ay2'], 'b': ['bee'], c: 'cee'] //Optional package-level attributes
         version {
-            name = "${version}"
+            name = "${plugin_version}"
             desc = "${plugin_desc}"
-            vcsTag = "${version}"
+            vcsTag = "${plugin_version}"
             //attributes = ['gradle-plugin': 'com.use.less:com.use.less.gradle:gradle-useless-plugin']
         }
     }
