@@ -2,7 +2,7 @@ package sagex.remote.factory.request;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 24/07/16 7:30 PM
+ * Generated Date/Time: 15/08/16 6:16 PM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/PlaylistAPIFactory.html'>PlaylistAPIFactory</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -53,7 +53,7 @@ public class PlaylistAPIFactory {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"IsPlaylistObject",parameters,java.lang.Object.class);
    }
    if (command.equals("GetPlaylists")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetPlaylists",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetPlaylists",parameters,(Class[])null);
    }
    if (command.equals("RemovePlaylist")) {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"RemovePlaylist",parameters,Object.class);
@@ -65,7 +65,7 @@ public class PlaylistAPIFactory {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"AddPlaylist",parameters,java.lang.String.class);
    }
    if (command.equals("GetNowPlayingList")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetNowPlayingList",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetNowPlayingList",parameters,(Class[])null);
    }
    if (command.equals("GetPlaylistProperty")) {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetPlaylistProperty",parameters,Object.class,java.lang.String.class);

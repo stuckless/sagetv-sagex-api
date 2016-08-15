@@ -2,7 +2,7 @@ package sagex.remote.factory.request;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 24/07/16 7:30 PM
+ * Generated Date/Time: 15/08/16 6:16 PM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/UtilityFactory.html'>UtilityFactory</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -68,10 +68,10 @@ public class UtilityFactory {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"Round",parameters,java.lang.Object.class);
    }
    if (command.equals("Time")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"Time",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"Time",parameters,(Class[])null);
    }
    if (command.equals("PrintCurrentTime")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"PrintCurrentTime",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"PrintCurrentTime",parameters,(Class[])null);
    }
    if (command.equals("PrintDate")) {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"PrintDate",parameters,long.class);
@@ -219,10 +219,10 @@ public class UtilityFactory {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"LocalDirectoryListing",parameters,java.io.File.class);
    }
    if (command.equals("GetFileSystemRoots")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetFileSystemRoots",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetFileSystemRoots",parameters,(Class[])null);
    }
    if (command.equals("GetLocalFileSystemRoots")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetLocalFileSystemRoots",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetLocalFileSystemRoots",parameters,(Class[])null);
    }
    if (command.equals("StringEndsWith")) {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"StringEndsWith",parameters,java.lang.String.class,java.lang.String.class);
@@ -237,10 +237,10 @@ public class UtilityFactory {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"StringLastIndexOf",parameters,java.lang.String.class,java.lang.String.class);
    }
    if (command.equals("GetWorkingDirectory")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetWorkingDirectory",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetWorkingDirectory",parameters,(Class[])null);
    }
    if (command.equals("HasLocalFilesystem")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"HasLocalFilesystem",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"HasLocalFilesystem",parameters,(Class[])null);
    }
    if (command.equals("CreateFilePath")) {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"CreateFilePath",parameters,java.lang.String.class,java.lang.String.class);
@@ -306,19 +306,19 @@ public class UtilityFactory {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"LocalizeString",parameters,java.lang.String.class);
    }
    if (command.equals("GetLocalIPAddress")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetLocalIPAddress",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetLocalIPAddress",parameters,(Class[])null);
    }
    if (command.equals("IsImportableFileType")) {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"IsImportableFileType",parameters,java.lang.String.class);
    }
    if (command.equals("GetSubnetMask")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetSubnetMask",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetSubnetMask",parameters,(Class[])null);
    }
    if (command.equals("GetGatewayAddress")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetGatewayAddress",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetGatewayAddress",parameters,(Class[])null);
    }
    if (command.equals("GetDNSAddress")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetDNSAddress",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetDNSAddress",parameters,(Class[])null);
    }
    if (command.equals("GuessMajorFileType")) {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GuessMajorFileType",parameters,java.lang.String.class);
@@ -336,7 +336,7 @@ public class UtilityFactory {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"SetScrollPosition",parameters,float.class,float.class);
    }
    if (command.equals("ClearMenuCache")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"ClearMenuCache",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"ClearMenuCache",parameters,(Class[])null);
    }
    if (command.equals("Animate")) {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"Animate",parameters,java.lang.String.class,java.lang.String.class,java.lang.String.class,long.class);
@@ -354,25 +354,25 @@ public class UtilityFactory {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"SetCoreAnimationsEnabled",parameters,boolean.class);
    }
    if (command.equals("AreCoreAnimationsEnabled")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"AreCoreAnimationsEnabled",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"AreCoreAnimationsEnabled",parameters,(Class[])null);
    }
    if (command.equals("AreCoreAnimationsSupported")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"AreCoreAnimationsSupported",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"AreCoreAnimationsSupported",parameters,(Class[])null);
    }
    if (command.equals("GetUIRefreshLock")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetUIRefreshLock",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetUIRefreshLock",parameters,(Class[])null);
    }
    if (command.equals("ReleaseUIRefreshLock")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"ReleaseUIRefreshLock",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"ReleaseUIRefreshLock",parameters,(Class[])null);
    }
    if (command.equals("CalculateMD5Sum")) {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"CalculateMD5Sum",parameters,java.io.File.class);
    }
    if (command.equals("ReloadNameserverCache")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"ReloadNameserverCache",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"ReloadNameserverCache",parameters,(Class[])null);
    }
    if (command.equals("GetTimeSinceLastInput")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetTimeSinceLastInput",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetTimeSinceLastInput",parameters,(Class[])null);
    }
    if (command.equals("GetFileAsString")) {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetFileAsString",parameters,java.io.File.class);
@@ -381,22 +381,22 @@ public class UtilityFactory {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetLocalFileAsString",parameters,java.io.File.class);
    }
    if (command.equals("IsLocalRestartNeeded")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"IsLocalRestartNeeded",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"IsLocalRestartNeeded",parameters,(Class[])null);
    }
    if (command.equals("IsServerRestartNeeded")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"IsServerRestartNeeded",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"IsServerRestartNeeded",parameters,(Class[])null);
    }
    if (command.equals("Restart")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"Restart",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"Restart",parameters,(Class[])null);
    }
    if (command.equals("ServerRestart")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"ServerRestart",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"ServerRestart",parameters,(Class[])null);
    }
    if (command.equals("QueryServerMacAddress")) {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"QueryServerMacAddress",parameters,java.lang.String.class);
    }
    if (command.equals("ScanWirelessAPs")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"ScanWirelessAPs",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"ScanWirelessAPs",parameters,(Class[])null);
    }
    if (command.equals("ReformatDeviceAtPathAsEXT3")) {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"ReformatDeviceAtPathAsEXT3",parameters,java.lang.String.class);
@@ -411,7 +411,7 @@ public class UtilityFactory {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"StringStartsWithNTE",parameters,java.lang.String.class,java.lang.String.class);
    }
    if (command.equals("DumpServerThreadStates")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"DumpServerThreadStates",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"DumpServerThreadStates",parameters,(Class[])null);
    }
    throw new RuntimeException("Invalid UtilityFactory Command: "+command);
    }

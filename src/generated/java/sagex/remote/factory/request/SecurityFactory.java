@@ -2,7 +2,7 @@ package sagex.remote.factory.request;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 24/07/16 7:30 PM
+ * Generated Date/Time: 15/08/16 6:16 PM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/SecurityFactory.html'>SecurityFactory</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -14,10 +14,10 @@ import sagex.remote.xmlrpc.RequestHelper;
 public class SecurityFactory {
    public static RemoteRequest createRequest(String context, String command, String[] parameters) {
    if (command.equals("GetActiveSecurityProfile")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetActiveSecurityProfile",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetActiveSecurityProfile",parameters,(Class[])null);
    }
    if (command.equals("GetDefaultSecurityProfile")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetDefaultSecurityProfile",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetDefaultSecurityProfile",parameters,(Class[])null);
    }
    if (command.equals("SetActiveSecurityProfile")) {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"SetActiveSecurityProfile",parameters,java.lang.String.class);
@@ -26,7 +26,7 @@ public class SecurityFactory {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"SetDefaultSecurityProfile",parameters,java.lang.String.class);
    }
    if (command.equals("GetSecurityProfiles")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetSecurityProfiles",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetSecurityProfiles",parameters,(Class[])null);
    }
    if (command.equals("AddSecurityProfile")) {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"AddSecurityProfile",parameters,java.lang.String.class);
@@ -35,7 +35,7 @@ public class SecurityFactory {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"RemoveSecurityProfile",parameters,java.lang.String.class);
    }
    if (command.equals("GetPredefinedPermissions")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetPredefinedPermissions",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetPredefinedPermissions",parameters,(Class[])null);
    }
    if (command.equals("SetPermission")) {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"SetPermission",parameters,java.lang.String.class,java.lang.String.class,boolean.class);

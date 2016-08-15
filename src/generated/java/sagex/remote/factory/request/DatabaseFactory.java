@@ -2,7 +2,7 @@ package sagex.remote.factory.request;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 24/07/16 7:30 PM
+ * Generated Date/Time: 15/08/16 6:16 PM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/DatabaseFactory.html'>DatabaseFactory</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -268,7 +268,7 @@ public class DatabaseFactory {
    }
    if (command.equals("GetAllTitles")) {
       if (parameters!=null && parameters.length == 0) {
-         return sagex.remote.xmlrpc.RequestHelper.createRequest(context, "GetAllTitles", parameters, (Class)null);
+         return sagex.remote.xmlrpc.RequestHelper.createRequest(context, "GetAllTitles", parameters, (Class[])null);
       }
       if (parameters!=null && parameters.length == 1) {
          return sagex.remote.xmlrpc.RequestHelper.createRequest(context, "GetAllTitles", parameters, java.lang.String.class);
@@ -276,7 +276,7 @@ public class DatabaseFactory {
    }
    if (command.equals("GetAllTitles")) {
       if (parameters!=null && parameters.length == 0) {
-         return sagex.remote.xmlrpc.RequestHelper.createRequest(context, "GetAllTitles", parameters, (Class)null);
+         return sagex.remote.xmlrpc.RequestHelper.createRequest(context, "GetAllTitles", parameters, (Class[])null);
       }
       if (parameters!=null && parameters.length == 1) {
          return sagex.remote.xmlrpc.RequestHelper.createRequest(context, "GetAllTitles", parameters, java.lang.String.class);
@@ -284,7 +284,7 @@ public class DatabaseFactory {
    }
    if (command.equals("GetAllPeople")) {
       if (parameters!=null && parameters.length == 0) {
-         return sagex.remote.xmlrpc.RequestHelper.createRequest(context, "GetAllPeople", parameters, (Class)null);
+         return sagex.remote.xmlrpc.RequestHelper.createRequest(context, "GetAllPeople", parameters, (Class[])null);
       }
       if (parameters!=null && parameters.length == 1) {
          return sagex.remote.xmlrpc.RequestHelper.createRequest(context, "GetAllPeople", parameters, java.lang.String.class);
@@ -292,7 +292,7 @@ public class DatabaseFactory {
    }
    if (command.equals("GetAllPeople")) {
       if (parameters!=null && parameters.length == 0) {
-         return sagex.remote.xmlrpc.RequestHelper.createRequest(context, "GetAllPeople", parameters, (Class)null);
+         return sagex.remote.xmlrpc.RequestHelper.createRequest(context, "GetAllPeople", parameters, (Class[])null);
       }
       if (parameters!=null && parameters.length == 1) {
          return sagex.remote.xmlrpc.RequestHelper.createRequest(context, "GetAllPeople", parameters, java.lang.String.class);
@@ -300,7 +300,7 @@ public class DatabaseFactory {
    }
    if (command.equals("GetAllCategories")) {
       if (parameters!=null && parameters.length == 0) {
-         return sagex.remote.xmlrpc.RequestHelper.createRequest(context, "GetAllCategories", parameters, (Class)null);
+         return sagex.remote.xmlrpc.RequestHelper.createRequest(context, "GetAllCategories", parameters, (Class[])null);
       }
       if (parameters!=null && parameters.length == 1) {
          return sagex.remote.xmlrpc.RequestHelper.createRequest(context, "GetAllCategories", parameters, java.lang.String.class);
@@ -308,7 +308,7 @@ public class DatabaseFactory {
    }
    if (command.equals("GetAllCategories")) {
       if (parameters!=null && parameters.length == 0) {
-         return sagex.remote.xmlrpc.RequestHelper.createRequest(context, "GetAllCategories", parameters, (Class)null);
+         return sagex.remote.xmlrpc.RequestHelper.createRequest(context, "GetAllCategories", parameters, (Class[])null);
       }
       if (parameters!=null && parameters.length == 1) {
          return sagex.remote.xmlrpc.RequestHelper.createRequest(context, "GetAllCategories", parameters, java.lang.String.class);
@@ -316,7 +316,7 @@ public class DatabaseFactory {
    }
    if (command.equals("GetAllGroupingCategories")) {
       if (parameters!=null && parameters.length == 0) {
-         return sagex.remote.xmlrpc.RequestHelper.createRequest(context, "GetAllGroupingCategories", parameters, (Class)null);
+         return sagex.remote.xmlrpc.RequestHelper.createRequest(context, "GetAllGroupingCategories", parameters, (Class[])null);
       }
       if (parameters!=null && parameters.length == 1) {
          return sagex.remote.xmlrpc.RequestHelper.createRequest(context, "GetAllGroupingCategories", parameters, java.lang.String.class);
@@ -324,7 +324,7 @@ public class DatabaseFactory {
    }
    if (command.equals("GetAllGroupingCategories")) {
       if (parameters!=null && parameters.length == 0) {
-         return sagex.remote.xmlrpc.RequestHelper.createRequest(context, "GetAllGroupingCategories", parameters, (Class)null);
+         return sagex.remote.xmlrpc.RequestHelper.createRequest(context, "GetAllGroupingCategories", parameters, (Class[])null);
       }
       if (parameters!=null && parameters.length == 1) {
          return sagex.remote.xmlrpc.RequestHelper.createRequest(context, "GetAllGroupingCategories", parameters, java.lang.String.class);
@@ -340,7 +340,7 @@ public class DatabaseFactory {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetMediaFilesWithImportPrefix",parameters,java.lang.Object.class,java.lang.String.class,boolean.class,boolean.class,boolean.class);
    }
    if (command.equals("IsDatabaseMemoryMaxed")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"IsDatabaseMemoryMaxed",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"IsDatabaseMemoryMaxed",parameters,(Class[])null);
    }
    if (command.equals("StripLeadingArticles")) {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"StripLeadingArticles",parameters,java.lang.String.class);

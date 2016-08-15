@@ -2,7 +2,7 @@ package sagex.remote.factory.request;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 24/07/16 7:30 PM
+ * Generated Date/Time: 15/08/16 6:16 PM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/WidgetAPIFactory.html'>WidgetAPIFactory</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -20,10 +20,10 @@ public class WidgetAPIFactory {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"ImportSTVFile",parameters,java.io.File.class);
    }
    if (command.equals("IsSTVModified")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"IsSTVModified",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"IsSTVModified",parameters,(Class[])null);
    }
    if (command.equals("GetAllWidgets")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetAllWidgets",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetAllWidgets",parameters,(Class[])null);
    }
    if (command.equals("GetWidgetsByType")) {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetWidgetsByType",parameters,java.lang.String.class);
@@ -83,7 +83,7 @@ public class WidgetAPIFactory {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"LaunchMenuWidget",parameters,Object.class);
    }
    if (command.equals("GetCurrentSTVFile")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetCurrentSTVFile",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetCurrentSTVFile",parameters,(Class[])null);
    }
    if (command.equals("GetWidgetChild")) {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetWidgetChild",parameters,Object.class,java.lang.String.class,java.lang.String.class);
@@ -92,13 +92,13 @@ public class WidgetAPIFactory {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetWidgetParent",parameters,Object.class,java.lang.String.class,java.lang.String.class);
    }
    if (command.equals("GetCurrentMenuWidget")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetCurrentMenuWidget",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetCurrentMenuWidget",parameters,(Class[])null);
    }
    if (command.equals("GetWidgetMenuHistory")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetWidgetMenuHistory",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetWidgetMenuHistory",parameters,(Class[])null);
    }
    if (command.equals("GetWidgetMenuBackHistory")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetWidgetMenuBackHistory",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetWidgetMenuBackHistory",parameters,(Class[])null);
    }
    if (command.equals("EvaluateExpression")) {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"EvaluateExpression",parameters,java.lang.String.class);
@@ -113,16 +113,16 @@ public class WidgetAPIFactory {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"FindWidgetBySymbol",parameters,java.lang.String.class);
    }
    if (command.equals("GetDefaultSTVFile")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetDefaultSTVFile",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetDefaultSTVFile",parameters,(Class[])null);
    }
    if (command.equals("GetUIWidgetContext")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetUIWidgetContext",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetUIWidgetContext",parameters,(Class[])null);
    }
    if (command.equals("GetSTVName")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetSTVName",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetSTVName",parameters,(Class[])null);
    }
    if (command.equals("GetSTVVersion")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetSTVVersion",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetSTVVersion",parameters,(Class[])null);
    }
    throw new RuntimeException("Invalid WidgetAPIFactory Command: "+command);
    }

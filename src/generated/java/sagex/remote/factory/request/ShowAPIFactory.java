@@ -2,7 +2,7 @@ package sagex.remote.factory.request;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 24/07/16 7:30 PM
+ * Generated Date/Time: 15/08/16 6:16 PM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/ShowAPIFactory.html'>ShowAPIFactory</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -75,7 +75,7 @@ public class ShowAPIFactory {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetOriginalAiringDate",parameters,Object.class);
    }
    if (command.equals("GetRoleTypes")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetRoleTypes",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetRoleTypes",parameters,(Class[])null);
    }
    if (command.equals("GetPeopleInShow")) {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetPeopleInShow",parameters,Object.class);

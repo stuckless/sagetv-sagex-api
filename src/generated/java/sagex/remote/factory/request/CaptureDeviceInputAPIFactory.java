@@ -2,7 +2,7 @@ package sagex.remote.factory.request;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 24/07/16 7:30 PM
+ * Generated Date/Time: 15/08/16 6:16 PM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/CaptureDeviceInputAPIFactory.html'>CaptureDeviceInputAPIFactory</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -101,7 +101,7 @@ public class CaptureDeviceInputAPIFactory {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"ReleaseCaptureDeviceInput",parameters,java.lang.String.class);
    }
    if (command.equals("GetCaptureDeviceInputBeingViewed")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetCaptureDeviceInputBeingViewed",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetCaptureDeviceInputBeingViewed",parameters,(Class[])null);
    }
    if (command.equals("GetCaptureDeviceInputRecordingMediaFile")) {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetCaptureDeviceInputRecordingMediaFile",parameters,Object.class);

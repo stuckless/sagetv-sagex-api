@@ -2,7 +2,7 @@ package sagex.remote.factory.request;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 24/07/16 7:30 PM
+ * Generated Date/Time: 15/08/16 6:16 PM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/TranscodeAPIFactory.html'>TranscodeAPIFactory</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -14,7 +14,7 @@ import sagex.remote.xmlrpc.RequestHelper;
 public class TranscodeAPIFactory {
    public static RemoteRequest createRequest(String context, String command, String[] parameters) {
    if (command.equals("GetTranscodeFormats")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetTranscodeFormats",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetTranscodeFormats",parameters,(Class[])null);
    }
    if (command.equals("GetTranscodeFormatDetails")) {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetTranscodeFormatDetails",parameters,java.lang.String.class);
@@ -66,10 +66,10 @@ public class TranscodeAPIFactory {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetTranscodeJobFormat",parameters,int.class);
    }
    if (command.equals("ClearTranscodedJobs")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"ClearTranscodedJobs",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"ClearTranscodedJobs",parameters,(Class[])null);
    }
    if (command.equals("GetTranscodeJobs")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetTranscodeJobs",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetTranscodeJobs",parameters,(Class[])null);
    }
    if (command.equals("CanFileBeTranscoded")) {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"CanFileBeTranscoded",parameters,Object.class);

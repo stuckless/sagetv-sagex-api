@@ -2,7 +2,7 @@ package sagex.remote.factory.request;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 24/07/16 7:30 PM
+ * Generated Date/Time: 15/08/16 6:16 PM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/PluginAPIFactory.html'>PluginAPIFactory</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -14,16 +14,16 @@ import sagex.remote.xmlrpc.RequestHelper;
 public class PluginAPIFactory {
    public static RemoteRequest createRequest(String context, String command, String[] parameters) {
    if (command.equals("GetSageTVPluginRegistry")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetSageTVPluginRegistry",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetSageTVPluginRegistry",parameters,(Class[])null);
    }
    if (command.equals("GetAllAvailablePlugins")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetAllAvailablePlugins",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetAllAvailablePlugins",parameters,(Class[])null);
    }
    if (command.equals("GetInstalledPlugins")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetInstalledPlugins",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetInstalledPlugins",parameters,(Class[])null);
    }
    if (command.equals("GetInstalledClientPlugins")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetInstalledClientPlugins",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetInstalledClientPlugins",parameters,(Class[])null);
    }
    if (command.equals("GetAllPluginVersions")) {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetAllPluginVersions",parameters,java.lang.Object.class);
@@ -56,7 +56,7 @@ public class PluginAPIFactory {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"IsPluginBeta",parameters,Object.class);
    }
    if (command.equals("RefreshAvailablePlugins")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"RefreshAvailablePlugins",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"RefreshAvailablePlugins",parameters,(Class[])null);
    }
    if (command.equals("CanPluginBeDisabled")) {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"CanPluginBeDisabled",parameters,Object.class);
@@ -137,13 +137,13 @@ public class PluginAPIFactory {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"UninstallPlugin",parameters,Object.class);
    }
    if (command.equals("GetPluginProgress")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetPluginProgress",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetPluginProgress",parameters,(Class[])null);
    }
    if (command.equals("GetClientPluginProgress")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetClientPluginProgress",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetClientPluginProgress",parameters,(Class[])null);
    }
    if (command.equals("AreClientPluginsSupported")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"AreClientPluginsSupported",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"AreClientPluginsSupported",parameters,(Class[])null);
    }
    if (command.equals("GetPluginConfigSettings")) {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetPluginConfigSettings",parameters,Object.class);
@@ -182,7 +182,7 @@ public class PluginAPIFactory {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetPluginImplementation",parameters,Object.class);
    }
    if (command.equals("IsPluginStartupComplete")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"IsPluginStartupComplete",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"IsPluginStartupComplete",parameters,(Class[])null);
    }
    throw new RuntimeException("Invalid PluginAPIFactory Command: "+command);
    }

@@ -69,13 +69,13 @@ public class ApiFactoryGenerator {
 			pw.println("   if (command.equals(\"" + m.name + "\")) {");
 			if (sameMethods.size() == 1) {
 				String args = createParameterArgs(m);
-				if (args==null) args="(Class)null";
+				if (args==null) args="(Class[])null";
 				pw.println("      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,\"" + m.name + "\",parameters," + args + ");");
 			} else {
 				for (SageMethod sm : sameMethods) {
 					int sig = getSignatureCount(sm);
 					String args = createParameterArgs(sm);
-					if (args==null) args="(Class)null";
+					if (args==null) args="(Class[])null";
 					pw.printf("      if (parameters!=null && parameters.length == %d) {\n", sig);
 					pw.printf("         return sagex.remote.xmlrpc.RequestHelper.createRequest(context, \"%s\", parameters, %s);\n", m.name, args);
 					pw.println("      }");

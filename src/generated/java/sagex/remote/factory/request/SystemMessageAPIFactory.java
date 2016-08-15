@@ -2,7 +2,7 @@ package sagex.remote.factory.request;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 24/07/16 7:30 PM
+ * Generated Date/Time: 15/08/16 6:16 PM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/SystemMessageAPIFactory.html'>SystemMessageAPIFactory</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -14,16 +14,16 @@ import sagex.remote.xmlrpc.RequestHelper;
 public class SystemMessageAPIFactory {
    public static RemoteRequest createRequest(String context, String command, String[] parameters) {
    if (command.equals("GetSystemAlertLevel")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetSystemAlertLevel",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetSystemAlertLevel",parameters,(Class[])null);
    }
    if (command.equals("GetSystemMessages")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetSystemMessages",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetSystemMessages",parameters,(Class[])null);
    }
    if (command.equals("ResetSystemAlertLevel")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"ResetSystemAlertLevel",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"ResetSystemAlertLevel",parameters,(Class[])null);
    }
    if (command.equals("DeleteAllSystemMessages")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"DeleteAllSystemMessages",parameters,(Class)null);
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"DeleteAllSystemMessages",parameters,(Class[])null);
    }
    if (command.equals("DeleteSystemMessage")) {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"DeleteSystemMessage",parameters,Object.class);
