@@ -164,7 +164,7 @@ task packagePluginServicesManifest << {
         into 'build/tmp/'
     }
 
-    ant.checksum (file:"build/distributions/${plugin_name}-services-${version}.zip", property:"md5_jar")
+    ant.checksum (file:"build/distributions/${plugin_name}-services-${version}.zip", property:"md5_system")
     ant.tstamp {
         format(property:"lastmodified", pattern:"yyyy.MM.dd")
     }
@@ -172,7 +172,7 @@ task packagePluginServicesManifest << {
     ant.replace(file:"build/tmp/plugin-services.xml", summary:"yes") {
         replacefilter(token: "@@last-modified@@", value: ant.lastmodified)
         replacefilter(token: "@@version@@", value: version)
-        replacefilter(token: "@@jar-checksum@@", value: ant.md5_jar)
+        replacefilter(token: "@@system-checksum@@", value: ant.md5_system)
         replacefilter(token: "@@plugin-name@@", value: "${plugin_name}-services")
         replacefilter(token: "@@plugin-desc@@", value: plugin_desc)
         replacefilter(token: "@@plugin-longdesc@@", value: plugin_longdesc)

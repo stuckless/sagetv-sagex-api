@@ -6,7 +6,6 @@
 /html/
 /lib/
 /libs/
-/deployed/
 .gradle/
 .idea/
 .classpath
