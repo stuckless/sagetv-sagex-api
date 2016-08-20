@@ -9,6 +9,8 @@ public class APIRules {
 	public APIRules() {
 		newRule("GetEpisodeNumber").renameTo("GetShowEpisodeNumber");
 		newRule("GetSeasonNumber").renameTo("GetShowSeasonNumber");
+		// sagetv 9 briefly changed to Object and caused some issues
+		newRule("GetFavoritePerson").setReturnType("String");
 	}
 	
 	public APIRule newRule(String api) {

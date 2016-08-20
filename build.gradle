@@ -10,7 +10,7 @@ ext {
     plugin_name = "sagex-api"
     plugin_desc = "SageTV API Extensions and Remote APIs"
     plugin_longdesc = "Wrapper for SageTV APIs, adding plugin extensions, remote REST extensions, and other general utility type functions"
-    plugin_version = '9.0.0.1'
+    plugin_version = '9.0.0.6'
 }
 
 archivesBaseName = "${plugin_name}"
@@ -283,6 +283,8 @@ public class Version {\n\
     }\n\
 }\n"
 }
+
+compileJava.dependsOn createVersion
 
 task generateApi(type: JavaExec) {
     classpath = sourceSets.main.runtimeClasspath

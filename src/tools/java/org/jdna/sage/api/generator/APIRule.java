@@ -9,6 +9,8 @@ public class APIRule {
 	private String api;
 	private String renameTo;
 
+	private String returnType;
+
 	public APIRule(String api) {
 		this.api=api;
 	}
@@ -25,4 +27,13 @@ public class APIRule {
 	public String getRenameTo() {
 		return renameTo;
 	}
+
+	public String getReturnType() {
+		return returnType;
+	}
+
+	public void setReturnType(String returnType) {
+		this.returnType = returnType;
+	}
+
 }

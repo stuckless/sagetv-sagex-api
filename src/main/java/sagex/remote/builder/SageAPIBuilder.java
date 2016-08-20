@@ -24,11 +24,15 @@ import sagex.api.SystemMessageAPI;
 import sagex.api.Utility;
 
 public class SageAPIBuilder {
+    public static final boolean DEBUG = false;
     public static final SageAPIBuilder INSTANCE = new SageAPIBuilder();
     
     private Map<Class, Method[]>  reflectionMap = new HashMap<Class, Method[]>();
     
     public void build(String name, Object parent, BuilderHandler handler, boolean arrayItem, String[] filter) throws Exception {
+        if (DEBUG) {
+            System.out.println("SageApiBuilder: " + name);
+        }
         if (parent==null) {
             buildSimpleData(name, parent, handler);
         } else if (parent instanceof String || parent.getClass().isPrimitive() || Number.class.isAssignableFrom(parent.getClass()) || Boolean.class.isAssignableFrom(parent.getClass())) {
@@ -117,7 +121,7 @@ public class SageAPIBuilder {
     }
 
     public void buildAiring(Object parent, BuilderHandler handler, String[] filter) throws Exception {
-        buildObject("Airing", AiringAPI.class, parent, handler, new String[] {"GetMediaFileForAiring", "GetAiringOnAfter", "GetAiringOnBefore"}, filter);
+        buildObject("Airing", AiringAPI.class, parent, handler, new String[] {"GetMediaFileForAiring", "GetAiringOnAfter", "GetAiringOnBefore", "GetPlayableAiring"}, filter);
     }
 
     public void buildShow(Object parent, BuilderHandler handler, String[] filter) throws Exception {

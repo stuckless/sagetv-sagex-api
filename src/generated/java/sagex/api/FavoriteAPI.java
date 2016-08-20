@@ -2,7 +2,7 @@ package sagex.api;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 15/08/16 6:16 PM
+ * Generated Date/Time: 19/08/16 9:14 PM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/FavoriteAPI.html'>FavoriteAPI</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -481,9 +481,9 @@ Favorite- the Favorite object
 Returns:
 the person that an Airing must have to be included in this Favorite, returns the empty string if person isn't a field that needs to match
  */
-public static java.lang.Object GetFavoritePerson (Object Favorite) {
+public static String GetFavoritePerson (Object Favorite) {
   Object o = sagex.SageAPI.call("GetFavoritePerson", new Object[] {Favorite});
-  if (o!=null) return (java.lang.Object) o;
+  if (o!=null) return (String) o;
   return null;
 }
 
@@ -496,9 +496,9 @@ Favorite- the Favorite object
 Returns:
 the person that an Airing must have to be included in this Favorite, returns the empty string if person isn't a field that needs to match
  */
-public static java.lang.Object GetFavoritePerson (UIContext _uicontext,Object Favorite) {
+public static String GetFavoritePerson (UIContext _uicontext,Object Favorite) {
   Object o = sagex.SageAPI.call(_uicontext, "GetFavoritePerson", new Object[] {Favorite});
-  if (o!=null) return (java.lang.Object) o;
+  if (o!=null) return (String) o;
   return null;
 }
 

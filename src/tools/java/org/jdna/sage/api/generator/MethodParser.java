@@ -126,6 +126,9 @@ public class MethodParser extends URLSaxParser {
 					method.comment = String.format("<i>NOTE: API Was Renamed from <b>%s</b> to <b>%s</b></i><br/></br>\n", oldName, rule.getRenameTo()) + (method.comment==null?"":method.comment);
 					// renaming API
 				}
+				if (rule.getReturnType()!=null) {
+					method.setReturnType(rule.getReturnType());
+				}
 			}
 			
 			// method = null;
