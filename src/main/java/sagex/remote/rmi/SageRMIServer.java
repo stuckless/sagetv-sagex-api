@@ -5,6 +5,7 @@ import java.io.PrintStream;
 import java.net.DatagramPacket;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
+import java.rmi.server.ExportException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.Properties;
 
@@ -38,28 +39,38 @@ public class SageRMIServer {
 
         isRunning = true;
 
-        SagexConfiguration config = new SagexConfiguration();
+        try {
+            SagexConfiguration config = new SagexConfiguration();
 
-        discoverProperties(config);
+            discoverProperties(config);
 
-        if (config.getBoolean(SagexConfiguration.PROP_ENABLE_RMI, true)) {
-            System.setProperty("java.rmi.server.hostname", serverInfo.getProperty("server"));
-            try {
-                log.info("Starting Sage RMI Server: " + this);
-                SageRemoteCommandImpl obj = SageRemoteCommandImpl.getInstance();
-                SageRemoteCommand stub = (SageRemoteCommand) UnicastRemoteObject.exportObject(obj, 0);
-                Registry registry = LocateRegistry.createRegistry(Integer.parseInt(serverInfo.getProperty("rmi.port")));
-                registry.rebind(SERVER_BINDING, stub);
-                log.info("Sage Java RMI Server ready: " + this);
+            if (config.getBoolean(SagexConfiguration.PROP_ENABLE_RMI, true)) {
+                System.setProperty("java.rmi.server.hostname", serverInfo.getProperty("server"));
+                try {
+                    log.info("Starting Sage RMI Server: " + this);
+                    Registry registry = null;
+                    try {
+                        registry = LocateRegistry.createRegistry(Integer.parseInt(serverInfo.getProperty("rmi.port")));
+                    } catch (ExportException err) {
+                        registry = LocateRegistry.getRegistry(Integer.parseInt(serverInfo.getProperty("rmi.port")));
+                    }
 
-            } catch (Exception e) {
-                log.warn("Failed to start RMI Services", e);
+                    SageRemoteCommandImpl obj = SageRemoteCommandImpl.getInstance();
+                    SageRemoteCommand stub = (SageRemoteCommand) UnicastRemoteObject.exportObject(obj, 0);
+                    registry.rebind(SERVER_BINDING, stub);
+                    log.info("Sage Java RMI Server ready: " + this);
+
+                } catch (Exception e) {
+                    log.warn("Failed to start RMI Services", e);
+                }
+            } else {
+                log.debug("RMI server is disabled in the configuration.  If you want RMI services you will need to enable it in the plugin configuration.");
             }
-        } else {
-            log.debug("RMI server is disabled in the configuration.  If you want RMI services you will need to enable it in the plugin configuration.");
-        }
 
-        startRMIBroadcastServer();
+            startRMIBroadcastServer();
+        } catch (Throwable t) {
+            log.error("Failed to start RMI Services", t);
+        }
     }
 
     public static SageRMIServer getInstance() {
@@ -134,8 +145,17 @@ public class SageRMIServer {
 
     private void discoverProperties(SagexConfiguration plugin) {
         serverInfo = new Properties();
-        serverInfo.put("server", Global.GetServerAddress());
-        serverInfo.put("server.ip", Utility.GetLocalIPAddress());
+        String server = Global.GetServerAddress();
+        String serverIp = Utility.GetLocalIPAddress();
+        if (server==null) {
+            server =  serverIp;
+        }
+        if (serverIp==null) {
+            serverIp="127.0.0.1";
+            server="127.0.0.1";
+        }
+        serverInfo.put("server", server);
+        serverInfo.put("server.ip", serverIp);
         serverInfo.put("rmi.port", plugin.get(SagexConfiguration.PROP_RMI_PORT, "1098"));
         serverInfo.put("http.port", plugin.get(SagexConfiguration.PROP_HTTP_PORT, "8080"));
         SageAPI.setProviderProperties(serverInfo);

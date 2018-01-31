@@ -15,6 +15,7 @@ import sagex.plugin.impl.SagexConfiguration;
 import sagex.remote.api.ApiHandler;
 import sagex.remote.media.MediaHandler;
 import sagex.remote.rmi.SageRMIServer;
+import sagex.remote.services.SSJSServiceHandler;
 import sagex.util.ILog;
 import sagex.util.LogProvider;
 
@@ -136,6 +137,9 @@ public class SagexServlet extends HttpServlet {
             
             // This API handler handles json, nielm, and xml
             sageHandlers.put(ApiHandler.SAGE_RPC_PATH, new ApiHandler());
+
+            // server side javascript service (ssjs)
+            sageHandlers.put(SSJSServiceHandler.SERVLET_PATH, new SSJSServiceHandler());
 
             try {
             	// hack for now to register the Phoenix apis... need to do this dynamically

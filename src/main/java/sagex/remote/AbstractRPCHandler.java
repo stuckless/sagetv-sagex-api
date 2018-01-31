@@ -200,8 +200,8 @@ public abstract class AbstractRPCHandler implements IRCPHandler {
 				removed++;
 			}
 		}
-		if (removed>0) {
-			log.info("Removed " + removed + " stale remote objects.");
+		if (removed>0 || objectRefs.size()>0) {
+			log.info("Removed " + removed + " stale objects, with " + objectRefs.size() + " remaining in queue.");
 		}
 	}
 }

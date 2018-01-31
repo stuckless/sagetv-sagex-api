@@ -10,7 +10,7 @@ import sagex.util.LogProvider;
 
 public class RemoteObjectReaper {
 	private ILog log = LogProvider.getLogger(RemoteObjectReaper.class);
-	private Timer timer = new Timer("sagex-obj-reaper");
+	private Timer timer = new Timer();
 	private long delay = 0;
 	private List<AbstractRPCHandler> tasks = new ArrayList<AbstractRPCHandler>();
 	
@@ -52,7 +52,7 @@ public class RemoteObjectReaper {
 		log.info("Remote Object Reaper has been changed to monitor stale objects every " + seconds + " seconds");
 		timer.cancel();
 		timer = new Timer();
-		log.debug("Moving " + tasks.size() + " tasks to the new reaper thread.");
+		log.info("Moving " + tasks.size() + " tasks to the new reaper thread.");
 		for (AbstractRPCHandler t : tasks) {
 			addTask(t);
 		}
@@ -61,7 +61,7 @@ public class RemoteObjectReaper {
 	private void addTask(AbstractRPCHandler handler) {
 		CleanTask ct = new CleanTask(handler);
 		timer.schedule(ct, delay, delay);
-		log.debug("Added Task: " + handler + " to run every " + delay + "ms");
+		log.info("Added Task: " + handler + " to run every " + delay + "ms");
 	}
 	
 	public int getReaperDelay() {

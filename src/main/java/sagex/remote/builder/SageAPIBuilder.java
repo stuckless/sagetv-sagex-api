@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import sage.Person;
 import sagex.api.AiringAPI;
 import sagex.api.AlbumAPI;
 import sagex.api.ChannelAPI;
@@ -73,6 +74,8 @@ public class SageAPIBuilder {
             buildSeriesInfo(parent, handler, filter);
         } else if(Utility.IsMetaImage(parent)) {
             buildImage(name, parent, handler);
+        } else if(parent instanceof Person) {
+            buildPerson(name, (Person)parent, handler);
         } else if(parent.toString().contains("SageTVPlugin[")) {
             buildPlugin(name, parent, handler, filter);
         } else {
@@ -80,7 +83,17 @@ public class SageAPIBuilder {
         }
     }
 
-	private void buildImage(String name, Object parent, BuilderHandler handler) {
+    private void buildPerson(String name, Person parent, BuilderHandler handler) {
+        handler.beginObject("Person");
+        buildSimpleData("Name", parent.getName(), handler);
+        buildSimpleData("Birthplace", parent.getBirthplace(), handler);
+        buildSimpleData("DateOfBirth", parent.getDateOfBirth(), handler);
+        buildSimpleData("DateOfDeath", parent.getDateOfDeath(), handler);
+        // TODO: We need to handle this better, ideally SageTV should have exposed Person API
+        handler.endObject("Person");
+    }
+
+    private void buildImage(String name, Object parent, BuilderHandler handler) {
         buildFile(name, Utility.GetMetaImageSourceFile(parent), handler);
 	}
 
