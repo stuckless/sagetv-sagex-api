@@ -36,7 +36,7 @@
   <Package>
     <PackageType>System</PackageType>
     <Location>http://dl.bintray.com/opensagetv/sagetv-plugins/sagex-api/9.0.0.8/sagex-api-services-9.0.0.8.zip</Location>
-    <MD5>241a9132c8031ef20fb98e20d806cf84</MD5>
+    <MD5>d6b04529c4c2e37824bb35754aa3536a</MD5>
   </Package>
 
   <!-- Plugin Class is in the core sagex-api jar -->

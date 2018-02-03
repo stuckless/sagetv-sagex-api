@@ -145,8 +145,13 @@ cleanEclipse.finalizedBy configure
 task packagePluginServices() {
     doLast {
         ant.mkdir(dir: "build/sage/jetty/contexts/")
+        ant.mkdir(dir: "build/sage/jetty/static/")
         ant.mkdir(dir: "build/sage/sagex/services/")
         ant.copy(file: "src/main/jetty/contexts/sagex.xml", todir: "build/sage/jetty/contexts/")
+        ant.copy(todir: "build/sage/jetty/static") {
+            fileset(dir: "src/main/jetty/static")
+        }
+
         ant.copy(file: "src/main/services/sagex.js", todir: "build/sage/sagex/services/")
         ant.zip(file: "build/distributions/${plugin_name}-services-${version}.zip") {
             fileset(dir: "build/sage", includes: "**/**")

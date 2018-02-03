@@ -16,7 +16,7 @@
   <Package>
     <PackageType>JAR</PackageType>
     <Location>http://dl.bintray.com/opensagetv/sagetv-plugins/sagex-api/9.0.0.8/sagex-api-9.0.0.8.zip</Location>
-    <MD5>4b0d6ab956a12ccae62ea0465853b399</MD5>
+    <MD5>31779a4ee9cf25a8e9d84bb75f88270a</MD5>
   </Package>
 
   <ReleaseNotes>
