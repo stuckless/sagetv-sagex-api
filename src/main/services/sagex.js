@@ -6,7 +6,19 @@
  * You can create local vars for these, such as,
  * var global = Packages.sagex.api.Global;
  * global.GetOS();
- * 
+ *
+ * From the Sagex Web Services, you can invoke these services by calling
+ * /sagex/api?c=sagex:Echo&1=Bill
+ *
+ * or if you wanted a JSON reply
+ * /sagex/api?c=sagex:Echo&1=Bill&encoder=json
+ *
+ * So the 'c' argument accepts fileName:functionName.
+ * ie, if you had a myservice.js file with a function called getItems(), then that file
+ * would be placed in SAGE_HOME/sagex/services/
+ * and you would call that service from the sagex web apis as
+ * /sagex/api?c=myservice:getItems
+ *
  */
 
 /**
@@ -19,30 +31,10 @@ function Echo(name) {
 }
 
 /**
- * Simple Service to return the Current Context
+ * Simple Service to return the Server's OS
  
  * @return
  */
-function GetUIContext() {
-	return SageAPI.GetUIContext();
-}
-
- /**
-  * Used for Junit testing the API
-  * @return
-  */
-function TestSageAPI1() {
-	return Global.GetOS();
-}
-
-/**
- * Used for Junit testing the API
- * @return
- */
-function TestSageAPI2(cmd) {
-	return SageAPI.call(cmd, null);
-}
-
-function GetMediaFileTitle(mfObj) {
-	return MediaFileAPI.GetMediaTitle(mfObj);
+function GetOS() {
+	return Packages.sagex.api.Global.GetOS();
 }

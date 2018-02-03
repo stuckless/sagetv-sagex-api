@@ -418,7 +418,7 @@ public class MediaFileRequestHandler implements SageMediaRequestHandler {
 			return new long[] { 0, fileLength-1 };
 		}
 		if (bytes.startsWith("-")) {
-			return new long[] { 0, Long.valueOf(bytes.substring(1)) };
+			return new long[] { 0, Math.min(Long.valueOf(bytes.substring(1)), fileLength-1) };
 		} else if (bytes.endsWith("-")) {
 			try {
 				return new long[] { Long.valueOf(bytes.substring(0, bytes.length() - 1)), fileLength-1 };
@@ -428,7 +428,7 @@ public class MediaFileRequestHandler implements SageMediaRequestHandler {
 			}
 		} else {
 			int pos = bytes.indexOf("-");
-			return new long[] { Long.valueOf(bytes.substring(0, pos)), Long.valueOf(bytes.substring(pos + 1)) };
+			return new long[] { Long.valueOf(bytes.substring(0, pos)), Math.min(Long.valueOf(bytes.substring(pos + 1)),fileLength-1) };
 		}
 	}
 

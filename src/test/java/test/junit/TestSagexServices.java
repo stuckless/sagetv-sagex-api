@@ -22,12 +22,14 @@ public class TestSagexServices extends TestCase {
         StubSageAPI api = new StubSageAPI();
         SageAPI.setProvider(api);
         
-        ServiceFactory sf = new ServiceFactory();
+        ServiceFactory sf = new ServiceFactory(new File("src/test/resources/sagex/services/"));
         assertEquals("Sean",sf.callService(null, "sagex", "Echo", new String[] {"Sean"}));
         
         assertNull(sf.callService(null, "sagex", "GetUIContext", null));
-        
-        assertEquals("XXXYYYXXX",sf.callService("XXXYYYXXX", "sagex", "GetUIContext", null));
+
+        Object o =sf.callService("XXXYYYXXX", "sagex", "GetUIContext", null);
+        System.out.println(o.getClass());
+        assertEquals("XXXYYYXXX", o);
         SageAPI.setUIContext(null);
         api.addCall("GetOS", "MyOS");
         assertEquals("MyOS", sf.callService(null, "sagex", "TestSageAPI1", null));

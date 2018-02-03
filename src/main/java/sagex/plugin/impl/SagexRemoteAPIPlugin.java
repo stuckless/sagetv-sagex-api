@@ -27,6 +27,7 @@ public class SagexRemoteAPIPlugin extends AbstractPlugin {
                 .setVisibleOnSetting(this,SagexConfiguration.PROP_ENABLE_RMI);
         addProperty(SageTVPlugin.CONFIG_BOOL, SagexConfiguration.PROP_ENABLE_DISCOVERY, "true", "Enable RMI Discovery", "Enables remote clients to automatically discover SageTV Servers)").setVisibleOnSetting(this, SagexConfiguration.PROP_ENABLE_RMI);
         addProperty(SageTVPlugin.CONFIG_BOOL, SagexConfiguration.PROP_ENABLE_HTTP, "true", "Enable HTTP Restful API", "Enables the HTTP Rest API for SageTV (Note this requires the Jetty Plugin)");
+        addProperty(SageTVPlugin.CONFIG_BOOL, SagexConfiguration.PROP_ENABLE_CORS, "true", "Enable CORS", "Allow remote web sites to call SageTV APIs");
         addProperty(SageTVPlugin.CONFIG_BOOL, SagexConfiguration.PROP_SECURE_HTTP, "true", "Secure HTTP API", "Enforces username/password authentication for /sagex/api handler").setVisibleOnSetting(this, SagexConfiguration.PROP_ENABLE_HTTP);
         addProperty(SageTVPlugin.CONFIG_INTEGER, SagexConfiguration.PROP_REAPER_INTERVAL, "180", "Reaper Interval", "The # of seconds between checks where the object reaper checks for stale objects.  A restart is required for this change to take effect.");
 

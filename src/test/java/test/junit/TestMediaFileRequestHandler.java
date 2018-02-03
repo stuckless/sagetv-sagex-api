@@ -49,16 +49,16 @@ public class TestMediaFileRequestHandler {
 
 		// test range 1
 		MediaFileRequestHandler mfrh = new MediaFileRequestHandler();
-		mfrh.doRangeRequest(f, req, resp, 1, new long[]{0,10});
+		mfrh.doRangeRequest(f, req, resp, 1, new long[]{0,9});
 		byte data1[] = tos.getBytes();
-		verifyData(data1, f, 0, 10);
+		verifyData(data1, f, 0, 9); // 10 bytes
 
 		// test range 2
 		mfrh = new MediaFileRequestHandler();
 		tos.reset();
-		mfrh.doRangeRequest(f, req, resp, 1, new long[]{10,20});
+		mfrh.doRangeRequest(f, req, resp, 1, new long[]{10,19});
 		byte data2[] = tos.getBytes();
-		verifyData(data2, f, 10, 20);
+		verifyData(data2, f, 10, 19); // 10 bytes
 		
 		// verify that the range 1 and range2 are not the same range
 		if (Arrays.equals(data1, data2)) {
@@ -68,9 +68,10 @@ public class TestMediaFileRequestHandler {
 		// verify the range1 + range2 is same as range3
 		mfrh = new MediaFileRequestHandler();
 		tos.reset();
-		mfrh.doRangeRequest(f, req, resp, 1, new long[]{0,20});
+		// 20 bytes of data range bytes=0-19
+		mfrh.doRangeRequest(f, req, resp, 1, new long[]{0,19});
 		byte data3[] = tos.getBytes();
-		verifyData(data3, f, 0, 20);
+		verifyData(data3, f, 0, 19);
 		
 		byte data4[] = new byte[20];
 		System.arraycopy(data1, 0, data4, 0, data1.length);
@@ -80,20 +81,20 @@ public class TestMediaFileRequestHandler {
 			fail("The 2 ranges of 10 bytes each are different than the 20 byte read!!!");
 		}
 		
-		verifyData(data4, f, 0, 20);
+		verifyData(data4, f, 0, 19);
 		
 		// test complete file
 		mfrh = new MediaFileRequestHandler();
 		tos.reset();
-		mfrh.doRangeRequest(f, req, resp, 1, new long[]{0,f.length()});
+		mfrh.doRangeRequest(f, req, resp, 1, new long[]{0,f.length()-1});
 		data2 = tos.getBytes();
-		verifyData(data2, f, 0, f.length());
+		verifyData(data2, f, 0, f.length()-1);
 		System.out.println("Done");
 	}
 
 	private void verifyData(byte[] data, File f, long start, long end) throws IOException {
 		// verify we read the coorrect amount of data
-		assertEquals((end-start), data.length);
+		assertEquals((end-start)+1, data.length);
 		
 		byte[] data2 = new byte[data.length];
 		// verify that we read the correct data
@@ -110,8 +111,13 @@ public class TestMediaFileRequestHandler {
 	public void testRangeParsing() {
 		testRange("bytes=-1024", 2048, 0, 1024);
 		testRange("bytes=1024-1048", 2048, 1024, 1048);
-		testRange("bytes=1024-", 2048, 1024, 2048);
-		testRange("bytes=", 2048, 0, 2048);
+
+		// not filesize is 2048, so end byte pos is 2047
+		testRange("bytes=1024-", 2048, 1024, 2047);
+		// overflow on the end
+		testRange("bytes=1024-2048", 2048, 1024, 2047);
+
+		testRange("bytes=", 2048, 0, 2047);
 	}
 
 	private void testRange(String rangeHeader, int fileSize, int start, int end) {

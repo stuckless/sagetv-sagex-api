@@ -112,25 +112,27 @@ clean {
     delete 'bin'
 }
 
-task configureDependencies << {
-    // remove all dependency jars
-    ant.delete(dir:"lib", includes: "*.*",failonerror:"false")
+task configureDependencies() {
+    doLast {
+        // remove all dependency jars
+        ant.delete(dir: "lib", includes: "*.*", failonerror: "false")
 
-    ant.taskdef(
-            name: 'sagetvdeps',
-            classname: 'sagex.plugin.resolver.ant.SageDependencies',
-            classpath: configurations.configure.asPath
-    )
+        ant.taskdef(
+                name: 'sagetvdeps',
+                classname: 'sagex.plugin.resolver.ant.SageDependencies',
+                classpath: configurations.configure.asPath
+        )
 
-    ant.sagetvdeps(
-            downloadsagejar:"true",
-            jardir:"lib",
-            pluginname:"sagex-api,sagex-api-services,sagexmlinfo,htmlparser,log4j",
-            devpluginsxml:"src/main/plugin/plugin.xml,src/main/plugin/plugin-services.xml"
-    )
+        ant.sagetvdeps(
+                downloadsagejar: "true",
+                jardir: "lib",
+                pluginname: "sagex-api,sagex-api-services,sagexmlinfo,htmlparser,log4j",
+                devpluginsxml: "src/main/plugin/plugin.xml,src/main/plugin/plugin-services.xml"
+        )
 
-    // delete the plugin jar if it's downloaded as a dependency
-    ant.delete(file:"lib/${plugin_name}.jar", failonerror:"false")
+        // delete the plugin jar if it's downloaded as a dependency
+        ant.delete(file: "lib/${plugin_name}.jar", failonerror: "false")
+    }
 }
 
 task configure(dependsOn: configureDependencies) {
@@ -140,13 +142,15 @@ task configure(dependsOn: configureDependencies) {
 // target will have the required deps
 cleanEclipse.finalizedBy configure
 
-task packagePluginServices << {
-    ant.mkdir(dir:"build/sage/jetty/contexts/")
-    ant.mkdir(dir:"build/sage/sagex/services/")
-    ant.copy(file:"src/main/jetty/contexts/sagex.xml", todir:"build/sage/jetty/contexts/")
-    ant.copy(file:"src/main/services/sagex.js", todir:"build/sage/sagex/services/")
-    ant.zip(file:"build/distributions/${plugin_name}-services-${version}.zip") {
-        fileset(dir: "build/sage", includes: "**/**")
+task packagePluginServices() {
+    doLast {
+        ant.mkdir(dir: "build/sage/jetty/contexts/")
+        ant.mkdir(dir: "build/sage/sagex/services/")
+        ant.copy(file: "src/main/jetty/contexts/sagex.xml", todir: "build/sage/jetty/contexts/")
+        ant.copy(file: "src/main/services/sagex.js", todir: "build/sage/sagex/services/")
+        ant.zip(file: "build/distributions/${plugin_name}-services-${version}.zip") {
+            fileset(dir: "build/sage", includes: "**/**")
+        }
     }
 }
 
@@ -157,37 +161,39 @@ task packagePlugin(type: Zip, dependsOn: jar) {
     rename("${plugin_name}-${version}.jar","${plugin_name}.jar")
 }
 
-task packagePluginServicesManifest << {
-    // note Copy will always overwrite, so we'll have clean files to manipulate
-    copy {
-        from 'src/main/plugin/plugin-services.xml'
-        into 'build/tmp/'
-    }
+task packagePluginServicesManifest() {
+    doLast {
+        // note Copy will always overwrite, so we'll have clean files to manipulate
+        copy {
+            from 'src/main/plugin/plugin-services.xml'
+            into 'build/tmp/'
+        }
 
-    ant.checksum (file:"build/distributions/${plugin_name}-services-${version}.zip", property:"md5_system")
-    ant.tstamp {
-        format(property:"lastmodified", pattern:"yyyy.MM.dd")
-    }
+        ant.checksum(file: "build/distributions/${plugin_name}-services-${version}.zip", property: "md5_system")
+        ant.tstamp {
+            format(property: "lastmodified", pattern: "yyyy.MM.dd")
+        }
 
-    ant.replace(file:"build/tmp/plugin-services.xml", summary:"yes") {
-        replacefilter(token: "@@last-modified@@", value: ant.lastmodified)
-        replacefilter(token: "@@version@@", value: version)
-        replacefilter(token: "@@system-checksum@@", value: ant.md5_system)
-        replacefilter(token: "@@plugin-name@@", value: "${plugin_name}-services")
-        replacefilter(token: "@@plugin-desc@@", value: plugin_desc)
-        replacefilter(token: "@@plugin-longdesc@@", value: plugin_longdesc)
-    }
+        ant.replace(file: "build/tmp/plugin-services.xml", summary: "yes") {
+            replacefilter(token: "@@last-modified@@", value: ant.lastmodified)
+            replacefilter(token: "@@version@@", value: version)
+            replacefilter(token: "@@system-checksum@@", value: ant.md5_system)
+            replacefilter(token: "@@plugin-name@@", value: "${plugin_name}-services")
+            replacefilter(token: "@@plugin-desc@@", value: plugin_desc)
+            replacefilter(token: "@@plugin-longdesc@@", value: plugin_longdesc)
+        }
 
-    copy {
-        from 'build/tmp/plugin-services.xml'
-        into 'build/distributions/'
-        rename ('plugin-services.xml', "${plugin_name}-services-${version}.xml")
-    }
+        copy {
+            from 'build/tmp/plugin-services.xml'
+            into 'build/distributions/'
+            rename('plugin-services.xml', "${plugin_name}-services-${version}.xml")
+        }
 
-    // update the deployed manifest
-    copy {
-        from 'build/tmp/plugin-services.xml'
-        into 'deployed/'
+        // update the deployed manifest
+        copy {
+            from 'build/tmp/plugin-services.xml'
+            into 'deployed/'
+        }
     }
 }
 
@@ -195,37 +201,39 @@ task packagePluginServicesManifest << {
 packagePlugin.finalizedBy packagePluginServices
 packagePluginServices.finalizedBy packagePluginServicesManifest
 
-task packagePluginManifest << {
-    // note Copy will always overwrite, so we'll have clean files to manipulate
-    copy {
-        from 'src/main/plugin/plugin.xml'
-        into 'build/tmp/'
-    }
+task packagePluginManifest() {
+    doLast {
+        // note Copy will always overwrite, so we'll have clean files to manipulate
+        copy {
+            from 'src/main/plugin/plugin.xml'
+            into 'build/tmp/'
+        }
 
-    ant.checksum (file:"build/distributions/${plugin_name}-${version}.zip", property:"md5_jar")
-    ant.tstamp {
-        format(property:"lastmodified", pattern:"yyyy.MM.dd")
-    }
+        ant.checksum(file: "build/distributions/${plugin_name}-${version}.zip", property: "md5_jar")
+        ant.tstamp {
+            format(property: "lastmodified", pattern: "yyyy.MM.dd")
+        }
 
-    ant.replace(file:"build/tmp/plugin.xml", summary:"yes") {
-        replacefilter(token: "@@last-modified@@", value: ant.lastmodified)
-        replacefilter(token: "@@version@@", value: version)
-        replacefilter(token: "@@jar-checksum@@", value: ant.md5_jar)
-        replacefilter(token: "@@plugin-name@@", value: plugin_name)
-        replacefilter(token: "@@plugin-desc@@", value: plugin_desc)
-        replacefilter(token: "@@plugin-longdesc@@", value: plugin_longdesc)
-    }
+        ant.replace(file: "build/tmp/plugin.xml", summary: "yes") {
+            replacefilter(token: "@@last-modified@@", value: ant.lastmodified)
+            replacefilter(token: "@@version@@", value: version)
+            replacefilter(token: "@@jar-checksum@@", value: ant.md5_jar)
+            replacefilter(token: "@@plugin-name@@", value: plugin_name)
+            replacefilter(token: "@@plugin-desc@@", value: plugin_desc)
+            replacefilter(token: "@@plugin-longdesc@@", value: plugin_longdesc)
+        }
 
-    copy {
-        from 'build/tmp/plugin.xml'
-        into 'build/distributions/'
-        rename ('plugin.xml', "${plugin_name}-${version}.xml")
-    }
+        copy {
+            from 'build/tmp/plugin.xml'
+            into 'build/distributions/'
+            rename('plugin.xml', "${plugin_name}-${version}.xml")
+        }
 
-    // update the deployed manifest
-    copy {
-        from 'build/tmp/plugin.xml'
-        into 'deployed/'
+        // update the deployed manifest
+        copy {
+            from 'build/tmp/plugin.xml'
+            into 'deployed/'
+        }
     }
 }
 packagePluginManifest.dependsOn packagePlugin
@@ -233,7 +241,10 @@ packagePluginManifest.dependsOn packagePlugin
 /**
  * Entry point for creating all plugins with manifest, making it ready for upload
  */
-task dist <<{
+task dist() {
+    doLast {
+        println "Packages build and placed in build/distributions/"
+    }
 }
 dist.dependsOn packagePluginManifest
 
@@ -272,16 +283,18 @@ bintray {
     }
 }
 
-task createVersion << {
-    def versionFile = new File("src/generated/java/sagex/api/Version.java");
-    versionFile.text = "\
-package sagex.api;\n\
-public class Version {\n\
-    public static final String VERSION = \"${version}\";\n\
-    public static String GetVersion() {\n\
-       return VERSION;\n\
-    }\n\
-}\n"
+task createVersion() {
+    doLast {
+        File versionFile = new File("src/generated/java/sagex/api/Version.java")
+        versionFile.text = """
+package sagex.api;
+public class Version {
+    public static final String VERSION = \"${version}\";
+    public static String GetVersion() {
+       return VERSION;
+    }
+}"""
+    }
 }
 
 compileJava.dependsOn createVersion

@@ -10,6 +10,7 @@ import sagex.util.TypesUtil;
  */
 public class SagexConfiguration {
     public static final String PROP_ENABLE_RMI  = "sagex/api/enableRMI";
+    public static final String PROP_ENABLE_CORS  = "sagex/api/enableCORS";
     public static final String PROP_RMI_PORT    = "sagex/api/RMIPort";
     public static final String PROP_ENABLE_DISCOVERY = "sagex/api/enableRMIDiscovery";
     public static final String PROP_ENABLE_HTTP = "sagex/api/enableHTTP";

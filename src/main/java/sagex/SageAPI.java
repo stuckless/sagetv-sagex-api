@@ -103,6 +103,16 @@ public class SageAPI {
         bubbleExceptions.add("EvaluateExpression");
     }
 
+    /**
+     * Should only be used in testing to re-init the SageAPI instance to empty
+     */
+    public static void initialize() {
+        remoteProvider            = null;
+        provider                  = null;
+        remoteProviderProperties  = null;
+        remoteProviders           = new ArrayList<Properties>();
+    }
+
     public static ISageAPIProvider getProvider() {
         if (provider == null) {
             try {
