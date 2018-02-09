@@ -155,46 +155,40 @@
     "Airing": {
       "type": "object",
       "properties": {
-        "AttributeList": {
+        "AiringAttributeList": {
           "type": "string"
         },
-        "ChannelName": {
+        "AiringChannelName": {
           "type": "string"
         },
-        "ChannelNumber": {
+        "AiringChannelNumber": {
           "type": "string"
         },
-        "Duration": {
+        "AiringDuration": {
           "type": "integer"
         },
-        "EndTime": {
+        "AiringEndTime": {
           "type": "integer"
         },
         "AiringID": {
           "type": "integer"
         },
-        "OnAfter": {
+        "AiringPartNumber": {
           "type": "integer"
         },
-        "OnBefore": {
-          "type": "integer"
-        },
-        "PartNumber": {
-          "type": "integer"
-        },
-        "PremiereFinaleInfo": {
+        "AiringPremiereFinaleInfo": {
           "type": "string"
         },
-        "Ratings": {
+        "AiringRatings": {
           "type": "string"
         },
-        "StartTime": {
+        "AiringStartTime": {
           "type": "integer"
         },
-        "Title": {
+        "AiringTitle": {
           "type": "string"
         },
-        "TotalParts": {
+        "AiringTotalParts": {
           "type": "integer"
         },
         "Channel": {
@@ -206,17 +200,11 @@
         "LatestWatchedTime": {
           "type": "integer"
         },
-        "MediaFileForAiring": {
-          "type": "integer"
-        },
         "ParentalLimitsExceeded": {
           "type": "string"
         },
         "ParentalRating": {
           "type": "string"
-        },
-        "PlayableAiring": {
-          "type": "integer"
         },
         "RealWatchedEndTime": {
           "type": "integer"
@@ -257,7 +245,7 @@
         "WatchedStartTime": {
           "type": "integer"
         },
-        "IsHDTV": {
+        "IsAiringHDTV": {
           "type": "boolean"
         },
         "IsDontLike": {
@@ -283,28 +271,28 @@
     "Album": {
       "type": "object",
       "properties": {
-        "Art": {
+        "AlbumArt": {
           "$ref": "#/definitions/MetaImage"
         },
-        "Artist": {
+        "AlbumArtist": {
           "type": "string"
         },
-        "Genre": {
+        "AlbumGenre": {
           "type": "string"
         },
-        "Name": {
+        "AlbumName": {
           "type": "string"
         },
-        "Tracks": {
+        "AlbumTracks": {
           "$ref": "#/definitions/Airing"
         },
-        "Year": {
+        "AlbumYear": {
           "type": "string"
         },
         "NumberOfTracks": {
           "type": "integer"
         },
-        "IsArt": {
+        "HasAlbumArt": {
           "type": "boolean"
         }
       }
@@ -312,31 +300,31 @@
     "Channel": {
       "type": "object",
       "properties": {
-        "Description": {
+        "ChannelDescription": {
           "type": "string"
         },
-        "Logo": {
+        "ChannelLogo": {
           "$ref": "#/definitions/MetaImage"
         },
-        "LogoCount": {
+        "ChannelLogoCount": {
           "type": "integer"
         },
-        "LogoURL": {
+        "ChannelLogoURL": {
           "type": "string"
         },
-        "Name": {
+        "ChannelName": {
           "type": "string"
         },
-        "Network": {
+        "ChannelNetwork": {
           "type": "string"
         },
-        "Number": {
+        "ChannelNumber": {
           "type": "string"
         },
         "StationID": {
           "type": "integer"
         },
-        "IsViewable": {
+        "IsChannelViewable": {
           "type": "boolean"
         }
       }
@@ -344,67 +332,67 @@
     "Favorite": {
       "type": "object",
       "properties": {
-        "Airings": {
+        "FavoriteAirings": {
           "$ref": "#/definitions/Airing"
         },
-        "AutomaticConversionDestination": {
+        "FavoriteAutomaticConversionDestination": {
           "$ref": "#/definitions/java.io.File"
         },
-        "AutomaticConversionFormat": {
+        "FavoriteAutomaticConversionFormat": {
           "type": "string"
         },
-        "Category": {
+        "FavoriteCategory": {
           "type": "string"
         },
-        "Channel": {
+        "FavoriteChannel": {
           "type": "string"
         },
-        "Description": {
+        "FavoriteDescription": {
           "type": "string"
         },
         "FavoriteID": {
           "type": "integer"
         },
-        "Keyword": {
+        "FavoriteKeyword": {
           "type": "string"
         },
-        "Network": {
+        "FavoriteNetwork": {
           "type": "string"
         },
-        "ParentalRating": {
+        "FavoriteParentalRating": {
           "type": "string"
         },
-        "Person": {
+        "FavoritePerson": {
           "type": "string"
         },
-        "PersonRole": {
+        "FavoritePersonRole": {
           "type": "string"
         },
-        "PresentationName": {
+        "FavoritePresentationName": {
           "type": "string"
         },
-        "PresentationPrefix": {
+        "FavoritePresentationPrefix": {
           "type": "string"
         },
-        "Properties": {
+        "FavoriteProperties": {
           "$ref": "#/definitions/java.util.Properties"
         },
-        "Quality": {
+        "FavoriteQuality": {
           "type": "string"
         },
-        "Rated": {
+        "FavoriteRated": {
           "type": "string"
         },
-        "SubCategory": {
+        "FavoriteSubCategory": {
           "type": "string"
         },
-        "Timeslot": {
+        "FavoriteTimeslot": {
           "type": "string"
         },
-        "Title": {
+        "FavoriteTitle": {
           "type": "string"
         },
-        "Year": {
+        "FavoriteYear": {
           "type": "string"
         },
         "KeepAtMost": {
@@ -422,7 +410,7 @@
         "IsDeleteAfterAutomaticConversion": {
           "type": "boolean"
         },
-        "IsEnabled": {
+        "IsFavoriteEnabled": {
           "type": "boolean"
         },
         "IsFirstRuns": {
@@ -445,7 +433,7 @@
     "MediaFile": {
       "type": "object",
       "properties": {
-        "IsAutorotatePictureFile": {
+        "CanAutorotatePictureFile": {
           "type": "boolean"
         },
         "AlbumForFile": {
@@ -463,22 +451,22 @@
         "FullImage": {
           "$ref": "#/definitions/MetaImage"
         },
-        "Airing": {
+        "MediaFileAiring": {
           "$ref": "#/definitions/Airing"
         },
-        "Encoding": {
+        "MediaFileEncoding": {
           "type": "string"
         },
-        "FormatDescription": {
+        "MediaFileFormatDescription": {
           "type": "string"
         },
         "MediaFileID": {
           "type": "integer"
         },
         "MediaFileMetadataProperties": {
-          "$ref": "#/definitions/MetadataProperties"
+          "$ref": "#/definitions/java.util.Properties"
         },
-        "RelativePath": {
+        "MediaFileRelativePath": {
           "type": "string"
         },
         "MediaTitle": {
@@ -502,10 +490,10 @@
         "Thumbnail": {
           "$ref": "#/definitions/MetaImage"
         },
-        "IsAnyThumbnail": {
+        "HasAnyThumbnail": {
           "type": "boolean"
         },
-        "IsSpecificThumbnail": {
+        "HasSpecificThumbnail": {
           "type": "boolean"
         },
         "IsBluRay": {
@@ -552,9 +540,6 @@
         "AllNodeDescendants": {
           "$ref": "#/definitions/java.util.Collection"
         },
-        "NodeChildren": {
-          "type": "integer"
-        },
         "NodeDataObject": {
           "$ref": "#/definitions/Object"
         },
@@ -571,9 +556,6 @@
           "type": "integer"
         },
         "NodeNumFilters": {
-          "type": "integer"
-        },
-        "NodeParent": {
           "type": "integer"
         },
         "NodePrimaryLabel": {
@@ -611,19 +593,19 @@
     "Person": {
       "type": "object",
       "properties": {
-        "Birthplace": {
+        "PersonBirthplace": {
           "type": "string"
         },
-        "DateOfBirth": {
+        "PersonDateOfBirth": {
           "type": "string"
         },
-        "DateOfDeath": {
+        "PersonDateOfDeath": {
           "type": "string"
         },
         "PersonID": {
           "type": "integer"
         },
-        "IsImage": {
+        "HasPersonImage": {
           "type": "boolean"
         }
       }
@@ -637,10 +619,10 @@
         "NumberOfPlaylistItems": {
           "type": "integer"
         },
-        "Items": {
+        "PlaylistItems": {
           "$ref": "#/definitions/Object"
         },
-        "Properties": {
+        "PlaylistProperties": {
           "$ref": "#/definitions/java.util.Properties"
         }
       }
@@ -648,67 +630,64 @@
     "Plugin": {
       "type": "object",
       "properties": {
-        "IsBeDisabled": {
+        "CanPluginBeDisabled": {
           "type": "boolean"
-        },
-        "AllPluginVersions": {
-          "type": "integer"
         },
         "ClientPluginIncompatabilityReason": {
           "type": "string"
         },
-        "Author": {
+        "PluginAuthor": {
           "type": "string"
         },
-        "ConfigSettings": {
+        "PluginConfigSettings": {
           "type": "string"
         },
-        "CreationDate": {
+        "PluginCreationDate": {
           "type": "integer"
         },
-        "DemoVideos": {
+        "PluginDemoVideos": {
           "type": "string"
         },
-        "Dependencies": {
+        "PluginDependencies": {
           "type": "string"
         },
-        "Description": {
+        "PluginDescription": {
           "type": "string"
         },
-        "Identifier": {
+        "PluginIdentifier": {
           "type": "string"
         },
-        "Implementation": {
+        "PluginImplementation": {
           "$ref": "#/definitions/sage.SageTVPlugin"
         },
-        "IncompatabilityReason": {
+        "PluginIncompatabilityReason": {
           "type": "string"
         },
-        "InstallDate": {
+        "PluginInstallDate": {
           "type": "integer"
         },
-        "ModificationDate": {
+        "PluginModificationDate": {
           "type": "integer"
         },
-        "Name": {
+        "PluginName": {
           "type": "string"
         },
-        "ReleaseNotes": {
+        "PluginReleaseNotes": {
           "type": "string"
         },
-        "ResourcePath": {
+        "PluginResourcePath": {
           "type": "string"
         },
-        "Screenshots": {
+        "PluginScreenshots": {
           "type": "string"
         },
-        "Type": {
+        "PluginType": {
           "type": "string"
         },
-        "Version": {
+        "PluginVersion": {
           "type": "string"
         },
-        "Websites": {
+        "PluginWebsites": {
           "type": "string"
         },
         "IsClientPluginCompatible": {
@@ -720,28 +699,28 @@
         "IsClientPluginInstalledSameVersion": {
           "type": "boolean"
         },
-        "IsBeta": {
+        "IsPluginBeta": {
           "type": "boolean"
         },
-        "IsCompatible": {
+        "IsPluginCompatible": {
           "type": "boolean"
         },
-        "IsConfigurable": {
+        "IsPluginConfigurable": {
           "type": "boolean"
         },
-        "IsDesktopOnly": {
+        "IsPluginDesktopOnly": {
           "type": "boolean"
         },
-        "IsEnabled": {
+        "IsPluginEnabled": {
           "type": "boolean"
         },
-        "IsFailed": {
+        "IsPluginFailed": {
           "type": "boolean"
         },
-        "IsInstalled": {
+        "IsPluginInstalled": {
           "type": "boolean"
         },
-        "IsInstalledSameVersion": {
+        "IsPluginInstalledSameVersion": {
           "type": "boolean"
         }
       }
@@ -800,7 +779,7 @@
         "SeriesTitle": {
           "type": "string"
         },
-        "IsSeriesImage": {
+        "HasSeriesImage": {
           "type": "boolean"
         }
       }
@@ -832,67 +811,67 @@
         "RolesInShow": {
           "type": "string"
         },
-        "CategoriesList": {
+        "ShowCategoriesList": {
           "type": "string"
         },
-        "CategoriesString": {
+        "ShowCategoriesString": {
           "type": "string"
         },
-        "Category": {
+        "ShowCategory": {
           "type": "string"
         },
-        "Description": {
+        "ShowDescription": {
           "type": "string"
         },
-        "Duration": {
+        "ShowDuration": {
           "type": "integer"
         },
-        "Episode": {
+        "ShowEpisode": {
           "type": "string"
         },
-        "EpisodeNumber": {
+        "ShowEpisodeNumber": {
           "type": "integer"
         },
-        "ExpandedRatings": {
+        "ShowExpandedRatings": {
           "type": "string"
         },
-        "ExternalID": {
+        "ShowExternalID": {
           "type": "string"
         },
-        "Language": {
+        "ShowLanguage": {
           "type": "string"
         },
-        "Misc": {
+        "ShowMisc": {
           "type": "string"
         },
-        "ParentalRating": {
+        "ShowParentalRating": {
           "type": "string"
         },
-        "Rated": {
+        "ShowRated": {
           "type": "string"
         },
-        "SeasonNumber": {
+        "ShowSeasonNumber": {
           "type": "integer"
         },
-        "SeriesInfo": {
+        "ShowSeriesInfo": {
           "$ref": "#/definitions/SeriesInfo"
         },
-        "SubCategory": {
+        "ShowSubCategory": {
           "type": "string"
         },
-        "Title": {
+        "ShowTitle": {
           "type": "string"
         },
-        "Year": {
+        "ShowYear": {
           "type": "string"
         },
-        "IsMovieImage": {
+        "HasMovieImage": {
           "type": "boolean"
         },
         "IsMovie": {
           "type": "boolean"
         },
-        "IsEPGDataUnique": {
+        "IsShowEPGDataUnique": {
           "type": "boolean"
         }
       }
@@ -900,28 +879,28 @@
     "SystemMessage": {
       "type": "object",
       "properties": {
-        "EndTime": {
+        "SystemMessageEndTime": {
           "type": "integer"
         },
-        "Level": {
+        "SystemMessageLevel": {
           "type": "integer"
         },
-        "RepeatCount": {
+        "SystemMessageRepeatCount": {
           "type": "integer"
         },
-        "String": {
+        "SystemMessageString": {
           "type": "string"
         },
-        "Time": {
+        "SystemMessageTime": {
           "type": "integer"
         },
-        "TypeCode": {
+        "SystemMessageTypeCode": {
           "type": "integer"
         },
-        "TypeName": {
+        "SystemMessageTypeName": {
           "type": "string"
         },
-        "VariableNames": {
+        "SystemMessageVariableNames": {
           "type": "string"
         }
       }
@@ -947,7 +926,7 @@
         "EditorialTitle": {
           "type": "string"
         },
-        "IsEditorialImage": {
+        "HasEditorialImage": {
           "type": "boolean"
         }
       }
@@ -955,7 +934,7 @@
     "UserRecord": {
       "type": "object",
       "properties": {
-        "Names": {
+        "UserRecordNames": {
           "type": "string"
         }
       }
@@ -963,19 +942,13 @@
     "Widget": {
       "type": "object",
       "properties": {
-        "Children": {
-          "type": "integer"
-        },
-        "Name": {
+        "WidgetName": {
           "type": "string"
         },
-        "Parents": {
-          "type": "integer"
-        },
-        "Symbol": {
+        "WidgetSymbol": {
           "type": "string"
         },
-        "Type": {
+        "WidgetType": {
           "type": "string"
         }
       }
@@ -54077,6 +54050,182 @@
         }
       }
     },
+    "?c\u003dGetWindowsRegistryDWORDValue": {
+      "parameters": [
+        {
+          "$ref": "#/parameters/encoder"
+        },
+        {
+          "$ref": "#/parameters/context"
+        },
+        {
+          "$ref": "#/parameters/filter"
+        }
+      ],
+      "get": {
+        "tags": [
+          "Utility"
+        ],
+        "description": "Returns a DWORD value from the Windows registry for the specified root, key and name(Windows only)\n        Acceptable values for the Root are: \"HKCR\", \"HKEY_CLASSES_ROOT\", \"HKCC\", \"HKEY_CURRENT_CONFIG\", \"HKCU\",\n        \"HKEY_CURRENT_USER\", \"HKU\", \"HKEY_USERS\", \"HKLM\" or \"HKEY_LOCAL_MACHINE\" (HKLM is the default if nothing matches)\n        @param Root the registry hive to look in\n        @param Key the key path in the registry hive\n        @param Name the name of the registry value to retrieve\n        @return the value of the specified registry setting as a DWORD",
+        "operationId": "GetWindowsRegistryDWORDValue",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "1",
+            "type": "string",
+            "required": true,
+            "description": "Root",
+            "in": "query"
+          },
+          {
+            "name": "2",
+            "type": "string",
+            "required": true,
+            "description": "Key",
+            "in": "query"
+          },
+          {
+            "name": "3",
+            "type": "string",
+            "required": true,
+            "description": "Name",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Normal response",
+            "schema": {
+              "$ref": "#/definitions/ResponseModel"
+            }
+          },
+          "500": {
+            "description": "Unexpected Error",
+            "schema": {
+              "$ref": "#/definitions/ErrorModel"
+            }
+          }
+        }
+      }
+    },
+    "?c\u003dGetWindowsRegistryNames": {
+      "parameters": [
+        {
+          "$ref": "#/parameters/encoder"
+        },
+        {
+          "$ref": "#/parameters/context"
+        },
+        {
+          "$ref": "#/parameters/filter"
+        }
+      ],
+      "get": {
+        "tags": [
+          "Utility"
+        ],
+        "description": "Returns a list of the Windows registry names which exist under the specified root \u0026amp; key (Windows only)\n        Acceptable values for the Root are: \"HKCR\", \"HKEY_CLASSES_ROOT\", \"HKCC\", \"HKEY_CURRENT_CONFIG\", \"HKCU\",\n        \"HKEY_CURRENT_USER\", \"HKU\", \"HKEY_USERS\", \"HKLM\" or \"HKEY_LOCAL_MACHINE\" (HKLM is the default if nothing matches)\n        @param Root the registry hive to look in\n        @param Key the key path in the registry hive\n        @return the names stored in the registry under the specified key",
+        "operationId": "GetWindowsRegistryNames",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "1",
+            "type": "string",
+            "required": true,
+            "description": "Root",
+            "in": "query"
+          },
+          {
+            "name": "2",
+            "type": "string",
+            "required": true,
+            "description": "Key",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Normal response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected Error",
+            "schema": {
+              "$ref": "#/definitions/ErrorModel"
+            }
+          }
+        }
+      }
+    },
+    "?c\u003dGetWindowsRegistryStringValue": {
+      "parameters": [
+        {
+          "$ref": "#/parameters/encoder"
+        },
+        {
+          "$ref": "#/parameters/context"
+        },
+        {
+          "$ref": "#/parameters/filter"
+        }
+      ],
+      "get": {
+        "tags": [
+          "Utility"
+        ],
+        "description": "Returns a string value from the Windows registry for the specified root, key and name(Windows only)\n        Acceptable values for the Root are: \"HKCR\", \"HKEY_CLASSES_ROOT\", \"HKCC\", \"HKEY_CURRENT_CONFIG\", \"HKCU\",\n        \"HKEY_CURRENT_USER\", \"HKU\", \"HKEY_USERS\", \"HKLM\" or \"HKEY_LOCAL_MACHINE\" (HKLM is the default if nothing matches)\n        @param Root the registry hive to look in\n        @param Key the key path in the registry hive\n        @param Name the name of the registry value to retrieve\n        @return the value of the specified registry setting as a string",
+        "operationId": "GetWindowsRegistryStringValue",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "1",
+            "type": "string",
+            "required": true,
+            "description": "Root",
+            "in": "query"
+          },
+          {
+            "name": "2",
+            "type": "string",
+            "required": true,
+            "description": "Key",
+            "in": "query"
+          },
+          {
+            "name": "3",
+            "type": "string",
+            "required": true,
+            "description": "Name",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Normal response",
+            "schema": {
+              "$ref": "#/definitions/ResponseModel"
+            }
+          },
+          "500": {
+            "description": "Unexpected Error",
+            "schema": {
+              "$ref": "#/definitions/ErrorModel"
+            }
+          }
+        }
+      }
+    },
     "?c\u003dGetWorkingDirectory": {
       "parameters": [
         {
@@ -55240,6 +55389,52 @@
         }
       }
     },
+    "?c\u003dPlaySound": {
+      "parameters": [
+        {
+          "$ref": "#/parameters/encoder"
+        },
+        {
+          "$ref": "#/parameters/context"
+        },
+        {
+          "$ref": "#/parameters/filter"
+        }
+      ],
+      "get": {
+        "tags": [
+          "Utility"
+        ],
+        "description": "Plays the specified sound file (used for sound effects, don\u0027t use for music playback)\n        @param SoundFile the path of the sound resource to play back",
+        "operationId": "PlaySound",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "1",
+            "type": "string",
+            "required": true,
+            "description": "SoundFile",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Normal response (code: 0 - OK)",
+            "schema": {
+              "$ref": "#/definitions/ErrorModel"
+            }
+          },
+          "500": {
+            "description": "Unexpected Error",
+            "schema": {
+              "$ref": "#/definitions/ErrorModel"
+            }
+          }
+        }
+      }
+    },
     "?c\u003dPrintCurrentTime": {
       "parameters": [
         {
@@ -56058,6 +56253,66 @@
         }
       }
     },
+    "?c\u003dRemoveWindowsRegistryValue": {
+      "parameters": [
+        {
+          "$ref": "#/parameters/encoder"
+        },
+        {
+          "$ref": "#/parameters/context"
+        },
+        {
+          "$ref": "#/parameters/filter"
+        }
+      ],
+      "get": {
+        "tags": [
+          "Utility"
+        ],
+        "description": "Removes a value from the Windows registry for the specified root, key and name(Windows only)\n        Acceptable values for the Root are: \"HKCR\", \"HKEY_CLASSES_ROOT\", \"HKCC\", \"HKEY_CURRENT_CONFIG\", \"HKCU\",\n        \"HKEY_CURRENT_USER\", \"HKU\", \"HKEY_USERS\", \"HKLM\" or \"HKEY_LOCAL_MACHINE\" (HKLM is the default if nothing matches)\n        @param Root the registry hive to look in\n        @param Key the key path in the registry hive\n        @param Name the name of the registry value to remove\n        @return true if the specified setting was removed, false otherwise",
+        "operationId": "RemoveWindowsRegistryValue",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "1",
+            "type": "string",
+            "required": true,
+            "description": "Root",
+            "in": "query"
+          },
+          {
+            "name": "2",
+            "type": "string",
+            "required": true,
+            "description": "Key",
+            "in": "query"
+          },
+          {
+            "name": "3",
+            "type": "string",
+            "required": true,
+            "description": "Name",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Normal response",
+            "schema": {
+              "$ref": "#/definitions/ResponseModel"
+            }
+          },
+          "500": {
+            "description": "Unexpected Error",
+            "schema": {
+              "$ref": "#/definitions/ErrorModel"
+            }
+          }
+        }
+      }
+    },
     "?c\u003dRenameFilePath": {
       "parameters": [
         {
@@ -56613,6 +56868,140 @@
             "description": "Normal response (code: 0 - OK)",
             "schema": {
               "$ref": "#/definitions/ErrorModel"
+            }
+          },
+          "500": {
+            "description": "Unexpected Error",
+            "schema": {
+              "$ref": "#/definitions/ErrorModel"
+            }
+          }
+        }
+      }
+    },
+    "?c\u003dSetWindowsRegistryDWORDValue": {
+      "parameters": [
+        {
+          "$ref": "#/parameters/encoder"
+        },
+        {
+          "$ref": "#/parameters/context"
+        },
+        {
+          "$ref": "#/parameters/filter"
+        }
+      ],
+      "get": {
+        "tags": [
+          "Utility"
+        ],
+        "description": "Sets a DWORD value in the Windows registry for the specified root, key and name(Windows only)\n        The name will be created if it doesn\u0027t already exist.\n        Acceptable values for the Root are: \"HKCR\", \"HKEY_CLASSES_ROOT\", \"HKCC\", \"HKEY_CURRENT_CONFIG\", \"HKCU\",\n        \"HKEY_CURRENT_USER\", \"HKU\", \"HKEY_USERS\", \"HKLM\" or \"HKEY_LOCAL_MACHINE\" (HKLM is the default if nothing matches)\n        @param Root the registry hive to use\n        @param Key the key path in the registry hive\n        @param Name the name of the registry value to set\n        @param Value the value of the specified registry setting as a DWORD\n        @return true if the operation was successful, false otherwise",
+        "operationId": "SetWindowsRegistryDWORDValue",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "1",
+            "type": "string",
+            "required": true,
+            "description": "Root",
+            "in": "query"
+          },
+          {
+            "name": "2",
+            "type": "string",
+            "required": true,
+            "description": "Key",
+            "in": "query"
+          },
+          {
+            "name": "3",
+            "type": "string",
+            "required": true,
+            "description": "Name",
+            "in": "query"
+          },
+          {
+            "name": "4",
+            "type": "integer",
+            "required": true,
+            "description": "Value",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Normal response",
+            "schema": {
+              "$ref": "#/definitions/ResponseModel"
+            }
+          },
+          "500": {
+            "description": "Unexpected Error",
+            "schema": {
+              "$ref": "#/definitions/ErrorModel"
+            }
+          }
+        }
+      }
+    },
+    "?c\u003dSetWindowsRegistryStringValue": {
+      "parameters": [
+        {
+          "$ref": "#/parameters/encoder"
+        },
+        {
+          "$ref": "#/parameters/context"
+        },
+        {
+          "$ref": "#/parameters/filter"
+        }
+      ],
+      "get": {
+        "tags": [
+          "Utility"
+        ],
+        "description": "Sets a string value in the Windows registry for the specified root, key and name(Windows only)\n        The name will be created if it doesn\u0027t already exist.\n        Acceptable values for the Root are: \"HKCR\", \"HKEY_CLASSES_ROOT\", \"HKCC\", \"HKEY_CURRENT_CONFIG\", \"HKCU\",\n        \"HKEY_CURRENT_USER\", \"HKU\", \"HKEY_USERS\", \"HKLM\" or \"HKEY_LOCAL_MACHINE\" (HKLM is the default if nothing matches)\n        @param Root the registry hive to use\n        @param Key the key path in the registry hive\n        @param Name the name of the registry value to set\n        @param Value the value of the specified registry setting as a string\n        @return true if the operation was successful, false otherwise",
+        "operationId": "SetWindowsRegistryStringValue",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "1",
+            "type": "string",
+            "required": true,
+            "description": "Root",
+            "in": "query"
+          },
+          {
+            "name": "2",
+            "type": "string",
+            "required": true,
+            "description": "Key",
+            "in": "query"
+          },
+          {
+            "name": "3",
+            "type": "string",
+            "required": true,
+            "description": "Name",
+            "in": "query"
+          },
+          {
+            "name": "4",
+            "type": "string",
+            "required": true,
+            "description": "Value",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Normal response",
+            "schema": {
+              "$ref": "#/definitions/ResponseModel"
             }
           },
           "500": {
