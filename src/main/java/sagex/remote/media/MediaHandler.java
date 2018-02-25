@@ -165,31 +165,42 @@ public class MediaHandler implements SageHandler {
         w.println("</pre>");
         w.flush();
     }
-    
+
+
     public Object getMediaFile(String id) throws Exception {
         try {
-            int mfid = Integer.parseInt(id);
-            Object o  = MediaFileAPI.GetMediaFileForID(mfid);
-            if (o==null) {
-            	// attempt to see if this is an airing ID that we can convert to
-            	// a mediafile
-            	o = AiringAPI.GetMediaFileForAiring(AiringAPI.GetAiringForID(mfid));
-            	if (o==null) {
-            		throw new Exception("Unknown MediaFile: " + id);
-            	}
+            Object o=null;
+            String parts[] = id.split(":");
+            if (parts.length==1) {
+                int mfid = Integer.parseInt(id);
+                o = MediaFileAPI.GetMediaFileForID(mfid);
+                if (o == null) {
+                    // attempt to see if this is an airing ID that we can convert to
+                    // a mediafile
+                    o = AiringAPI.GetMediaFileForAiring(AiringAPI.GetAiringForID(mfid));
+                }
+            } else {
+                if ("mediafile".equalsIgnoreCase(parts[0])) {
+                    o =  MediaFileAPI.GetMediaFileForID(Integer.parseInt(parts[1]));
+                } else if ("airing".equalsIgnoreCase(parts[0])) {
+                    o = AiringAPI.GetAiringForID(Integer.parseInt(parts[1]));
+                }
+            }
+            if (o == null) {
+                throw new Exception("Unknown MediaFile/Airing: " + id);
             }
             return o;
         } catch (Exception e) {
-        	log.warn("MediaFileForID failed for: {" + id + "}", e);
+        	log.warn("Unable to get Airing or MediaFile failed for: {" + id + "}", e);
             File f = new File(id);
             if (f.exists()) {
                 Object o = MediaFileAPI.GetMediaFileForFilePath(f);
                 if (o==null) {
-                    throw new Exception("Unknown MediaFile: " + id);
+                    throw new Exception("Unknown MediaFile/Airing: " + id);
                 }
                 return o;
             } else {
-                throw new Exception("Not A MediaFile: " + id); 
+                throw new Exception("Not A MediaFile/Airing: " + id);
             }
         }
     }

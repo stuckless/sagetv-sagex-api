@@ -6,7 +6,9 @@ import sagex.SageAPI;
 import sagex.UIContext;
 import sagex.api.Configuration;
 import sagex.api.Global;
+import sagex.api.MediaFileAPI;
 import sagex.api.WidgetAPI;
+import sagex.stub.MediaFileAPIProxy;
 
 /**
  * To enable the remote sage api, you need to add
@@ -21,7 +23,7 @@ public class TestSageAPI {
 	public static void main(String args[]) throws Exception {
 		// we can explicitly set the remote server, or let it figure it out...
 		//SageAPI.setProvider(new SageAPIRemote("http://mediaserver:8081/sagex/rpcJava"));
-	    //System.setProperty("sagex.SageAPI.remoteUrl", "http://mediaserver:8081/sagex/rpcJava");
+	    //System.setProperty("sagex.SageAPI.remoteUrl", "http://localhost:8080/sagex/rpcJava");
 
 		// what os is the remote server running...
 		System.out.println("Remote Sage OS: " + Global.GetOS());
@@ -80,6 +82,7 @@ public class TestSageAPI {
                 System.out.println("Got Client Val: " + val);
             }
 		}
+		System.out.println(MediaFileAPI.GetMediaFiles("V"));
 		System.out.printf("Current STV File: %s\n", WidgetAPI.GetCurrentSTVFile());
 		
 		//Object currentMenu = WidgetAPI.GetCurrentMenuWidget();

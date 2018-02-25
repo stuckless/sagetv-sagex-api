@@ -22,6 +22,7 @@ public class RemoteObjectReaper {
 		
 		@Override
 		public void run() {
+			log.debug("Reaper is running: " + this);
 			handler.cleanObjectReferences(delay);
 		}
 		

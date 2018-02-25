@@ -118,7 +118,7 @@ public abstract class AbstractRPCHandler implements IRCPHandler {
 						// we can send back primitives and serialiable arrays
 						finalReply = oreply;
 					} else {
-						System.out.println("Converting Sage Object Array into a Remote Object Reference Array.");
+						log.debug("Converting Sage Object Array into a Remote Object Reference Array.");
 						// non primitive / array - convert to an object reference
 						replyRef = new RemoteObjectRef(((Object[]) oreply));
 						
@@ -131,7 +131,7 @@ public abstract class AbstractRPCHandler implements IRCPHandler {
 						// serializiable stuff... ok with that.
 						finalReply = oreply;
 					} else {
-					    System.out.println("Converting Sage Object into a Remote Object Reference.");
+					    log.debug("Converting Sage Object into a Remote Object Reference.");
 						// non primitive / non serializable objects - convert to
 						// object reference
 						replyRef = new RemoteObjectRef();
@@ -192,6 +192,7 @@ public abstract class AbstractRPCHandler implements IRCPHandler {
 	 * @param maxexpiry expire objects that have not been accessed since this many ms
 	 */
 	public void cleanObjectReferences(long maxexpiry) {
+		log.debug("Cleaning Object References");
 		int removed = 0;
 		for (Iterator<Map.Entry<String, ObjRef>> i = objectRefs.entrySet().iterator(); i.hasNext();) {
 			Map.Entry<String, ObjRef> me = i.next();
@@ -199,9 +200,12 @@ public abstract class AbstractRPCHandler implements IRCPHandler {
 				i.remove();
 				removed++;
 			}
+			me.getValue().object=null;
+			me.getValue().accessed=0;
 		}
 		if (removed>0 || objectRefs.size()>0) {
 			log.info("Removed " + removed + " stale objects, with " + objectRefs.size() + " remaining in queue.");
 		}
+		log.debug("Cleaned Object References.  Removed " + removed);
 	}
 }

@@ -23,6 +23,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import javafx.scene.Parent;
 import sagex.SageAPI;
 import sagex.remote.RemoteRequest;
 import sagex.remote.SagexServlet.SageHandler;
@@ -125,6 +126,10 @@ public class ApiHandler implements SageHandler {
             for (int i = 1; i < 99; i++) {
                 String v = req.getParameter(String.valueOf(i));
                 if (v == null) break;
+                // ensure that we allow "null" arguments
+                if ("null".equalsIgnoreCase(v)) {
+                    v=null;
+                }
                 argsList.add(v);
             }
             args = argsList.toArray(new String[argsList.size()]);
@@ -253,7 +258,7 @@ public class ApiHandler implements SageHandler {
         pw.println("</style>");
         pw.println("<table>");
         pw.println("<tr><td colspan=2><form method=get action=/sagex/api><input name=q><input type=submit value=Filter></form></td></tr>");
-        pw.println("<tr><td class=l nowrap>Url Format:</td><td nowrap>/sagex/api&<b>command</b>=SAGE_COMMAND&<b>1</b>=arg1&<b>2</b>=arg2...&<b>start</b>=#&<b>size</b>=#&<b>context</b>=SAGE_UI_CONTEXT&<b>encoder</b>=xml|json|nielm|image|raw&<b>jsoncallback</b>=functionName&<b>filter</b>=Field1|Field2|Field3|...&<b>raw_content_type</b>=audio/x-mpegurl</td></tr>");
+        pw.println("<tr><td class=l nowrap>Url Format:</td><td nowrap>/sagex/api?<b>command</b>=SAGE_COMMAND&<b>1</b>=arg1&<b>2</b>=arg2...&<b>start</b>=#&<b>size</b>=#&<b>context</b>=SAGE_UI_CONTEXT&<b>encoder</b>=xml|json|nielm|image|raw&<b>jsoncallback</b>=functionName&<b>filter</b>=Field1|Field2|Field3|...&<b>raw_content_type</b>=audio/x-mpegurl</td></tr>");
         pw.println("<tr><td class=ll>command</td><td>SageTV Command (can also use c= as a short form)</td></tr>");
         pw.println("<tr><td class=ll>start</td><td>If the return type is an array, start at this element (0 is the first element)</td></tr>");
         pw.println("<tr><td class=ll>size</td><td>If the return type is an array, return this # of elements</td></tr>");
