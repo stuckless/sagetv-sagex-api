@@ -4,7 +4,6 @@ import org.mortbay.jetty.security.Constraint;
 import org.mortbay.jetty.security.ConstraintMapping;
 import org.mortbay.jetty.security.SecurityHandler;
 import org.mortbay.jetty.servlet.Context;
-
 import sagex.plugin.impl.SagexConfiguration;
 import sagex.remote.SagexServlet;
 

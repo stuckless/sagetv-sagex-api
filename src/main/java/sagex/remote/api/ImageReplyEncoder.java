@@ -1,8 +1,8 @@
 package sagex.remote.api;
 
-import javax.servlet.http.HttpServletRequest;
-
 import sagex.util.ImageUtil;
+
+import javax.servlet.http.HttpServletRequest;
 
 
 /**

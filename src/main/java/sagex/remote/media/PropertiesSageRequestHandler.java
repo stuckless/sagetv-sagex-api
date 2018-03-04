@@ -1,14 +1,13 @@
 package sagex.remote.media;
 
+import sagex.api.MediaFileAPI;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.OutputStream;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-import sagex.api.MediaFileAPI;
 
 public class PropertiesSageRequestHandler implements SageMediaRequestHandler {
     public void processRequest(HttpServletRequest req, HttpServletResponse resp, Object sageMediaFile) throws Exception {

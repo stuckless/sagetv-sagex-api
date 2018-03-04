@@ -1,9 +1,8 @@
 package sagex.remote.api;
 
+import javax.servlet.http.HttpServletRequest;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-
-import javax.servlet.http.HttpServletRequest;
 
 /**
  * Returns the contents as a raw stream to the output.  User can pass encoder=raw&raw_content_type=MIME_TYPE and have

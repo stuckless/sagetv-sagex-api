@@ -1,16 +1,5 @@
 package sagex;
 
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
-import java.net.DatagramPacket;
-import java.net.URI;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Properties;
-import java.util.Set;
-import java.util.TreeSet;
-
 import sagex.api.Global;
 import sagex.api.MediaFileAPI;
 import sagex.api.WidgetAPI;
@@ -25,6 +14,13 @@ import sagex.stub.StubSageAPI;
 import sagex.util.ILog;
 import sagex.util.LogProvider;
 import sagex.util.WaitFor;
+
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import java.net.DatagramPacket;
+import java.net.URI;
+import java.util.*;
 
 /**
  * Provides a wrapper for the SageTV services. This class enables the SageTV

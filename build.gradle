@@ -10,7 +10,7 @@ ext {
     plugin_name = "sagex-api"
     plugin_desc = "SageTV API Extensions and Remote APIs"
     plugin_longdesc = "Wrapper for SageTV APIs, adding plugin extensions, remote REST extensions, and other general utility type functions"
-    plugin_version = '9.0.0.8'
+    plugin_version = '9.1.7.0'
 }
 
 archivesBaseName = "${plugin_name}"

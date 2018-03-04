@@ -1,13 +1,12 @@
 package sagex.remote.api;
 
-import java.io.PrintWriter;
-import java.io.StringWriter;
-
-import javax.servlet.http.HttpServletRequest;
-
 import sagex.remote.builder.SageAPIBuilder;
 import sagex.remote.builder.SimpleJSONBuilder;
 import sagex.remote.json.JSONObject;
+
+import javax.servlet.http.HttpServletRequest;
+import java.io.PrintWriter;
+import java.io.StringWriter;
 
 public class JsonReplyEncoder implements ReplyEncoder {
     public String encodeError(Exception e) {

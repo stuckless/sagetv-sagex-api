@@ -1,12 +1,11 @@
 package sagex.remote.builder;
 
-import java.io.PrintWriter;
-import java.io.StringWriter;
-import java.util.Stack;
-
 import sagex.remote.json.JSONArray;
 import sagex.remote.json.JSONException;
 import sagex.remote.json.JSONObject;
+
+import java.io.StringWriter;
+import java.util.Stack;
 
 public class SimpleJSONBuilder implements BuilderHandler {
     JSONObject        obj  = new JSONObject();

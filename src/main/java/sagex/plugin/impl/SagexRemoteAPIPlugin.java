@@ -1,15 +1,15 @@
 package sagex.plugin.impl;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.util.Properties;
-
 import sage.SageTVPlugin;
 import sage.SageTVPluginRegistry;
 import sagex.plugin.AbstractPlugin;
 import sagex.plugin.ConfigValueChangeHandler;
 import sagex.remote.jetty.JettyInitializer;
 import sagex.remote.rmi.SageRMIServer;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.util.Properties;
 
 public class SagexRemoteAPIPlugin extends AbstractPlugin {
     public static SagexRemoteAPIPlugin pluginInstance = null;

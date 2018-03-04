@@ -1,11 +1,11 @@
 package sagex;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import sagex.api.Global;
 import sagex.util.ILog;
 import sagex.util.LogProvider;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public final class UIContext {
     private static final ILog                              log                          = LogProvider.getLogger(UIContext.class);

@@ -1,16 +1,5 @@
 package sagex.remote;
 
-import java.io.IOException;
-import java.util.Enumeration;
-import java.util.HashMap;
-import java.util.Map;
-
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import sagex.plugin.impl.SagexConfiguration;
 import sagex.remote.api.ApiHandler;
 import sagex.remote.media.MediaHandler;
@@ -18,6 +7,16 @@ import sagex.remote.rmi.SageRMIServer;
 import sagex.remote.services.SSJSServiceHandler;
 import sagex.util.ILog;
 import sagex.util.LogProvider;
+
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.Map;
 
 public class SagexServlet extends HttpServlet {
     public static final String DEBUG_ATTRIBUTE = "SagexServlet.debug";

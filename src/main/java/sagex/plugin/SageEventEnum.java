@@ -32,7 +32,7 @@ package sagex.plugin;
 
  * As found in http://download.sagetv.com/SageTVEventListener.java
  * 
- * @deprecated use the contstants class.  Enums can't be used in the SageEvent annotation
+ * @deprecated use the constants class.  Enums can't be used in the SageEvent annotation
  * @author seans
  */
 @Deprecated

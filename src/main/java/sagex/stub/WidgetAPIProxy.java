@@ -1,10 +1,10 @@
 package sagex.stub;
 
+import sagex.api.enums.WidgetAPIEnum;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
-import sagex.api.enums.WidgetAPIEnum;
 
 public class WidgetAPIProxy implements StubAPIProxy {
     private class Widget {

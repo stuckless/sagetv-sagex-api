@@ -1,11 +1,11 @@
 package sagex.remote.rmi;
 
-import java.rmi.registry.LocateRegistry;
-import java.rmi.registry.Registry;
-
 import sagex.ISageAPIProvider;
 import sagex.remote.RemoteRequest;
 import sagex.remote.RemoteResponse;
+
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
 
 public class RMISageAPI implements ISageAPIProvider {
     private String host;

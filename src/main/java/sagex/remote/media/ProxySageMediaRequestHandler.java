@@ -1,9 +1,8 @@
 package sagex.remote.media;
 
-import java.lang.reflect.Constructor;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.lang.reflect.Constructor;
 
 public class ProxySageMediaRequestHandler implements SageMediaRequestHandler {
     private String proxyClass = null;

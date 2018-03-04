@@ -1,21 +1,15 @@
 package sagex.remote;
 
-import java.io.Serializable;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Vector;
-
-import sage.UserRecord;
-import sage.Widget;
-import sage.msg.SystemMessage;
 import sagex.SageAPI;
-import sagex.api.*;
-import sagex.remote.RemoteRequest;
-import sagex.remote.RemoteResponse;
+import sagex.api.Utility;
 import sagex.remote.rmi.IRCPHandler;
 import sagex.util.ILog;
 import sagex.util.LogProvider;
+import sagex.util.RemoteRef;
+import sagex.util.TypesUtil;
+
+import java.io.Serializable;
+import java.util.Vector;
 
 /**
  * Accepts RemoteRequest object and returns a RemoteResponse object.
@@ -164,37 +158,7 @@ public abstract class AbstractRPCHandler implements IRCPHandler {
     }
 
     private Object convertRefToSageObject(RemoteRef ref) {
-        if (ref==null || ref.getType()==null) {
-            return null;
-        } else if ("airing".equals(ref.getType())) {
-            return AiringAPI.GetAiringForID(Integer.parseInt(ref.getId()));
-        } else if ("album".equals(ref.getType())) {
-            return getFirst(Database.FilterByMethod(AlbumAPI.GetAlbums(), "GetAlbumName", ref.getId(), true));
-        } else if ("channel".equals(ref.getType())) {
-            return ChannelAPI.GetChannelForStationID(Integer.parseInt(ref.getId()));
-        } else if ("favorite".equals(ref.getType())) {
-            return FavoriteAPI.GetFavoriteForID(Integer.parseInt(ref.getId()));
-        } else if ("mediafile".equals(ref.getType())) {
-            return MediaFileAPI.GetMediaFileForID(Integer.parseInt(ref.getId()));
-        } else if ("playlist".equals(ref.getType())) {
-            return getFirst(Database.FilterByMethod(PlaylistAPI.GetPlaylists(), "GetName", ref.getId(), true));
-        } else if ("plugin".equals(ref.getType())) {
-            return PluginAPI.GetAvailablePluginForID(ref.getId());
-        } else if ("series".equals(ref.getType())) {
-            return SeriesInfoAPI.GetSeriesInfoForID(ref.getId());
-        } else if ("show".equals(ref.getType())) {
-            return ShowAPI.GetShowForExternalID(ref.getId());
-        } else if ("systemmessage".equals(ref.getType())) {
-            return getFirst(Database.FilterByMethod(SystemMessageAPI.GetSystemMessages(), "hashCode", Integer.parseInt(ref.getId()), true));
-        } else if ("userrecord".equals(ref.getType())) {
-            String parts[] = ref.getId().split(":");
-            return UserRecordAPI.GetUserRecord(parts[0],parts[1]);
-        } else if ("widget".equals(ref.getType())) {
-            return WidgetAPI.FindWidgetBySymbol(ref.getId());
-        } else {
-            log.warn("Unknown Ref Object: " + ref);
-        }
-        return null;
+        return TypesUtil.toSageObject(ref);
     }
 
     private Object createSageObjecRefArray(Object[] oreply) {
@@ -207,57 +171,7 @@ public abstract class AbstractRPCHandler implements IRCPHandler {
     }
 
     private RemoteRef createSageObjectRef(Object in) {
-	    String type, id;
-	    if (in == null) {
-	        return null;
-        } else if (AiringAPI.IsAiringObject(in)) {
-	        type="airing";
-	        id=String.valueOf(AiringAPI.GetAiringID(in));
-        } else if (AlbumAPI.IsAlbumObject(in)) {
-            type="album";
-            id=String.valueOf(AlbumAPI.GetAlbumName(in));
-        } else if (ChannelAPI.IsChannelObject(in)) {
-            type="channel";
-            id=String.valueOf(ChannelAPI.GetStationID(in));
-        } else if (FavoriteAPI.IsFavoriteObject(in)) {
-            type="favorite";
-            id=String.valueOf(FavoriteAPI.GetFavoriteID(in));
-        } else if (MediaFileAPI.IsMediaFileObject(in)) {
-            type="mediafile";
-            id=String.valueOf(MediaFileAPI.GetMediaFileID(in));
-        } else if (PlaylistAPI.IsPlaylistObject(in)) {
-            type="playlist";
-            id=String.valueOf(PlaylistAPI.GetName(in));
-        } else if (PluginAPI.IsPluginObject(in)) {
-            type="plugin";
-            id=String.valueOf(PluginAPI.GetPluginIdentifier(in));
-        } else if (SeriesInfoAPI.IsSeriesInfoObject(in)) {
-            type="series";
-            id=String.valueOf(SeriesInfoAPI.GetSeriesID(in));
-        } else if (ShowAPI.IsShowObject(in)) {
-            type="show";
-            id=String.valueOf(ShowAPI.GetShowExternalID(in));
-        } else if (SystemMessageAPI.IsSystemMessageObject(in)) {
-            type="systemmessage";
-            id=String.valueOf(in.hashCode());
-        } else if (UserRecordAPI.IsUserRecordObject(in)) {
-            type="userrecord";
-            id= ((UserRecord)in).getStore() + ":" + ((UserRecord)in).getKey();
-        } else if (in instanceof Widget) {
-            type="widget";
-            id= WidgetAPI.GetWidgetSymbol(in);
-        } else if (in instanceof RemoteRef) {
-	        log.warn("we were passed a remote ref as a sage object.  Likely a programmer error.",  new Exception("*************"));
-            type=((RemoteRef) in).getType();
-            id= ((RemoteRef) in).getId();
-
-        } else {
-	        log.warn("Unknown Object: " + in);
-	        type="unknown";
-	        id=in.getClass().getName();
-        }
-
-        return new RemoteRef(type, id);
+	    return TypesUtil.toSageObjectRef(in);
     }
 
     protected boolean isSerializable(Object oreply) {

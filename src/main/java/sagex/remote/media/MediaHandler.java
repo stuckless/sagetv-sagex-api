@@ -1,23 +1,5 @@
 package sagex.remote.media;
 
-import java.awt.image.BufferedImage;
-import java.awt.image.RenderedImage;
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.PrintWriter;
-import java.util.HashMap;
-import java.util.Map;
-
-import javax.imageio.ImageIO;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import sagex.api.AiringAPI;
 import sagex.api.MediaFileAPI;
 import sagex.api.Utility;
@@ -25,6 +7,16 @@ import sagex.remote.SagexServlet.SageHandler;
 import sagex.util.ILog;
 import sagex.util.ImageUtil;
 import sagex.util.LogProvider;
+
+import javax.imageio.ImageIO;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.awt.image.BufferedImage;
+import java.awt.image.RenderedImage;
+import java.io.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class MediaHandler implements SageHandler {
 	public static final String MEDIA_SEGMENT_ATTRIBUTE = "MediaHandler.mediasegment";

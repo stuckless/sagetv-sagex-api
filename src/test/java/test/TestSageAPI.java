@@ -5,8 +5,7 @@ import java.io.File;
 import sagex.SageAPI;
 import sagex.UIContext;
 import sagex.api.*;
-import sagex.remote.RemoteRef;
-import sagex.stub.MediaFileAPIProxy;
+import sagex.util.RemoteRef;
 
 /**
  * To enable the remote sage api, you need to add

@@ -13,7 +13,7 @@
 
   <Dependency>
     <Core/>
-    <MinVersion>9.0.0</MinVersion>
+    <MinVersion>9.1.7</MinVersion>
   </Dependency>
 
   <Dependency>
@@ -43,6 +43,9 @@
   <ImplementationClass>sagex.plugin.impl.SagexRemoteAPIPlugin</ImplementationClass>
 
   <ReleaseNotes>
+9.1.7
+    * Added OpenAPI (swagger) reference guide
+
 9.0.0
     * Updated to SageTV 9
   </ReleaseNotes>

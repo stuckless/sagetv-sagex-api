@@ -1,28 +1,13 @@
 package sagex.remote.builder;
 
+import sage.Person;
+import sagex.api.*;
+
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Method;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.Map.Entry;
-
-import sage.Person;
-import sagex.api.AiringAPI;
-import sagex.api.AlbumAPI;
-import sagex.api.ChannelAPI;
-import sagex.api.FavoriteAPI;
-import sagex.api.MediaFileAPI;
-import sagex.api.PlaylistAPI;
-import sagex.api.PluginAPI;
-import sagex.api.SeriesInfoAPI;
-import sagex.api.ShowAPI;
-import sagex.api.SystemMessageAPI;
-import sagex.api.Utility;
 
 public class SageAPIBuilder {
     public static final boolean DEBUG = false;

@@ -1,14 +1,14 @@
 package sagex.util;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import sagex.SageAPI;
 import sagex.api.MediaFileAPI;
 import sagex.api.Utility;
 import sagex.api.WidgetAPI;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class MetaImageUtil {
 	private static ILog log = LogProvider.getLogger(MetaImageUtil.class);

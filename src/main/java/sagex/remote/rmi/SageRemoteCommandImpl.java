@@ -1,11 +1,11 @@
 package sagex.remote.rmi;
 
-import java.io.Serializable;
-
 import sagex.remote.RemoteRequest;
 import sagex.remote.RemoteResponse;
 import sagex.util.ILog;
 import sagex.util.LogProvider;
+
+import java.io.Serializable;
 
 /**
  * This is the class that will handle all the RMI transaction on the server, but it needs to be serializable

@@ -1,10 +1,9 @@
 package sagex.remote.api;
 
-import java.io.ByteArrayOutputStream;
+import net.sf.sageplugins.sagexmlinfo.SageXmlWriter;
 
 import javax.servlet.http.HttpServletRequest;
-
-import net.sf.sageplugins.sagexmlinfo.SageXmlWriter;
+import java.io.ByteArrayOutputStream;
 
 public class NielmXmlReplyEncoder extends XmlReplyEncoder {
     @Override

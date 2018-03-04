@@ -1,9 +1,9 @@
 package sagex.stub;
 
+import sagex.ISageAPIProvider;
+
 import java.util.HashMap;
 import java.util.Map;
-
-import sagex.ISageAPIProvider;
 
 public class StubSageAPI implements ISageAPIProvider {
     private boolean debugCalls = false;

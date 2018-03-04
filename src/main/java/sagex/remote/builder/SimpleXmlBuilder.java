@@ -1,8 +1,5 @@
 package sagex.remote.builder;
 
-import java.io.PrintWriter;
-import java.io.StringWriter;
-
 public class SimpleXmlBuilder implements BuilderHandler {
     private StringBuilder sb = new StringBuilder();
     

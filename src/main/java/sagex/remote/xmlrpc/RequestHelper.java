@@ -1,17 +1,9 @@
 package sagex.remote.xmlrpc;
 
-import java.io.File;
-
-import sagex.api.AiringAPI;
-import sagex.api.ChannelAPI;
-import sagex.api.FavoriteAPI;
-import sagex.api.MediaFileAPI;
-import sagex.api.PlaylistAPI;
-import sagex.api.PluginAPI;
-import sagex.api.SeriesInfoAPI;
-import sagex.api.ShowAPI;
-import sagex.api.WidgetAPI;
 import sagex.remote.RemoteRequest;
+import sagex.util.TypesUtil;
+
+import java.io.File;
 
 public class RequestHelper {
 	public static RemoteRequest createRequest(String context, String command, String[] args, Class... argTypes) {
@@ -68,79 +60,6 @@ public class RequestHelper {
 	}
 	
 	public static Object makeSageObject(String str) {
-        if (str.startsWith("channel")){
-            String cargs[] = str.split(":");
-            Object retObj = new Object();
-            try {
-                retObj = ChannelAPI.GetChannelForStationID(Integer.parseInt(cargs[1]));
-            } catch (Exception e) { }
-            return retObj;
-        } else if (str.startsWith("airing")){
-            String cargs[] = str.split(":");
-            Object retObj = new Object();
-            try {
-                retObj = AiringAPI.GetAiringForID(Integer.parseInt(cargs[1]));
-            } catch (Exception e) { }
-            return retObj;
-        } else if (str.startsWith("mediafile")){
-            String cargs[] = str.split(":");
-            Object retObj = new Object();
-            try {
-                retObj = MediaFileAPI.GetMediaFileForID(Integer.parseInt(cargs[1]));
-            } catch (Exception e) { }
-            return retObj;
-        } else if (str.startsWith("show")){
-            String cargs[] = str.split(":");
-            Object retObj = new Object();
-            try {
-                retObj = ShowAPI.GetShowForExternalID(cargs[1]);
-            } catch (Exception e) { }
-            return retObj;
-        } else if (str.startsWith("series")){
-            String cargs[] = str.split(":");
-            Object retObj = new Object();
-            try {
-                retObj = SeriesInfoAPI.GetSeriesInfoForID(cargs[1]);
-            } catch (Exception e) { }
-            return retObj;
-        } else if (str.startsWith("favorite")){
-            String cargs[] = str.split(":");
-            Object retObj = new Object();
-            try {
-                retObj = FavoriteAPI.GetFavoriteForID(Integer.parseInt(cargs[1]));
-            } catch (Exception e) { }
-            return retObj;
-        } else if (str.startsWith("plugin")){
-            String cargs[] = str.split(":");
-            Object retObj = new Object();
-            try {
-                retObj = PluginAPI.GetAvailablePluginForID(cargs[1]);
-            } catch (Exception e) { }
-            return retObj;
-        } else if (str.startsWith("playlist")){
-            String cargs[] = str.split(":");
-            Object retObj = new Object();
-            try {
-                Object all[] = PlaylistAPI.GetPlaylists();
-                if (all==null) return retObj;
-                for (Object o : all) {
-                    String name = PlaylistAPI.GetName(o);
-                    if (name.equals(cargs[1])) {
-                        return o;
-                    }
-                }
-                return retObj;
-            } catch (Exception e) { }
-            return retObj;
-        } else if (str.startsWith("widget")){
-            String cargs[] = str.split(":");
-            Object retObj = new Object();
-            try {
-                retObj = WidgetAPI.FindWidgetBySymbol(cargs[1]);
-            } catch (Exception e) { }
-            
-            return retObj;
-        }
-        return null;
+	    return TypesUtil.toSageObject(str);
 	}
 }

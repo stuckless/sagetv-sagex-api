@@ -1,12 +1,12 @@
 package sagex.remote.media;
 
-import javax.servlet.http.HttpServletRequest;
-
 import sagex.remote.json.JSONArray;
 import sagex.remote.json.JSONObject;
 import sagex.util.ILog;
 import sagex.util.LogProvider;
 import sagex.util.TypesUtil;
+
+import javax.servlet.http.HttpServletRequest;
 
 public class ScaleUtils {
 	private static ILog log = LogProvider.getLogger(ScaleUtils.class);

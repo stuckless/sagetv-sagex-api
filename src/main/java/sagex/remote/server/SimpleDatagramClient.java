@@ -1,5 +1,8 @@
 package sagex.remote.server;
 
+import sagex.util.ILog;
+import sagex.util.LogProvider;
+
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.net.DatagramPacket;
@@ -9,9 +12,6 @@ import java.net.SocketException;
 import java.util.Properties;
 import java.util.Timer;
 import java.util.TimerTask;
-
-import sagex.util.ILog;
-import sagex.util.LogProvider;
 
 public class SimpleDatagramClient {
     private ILog log = LogProvider.getLogger(SimpleDatagramClient.class);

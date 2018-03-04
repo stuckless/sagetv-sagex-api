@@ -1,14 +1,11 @@
 package sagex.remote.media;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.OutputStream;
+import sagex.api.MediaFileAPI;
+import sagex.util.MetaImageUtil;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import sagex.api.MediaFileAPI;
-import sagex.util.MetaImageUtil;
+import java.io.File;
 
 public class ThumbnailRequestHandler implements SageMediaRequestHandler {
 

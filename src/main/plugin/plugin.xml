@@ -20,13 +20,17 @@
   </Package>
 
   <ReleaseNotes>
+9.1.7
+    * RMI is now stateless to avoid memory leaks
+    * removed deprecated and legacy RPC connectors
+
 9.0.0
     * Upgraded to SageTV 9
   </ReleaseNotes>
 
   <Dependency>
     <Core/>
-    <MinVersion>9.0.0</MinVersion>
+    <MinVersion>9.1.7</MinVersion>
   </Dependency>
 
   <Dependency>
