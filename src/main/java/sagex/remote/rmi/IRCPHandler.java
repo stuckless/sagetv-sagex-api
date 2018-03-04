@@ -1,4 +1,7 @@
-package sagex.remote;
+package sagex.remote.rmi;
+
+import sagex.remote.RemoteRequest;
+import sagex.remote.RemoteResponse;
 
 public interface IRCPHandler {
 	/**

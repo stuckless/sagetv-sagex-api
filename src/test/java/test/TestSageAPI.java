@@ -4,10 +4,8 @@ import java.io.File;
 
 import sagex.SageAPI;
 import sagex.UIContext;
-import sagex.api.Configuration;
-import sagex.api.Global;
-import sagex.api.MediaFileAPI;
-import sagex.api.WidgetAPI;
+import sagex.api.*;
+import sagex.remote.RemoteRef;
 import sagex.stub.MediaFileAPIProxy;
 
 /**
@@ -112,7 +110,22 @@ public class TestSageAPI {
 		System.out.println("Total Video Duration: " + Global.GetTotalVideoDuration() / 3600);
 
 		SageAPI.setUIContext(null);
-	    
+
+		Object files[] = MediaFileAPI.GetMediaFiles("T");
+		System.out.println("Files: " + files.length);
+		for (Object f: files) {
+		    System.out.println("\nRemoteRef: " + ((RemoteRef)f).getType()+ ":"+((RemoteRef)f).getId());
+            System.out.println("MediaTitle: "+ MediaFileAPI.GetMediaTitle(f));
+        }
+
+        // sort the titles
+        System.out.println("\n\nSorted...");
+        files = (Object[])Database.Sort(files, true, "GetMediaTitle");
+        for (Object f: files) {
+            System.out.println("\nRemoteRef: " + ((RemoteRef)f).getType()+ ":"+((RemoteRef)f).getId());
+            System.out.println("MediaTitle: "+ MediaFileAPI.GetMediaTitle(f));
+        }
+
 		
 		System.out.println("Were Done.");
 	}

@@ -8,7 +8,6 @@ import sage.SageTVPlugin;
 import sage.SageTVPluginRegistry;
 import sagex.plugin.AbstractPlugin;
 import sagex.plugin.ConfigValueChangeHandler;
-import sagex.remote.RemoteObjectReaper;
 import sagex.remote.jetty.JettyInitializer;
 import sagex.remote.rmi.SageRMIServer;
 
@@ -29,7 +28,6 @@ public class SagexRemoteAPIPlugin extends AbstractPlugin {
         addProperty(SageTVPlugin.CONFIG_BOOL, SagexConfiguration.PROP_ENABLE_HTTP, "true", "Enable HTTP Restful API", "Enables the HTTP Rest API for SageTV (Note this requires the Jetty Plugin)");
         addProperty(SageTVPlugin.CONFIG_BOOL, SagexConfiguration.PROP_ENABLE_CORS, "true", "Enable CORS", "Allow remote web sites to call SageTV APIs");
         addProperty(SageTVPlugin.CONFIG_BOOL, SagexConfiguration.PROP_SECURE_HTTP, "true", "Secure HTTP API", "Enforces username/password authentication for /sagex/api handler").setVisibleOnSetting(this, SagexConfiguration.PROP_ENABLE_HTTP);
-        addProperty(SageTVPlugin.CONFIG_INTEGER, SagexConfiguration.PROP_REAPER_INTERVAL, "180", "Reaper Interval", "The # of seconds between checks where the object reaper checks for stale objects.  A restart is required for this change to take effect.");
 
         String defPort = "8080";
         File jfile = new File("JettyStarter.properties");
@@ -91,11 +89,6 @@ public class SagexRemoteAPIPlugin extends AbstractPlugin {
         JettyInitializer.updateAuthentication();
     }
 
-    @ConfigValueChangeHandler(SagexConfiguration.PROP_REAPER_INTERVAL)
-    public void onReaperChanged(String setting) {
-    	RemoteObjectReaper.getInstance().updateDelay(getConfigIntValue(SagexConfiguration.PROP_REAPER_INTERVAL));
-    }
-
     /*
      * (non-Javadoc)
      * 
@@ -105,11 +98,6 @@ public class SagexRemoteAPIPlugin extends AbstractPlugin {
     public void start() {
     	try{
 	        super.start();
-	        
-	        int delay = getConfigIntValue(SagexConfiguration.PROP_REAPER_INTERVAL);
-	        if (delay != RemoteObjectReaper.getInstance().getReaperDelay()) {
-	        	RemoteObjectReaper.getInstance().updateDelay(delay);
-	        }
 	        
 	        log.info("Starting sagex-api-services Plugin");
 	        if (getConfigBoolValue(SagexConfiguration.PROP_ENABLE_RMI)) {

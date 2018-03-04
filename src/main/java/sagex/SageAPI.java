@@ -16,7 +16,6 @@ import sagex.api.MediaFileAPI;
 import sagex.api.WidgetAPI;
 import sagex.remote.EmbeddedSageAPIProvider;
 import sagex.remote.api.ServiceFactory;
-import sagex.remote.javarpc.SageAPIRemote;
 import sagex.remote.rmi.RMISageAPI;
 import sagex.remote.server.DatagramPacketHandler;
 import sagex.remote.server.DatagramServer;
@@ -158,10 +157,7 @@ public class SageAPI {
                     } else if ("stub".equals(u.getScheme())) {
                         remoteProvider = new StubSageAPI();
                     } else {
-                        remoteProviderProperties = new Properties();
-                        remoteProviderProperties.put(PROP_REMOTE_SERVER, u.getHost());
-                        remoteProviderProperties.put(PROP_REMOTE_HTTP_PORT, u.getPort());
-                        remoteProvider = (new SageAPIRemote(remoteUrl));
+                    throw new Exception("Unknown and unhandled remote request type for " + u);
                     }
                 }
             } catch (Throwable t) {

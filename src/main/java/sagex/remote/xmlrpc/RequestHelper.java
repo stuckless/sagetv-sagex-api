@@ -11,7 +11,6 @@ import sagex.api.PluginAPI;
 import sagex.api.SeriesInfoAPI;
 import sagex.api.ShowAPI;
 import sagex.api.WidgetAPI;
-import sagex.remote.RemoteObjectRef;
 import sagex.remote.RemoteRequest;
 
 public class RequestHelper {
@@ -63,17 +62,7 @@ public class RequestHelper {
 		    Object retObj = makeSageObject(str);
 		    if (retObj!=null) return retObj;
 
-		    // else assume an array.
-			int p = str.indexOf(":");
-			if (p != -1) {
-				// array index object ref
-				String id = str.substring(0, p);
-				int idx = Integer.parseInt(str.substring(p + 1));
-				return new RemoteObjectRef(id, idx);
-			} else {
-				// object ref
-				return new RemoteObjectRef(str);
-			}
+		    System.out.println("sagex Request Helper: Unhandled object in parameters: " + str);
 		}
 		return null;
 	}

@@ -23,7 +23,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import javafx.scene.Parent;
 import sagex.SageAPI;
 import sagex.remote.RemoteRequest;
 import sagex.remote.SagexServlet.SageHandler;

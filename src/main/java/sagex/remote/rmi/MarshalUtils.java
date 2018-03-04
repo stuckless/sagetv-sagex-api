@@ -1,4 +1,4 @@
-package sagex.remote;
+package sagex.remote.rmi;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;

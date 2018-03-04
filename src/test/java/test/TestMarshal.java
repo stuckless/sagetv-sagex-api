@@ -2,7 +2,7 @@ package test;
 
 import java.io.IOException;
 
-import sagex.remote.MarshalUtils;
+import sagex.remote.rmi.MarshalUtils;
 import sagex.remote.RemoteRequest;
 
 public class TestMarshal {
