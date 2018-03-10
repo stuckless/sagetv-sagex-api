@@ -137,7 +137,12 @@ public class ApiHandler implements SageHandler {
                     command = m.group(2);
                 }
                 oreply = callSageAPI(context, api, command, args);
-            }            
+            }
+
+            // convert collections to arrays and we'll page them
+            if (oreply instanceof Collection) {
+                oreply = ((Collection) oreply).toArray();
+            }
 
             // do range checking....
             if (oreply != null && oreply.getClass().isArray()) {
@@ -149,6 +154,7 @@ public class ApiHandler implements SageHandler {
                     oreply = Arrays.copyOfRange(oArr, start, end);
                 }
             }
+
 
             if (isImageReply) {
             	try {
