@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <SageTVPlugin>
-  <Name>sagex-api - SageTV API Extensions</Name>
+  <Name>SageTV Sagex API Extensions (sagex-api)</Name>
   <Identifier>sagex-api</Identifier>
   <Description>SageTV API Wrappers with Remote API capabilities</Description>
   <Author>stuckless</Author>
@@ -15,11 +15,13 @@
 
   <Package>
     <PackageType>JAR</PackageType>
-    <Location>http://dl.bintray.com/opensagetv/sagetv-plugins/sagex-api/@@version@@/sagex-api-@@version@@.zip</Location>
+    <Location>https://github.com/OpenSageTV/sagetv-plugin-repo/releases/download/1/sagex-api-@@version@@.zip</Location>
     <MD5>@@jar-checksum@@</MD5>
   </Package>
 
   <ReleaseNotes>
+9.2.6
+    * Build for Github sources and Jetty 9
 9.1.7
     * RMI is now stateless to avoid memory leaks
     * removed deprecated and legacy RPC connectors
@@ -35,7 +37,7 @@
 
   <Dependency>
     <JVM/>
-    <MinVersion>1.7</MinVersion>
+    <MinVersion>1.8</MinVersion>
   </Dependency>
 
 </SageTVPlugin>

@@ -1,0 +1,16 @@
+<?xml version="1.0"  encoding="ISO-8859-1"?>
+<!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "http://www.eclipse.org/jetty/configure_9_0.dtd">
+<Configure id="sagexapidocscontext" class="org.eclipse.jetty.webapp.WebAppContext">
+	<Call name="setAttribute">
+		<Arg>pluginid</Arg>
+		<Arg>sagex-apidocs</Arg>
+	</Call>
+	<Call name="setAttribute">
+		<Arg>webpage</Arg>
+		<Arg></Arg>
+	</Call>
+	<Call name="setAttribute">
+		<Arg>version</Arg>
+		<Arg>9.2.6.1</Arg>
+	</Call>
+</Configure>

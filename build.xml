@@ -41,7 +41,33 @@
 		<fileset dir="lib" includes="*.jar" />
 	</path>
 
-	<target name="package" depends="init,build,makeJar,javadoc,package-javadoc">
+	<!--
+       - Create a war file for the /root web application (list of running applications).
+      -->
+	<target name="war">
+		<mkdir dir="${build.dir}/war" />
+
+		<copy todir="${build.dir}/war" includeemptydirs="true">
+			<fileset dir="WebContent">
+				<exclude name=".directory"/> <!-- KDE artifact -->
+			</fileset>
+		</copy>
+
+		<war basedir="${build.dir}/war/sagex"
+			 destfile="${build.dir}/sagex.war"
+			 manifest="${build.dir}/war/sagex/META-INF/MANIFEST.MF"
+			 webxml="${build.dir}/war/sagex/WEB-INF/web.xml"
+		>
+		<manifest>
+			<attribute name="Specification-Title" value="Sage API Extension"/>
+			<attribute name="Specification-Version" value="${version}"/>
+			<attribute name="Implementation-Title" value="Sage API Extension"/>
+			<attribute name="Implementation-Version" value="${version}"/>
+		</manifest>
+		</war>
+	</target>
+
+	<target name="package" depends="init,build,war,makeJar,javadoc,package-javadoc">
 		<mkdir dir="${build.dir}/sage/jetty/contexts/" />
 		<mkdir dir="${build.dir}/sage/sagex/services/" />
 		<copy file="src/main/jetty/contexts/sagex.xml" todir="${build.dir}/sage/jetty/contexts/" />

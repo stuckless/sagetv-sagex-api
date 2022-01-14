@@ -91,7 +91,7 @@ public class AbstractPlugin implements SageTVPlugin {
     }
 
     /**
-     * Add a new PluginPropety to be managed by this plugin.
+     * Add a new PluginProperty to be managed by this plugin.
      * 
      * @param prop {@link PluginProperty} instance
      * @return {@link PluginProperty}

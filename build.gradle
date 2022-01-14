@@ -10,15 +10,16 @@ ext {
     plugin_name = "sagex-api"
     plugin_desc = "SageTV API Extensions and Remote APIs"
     plugin_longdesc = "Wrapper for SageTV APIs, adding plugin extensions, remote REST extensions, and other general utility type functions"
-    plugin_version = '9.1.7.0'
+    plugin_version = '9.2.6.1'
+    targetdir = 'target'
 }
 
 archivesBaseName = "${plugin_name}"
 group 'sagex.plugins'
 version = plugin_version
 
-sourceCompatibility = 1.7
-targetCompatibility = 1.7
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 configurations {
     configure
@@ -40,16 +41,21 @@ repositories {
     mavenCentral()
     jcenter()
     maven {
-        url  "http://dl.bintray.com/opensagetv/maven"
-    }
-    maven {
-        url  "http://dl.bintray.com/stuckless/sagetvphoenix"
+        //Github does not support public maven packages so to retrieve you will need
+        // a Personal Access Token to get the package
+        // Create the 2 environment variables below with the user and token
+        name = "GitHubPackages"
+        url = uri("https://maven.pkg.github.com/jusjoken/sagetv-dependencies-task")
+        credentials {
+            username = project.findProperty("gpr.user") ?: System.getenv("GITHUB_USER")
+            password = project.findProperty("gpr.key") ?: System.getenv("GITHUB_TOKEN")
+        }
     }
 }
 
 dependencies {
     // used by the configure target
-    configure 'sagex:sagex.plugin.resolver:1.5'
+    configure 'sagex:sagex.plugin.resolver:1.7'
     configure 'dom4j:dom4j:1.6.1'
 
     // the plugin jars should be extrated here
@@ -121,13 +127,14 @@ task configureDependencies() {
                 name: 'sagetvdeps',
                 classname: 'sagex.plugin.resolver.ant.SageDependencies',
                 classpath: configurations.configure.asPath
+
         )
 
         ant.sagetvdeps(
                 downloadsagejar: "true",
                 jardir: "lib",
                 pluginname: "sagex-api,sagex-api-services,sagexmlinfo,htmlparser,log4j",
-                devpluginsxml: "src/main/plugin/plugin.xml,src/main/plugin/plugin-services.xml"
+                devpluginsxml: "src/main/plugin/plugin.xml,src/main/plugin/plugin-services.xml,src/main/plugin/jettystarter_plugin.xml"
         )
 
         // delete the plugin jar if it's downloaded as a dependency
@@ -144,11 +151,12 @@ cleanEclipse.finalizedBy configure
 
 task packagePluginServices() {
     doLast {
-        ant.mkdir(dir: "build/sage/jetty/contexts/")
-        ant.mkdir(dir: "build/sage/jetty/static/")
+        ant.mkdir(dir: "build/sage/jetty/webapps/")
+        //ant.mkdir(dir: "build/sage/jetty/static/")
         ant.mkdir(dir: "build/sage/sagex/services/")
-        ant.copy(file: "src/main/jetty/contexts/sagex.xml", todir: "build/sage/jetty/contexts/")
-        ant.copy(todir: "build/sage/jetty/static") {
+        ant.copy(file: "${targetdir}/build/sagex.war", todir: "build/sage/jetty/webapps/")
+        //ant.copy(file: "src/main/jetty/contexts/sagex.xml", todir: "build/sage/jetty/contexts/")
+        ant.copy(todir: "build/sage/jetty/webapps") {
             fileset(dir: "src/main/jetty/static")
         }
 

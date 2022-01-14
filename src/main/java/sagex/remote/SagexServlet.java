@@ -90,7 +90,18 @@ public class SagexServlet extends HttpServlet {
             // 2 - arg1
             String args[] = req.getPathInfo().split("/");
             if (args == null || args.length < 2) {
-                resp.sendError(404, "No Sage Handler Specified.");
+                //if no specific sub handler is specified default to api
+                SageHandler shapi = sageHandlers.get(ApiHandler.SAGE_RPC_PATH);
+                String argsAPI[] = {"sagex", "api"};
+                shapi.handleRequest(argsAPI, req, resp);
+                //resp.sendError(404, "No Sage Handler Specified.");
+                return;
+            }
+
+            String iconRequest = "favicon.ico";
+            if (args[1].equals(iconRequest)){
+                log.info("SagexServlet: favicon request found.  Sending to '" + req.getPathInfo() + "'");
+                resp.sendRedirect(req.getPathInfo());
                 return;
             }
 
@@ -197,7 +208,6 @@ public class SagexServlet extends HttpServlet {
         response.addHeader("Access-Control-Request-Method", methods);
         response.addHeader("Access-Control-Allow-Headers", headers);
         response.addHeader("Access-Control-Allow-Credentials", "true");
-
 
     }
 }
