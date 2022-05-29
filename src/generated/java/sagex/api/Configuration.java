@@ -2,7 +2,7 @@ package sagex.api;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 12/6/21 7:46 AM
+ * Generated Date/Time: 5/27/22 7:59 AM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/Configuration.html'>Configuration</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -108,7 +108,7 @@ public static java.io.File[] GetVideoLibraryImportPaths (UIContext _uicontext) {
 }
 
 /**
-Deprecated. 
+Deprecated.
 
 Returns true if the legacy major/minor channel tuning is enabled. Do not use anymore
 
@@ -123,7 +123,7 @@ public static boolean IsMajorMinorDTVChannelTuningEnabled () {
 
 /**
  * UI Context Aware Call<br>
-Deprecated. 
+Deprecated.
 
 Returns true if the legacy major/minor channel tuning is enabled. Do not use anymore
 
@@ -183,7 +183,7 @@ public static void SetAutodialForInternet (UIContext _uicontext,boolean Autodial
 }
 
 /**
-Deprecated. 
+Deprecated.
 
 Returns true if the Provideo 256 Pentium 4 fix is enabled
 
@@ -198,7 +198,7 @@ public static boolean IsProvideoPentium4FixEnabled () {
 
 /**
  * UI Context Aware Call<br>
-Deprecated. 
+Deprecated.
 
 Returns true if the Provideo 256 Pentium 4 fix is enabled
 
@@ -212,7 +212,7 @@ public static boolean IsProvideoPentium4FixEnabled (UIContext _uicontext) {
 }
 
 /**
-Deprecated. 
+Deprecated.
 
 Sets whether or not the Provideo 256 Pentium 4 fix should be enabled
 
@@ -225,7 +225,7 @@ public static void SetProvideoPentium4FixEnabled (boolean Enabled) {
 
 /**
  * UI Context Aware Call<br>
-Deprecated. 
+Deprecated.
 
 Sets whether or not the Provideo 256 Pentium 4 fix should be enabled
 
@@ -1515,7 +1515,7 @@ public static void SetIntelligentRecordingDisabled (UIContext _uicontext,boolean
 }
 
 /**
-Deprecated. 
+Deprecated.
 
 Sets whether or not SageTV should use legacy major-minor DTV channels. Not recommend for use anymore.
 
@@ -1528,7 +1528,7 @@ public static void SetMajorMinorDTVChannelTuningEnabled (boolean Enabled) {
 
 /**
  * UI Context Aware Call<br>
-Deprecated. 
+Deprecated.
 
 Sets whether or not SageTV should use legacy major-minor DTV channels. Not recommend for use anymore.
 
@@ -4334,7 +4334,7 @@ public static void SetAdvancedDeinterlacingEnabled (UIContext _uicontext,boolean
 }
 
 /**
-Deprecated. 
+Deprecated.
 
 Sets the DirectShow audio  video decoders on windows to acceptable values
  */
@@ -4344,7 +4344,7 @@ public static void RunFilterAutoconfiguration () {
 
 /**
  * UI Context Aware Call<br>
-Deprecated. 
+Deprecated.
 
 Sets the DirectShow audio  video decoders on windows to acceptable values
  */

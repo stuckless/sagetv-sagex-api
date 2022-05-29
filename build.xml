@@ -21,7 +21,7 @@
 	<property name="dist.dir" location="${target}/dist" />
 
 	<property name="name" value="sagex-api" />
-	<property name="version" value="9.0.0.0" />
+	<property name="version" value="9.2.8.1" />
 	<property name="jarname" value="${name}.jar" />
 
 	<!-- should be no more api updates -->
@@ -85,7 +85,7 @@
 		<copy todir="target/classes">
 			<fileset dir="${src.dir}" excludes="**/*.java" />
 		</copy>
-		<javac debug="true" classpathref="AppClasspath" source="1.5" target="1.5" srcdir="${src.dir}" destdir="target/classes">
+		<javac debug="true" classpathref="AppClasspath" source="1.8" target="1.8" srcdir="${src.dir}" destdir="target/classes">
 		</javac>
 	</target>
 

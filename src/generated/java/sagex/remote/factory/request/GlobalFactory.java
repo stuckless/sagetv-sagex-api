@@ -2,7 +2,7 @@ package sagex.remote.factory.request;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 12/6/21 7:46 AM
+ * Generated Date/Time: 5/27/22 7:59 AM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/GlobalFactory.html'>GlobalFactory</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -72,6 +72,12 @@ public class GlobalFactory {
    }
    if (command.equals("IsChannelDownloadComplete")) {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"IsChannelDownloadComplete",parameters,java.lang.String.class);
+   }
+   if (command.equals("GetEPGProperty")) {
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetEPGProperty",parameters,java.lang.String.class,java.lang.String.class,java.lang.String.class);
+   }
+   if (command.equals("SetEPGProperty")) {
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"SetEPGProperty",parameters,java.lang.String.class,java.lang.String.class,java.lang.String.class);
    }
    if (command.equals("GetLocalMarketsFromEPGServer")) {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetLocalMarketsFromEPGServer",parameters,(Class[])null);
@@ -278,6 +284,9 @@ public class GlobalFactory {
    }
    if (command.equals("IsDesktopUI")) {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"IsDesktopUI",parameters,(Class[])null);
+   }
+   if (command.equals("IsTouchUI")) {
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"IsTouchUI",parameters,(Class[])null);
    }
    if (command.equals("IsServerUI")) {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"IsServerUI",parameters,(Class[])null);
@@ -505,6 +514,9 @@ public class GlobalFactory {
    }
    if (command.equals("GetEPGUpdateState")) {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetEPGUpdateState",parameters,(Class[])null);
+   }
+   if (command.equals("IsSDEPGServiceAvailable")) {
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"IsSDEPGServiceAvailable",parameters,(Class[])null);
    }
    throw new RuntimeException("Invalid GlobalFactory Command: "+command);
    }

@@ -2,7 +2,7 @@ package sagex.remote.factory.request;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 12/6/21 7:47 AM
+ * Generated Date/Time: 5/27/22 7:59 AM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/SageRPCRequestFactory.html'>SageRPCRequestFactory</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -546,6 +546,8 @@ static {
    commands.put("GetTimeUntilNextEPGDownload","Global");
    commands.put("GetAllLineups","Global");
    commands.put("IsChannelDownloadComplete","Global");
+   commands.put("GetEPGProperty","Global");
+   commands.put("SetEPGProperty","Global");
    commands.put("GetLocalMarketsFromEPGServer","Global");
    commands.put("GetLineupsForZipCodeFromEPGServer","Global");
    commands.put("GetCurrentlyRecordingMediaFiles","Global");
@@ -608,6 +610,7 @@ static {
    commands.put("IsClient","Global");
    commands.put("IsRemoteUI","Global");
    commands.put("IsDesktopUI","Global");
+   commands.put("IsTouchUI","Global");
    commands.put("IsServerUI","Global");
    commands.put("GetConnectedClients","Global");
    commands.put("GetUIContextNames","Global");
@@ -677,6 +680,7 @@ static {
    commands.put("IsClientDisconnected","Global");
    commands.put("GetClientServerConnectionProgress","Global");
    commands.put("GetEPGUpdateState","Global");
+   commands.put("IsSDEPGServiceAvailable","Global");
    commands.put("GetMediaFiles","MediaFileAPI");
    commands.put("GetMediaFiles","MediaFileAPI");
    commands.put("AddMediaFile","MediaFileAPI");
@@ -858,6 +862,15 @@ static {
    commands.put("GetRecentChannels","MediaPlayerAPI");
    commands.put("ClearRecentChannels","MediaPlayerAPI");
    commands.put("GetVideoSnapshot","MediaPlayerAPI");
+   commands.put("HasPersonImage","PersonAPI");
+   commands.put("GetPersonImage","PersonAPI");
+   commands.put("GetPersonImageURL","PersonAPI");
+   commands.put("GetPersonDateOfBirth","PersonAPI");
+   commands.put("GetPersonDateOfDeath","PersonAPI");
+   commands.put("GetPersonBirthplace","PersonAPI");
+   commands.put("GetPersonID","PersonAPI");
+   commands.put("GetPersonForID","PersonAPI");
+   commands.put("IsPersonObject","PersonAPI");
    commands.put("AddToPlaylist","PlaylistAPI");
    commands.put("GetName","PlaylistAPI");
    commands.put("GetNumberOfPlaylistItems","PlaylistAPI");
@@ -1034,15 +1047,9 @@ static {
    commands.put("GetMovieImageCount","ShowAPI");
    commands.put("GetMovieImageAtIndex","ShowAPI");
    commands.put("GetMovieImageURLAtIndex","ShowAPI");
-   commands.put("HasPersonImage","ShowAPI");
-   commands.put("GetPersonImage","ShowAPI");
-   commands.put("GetPersonImageURL","ShowAPI");
-   commands.put("GetPersonDateOfBirth","ShowAPI");
-   commands.put("GetPersonDateOfDeath","ShowAPI");
-   commands.put("GetPersonBirthplace","ShowAPI");
-   commands.put("GetPersonID","ShowAPI");
-   commands.put("GetPersonForID","ShowAPI");
    commands.put("GetMovieStarRating","ShowAPI");
+   commands.put("IsSDEPGInProgressSport","ShowAPI");
+   commands.put("GetSDEPGInProgressSportStatus","ShowAPI");
    commands.put("GetSystemAlertLevel","SystemMessageAPI");
    commands.put("GetSystemMessages","SystemMessageAPI");
    commands.put("ResetSystemAlertLevel","SystemMessageAPI");
@@ -1210,10 +1217,13 @@ static {
    commands.put("GetUIRefreshLock","Utility");
    commands.put("ReleaseUIRefreshLock","Utility");
    commands.put("CalculateMD5Sum","Utility");
+   commands.put("CalculateSHA1Hash","Utility");
    commands.put("ReloadNameserverCache","Utility");
    commands.put("GetTimeSinceLastInput","Utility");
    commands.put("GetFileAsString","Utility");
    commands.put("GetLocalFileAsString","Utility");
+   commands.put("WriteStringToFile","Utility");
+   commands.put("WriteStringToLocalFile","Utility");
    commands.put("IsLocalRestartNeeded","Utility");
    commands.put("IsServerRestartNeeded","Utility");
    commands.put("Restart","Utility");
@@ -1305,6 +1315,9 @@ static {
       }
       if ("MediaPlayerAPI".equals(api)) {
          return MediaPlayerAPIFactory.createRequest(context, command, parameters);
+      }
+      if ("PersonAPI".equals(api)) {
+         return PersonAPIFactory.createRequest(context, command, parameters);
       }
       if ("PlaylistAPI".equals(api)) {
          return PlaylistAPIFactory.createRequest(context, command, parameters);

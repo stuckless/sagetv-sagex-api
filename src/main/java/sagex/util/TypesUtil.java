@@ -198,6 +198,8 @@ public class TypesUtil {
             return FavoriteAPI.GetFavoriteForID(Integer.parseInt(id));
         } else if ("mediafile".equals(type)) {
             return MediaFileAPI.GetMediaFileForID(Integer.parseInt(id));
+        } else if ("person".equals(type)) {
+            return PersonAPI.GetPersonForID(Integer.parseInt(id));
         } else if ("playlist".equals(type)) {
             return getFirst(Database.FilterByMethod(PlaylistAPI.GetPlaylists(), "GetName", id, true));
         } else if ("plugin".equals(type)) {
@@ -247,6 +249,9 @@ public class TypesUtil {
         } else if (MediaFileAPI.IsMediaFileObject(in)) {
             type="mediafile";
             id=String.valueOf(MediaFileAPI.GetMediaFileID(in));
+        } else if (PersonAPI.IsPersonObject(in)) {
+            type="person";
+            id=String.valueOf(PersonAPI.GetPersonID(in));
         } else if (PlaylistAPI.IsPlaylistObject(in)) {
             type="playlist";
             id=String.valueOf(PlaylistAPI.GetName(in));

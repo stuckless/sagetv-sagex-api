@@ -2,7 +2,7 @@ package sagex.remote.factory.request;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 12/6/21 7:47 AM
+ * Generated Date/Time: 5/27/22 7:59 AM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/UtilityFactory.html'>UtilityFactory</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -368,6 +368,9 @@ public class UtilityFactory {
    if (command.equals("CalculateMD5Sum")) {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"CalculateMD5Sum",parameters,java.io.File.class);
    }
+   if (command.equals("CalculateSHA1Hash")) {
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"CalculateSHA1Hash",parameters,java.lang.String.class);
+   }
    if (command.equals("ReloadNameserverCache")) {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"ReloadNameserverCache",parameters,(Class[])null);
    }
@@ -379,6 +382,12 @@ public class UtilityFactory {
    }
    if (command.equals("GetLocalFileAsString")) {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetLocalFileAsString",parameters,java.io.File.class);
+   }
+   if (command.equals("WriteStringToFile")) {
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"WriteStringToFile",parameters,java.io.File.class,java.lang.String.class);
+   }
+   if (command.equals("WriteStringToLocalFile")) {
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"WriteStringToLocalFile",parameters,java.io.File.class,java.lang.String.class);
    }
    if (command.equals("IsLocalRestartNeeded")) {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"IsLocalRestartNeeded",parameters,(Class[])null);

@@ -2,7 +2,7 @@ package sagex.api;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 12/6/21 7:47 AM
+ * Generated Date/Time: 5/27/22 7:59 AM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/Utility.html'>Utility</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -192,9 +192,9 @@ public static java.lang.String NumberFormat (UIContext _uicontext,java.lang.Stri
 Returns a formatted duration String for a period of time in milliseconds. The formatting string
  uses the % character for escapement (%% is not supported, you cannot display the % symbol in a duration string).
  The 'd', 'h', 'm' and 's' characters can be used to indicate days, hours, minutes and seconds respectively.
- Any format character may be prefixed by the 'r' character to indicate it is a required field.For example, the format string %rh:%m for 20 minutes would return 0:20 and for the string $h:%m it would return 20
+ Any format character may be prefixed by the 'r' character to indicate it is a required field.
+For example, the format string %rh:%m for 20 minutes would return 0:20 and for the string $h:%m it would return 20
  If there's characters before a field value then that value will be zero padded, i.e. 65 minutes for %h:%m would be 1:05
-
 
 Parameters:
 Format- the duration format string, or null to use SageTV's default duration formatting
@@ -213,9 +213,9 @@ public static java.lang.String DurFormat (java.lang.String Format, long Duration
 Returns a formatted duration String for a period of time in milliseconds. The formatting string
  uses the % character for escapement (%% is not supported, you cannot display the % symbol in a duration string).
  The 'd', 'h', 'm' and 's' characters can be used to indicate days, hours, minutes and seconds respectively.
- Any format character may be prefixed by the 'r' character to indicate it is a required field.For example, the format string %rh:%m for 20 minutes would return 0:20 and for the string $h:%m it would return 20
+ Any format character may be prefixed by the 'r' character to indicate it is a required field.
+For example, the format string %rh:%m for 20 minutes would return 0:20 and for the string $h:%m it would return 20
  If there's characters before a field value then that value will be zero padded, i.e. 65 minutes for %h:%m would be 1:05
-
 
 Parameters:
 Format- the duration format string, or null to use SageTV's default duration formatting
@@ -1610,10 +1610,10 @@ public static Object LoadImageFile (UIContext _uicontext,java.io.File FilePath) 
 }
 
 /**
-Returns a MetaImage object that refers to a specified image resource. This can be used to load images from URLs, JAR resources or the file system.It also has a secondary purpose where you can pass it a MetaImage and then it will load that image into
+Returns a MetaImage object that refers to a specified image resource. This can be used to load images from URLs, JAR resources or the file system.
+It also has a secondary purpose where you can pass it a MetaImage and then it will load that image into
  the current image cache so it will render as fast as possible in the next drawing cycle. Good for preloading
  the next image in a slideshow. If a MetaImage is passed in; this call will not return until that image is loaded into the cache.
-
 
 Parameters:
 Resource- if this is a MetaImage then the image is loaded into the cache, otherwise its converted to a string and then a MetaImage is returned for that resource
@@ -1628,10 +1628,10 @@ public static Object LoadImage (java.lang.Object Resource) {
 
 /**
  * UI Context Aware Call<br>
-Returns a MetaImage object that refers to a specified image resource. This can be used to load images from URLs, JAR resources or the file system.It also has a secondary purpose where you can pass it a MetaImage and then it will load that image into
+Returns a MetaImage object that refers to a specified image resource. This can be used to load images from URLs, JAR resources or the file system.
+It also has a secondary purpose where you can pass it a MetaImage and then it will load that image into
  the current image cache so it will render as fast as possible in the next drawing cycle. Good for preloading
  the next image in a slideshow. If a MetaImage is passed in; this call will not return until that image is loaded into the cache.
-
 
 Parameters:
 Resource- if this is a MetaImage then the image is loaded into the cache, otherwise its converted to a string and then a MetaImage is returned for that resource
@@ -3299,7 +3299,8 @@ Starts an animation for the specified Widget in the specified Layer. If the Widg
  also have the specified Layer as it's animation layer (i.e. if the Layer is Foreground, then the corresponding Widget
  should have an Animation property of LayerForeground). The type of animation is controlled by AnimtionName. There's
  also suffixes that can be appened to the AnimationName that effect how the timescale for the animation progresses.
- There's also other suffixes that can be used to specify other options for the animations.Valid strings for the AnimationName are:
+ There's also other suffixes that can be used to specify other options for the animations.
+Valid strings for the AnimationName are:
 FullSlideDownOut - slides down off the bottom of the screen
 FullSlideDownIn - slides down in from the top of the screen
 FullSlideUpOut - slides up off the top of the screen
@@ -3348,8 +3349,8 @@ Unclipped - for Slide animations will cause the same motion to occur but without
 Unease - for In or Out animations it will reverse the 'easing' direction so you can slide in  out the same panel w/ out overlap
 
 You may combine the directional suffixes to get an additional four directions (i.e. ZoomOutNorthEast). And this
- can also be combined with the timeline suffixes as well, or even Fade (i.e. ZoomInQuadraticSouthWestFade)For delaying the start of an animation; see hereAnimateDelayed()
-
+ can also be combined with the timeline suffixes as well, or even Fade (i.e. ZoomInQuadraticSouthWestFade)
+For delaying the start of an animation; see hereAnimateDelayed()
 
 
 Parameters:
@@ -3375,7 +3376,8 @@ Starts an animation for the specified Widget in the specified Layer. If the Widg
  also have the specified Layer as it's animation layer (i.e. if the Layer is Foreground, then the corresponding Widget
  should have an Animation property of LayerForeground). The type of animation is controlled by AnimtionName. There's
  also suffixes that can be appened to the AnimationName that effect how the timescale for the animation progresses.
- There's also other suffixes that can be used to specify other options for the animations.Valid strings for the AnimationName are:
+ There's also other suffixes that can be used to specify other options for the animations.
+Valid strings for the AnimationName are:
 FullSlideDownOut - slides down off the bottom of the screen
 FullSlideDownIn - slides down in from the top of the screen
 FullSlideUpOut - slides up off the top of the screen
@@ -3424,8 +3426,8 @@ Unclipped - for Slide animations will cause the same motion to occur but without
 Unease - for In or Out animations it will reverse the 'easing' direction so you can slide in  out the same panel w/ out overlap
 
 You may combine the directional suffixes to get an additional four directions (i.e. ZoomOutNorthEast). And this
- can also be combined with the timeline suffixes as well, or even Fade (i.e. ZoomInQuadraticSouthWestFade)For delaying the start of an animation; see hereAnimateDelayed()
-
+ can also be combined with the timeline suffixes as well, or even Fade (i.e. ZoomInQuadraticSouthWestFade)
+For delaying the start of an animation; see hereAnimateDelayed()
 
 
 Parameters:
@@ -3498,7 +3500,9 @@ public static boolean AnimateVariable (UIContext _uicontext,java.lang.String Wid
 /**
 Performs an Animation between two different Widgets. Normally animations are performed between two different states for a single Widget.
  This API call allows an animation to occur between two different Widgets and will usually be used with a 'Morph' AnimationName. This
- may only target a single Widget; so the '*' suffix is not used on the WidgetNames in this call.For more details on Animations see here:Animate()
+ may only target a single Widget; so the '*' suffix is not used on the WidgetNames in this call.
+For more details on Animations see here:Animate()
+
 
 
 Parameters:
@@ -3524,7 +3528,9 @@ public static boolean AnimateTransition (java.lang.String SourceWidgetName, java
  * UI Context Aware Call<br>
 Performs an Animation between two different Widgets. Normally animations are performed between two different states for a single Widget.
  This API call allows an animation to occur between two different Widgets and will usually be used with a 'Morph' AnimationName. This
- may only target a single Widget; so the '*' suffix is not used on the WidgetNames in this call.For more details on Animations see here:Animate()
+ may only target a single Widget; so the '*' suffix is not used on the WidgetNames in this call.
+For more details on Animations see here:Animate()
+
 
 
 Parameters:
@@ -3784,6 +3790,39 @@ public static java.lang.String CalculateMD5Sum (UIContext _uicontext,java.io.Fil
 }
 
 /**
+Calculates the SHA1 hash of a String
+
+Parameters:
+EncodeString- the String to be converted into a SHA1 hash
+Returns:
+the SHA1 sum of the provided String or null if the string was null
+Since:
+9.0
+ */
+public static java.lang.String CalculateSHA1Hash (java.lang.String EncodeString) {
+  Object o = sagex.SageAPI.call("CalculateSHA1Hash", new Object[] {EncodeString});
+  if (o!=null) return (java.lang.String) o;
+  return null;
+}
+
+/**
+ * UI Context Aware Call<br>
+Calculates the SHA1 hash of a String
+
+Parameters:
+EncodeString- the String to be converted into a SHA1 hash
+Returns:
+the SHA1 sum of the provided String or null if the string was null
+Since:
+9.0
+ */
+public static java.lang.String CalculateSHA1Hash (UIContext _uicontext,java.lang.String EncodeString) {
+  Object o = sagex.SageAPI.call(_uicontext, "CalculateSHA1Hash", new Object[] {EncodeString});
+  if (o!=null) return (java.lang.String) o;
+  return null;
+}
+
+/**
 Reloads the name server cache. Should be used after reconfiguring the network adapter.
  NOTE: This is only valid on embedded platforms.
  */
@@ -3895,6 +3934,78 @@ public static java.lang.String GetLocalFileAsString (UIContext _uicontext,java.i
   Object o = sagex.SageAPI.call(_uicontext, "GetLocalFileAsString", new Object[] {FilePath});
   if (o!=null) return (java.lang.String) o;
   return null;
+}
+
+/**
+Opens the file at the specified path and writes out the specified String as its contents.
+ This will use the server's filesystem if executed on SageTVClient.
+
+Parameters:
+FilePath- the file path
+Data- the contents to write to the file
+Returns:
+true if successful, false if there was an error writing to the file
+Since:
+9.0
+ */
+public static boolean WriteStringToFile (java.io.File FilePath, java.lang.String Data) {
+  Object o = sagex.SageAPI.call("WriteStringToFile", new Object[] {FilePath,Data});
+  if (o!=null) return (Boolean) o;
+  return false;
+}
+
+/**
+ * UI Context Aware Call<br>
+Opens the file at the specified path and writes out the specified String as its contents.
+ This will use the server's filesystem if executed on SageTVClient.
+
+Parameters:
+FilePath- the file path
+Data- the contents to write to the file
+Returns:
+true if successful, false if there was an error writing to the file
+Since:
+9.0
+ */
+public static boolean WriteStringToFile (UIContext _uicontext,java.io.File FilePath, java.lang.String Data) {
+  Object o = sagex.SageAPI.call(_uicontext, "WriteStringToFile", new Object[] {FilePath,Data});
+  if (o!=null) return (Boolean) o;
+  return false;
+}
+
+/**
+Opens the file at the specified path and writes out the specified String as its contents.
+
+Parameters:
+FilePath- the file path
+Data- the contents to write to the file
+Returns:
+true if successful, false if there was an error writing to the file
+Since:
+9.0
+ */
+public static boolean WriteStringToLocalFile (java.io.File FilePath, java.lang.String Data) {
+  Object o = sagex.SageAPI.call("WriteStringToLocalFile", new Object[] {FilePath,Data});
+  if (o!=null) return (Boolean) o;
+  return false;
+}
+
+/**
+ * UI Context Aware Call<br>
+Opens the file at the specified path and writes out the specified String as its contents.
+
+Parameters:
+FilePath- the file path
+Data- the contents to write to the file
+Returns:
+true if successful, false if there was an error writing to the file
+Since:
+9.0
+ */
+public static boolean WriteStringToLocalFile (UIContext _uicontext,java.io.File FilePath, java.lang.String Data) {
+  Object o = sagex.SageAPI.call(_uicontext, "WriteStringToLocalFile", new Object[] {FilePath,Data});
+  if (o!=null) return (Boolean) o;
+  return false;
 }
 
 /**
@@ -4131,8 +4242,10 @@ public static int ReformatDeviceAtPathAsEXT3 (UIContext _uicontext,java.lang.Str
 /**
 converts a string of NTE key characters (and normal characters) into their
  default character representation - given by the first character in the
- NTE chatacter listThe NTE key characters are the Unicode characters u2460-u2468 and u24EA  (Unicode Circled Digits),
- representing the numeric Text Keys 1-9 and 0.The characters represented by the keys are defined by the client properties"ui/numeric_text_input_ui/translation_language_code_key_lower.
+ NTE chatacter list
+The NTE key characters are the Unicode characters u2460-u2468 and u24EA  (Unicode Circled Digits),
+ representing the numeric Text Keys 1-9 and 0.
+The characters represented by the keys are defined by the client properties"ui/numeric_text_input_ui/translation_language_code_key_lower.
 
 Parameters:
 NteString- the string to convert
@@ -4151,8 +4264,10 @@ public static java.lang.String ConvertNteChars (java.lang.String NteString) {
  * UI Context Aware Call<br>
 converts a string of NTE key characters (and normal characters) into their
  default character representation - given by the first character in the
- NTE chatacter listThe NTE key characters are the Unicode characters u2460-u2468 and u24EA  (Unicode Circled Digits),
- representing the numeric Text Keys 1-9 and 0.The characters represented by the keys are defined by the client properties"ui/numeric_text_input_ui/translation_language_code_key_lower.
+ NTE chatacter list
+The NTE key characters are the Unicode characters u2460-u2468 and u24EA  (Unicode Circled Digits),
+ representing the numeric Text Keys 1-9 and 0.
+The characters represented by the keys are defined by the client properties"ui/numeric_text_input_ui/translation_language_code_key_lower.
 
 Parameters:
 NteString- the string to convert
@@ -4168,7 +4283,9 @@ public static java.lang.String ConvertNteChars (UIContext _uicontext,java.lang.S
 }
 
 /**
-Returns the index of MatchStringNTE string within FullString, -1 if it is not found.Search is case-insentiveThe MatchStringNTE may contain the Unicode characters u2460-u2468 and u24EA  (Unicode Circled Digits) representing
+Returns the index of MatchStringNTE string within FullString, -1 if it is not found.
+Search is case-insentive
+The MatchStringNTE may contain the Unicode characters u2460-u2468 and u24EA  (Unicode Circled Digits) representing
  numeric Text Keys 1-9 and 0. The characters represented by the keys are defined by the client properties"ui/numeric_text_input_ui/translation_language_code_key_lower.
 
 Parameters:
@@ -4187,7 +4304,9 @@ public static java.lang.String StringIndexOfNTE (java.lang.String FullString, ja
 
 /**
  * UI Context Aware Call<br>
-Returns the index of MatchStringNTE string within FullString, -1 if it is not found.Search is case-insentiveThe MatchStringNTE may contain the Unicode characters u2460-u2468 and u24EA  (Unicode Circled Digits) representing
+Returns the index of MatchStringNTE string within FullString, -1 if it is not found.
+Search is case-insentive
+The MatchStringNTE may contain the Unicode characters u2460-u2468 and u24EA  (Unicode Circled Digits) representing
  numeric Text Keys 1-9 and 0. The characters represented by the keys are defined by the client properties"ui/numeric_text_input_ui/translation_language_code_key_lower.
 
 Parameters:
@@ -4205,7 +4324,9 @@ public static java.lang.String StringIndexOfNTE (UIContext _uicontext,java.lang.
 }
 
 /**
-Returns true if the Full String starts with characters matching MatchStringNTESearch is case-insentiveThe MatchStringNTE may contain the Unicode characters u2460-u2468 and u24EA  (Unicode Circled Digits) representing
+Returns true if the Full String starts with characters matching MatchStringNTE
+Search is case-insentive
+The MatchStringNTE may contain the Unicode characters u2460-u2468 and u24EA  (Unicode Circled Digits) representing
  numeric Text Keys 1-9 and 0. The characters represented by the keys are defined by the client properties"ui/numeric_text_input_ui/translation_language_code_key_lower.
 
 Parameters:
@@ -4224,7 +4345,9 @@ public static java.lang.Boolean StringStartsWithNTE (java.lang.String FullString
 
 /**
  * UI Context Aware Call<br>
-Returns true if the Full String starts with characters matching MatchStringNTESearch is case-insentiveThe MatchStringNTE may contain the Unicode characters u2460-u2468 and u24EA  (Unicode Circled Digits) representing
+Returns true if the Full String starts with characters matching MatchStringNTE
+Search is case-insentive
+The MatchStringNTE may contain the Unicode characters u2460-u2468 and u24EA  (Unicode Circled Digits) representing
  numeric Text Keys 1-9 and 0. The characters represented by the keys are defined by the client properties"ui/numeric_text_input_ui/translation_language_code_key_lower.
 
 Parameters:

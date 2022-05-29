@@ -2,7 +2,7 @@ package sagex.remote.factory.request;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 12/6/21 7:46 AM
+ * Generated Date/Time: 5/27/22 7:59 AM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/ShowAPIFactory.html'>ShowAPIFactory</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -192,32 +192,14 @@ public class ShowAPIFactory {
    if (command.equals("GetMovieImageURLAtIndex")) {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetMovieImageURLAtIndex",parameters,Object.class,int.class,boolean.class);
    }
-   if (command.equals("HasPersonImage")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"HasPersonImage",parameters,Object.class);
-   }
-   if (command.equals("GetPersonImage")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetPersonImage",parameters,Object.class,boolean.class);
-   }
-   if (command.equals("GetPersonImageURL")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetPersonImageURL",parameters,Object.class,boolean.class);
-   }
-   if (command.equals("GetPersonDateOfBirth")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetPersonDateOfBirth",parameters,Object.class);
-   }
-   if (command.equals("GetPersonDateOfDeath")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetPersonDateOfDeath",parameters,Object.class);
-   }
-   if (command.equals("GetPersonBirthplace")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetPersonBirthplace",parameters,Object.class);
-   }
-   if (command.equals("GetPersonID")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetPersonID",parameters,Object.class);
-   }
-   if (command.equals("GetPersonForID")) {
-      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetPersonForID",parameters,int.class);
-   }
    if (command.equals("GetMovieStarRating")) {
       return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetMovieStarRating",parameters,Object.class);
+   }
+   if (command.equals("IsSDEPGInProgressSport")) {
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"IsSDEPGInProgressSport",parameters,java.lang.String[].class);
+   }
+   if (command.equals("GetSDEPGInProgressSportStatus")) {
+      return sagex.remote.xmlrpc.RequestHelper.createRequest(context,"GetSDEPGInProgressSportStatus",parameters,java.lang.String[].class);
    }
    throw new RuntimeException("Invalid ShowAPIFactory Command: "+command);
    }

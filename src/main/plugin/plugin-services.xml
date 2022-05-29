@@ -13,7 +13,7 @@
 
   <Dependency>
     <Core/>
-    <MinVersion>9.1.7</MinVersion>
+    <MinVersion>9.2.0</MinVersion>
   </Dependency>
 
   <Dependency>
@@ -43,6 +43,10 @@
   <ImplementationClass>sagex.plugin.impl.SagexRemoteAPIPlugin</ImplementationClass>
 
   <ReleaseNotes>
+9.2.8
+    * Added support for api's added since 9.0 (mostly related to Person and SD EPG)
+    * Updated generate api to support the new javadocs format that removed frame support
+      * note: all api's have been regenerated as of this version
 9.2.6
     * Build for Github sources and Jetty 9
 9.1.7

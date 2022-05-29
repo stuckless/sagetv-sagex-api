@@ -1,4 +1,6 @@
 
+9.2.8.0
+* Updated to support new javadoc format that removed frame support
 7.0.11.0
 * Added Validation Support (IPropertyValidator)
 * Fixed bug in the AbstractPlugin where null configuration values could never be set to a value.

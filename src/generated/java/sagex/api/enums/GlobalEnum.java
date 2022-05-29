@@ -2,7 +2,7 @@ package sagex.api.enums;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 12/6/21 7:46 AM
+ * Generated Date/Time: 5/27/22 7:59 AM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/GlobalEnum.html'>GlobalEnum</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -28,6 +28,8 @@ GetLogo,
 GetTimeUntilNextEPGDownload,
 GetAllLineups,
 IsChannelDownloadComplete,
+GetEPGProperty,
+SetEPGProperty,
 GetLocalMarketsFromEPGServer,
 GetLineupsForZipCodeFromEPGServer,
 GetCurrentlyRecordingMediaFiles,
@@ -88,6 +90,7 @@ GetAiringsThatWontBeRecorded,
 IsClient,
 IsRemoteUI,
 IsDesktopUI,
+IsTouchUI,
 IsServerUI,
 GetConnectedClients,
 GetUIContextNames,
@@ -154,5 +157,6 @@ GetEmbeddedPanel,
 SetEmbeddedPanelBounds,
 IsClientDisconnected,
 GetClientServerConnectionProgress,
-GetEPGUpdateState
+GetEPGUpdateState,
+IsSDEPGServiceAvailable
 }

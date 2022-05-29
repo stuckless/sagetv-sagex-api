@@ -2,7 +2,7 @@ package sagex.api;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 12/6/21 7:46 AM
+ * Generated Date/Time: 5/27/22 7:59 AM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/Global.html'>Global</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -521,13 +521,89 @@ public static boolean IsChannelDownloadComplete (UIContext _uicontext,java.lang.
 }
 
 /**
+Gets a property from a specific EPG data source with an optional parameter
+
+Parameters:
+EPGDataSource- the name of the EPG data source
+Property- the property name to get
+Parameter- optional parameter
+Returns:
+the value of the requested property
+Since:
+9.0
+ */
+public static java.lang.Object GetEPGProperty (java.lang.String EPGDataSource, java.lang.String Property, java.lang.String Parameter) {
+  Object o = sagex.SageAPI.call("GetEPGProperty", new Object[] {EPGDataSource,Property,Parameter});
+  if (o!=null) return (java.lang.Object) o;
+  return null;
+}
+
+/**
+ * UI Context Aware Call<br>
+Gets a property from a specific EPG data source with an optional parameter
+
+Parameters:
+EPGDataSource- the name of the EPG data source
+Property- the property name to get
+Parameter- optional parameter
+Returns:
+the value of the requested property
+Since:
+9.0
+ */
+public static java.lang.Object GetEPGProperty (UIContext _uicontext,java.lang.String EPGDataSource, java.lang.String Property, java.lang.String Parameter) {
+  Object o = sagex.SageAPI.call(_uicontext, "GetEPGProperty", new Object[] {EPGDataSource,Property,Parameter});
+  if (o!=null) return (java.lang.Object) o;
+  return null;
+}
+
+/**
+Sets a property for a specific EPG data source to the provided value
+
+Parameters:
+EPGDataSource- the name of the EPG data source
+Property- the property name to set
+Value- the value to set
+Returns:
+result of setting the property
+Since:
+9.0
+ */
+public static java.lang.Object SetEPGProperty (java.lang.String EPGDataSource, java.lang.String Property, java.lang.String Value) {
+  Object o = sagex.SageAPI.call("SetEPGProperty", new Object[] {EPGDataSource,Property,Value});
+  if (o!=null) return (java.lang.Object) o;
+  return null;
+}
+
+/**
+ * UI Context Aware Call<br>
+Sets a property for a specific EPG data source to the provided value
+
+Parameters:
+EPGDataSource- the name of the EPG data source
+Property- the property name to set
+Value- the value to set
+Returns:
+result of setting the property
+Since:
+9.0
+ */
+public static java.lang.Object SetEPGProperty (UIContext _uicontext,java.lang.String EPGDataSource, java.lang.String Property, java.lang.String Value) {
+  Object o = sagex.SageAPI.call(_uicontext, "SetEPGProperty", new Object[] {EPGDataSource,Property,Value});
+  if (o!=null) return (java.lang.Object) o;
+  return null;
+}
+
+/**
 Gets a list of all the possible United States local broadcast markets from the EPG server
 
 Returns:
-a list of all the possible United States local broadcast markets from the EPG server
+a String[] of all the possible United States local broadcast markets from the EPG server or a String error message of "NO_KEY", "INVALID_KEY", or "CONNECTION_FAILURE"
  */
-public static java.lang.String[] GetLocalMarketsFromEPGServer () {
-  return (java.lang.String[]) sagex.SageAPI.call("GetLocalMarketsFromEPGServer", (Object[])null);
+public static java.lang.Object GetLocalMarketsFromEPGServer () {
+  Object o = sagex.SageAPI.call("GetLocalMarketsFromEPGServer", (Object[])null);
+  if (o!=null) return (java.lang.Object) o;
+  return null;
 }
 
 /**
@@ -535,10 +611,12 @@ public static java.lang.String[] GetLocalMarketsFromEPGServer () {
 Gets a list of all the possible United States local broadcast markets from the EPG server
 
 Returns:
-a list of all the possible United States local broadcast markets from the EPG server
+a String[] of all the possible United States local broadcast markets from the EPG server or a String error message of "NO_KEY", "INVALID_KEY", or "CONNECTION_FAILURE"
  */
-public static java.lang.String[] GetLocalMarketsFromEPGServer (UIContext _uicontext) {
-  return (java.lang.String[]) sagex.SageAPI.call(_uicontext, "GetLocalMarketsFromEPGServer", (Object[])null);
+public static java.lang.Object GetLocalMarketsFromEPGServer (UIContext _uicontext) {
+  Object o = sagex.SageAPI.call(_uicontext, "GetLocalMarketsFromEPGServer", (Object[])null);
+  if (o!=null) return (java.lang.Object) o;
+  return null;
 }
 
 /**
@@ -547,10 +625,12 @@ Gets a list from the EPG server of all the possible EPG Lineups that are availab
 Parameters:
 ZipCode- the zip code to search for EPG lineups in
 Returns:
-a list from the EPG server of all the possible EPG lineups in the specified zip code
+a String[] from the EPG server of all the possible EPG lineups in the specified zip code or a String error message of "NO_KEY", "INVALID_KEY", or "CONNECTION_FAILURE"
  */
-public static java.lang.String[] GetLineupsForZipCodeFromEPGServer (java.lang.String ZipCode) {
-  return (java.lang.String[]) sagex.SageAPI.call("GetLineupsForZipCodeFromEPGServer", new Object[] {ZipCode});
+public static java.lang.Object GetLineupsForZipCodeFromEPGServer (java.lang.String ZipCode) {
+  Object o = sagex.SageAPI.call("GetLineupsForZipCodeFromEPGServer", new Object[] {ZipCode});
+  if (o!=null) return (java.lang.Object) o;
+  return null;
 }
 
 /**
@@ -560,10 +640,12 @@ Gets a list from the EPG server of all the possible EPG Lineups that are availab
 Parameters:
 ZipCode- the zip code to search for EPG lineups in
 Returns:
-a list from the EPG server of all the possible EPG lineups in the specified zip code
+a String[] from the EPG server of all the possible EPG lineups in the specified zip code or a String error message of "NO_KEY", "INVALID_KEY", or "CONNECTION_FAILURE"
  */
-public static java.lang.String[] GetLineupsForZipCodeFromEPGServer (UIContext _uicontext,java.lang.String ZipCode) {
-  return (java.lang.String[]) sagex.SageAPI.call(_uicontext, "GetLineupsForZipCodeFromEPGServer", new Object[] {ZipCode});
+public static java.lang.Object GetLineupsForZipCodeFromEPGServer (UIContext _uicontext,java.lang.String ZipCode) {
+  Object o = sagex.SageAPI.call(_uicontext, "GetLineupsForZipCodeFromEPGServer", new Object[] {ZipCode});
+  if (o!=null) return (java.lang.Object) o;
+  return null;
 }
 
 /**
@@ -2496,6 +2578,35 @@ Since:
  */
 public static boolean IsDesktopUI (UIContext _uicontext) {
   Object o = sagex.SageAPI.call(_uicontext, "IsDesktopUI", (Object[])null);
+  if (o!=null) return (Boolean) o;
+  return false;
+}
+
+/**
+Returns true if this UI is being run in a touch environment, such as a phone or tablet.
+
+Returns:
+true if this UI is being run in a touch environment, false otherwise
+Since:
+9.0.4
+ */
+public static boolean IsTouchUI () {
+  Object o = sagex.SageAPI.call("IsTouchUI", (Object[])null);
+  if (o!=null) return (Boolean) o;
+  return false;
+}
+
+/**
+ * UI Context Aware Call<br>
+Returns true if this UI is being run in a touch environment, such as a phone or tablet.
+
+Returns:
+true if this UI is being run in a touch environment, false otherwise
+Since:
+9.0.4
+ */
+public static boolean IsTouchUI (UIContext _uicontext) {
+  Object o = sagex.SageAPI.call(_uicontext, "IsTouchUI", (Object[])null);
   if (o!=null) return (Boolean) o;
   return false;
 }
@@ -4575,6 +4686,41 @@ public static java.lang.String GetEPGUpdateState (UIContext _uicontext) {
   Object o = sagex.SageAPI.call(_uicontext, "GetEPGUpdateState", (Object[])null);
   if (o!=null) return (java.lang.String) o;
   return null;
+}
+
+/**
+Returns true if the Schedules Direct EPG service is available.
+ This is determined by trying to communicate with Schedules Direct if an unexpired token is
+ present. If no token currently exists or it is expired, a new token will be acquired. If
+ the token is unable to be obtained for any reason, the service is considered unavailable.
+
+Returns:
+true if the Schedules Direct EPG service is configured and able to authenticate, false otherwise
+Since:
+9.0
+ */
+public static boolean IsSDEPGServiceAvailable () {
+  Object o = sagex.SageAPI.call("IsSDEPGServiceAvailable", (Object[])null);
+  if (o!=null) return (Boolean) o;
+  return false;
+}
+
+/**
+ * UI Context Aware Call<br>
+Returns true if the Schedules Direct EPG service is available.
+ This is determined by trying to communicate with Schedules Direct if an unexpired token is
+ present. If no token currently exists or it is expired, a new token will be acquired. If
+ the token is unable to be obtained for any reason, the service is considered unavailable.
+
+Returns:
+true if the Schedules Direct EPG service is configured and able to authenticate, false otherwise
+Since:
+9.0
+ */
+public static boolean IsSDEPGServiceAvailable (UIContext _uicontext) {
+  Object o = sagex.SageAPI.call(_uicontext, "IsSDEPGServiceAvailable", (Object[])null);
+  if (o!=null) return (Boolean) o;
+  return false;
 }
 
 }

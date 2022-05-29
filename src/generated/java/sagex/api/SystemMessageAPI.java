@@ -2,7 +2,7 @@ package sagex.api;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 12/6/21 7:46 AM
+ * Generated Date/Time: 5/27/22 7:59 AM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/SystemMessageAPI.html'>SystemMessageAPI</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -405,7 +405,12 @@ public static java.lang.String GetSystemMessageVariable (UIContext _uicontext,Ob
 
 /**
 Creates a new SystemMessage and posts it to the message queue.
- Predefined message codes of interest for posting messages are:SOFTWARE_UPDATE_MSG = 1202STORAGE_MONITOR_MSG = 1203GENERAL_MSG = 1204You may also use other user-defined message codes which should be greater than 9999. To give those messages a 'type name' which
+ Predefined message codes of interest for posting messages are:
+SOFTWARE_UPDATE_MSG = 1202
+STORAGE_MONITOR_MSG = 1203
+GENERAL_MSG = 1204
+
+You may also use other user-defined message codes which should be greater than 9999. To give those messages a 'type name' which
  will be visible by the user; you can defined a message variable with the name 'typename' and then that will be displayed.
 
 Parameters:
@@ -423,7 +428,12 @@ public static void PostSystemMessage (int MessageCode, int MessageLevel, java.la
 /**
  * UI Context Aware Call<br>
 Creates a new SystemMessage and posts it to the message queue.
- Predefined message codes of interest for posting messages are:SOFTWARE_UPDATE_MSG = 1202STORAGE_MONITOR_MSG = 1203GENERAL_MSG = 1204You may also use other user-defined message codes which should be greater than 9999. To give those messages a 'type name' which
+ Predefined message codes of interest for posting messages are:
+SOFTWARE_UPDATE_MSG = 1202
+STORAGE_MONITOR_MSG = 1203
+GENERAL_MSG = 1204
+
+You may also use other user-defined message codes which should be greater than 9999. To give those messages a 'type name' which
  will be visible by the user; you can defined a message variable with the name 'typename' and then that will be displayed.
 
 Parameters:
