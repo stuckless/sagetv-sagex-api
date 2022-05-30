@@ -10,6 +10,7 @@ import java.io.RandomAccessFile;
 import java.util.Arrays;
 
 import javax.servlet.ServletOutputStream;
+import javax.servlet.WriteListener;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -33,6 +34,16 @@ public class TestMediaFileRequestHandler {
 		
 		public void reset() {
 			baos = new ByteArrayOutputStream();
+		}
+
+		@Override
+		public boolean isReady() {
+			return false;
+		}
+
+		@Override
+		public void setWriteListener(WriteListener writeListener) {
+
 		}
 	}
 	

@@ -1,0 +1,31 @@
+<?xml version="1.0"  encoding="ISO-8859-1"?>
+<!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "http://www.eclipse.org/jetty/configure_9_0.dtd">
+<Configure id="sagexcontext" class="org.eclipse.jetty.webapp.WebAppContext">
+	<Set name="contextPath">/sagex</Set>
+	<Call name="setAttribute">
+		<Arg>pluginid</Arg>
+		<Arg>sagex-api-services</Arg>
+	</Call>
+	<Call name="setAttribute">
+		<Arg>webpage</Arg>
+		<Arg>/api</Arg>
+	</Call>
+	<Call name="setAttribute">
+		<Arg>version</Arg>
+		<Arg>9.2.6.1</Arg>
+	</Call>
+	<Call name="addServlet">
+		<Arg>sagex.remote.SagexServlet</Arg>
+		<Arg>/*</Arg>
+	</Call>
+	<!-- Initialize the RMI Services on Startup, for Jetty -->
+	<Call class="sagex.remote.SagexServlet" name="initServices">
+		<Arg>jetty</Arg>
+	</Call>
+
+	<Call class="sagex.remote.jetty.JettyInitializer" name="initJetty">
+		<Arg>
+			<Ref id="sagexcontext" />
+		</Arg>
+	</Call>
+</Configure>

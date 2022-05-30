@@ -2,14 +2,11 @@ package sagex.plugin.impl;
 
 import sage.SageTVPlugin;
 import sage.SageTVPluginRegistry;
+import sagex.api.Configuration;
 import sagex.plugin.AbstractPlugin;
 import sagex.plugin.ConfigValueChangeHandler;
 import sagex.remote.jetty.JettyInitializer;
 import sagex.remote.rmi.SageRMIServer;
-
-import java.io.File;
-import java.io.FileInputStream;
-import java.util.Properties;
 
 public class SagexRemoteAPIPlugin extends AbstractPlugin {
     public static SagexRemoteAPIPlugin pluginInstance = null;
@@ -27,9 +24,11 @@ public class SagexRemoteAPIPlugin extends AbstractPlugin {
         addProperty(SageTVPlugin.CONFIG_BOOL, SagexConfiguration.PROP_ENABLE_DISCOVERY, "true", "Enable RMI Discovery", "Enables remote clients to automatically discover SageTV Servers)").setVisibleOnSetting(this, SagexConfiguration.PROP_ENABLE_RMI);
         addProperty(SageTVPlugin.CONFIG_BOOL, SagexConfiguration.PROP_ENABLE_HTTP, "true", "Enable HTTP Restful API", "Enables the HTTP Rest API for SageTV (Note this requires the Jetty Plugin)");
         addProperty(SageTVPlugin.CONFIG_BOOL, SagexConfiguration.PROP_ENABLE_CORS, "true", "Enable CORS", "Allow remote web sites to call SageTV APIs");
-        addProperty(SageTVPlugin.CONFIG_BOOL, SagexConfiguration.PROP_SECURE_HTTP, "true", "Secure HTTP API", "Enforces username/password authentication for /sagex/api handler").setVisibleOnSetting(this, SagexConfiguration.PROP_ENABLE_HTTP);
+        //addProperty(SageTVPlugin.CONFIG_BOOL, SagexConfiguration.PROP_SECURE_HTTP, "true", "Secure HTTP API", "Enforces username/password authentication for /sagex/api handler").setVisibleOnSetting(this, SagexConfiguration.PROP_ENABLE_HTTP);
 
-        String defPort = "8080";
+        //Set the default HTTP port to the one set in the sage properties file by JettyStarter
+        String defPort = Configuration.GetProperty(SagexConfiguration.PROP_JETTY_HTTP_PORT, "8080");
+        /* Removed as JettyStarter no longer uses this properties file and stores settings in sage properties file
         File jfile = new File("JettyStarter.properties");
         if (jfile.exists()) {
             Properties jprops = new Properties();
@@ -42,7 +41,7 @@ public class SagexRemoteAPIPlugin extends AbstractPlugin {
                 log.warn("Wasn't able to load the jetty properties to discover port");
             }
         }
-
+         */
         addProperty(SageTVPlugin.CONFIG_INTEGER, SagexConfiguration.PROP_HTTP_PORT, defPort, "HTTP Port", "This value should be the same as youre Jetty HTTP Port (usually autodetected)").setVisibleOnSetting(this, SagexConfiguration.PROP_ENABLE_HTTP);
         
         // test for multi choice
@@ -52,13 +51,14 @@ public class SagexRemoteAPIPlugin extends AbstractPlugin {
 //        addProperty(SageTVPlugin.CONFIG_MULTICHOICE, "sagex/test/testChoice4", "", "Test Choice 4", "Tests Multiple Choice 4", new String[] {"1","2","3","4","5"}, ",");
     }
 
+    /* Removed as the Jetty security is for ALL jetty apps so sagex cannot disable it
     @ConfigValueChangeHandler(SagexConfiguration.PROP_SECURE_HTTP)
     public void onSecureHTTPChanged(String setting) {
         log.info("HTTP Secure Enabled Flag Changed: " + getConfigBoolValue(setting));
         JettyInitializer.updateAuthentication();
     }
+     */
 
-    
     @ConfigValueChangeHandler(SagexConfiguration.PROP_ENABLE_RMI)
     public void onRMIEnabledChanged(String setting) {
         log.info("RMI Enabled Flag Changed: " + getConfigBoolValue(setting));

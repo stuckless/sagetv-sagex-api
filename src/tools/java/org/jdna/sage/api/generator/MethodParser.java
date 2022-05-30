@@ -8,10 +8,15 @@ import java.util.regex.Pattern;
 import org.jdna.url.URLSaxParser;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
+import sagex.util.ILog;
+import sagex.util.LogProvider;
 
+// KEB - updated 5/27/2022 to match new javadocs format that now does not include frames
 public class MethodParser extends URLSaxParser {
+	private static final ILog log = LogProvider.getLogger(MethodParser.class);
 	public MethodParser(String url) {
 		super(url);
+		log.debug("MethodParser for url:" + url);
 	}
 
 	public static class MethodParam {
@@ -77,6 +82,7 @@ public class MethodParser extends URLSaxParser {
 	private int state = READING;
 	private SageMethod method = null;
 	private String charbuf = null;
+	private String argString = null;
 
 	private List<SageMethod> methods = new ArrayList<SageMethod>();
 
@@ -89,30 +95,29 @@ public class MethodParser extends URLSaxParser {
 			return;
 
 		charbuf = getCharacters(ch, start, length);
+		log.debug("characters: state:" + state + " charbuf:" + charbuf);
 		if (charbuf == null || charbuf.length() == 0)
 			return;
 
 		if (state == READ_PREFIX) {
-			method.returnType = parseReturnType(charbuf);
-			state = READ_NAME;
+			String prefixRemoved = parseReturnType(charbuf).trim();
+			method.returnType = prefixRemoved.split(" ")[0];
+			argString = charbuf.split("[(]")[1];
+			state = LOOK_JAVADOC;
 		} else if (state == READ_NAME) {
 			method.name = charbuf;
 			state = READ_ARGS;
 		} else if (state == READ_ARGS) {
-			charbuf = charbuf.replaceAll("[()]+", "").trim();
+			argString = argString.replaceAll("[()]+", "").trim();
 
-			// Pattern p =
-			// Pattern.compile("([a-zA-Z0-9\\._]+)\\s+([a-zA-Z0-9\\._]+)[\\s,]*");
 			Pattern p = Pattern.compile("([^\\s]+)\\s+([^\\s,$]+)[\\s,]*");
-			Matcher m = p.matcher(charbuf);
+			Matcher m = p.matcher(argString);
 			while (m.find()) {
 				MethodParam mp = new MethodParam();
 				mp.dataType = m.group(1);
 				mp.varName = m.group(2);
 				method.args.add(mp);
 			}
-
-			// state = READ_METHODS;
 
 			methods.add(method);
 			
@@ -131,31 +136,42 @@ public class MethodParser extends URLSaxParser {
 				}
 			}
 			
-			// method = null;
-			state = LOOK_JAVADOC;
+			argString = null;
+			state = READ_METHODS;
 		} else if (state == READ_JAVADOC) {
 			method.comment += charbuf;
 		}
 	}
 
 	private String parseReturnType(String retString) {
-		return retString.replaceAll("public|private|static|final|\\s+", "");
+		return retString.replaceAll("public|private|static|final", "");
 	}
 
 	@Override
 	public void startElement(String uri, String localName, String name, Attributes atts) throws SAXException {
 		if ((state == READ_JAVADOC || state == LOOK_JAVADOC) && isTag("hr", localName)) {
 			state = READ_METHODS;
-		} else if (state == READ_JAVADOC) {
+		} else if (state == READ_JAVADOC  && isTag("h4", localName)) {
+			method.comment += "\n";
+			state = READ_ARGS;
+		} else if (state == READ_JAVADOC  && isTag("footer", localName)) {
+			//end of document found so close out the method by reading args
+			method.comment += "\n";
+			state = READ_ARGS;
+		} else if (state == READ_JAVADOC  && (isTag("br", localName)) || isTag("p", localName)) {
+			//handle tags p and br for comment formatting
+			if(method!=null && method.comment!=null){
+				method.comment += "\n";
+			}
 		} else if (state == LOOK_JAVADOC) {
-			if (isTag("dl", localName)) {
+			if (isTag("div", localName)) {
 				if (method.comment==null) {
 					method.comment = "";
 				}
 				state = READ_JAVADOC;
 			}
 		} else if (isTag("A", localName)) {
-			if ("method_detail".equals(atts.getValue("NAME"))) {
+			if ("method.detail".equals(atts.getValue("ID"))) {
 				state = READ_METHODS;
 			}
 		}
@@ -163,11 +179,16 @@ public class MethodParser extends URLSaxParser {
 
 	@Override
 	public void endElement(String uri, String localName, String name) throws SAXException {
-		if (state == READ_JAVADOC) {
+		if (state == READ_JAVADOC && (isTag("dd", localName) || isTag("dt", localName) || isTag("a", localName) || isTag("li", localName))) {
 			method.comment += "\n";
 		}
-		if (state == READ_METHODS && isTag("h3", localName)) {
+		if (state == READ_JAVADOC && isTag("div", localName)) {
+			method.comment += "\n\n";
+		}
+		if (state == READ_METHODS && isTag("h4", localName)) {
+			//start a new method
 			method = new SageMethod();
+			method.name = charbuf; //have the name so save it
 			state = READ_PREFIX;
 		}
 	}

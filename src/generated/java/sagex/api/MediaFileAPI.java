@@ -2,7 +2,7 @@ package sagex.api;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 03/02/18 8:59 AM
+ * Generated Date/Time: 5/27/22 7:59 AM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/MediaFileAPI.html'>MediaFileAPI</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -1563,7 +1563,7 @@ Returns a string for the corresponding metadata property in the MediaFile's form
  Format.Video.Resolution, Format.Video.Aspect, Format.Video.Bitrate, Format.Video.Width, Format.Video.Height, Format.Video.FPS,
  Format.Video.Interlaced, Format.Video.Progressive, Format.Video.Index, Format.Video.ID, Format.Audio.NumStreams, Format.Audio[.#].Codec, Format.Audio[.#].Channels,
  Format.Audio[.#].Language, Format.Audio[.#].SampleRate, Format.Audio[.#].BitsPerSample, Format.Audio[.#].Index, Format.Audio[.#].ID, Format.Subtitle.NumStreams,
- Format.Subtitle[.#].Codec, Format.Subtitle[.#].Language, Format.Subtitle[.#].Index, Format.Subtitle[.#].ID, Format.Container and Picture.Resolution
+ Format.Subtitle[.#].Codec, Format.Subtitle[.#].Language, Format.Subtitle[.#].Index, Format.Subtitle[.#].ID, Format.Subtitle[.#].Forced, Format.Container and Picture.Resolution
 
 Parameters:
 MediaFile- the MediaFile object
@@ -1591,7 +1591,7 @@ Returns a string for the corresponding metadata property in the MediaFile's form
  Format.Video.Resolution, Format.Video.Aspect, Format.Video.Bitrate, Format.Video.Width, Format.Video.Height, Format.Video.FPS,
  Format.Video.Interlaced, Format.Video.Progressive, Format.Video.Index, Format.Video.ID, Format.Audio.NumStreams, Format.Audio[.#].Codec, Format.Audio[.#].Channels,
  Format.Audio[.#].Language, Format.Audio[.#].SampleRate, Format.Audio[.#].BitsPerSample, Format.Audio[.#].Index, Format.Audio[.#].ID, Format.Subtitle.NumStreams,
- Format.Subtitle[.#].Codec, Format.Subtitle[.#].Language, Format.Subtitle[.#].Index, Format.Subtitle[.#].ID, Format.Container and Picture.Resolution
+ Format.Subtitle[.#].Codec, Format.Subtitle[.#].Language, Format.Subtitle[.#].Index, Format.Subtitle[.#].ID, Format.Subtitle[.#].Forced, Format.Container and Picture.Resolution
 
 Parameters:
 MediaFile- the MediaFile object

@@ -2,7 +2,7 @@ package sagex.api;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 03/02/18 8:59 AM
+ * Generated Date/Time: 5/27/22 7:59 AM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/FavoriteAPI.html'>FavoriteAPI</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -1741,7 +1741,9 @@ public static Object UpdateFavorite (UIContext _uicontext,Object Favorite, java.
 }
 
 /**
-Returns a list of all of the Airings in the database that match this Favorite.
+Returns a list of all of the Airings in the database that match this Favorite.  If this Favorite is disabled,
+ no Airings will be returned.  To get a list of Airings that match a disabled Favorite, call
+ GetPotentialFavoriteAirings instead.
 
 Parameters:
 Favorite- the Favorite object
@@ -1754,7 +1756,9 @@ public static Object[] GetFavoriteAirings (Object Favorite) {
 
 /**
  * UI Context Aware Call<br>
-Returns a list of all of the Airings in the database that match this Favorite.
+Returns a list of all of the Airings in the database that match this Favorite.  If this Favorite is disabled,
+ no Airings will be returned.  To get a list of Airings that match a disabled Favorite, call
+ GetPotentialFavoriteAirings instead.
 
 Parameters:
 Favorite- the Favorite object

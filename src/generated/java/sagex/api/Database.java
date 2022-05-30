@@ -2,7 +2,7 @@ package sagex.api;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 03/02/18 8:59 AM
+ * Generated Date/Time: 5/27/22 7:59 AM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/Database.html'>Database</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -443,7 +443,7 @@ public static Object[] GetAiringsOnViewableChannelsAtTime (UIContext _uicontext,
 }
 
 /**
-Deprecated. 
+Deprecated.
 
 Returns all Airings in the database that refer to content that is NOT a music file and includes the specified person
  in the list of people involved (i.e. actors, directors, producers, etc.)
@@ -459,7 +459,7 @@ public static Object[] GetAllNonMusicWithPerson (java.lang.String Person) {
 
 /**
  * UI Context Aware Call<br>
-Deprecated. 
+Deprecated.
 
 Returns all Airings in the database that refer to content that is NOT a music file and includes the specified person
  in the list of people involved (i.e. actors, directors, producers, etc.)
@@ -474,7 +474,7 @@ public static Object[] GetAllNonMusicWithPerson (UIContext _uicontext,java.lang.
 }
 
 /**
-Deprecated. 
+Deprecated.
 
 Returns all Airings in the database that refer to content that is NOT a music file and has the specified title.
 
@@ -489,7 +489,7 @@ public static Object[] GetAllNonMusicWithTitle (java.lang.String Title) {
 
 /**
  * UI Context Aware Call<br>
-Deprecated. 
+Deprecated.
 
 Returns all Airings in the database that refer to content that is NOT a music file and has the specified title.
 
@@ -877,7 +877,8 @@ public static Object[] SearchForPeopleRegex (UIContext _uicontext,java.util.rege
 /**
 Returns a list of all of the people in the database that match the passed in text, where
  the Unicode characters u2460-u2468 and u24EA  (Unicode Circled Digits) in the text represent the
- numeric Text Keys 1-9 and 0. This is similar to the predictive text entry input of mobile phones.The characters represented by the keys are defined by the client properties"ui/numeric_text_input_ui/translation_language_code_key_lower
+ numeric Text Keys 1-9 and 0. This is similar to the predictive text entry input of mobile phones.
+The characters represented by the keys are defined by the client properties"ui/numeric_text_input_ui/translation_language_code_key_lower
 
 Parameters:
 NTEString- A string containing a mix of normal and NumericTextKey characters (u2460-2468, u24ae)
@@ -894,7 +895,8 @@ public static Object[] SearchForPeopleNTE (java.lang.String NTEString) {
  * UI Context Aware Call<br>
 Returns a list of all of the people in the database that match the passed in text, where
  the Unicode characters u2460-u2468 and u24EA  (Unicode Circled Digits) in the text represent the
- numeric Text Keys 1-9 and 0. This is similar to the predictive text entry input of mobile phones.The characters represented by the keys are defined by the client properties"ui/numeric_text_input_ui/translation_language_code_key_lower
+ numeric Text Keys 1-9 and 0. This is similar to the predictive text entry input of mobile phones.
+The characters represented by the keys are defined by the client properties"ui/numeric_text_input_ui/translation_language_code_key_lower
 
 Parameters:
 NTEString- A string containing a mix of normal and NumericTextKey characters (u2460-2468, u24ae)
@@ -910,7 +912,8 @@ public static Object[] SearchForPeopleNTE (UIContext _uicontext,java.lang.String
 /**
 Returns a list of all of the people in the database that match the passed in text, where
  the Unicode characters u2460-u2468 and u24EA  (Unicode Circled Digits) in the text represent the
- numeric Text Keys 1-9 and 0. This is similar to the predictive text entry input of mobile phones.The characters represented by the keys are defined by the client properties"ui/numeric_text_input_ui/translation_language_code_key_lowerThe content it references must also match one of the media types specified in the MediaMask.
+ numeric Text Keys 1-9 and 0. This is similar to the predictive text entry input of mobile phones.
+The characters represented by the keys are defined by the client properties"ui/numeric_text_input_ui/translation_language_code_key_lowerThe content it references must also match one of the media types specified in the MediaMask.
 
 Parameters:
 NTEString- A string containing a mix of normal and NumericTextKey characters (u2460-2468, u24ae)
@@ -928,7 +931,8 @@ public static Object[] SearchForPeopleNTE (java.lang.String NTEString, java.lang
  * UI Context Aware Call<br>
 Returns a list of all of the people in the database that match the passed in text, where
  the Unicode characters u2460-u2468 and u24EA  (Unicode Circled Digits) in the text represent the
- numeric Text Keys 1-9 and 0. This is similar to the predictive text entry input of mobile phones.The characters represented by the keys are defined by the client properties"ui/numeric_text_input_ui/translation_language_code_key_lowerThe content it references must also match one of the media types specified in the MediaMask.
+ numeric Text Keys 1-9 and 0. This is similar to the predictive text entry input of mobile phones.
+The characters represented by the keys are defined by the client properties"ui/numeric_text_input_ui/translation_language_code_key_lowerThe content it references must also match one of the media types specified in the MediaMask.
 
 Parameters:
 NTEString- A string containing a mix of normal and NumericTextKey characters (u2460-2468, u24ae)
@@ -1007,7 +1011,8 @@ public static java.lang.String[] SearchForTitlesRegex (UIContext _uicontext,java
 /**
 Returns a list of all of the titles in the database that match the passed in text, where
  the Unicode characters u2460-u2468 and u24EA  (Unicode Circled Digits) in the text represent the
- numeric Text Keys 1-9 and 0. This is similar to the predictive text entry input of mobile phones.The characters represented by the keys are defined by the client properties"ui/numeric_text_input_ui/translation_language_code_key_lowerThe content it references must also match one of the media types specified in the MediaMask.
+ numeric Text Keys 1-9 and 0. This is similar to the predictive text entry input of mobile phones.
+The characters represented by the keys are defined by the client properties"ui/numeric_text_input_ui/translation_language_code_key_lowerThe content it references must also match one of the media types specified in the MediaMask.
 
 Parameters:
 NTEString- A string containing a mix of normal and NumericTextKey characters (u2460-2468, u24ae)
@@ -1024,7 +1029,8 @@ public static java.lang.String[] SearchForTitlesNTE (java.lang.String NTEString)
  * UI Context Aware Call<br>
 Returns a list of all of the titles in the database that match the passed in text, where
  the Unicode characters u2460-u2468 and u24EA  (Unicode Circled Digits) in the text represent the
- numeric Text Keys 1-9 and 0. This is similar to the predictive text entry input of mobile phones.The characters represented by the keys are defined by the client properties"ui/numeric_text_input_ui/translation_language_code_key_lowerThe content it references must also match one of the media types specified in the MediaMask.
+ numeric Text Keys 1-9 and 0. This is similar to the predictive text entry input of mobile phones.
+The characters represented by the keys are defined by the client properties"ui/numeric_text_input_ui/translation_language_code_key_lowerThe content it references must also match one of the media types specified in the MediaMask.
 
 Parameters:
 NTEString- A string containing a mix of normal and NumericTextKey characters (u2460-2468, u24ae)
@@ -1040,7 +1046,8 @@ public static java.lang.String[] SearchForTitlesNTE (UIContext _uicontext,java.l
 /**
 Returns a list of all of the titles in the database that match the passed in text, where
  the Unicode characters u2460-u2468 and u24EA  (Unicode Circled Digits) in the text represent the
- numeric Text Keys 1-9 and 0. This is similar to the predictive text entry input of mobile phones.The characters represented by the keys are defined by the client properties"ui/numeric_text_input_ui/translation_language_code_key_lowerThe content it references must also match one of the media types specified in the MediaMask.
+ numeric Text Keys 1-9 and 0. This is similar to the predictive text entry input of mobile phones.
+The characters represented by the keys are defined by the client properties"ui/numeric_text_input_ui/translation_language_code_key_lowerThe content it references must also match one of the media types specified in the MediaMask.
 
 Parameters:
 NTEString- A string containing a mix of normal and NumericTextKey characters (u2460-2468, u24ae)
@@ -1058,7 +1065,8 @@ public static java.lang.String[] SearchForTitlesNTE (java.lang.String NTEString,
  * UI Context Aware Call<br>
 Returns a list of all of the titles in the database that match the passed in text, where
  the Unicode characters u2460-u2468 and u24EA  (Unicode Circled Digits) in the text represent the
- numeric Text Keys 1-9 and 0. This is similar to the predictive text entry input of mobile phones.The characters represented by the keys are defined by the client properties"ui/numeric_text_input_ui/translation_language_code_key_lowerThe content it references must also match one of the media types specified in the MediaMask.
+ numeric Text Keys 1-9 and 0. This is similar to the predictive text entry input of mobile phones.
+The characters represented by the keys are defined by the client properties"ui/numeric_text_input_ui/translation_language_code_key_lowerThe content it references must also match one of the media types specified in the MediaMask.
 
 Parameters:
 NTEString- A string containing a mix of normal and NumericTextKey characters (u2460-2468, u24ae)
@@ -1487,7 +1495,8 @@ public static java.util.Vector SearchSelectedFieldsRegex (UIContext _uicontext,j
 /**
 Searches the specified fields of all the Airings in the database and tries to match them against
  the passed in text, where the Unicode characters u2460-u2468 and u24EA  (Unicode Circled Digits) in the text represent the
- numeric Text Keys 1-9 and 0. This is similar to the predictive text entry input of mobile phones.The characters represented by the keys are defined by the client properties"ui/numeric_text_input_ui/translation_language_code_key_lower.
+ numeric Text Keys 1-9 and 0. This is similar to the predictive text entry input of mobile phones.
+The characters represented by the keys are defined by the client properties"ui/numeric_text_input_ui/translation_language_code_key_lower.
 
 Parameters:
 NTEString- A string containing a mix of normal and NumericTextKey characters (u2460-2468, u24ae)
@@ -1515,7 +1524,8 @@ public static java.util.Vector SearchSelectedFieldsNTE (java.lang.String NTEStri
  * UI Context Aware Call<br>
 Searches the specified fields of all the Airings in the database and tries to match them against
  the passed in text, where the Unicode characters u2460-u2468 and u24EA  (Unicode Circled Digits) in the text represent the
- numeric Text Keys 1-9 and 0. This is similar to the predictive text entry input of mobile phones.The characters represented by the keys are defined by the client properties"ui/numeric_text_input_ui/translation_language_code_key_lower.
+ numeric Text Keys 1-9 and 0. This is similar to the predictive text entry input of mobile phones.
+The characters represented by the keys are defined by the client properties"ui/numeric_text_input_ui/translation_language_code_key_lower.
 
 Parameters:
 NTEString- A string containing a mix of normal and NumericTextKey characters (u2460-2468, u24ae)
@@ -1542,7 +1552,8 @@ public static java.util.Vector SearchSelectedFieldsNTE (UIContext _uicontext,jav
 /**
 Searches the specified fields of all the Airings in the database and tries to match them against
  the passed in text where the Unicode characters u2460-u2468 and u24EA  (Unicode Circled Digits) in the text represent the
- numeric Text Keys 1-9 and 0. This is similar to the predictive text entry input of mobile phones.The characters represented by the keys are defined by the client properties"ui/numeric_text_input_ui/translation_language_code_key_lower.
+ numeric Text Keys 1-9 and 0. This is similar to the predictive text entry input of mobile phones.
+The characters represented by the keys are defined by the client properties"ui/numeric_text_input_ui/translation_language_code_key_lower.
  The content it references must also match one of the media types specified in the MediaMask.
 
 Parameters:
@@ -1572,7 +1583,8 @@ public static java.util.Vector SearchSelectedFieldsNTE (java.lang.String NTEStri
  * UI Context Aware Call<br>
 Searches the specified fields of all the Airings in the database and tries to match them against
  the passed in text where the Unicode characters u2460-u2468 and u24EA  (Unicode Circled Digits) in the text represent the
- numeric Text Keys 1-9 and 0. This is similar to the predictive text entry input of mobile phones.The characters represented by the keys are defined by the client properties"ui/numeric_text_input_ui/translation_language_code_key_lower.
+ numeric Text Keys 1-9 and 0. This is similar to the predictive text entry input of mobile phones.
+The characters represented by the keys are defined by the client properties"ui/numeric_text_input_ui/translation_language_code_key_lower.
  The content it references must also match one of the media types specified in the MediaMask.
 
 Parameters:

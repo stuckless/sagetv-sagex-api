@@ -2,7 +2,7 @@ package sagex.api;
 
 /**
  * Unofficial SageTV Generated File - Never Edit
- * Generated Date/Time: 03/02/18 8:59 AM
+ * Generated Date/Time: 5/27/22 7:59 AM
  * See Official Sage Documentation at <a href='http://download.sage.tv/api/sage/api/MediaNodeAPI.html'>MediaNodeAPI</a>
  * This Generated API is not Affiliated with SageTV.  It is user contributed.
  */
@@ -16,7 +16,8 @@ Retrieves a MediaNode which is the root of the specified 'Media Source'. All nam
  MusicNavigator - provides various views of the imported music
  MusicVideosNavigator - provides various views of the imported videos with the 'music videos' category
  MoviesNavigator - provides various views of all content with the 'Movie' category or that are DVDs or BluRays
- TVNavigator - provides various views of recorded TV contentYou can also use names that are "ContentByGrouping" or just "Content".
+ TVNavigator - provides various views of recorded TV content
+You can also use names that are "ContentByGrouping" or just "Content".
  Valid values for "Content" are:
  Clips - all video files with a duration under 10 mins (controlled by the property max_duration_to_be_a_clip)
  Music or ImportedMusic - all imported music files
@@ -30,7 +31,8 @@ Retrieves a MediaNode which is the root of the specified 'Media Source'. All nam
  MediaFiles - all files in SageTV
  Compilations - all music files that are by 'Various Artist'
  MusicPlaylists - all music playlists
- VideoPlaylists - all video playlistsValid values for "Grouping" are:
+ VideoPlaylists - all video playlists
+Valid values for "Grouping" are:
  Folder - grouped according to their relative import path
  Category or Genre - grouped by category, for music files they are then subgrouped by Artist and then Album
  Year - grouped by year, for music files they are subgrouped by Album
@@ -65,7 +67,8 @@ Retrieves a MediaNode which is the root of the specified 'Media Source'. All nam
  MusicNavigator - provides various views of the imported music
  MusicVideosNavigator - provides various views of the imported videos with the 'music videos' category
  MoviesNavigator - provides various views of all content with the 'Movie' category or that are DVDs or BluRays
- TVNavigator - provides various views of recorded TV contentYou can also use names that are "ContentByGrouping" or just "Content".
+ TVNavigator - provides various views of recorded TV content
+You can also use names that are "ContentByGrouping" or just "Content".
  Valid values for "Content" are:
  Clips - all video files with a duration under 10 mins (controlled by the property max_duration_to_be_a_clip)
  Music or ImportedMusic - all imported music files
@@ -79,7 +82,8 @@ Retrieves a MediaNode which is the root of the specified 'Media Source'. All nam
  MediaFiles - all files in SageTV
  Compilations - all music files that are by 'Various Artist'
  MusicPlaylists - all music playlists
- VideoPlaylists - all video playlistsValid values for "Grouping" are:
+ VideoPlaylists - all video playlists
+Valid values for "Grouping" are:
  Folder - grouped according to their relative import path
  Category or Genre - grouped by category, for music files they are then subgrouped by Artist and then Album
  Year - grouped by year, for music files they are subgrouped by Album

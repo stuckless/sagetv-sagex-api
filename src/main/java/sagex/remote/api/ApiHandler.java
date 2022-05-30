@@ -265,7 +265,7 @@ public class ApiHandler implements SageHandler {
         pw.println("<tr><td colspan=2><hr/></td></tr>");
         
         pw.println("<p><b><i>NOTE: If the command arg expects a sage object, such mediafile, ariing, playlist, channel, show, plugin, favorite, series, etc, then you can still pass a reference to sage object, using mediafile:MEDIAFILE_ID, airing:AIRING_ID, playlist:PLAYLIST_NAME, channel:CHANNEL_NUMBER, show:EXTERNAL_ID, series:SERIES_INFO_ID, favorite:FAVORITE_ID, plugin:PLUGIN_ID, playlist:PLAYLIST_NAME, widget:SYMBOL, etc.</i></b></p>");
-        pw.println("<p>Example: /sages/api?c=IsMediaFileObject&1=mediafile:3231112");
+        pw.println("<p>Example: /sagex/api?c=IsMediaFileObject&1=mediafile:3231112");
         pw.println("<br/>");
 
         List<JSONObject> apis = null;
